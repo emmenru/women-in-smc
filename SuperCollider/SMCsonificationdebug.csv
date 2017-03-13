@@ -1,0 +1,5 @@
+Gender,Place,Year,NumberOfAuthors,Conference,Gender2,Gender3,Gender4,Gender5,Gender6,Gender7,Gender8,Gender9,Gender10,Gender11,Gender12,Gender13,Gender14,Gender15,Gender16
+male,Germany,2008,1,SMC,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+male,Germany,2008,3,SMC,male,male,0,0,0,0,0,0,0,0,0,0,0,0,0
+male,Germany,2008,14,SMC,male,None,None,male,male,None,male,male,None,None,None,None,male,0,0
+male,Germany,2008,2,SMC,male,0,0,0,0,0,0,0,0,0,0,0,0,0,0

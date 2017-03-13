@@ -1,0 +1,874 @@
+Going through CSV with correct author gender
+Correcting paper "Towards Defining the Potential of Electroacoustic Infrasonic Music" author Alexis's gender (female)
+Corrected column 3 in row 658 in conference csv data
+
+Correcting paper "PERSONALITY AND COMPUTER MUSIC" author Andrea's gender (female)
+Corrected column 14 in row 400 in conference csv data
+
+Correcting paper "Teaching Robots to Conduct: Automatic Extraction of Conducting Information from Sheet Music" author Andrea's gender (female)
+Corrected column 3 in row 801 in conference csv data
+
+Correcting paper "Sensor and Software Technologies for Lip Pressure Measurements in Trumpet and Cornet Playing - from Lab to Classroom" author Anuschka's gender (female)
+Corrected column 12 in row 928 in conference csv data
+
+Correcting paper "ENGAGEMENT AND INTERACTION IN PARTICIPATORY SOUND ART" author Artemi-Maria's gender (female)
+Corrected column 10 in row 984 in conference csv data
+
+Correcting paper "SmartDJ, An Interactive Music Player for Music Discovery by Similarity Comparison" author Aw's gender (female)
+Corrected column 3 in row 592 in conference csv data
+
+Correcting paper "Recommending Music to Groups in Fitness Classes" author Berardina's gender (female)
+Corrected column 3 in row 882 in conference csv data
+
+Correcting paper "SynPy: a Python Toolkit for Syncopation Modelling" author Chunyang's gender (female)
+Corrected column 3 in row 916 in conference csv data
+
+Correcting paper "Warped low-order modeling of musical tones" author Heidi-Maria's gender (female)
+Corrected column 10 in row 615 in conference csv data
+
+Correcting paper "Modulus p Rhythmic Tiling Canons and some implementations in Open Music visual programming language" author HГ©lianthe's gender (female)
+Corrected column 3 in row 781 in conference csv data
+
+Correcting paper "Machine Improvisation with Formal Specifications" author Ilge's gender (female)
+Corrected column 12 in row 811 in conference csv data
+
+Correcting paper "Embodiment and agency: Towards an aesthetics of interactive performativity" author Jin's gender (female)
+Corrected column 3 in row 146 in conference csv data
+
+Correcting paper "INTUNE: A Musician's Intonation Visualization System"" author Kyung's gender (female)
+Corrected column 3 in row 269 in conference csv data
+
+Correcting paper "TRENDS IN/OVER TIME: RHYTHM IN SPEECH AND MUSICAL MELODY IN 19TH-CENTURY ART SONG" author Leigh's gender (female)
+Corrected column 3 in row 111 in conference csv data
+
+Correcting paper "Space Resonating Through Sound" author LГ­lian's gender (female)
+Corrected column 10 in row 191 in conference csv data
+
+Correcting paper "Towards a decodification of the graphical scores of Anestis Logothetis (1921-1994). The graphical space of Odysee (1963)." author Maria-Dimitra's gender (female)
+Corrected column 3 in row 195 in conference csv data
+
+Correcting paper "Design of an Interactive Earphone Simulator and Results from a Perceptual Experiment" author Miracle's gender (female)
+Corrected column 10 in row 531 in conference csv data
+
+Correcting paper "Using EarSketch to Broaden Participation in Computing and Music" author Morgan's gender (female)
+Corrected column 14 in row 982 in conference csv data
+
+Correcting paper "An In-Situ Study of Real Life Listening Context" author Regan's gender (female)
+Corrected column 10 in row 434 in conference csv data
+
+Correcting paper "Remote Music Tuition" author Sam's gender (female)
+Corrected column 3 in row 478 in conference csv data
+
+Correcting paper "3DMIN вЂ” Challenges and Interventions in Design, Development and Dissemination of New Musical Instruments" author Sarah-Indriyati's gender (female)
+Corrected column 20 in row 863 in conference csv data
+
+Correcting paper "EFFECT OF TIMBRE ON MELODY RECOGNITION IN THREE-VOICE COUNTERPOINT MUSIC" author Song's gender (female)
+Corrected column 3 in row 535 in conference csv data
+
+Correcting paper "The HOA library, review and prospects" author SГЁdes's gender (female)
+Corrected column 3 in row 749 in conference csv data
+
+Correcting paper "ENGAGEMENT AND INTERACTION IN PARTICIPATORY SOUND ART" author Visda's gender (female)
+Corrected column 3 in row 984 in conference csv data
+
+Correcting paper "A Study on Cross-cultural and Cross-dataset Generalizability of Music Mood Regression Models" author Xiao's gender (female)
+Corrected column 3 in row 791 in conference csv data
+
+Correcting paper "Sonic Scenography - Equalized Structure-borne Sound for Aurally Active Set Design" author Aki's gender (male)
+Corrected column 10 in row 877 in conference csv data
+
+Correcting paper "Elegans Meets Data Sonification: Can We Hear its Elegant Movement?" author Akiyoshi's gender (male)
+Corrected column 18 in row 365 in conference csv data
+
+Correcting paper "Artificial Affective Listening towards a Machine Learning Tool for Sound-Based Emotion Therapy and Control" author Alexis's gender (male)
+Corrected column 3 in row 515 in conference csv data
+
+Correcting paper "REAL-TIME HALLUCATINATION SONIFICATION AND SIMULATION THROUGH USER-LED DEVELOPMENT OF AN IPAD AUGMENTED REALITY PERFORMANCE" author Alexis's gender (male)
+Corrected column 3 in row 579 in conference csv data
+
+Correcting paper "Technical Report on a Short Live-action Film whose Story with Soundtrack is selected in Real-time based on Audience Arousal during Performance" author Alexis's gender (male)
+Corrected column 3 in row 602 in conference csv data
+
+Correcting paper "EVALUATING PERCEPTUAL SEPARATION IN A PILOT SYSTEM FOR AFFECTIVE COMPOSITION" author Alexis's gender (male)
+Corrected column 10 in row 756 in conference csv data
+
+Correcting paper "Sonification of Dark Matter: Challenges and Opportunities" author Alexis's gender (male)
+Corrected column 10 in row 967 in conference csv data
+
+Correcting paper "Adapting a Computational Multi Agent Model for Humpback Whale Song Research for use as a Tool for Algorithmic Composition" author Alexis's gender (male)
+Corrected column 16 in row 1000 in conference csv data
+
+Correcting paper "Gene expression synthesis" author Alo's gender (male)
+Corrected column 3 in row 827 in conference csv data
+
+Correcting paper " "Automatic Manipulation of Music to Express Desired Emotions"" author AmГ­lcar's gender (male)
+Corrected column 10 in row 212 in conference csv data
+
+Correcting paper "The AGNULA/DeMuDi distribution: GNU/Linux and Free Software for the pro audio and sound research domain" author Andrea's gender (male)
+Corrected column 14 in row 47 in conference csv data
+
+Correcting paper "AUGMENTING C-CARDS WITH MUSIC ACTIONS" author Andrea's gender (male)
+Corrected column 3 in row 60 in conference csv data
+
+Correcting paper "A platform for real-time multimodal processing" author Andrea's gender (male)
+Corrected column 16 in row 167 in conference csv data
+
+Correcting paper "Echi tra le Volte  a sound design project for churches" author Andrea's gender (male)
+Corrected column 3 in row 188 in conference csv data
+
+Correcting paper "A framework for soundscape analysis and re-synthesis"" author Andrea's gender (male)
+Corrected column 3 in row 247 in conference csv data
+
+Correcting paper "TOWARDS A PRACTICAL APPROACH TO MUSIC THEORY ON THE REACTABLE" author Andrea's gender (male)
+Corrected column 3 in row 292 in conference csv data
+
+Correcting paper "In a concrete space Reconstructing the spatialization of Iannis Xenakis Concret PH on a multichannel setup" author Andrea's gender (male)
+Corrected column 3 in row 309 in conference csv data
+
+Correcting paper "Audio Physical Computing" author Andrea's gender (male)
+Corrected column 3 in row 359 in conference csv data
+
+Correcting paper "Concatenative Synthesis Unit Navigation and Dynamic Rearrangement in vrGrains" author Andrea's gender (male)
+Corrected column 12 in row 445 in conference csv data
+
+Correcting paper "cage: a high-level library for real-time computer-aided composition" author Andrea's gender (male)
+Corrected column 3 in row 663 in conference csv data
+
+Correcting paper "Fine-tuned Control of Concatenative Synthesis with CATART Using the BACH Library for MAX" author Andrea's gender (male)
+Corrected column 12 in row 775 in conference csv data
+
+Correcting paper "SoDA: A Sound Design Accelerator for the automatic generation of soundscapes from an ontologically annotated sound library" author Andrea's gender (male)
+Corrected column 3 in row 859 in conference csv data
+
+Correcting paper "Learning Musical Contour on a Tabletop" author Andrea's gender (male)
+Corrected column 3 in row 880 in conference csv data
+
+Correcting paper "Wave Voxel Synthesis" author Anis's gender (male)
+Corrected column 3 in row 896 in conference csv data
+
+Correcting paper " "Automatic Manipulation of Music to Express Desired Emotions"" author AntГіnio's gender (male)
+Corrected column 3 in row 212 in conference csv data
+
+Correcting paper "Implementation of algorithms to classify musical texts according to rhythms" author Arbee's gender (male)
+Corrected column 3 in row 129 in conference csv data
+
+Correcting paper " "Making an Orchestra Speak" (received the Best Paper Award)" author Arshia's gender (male)
+Corrected column 3 in row 236 in conference csv data
+
+Correcting paper "On the Creative use of Score Following and its Impact on Research" author Arshia's gender (male)
+Corrected column 3 in row 398 in conference csv data
+
+Correcting paper "AscoGraph A User Interface for Sequencing and Score Following for Interactive Music" author Arshia's gender (male)
+Corrected column 10 in row 708 in conference csv data
+
+Correcting paper "Gestural Musical Affordances" author Atau's gender (male)
+Corrected column 3 in row 462 in conference csv data
+
+Correcting paper "The Quiet Walk: Sonic Memories and Mobile Cartography" author Atau's gender (male)
+Corrected column 10 in row 493 in conference csv data
+
+Correcting paper "Composing for cars" author Atau's gender (male)
+Corrected column 10 in row 526 in conference csv data
+
+Correcting paper "Joint f0 and inharmoncity estimation using second order optimization" author Azel's gender (male)
+Corrected column 10 in row 549 in conference csv data
+
+Correcting paper "AN EXPLORATION ON THE INFLUENCE OF VIBROTACTILE CUES DURING DIGITAL PIANO PLAYING" author BalГzs's gender (male)
+Corrected column 16 in row 354 in conference csv data
+
+Correcting paper "COMPOSING AUDIO-VISUAL ART: THE ISSUE OF TIME AND THE CONCEPT OF TRANSDUCTION" author BenoГ®t's gender (male)
+Corrected column 3 in row 92 in conference csv data
+
+Correcting paper "CONCURRENT CONSTRAINTS MODELS FOR SPECIFYING INTERACTIVE SCORES" author Camilio's gender (male)
+Corrected column 14 in row 95 in conference csv data
+
+Correcting paper "Movable Party: A bicycle-powered system for interactive musical performance" author Carey's gender (male)
+Corrected column 12 in row 696 in conference csv data
+
+Correcting paper "Vuza: a functional language for creative applications" author Carmine-Emanuele's gender (male)
+Corrected column 3 in row 862 in conference csv data
+
+Correcting paper "STYLE EMULATION OF DRUM PATTERNS BY MEANS OF EVOLUTIONARY METHODS AND STATISTICAL ANALYSIS" author Caros's gender (male)
+Corrected column 10 in row 295 in conference csv data
+
+Correcting paper "A CONTOUR-BASED JAZZ WALKING BASS GENERATOR" author Rui's gender (male)
+Corrected column 3 in row 501 in conference csv data
+
+Correcting paper "Citygram One: One Year Later вЂ¦" author Charlie's gender (male)
+Corrected column 14 in row 691 in conference csv data
+
+Correcting paper "Toward Real-Time Estimation of Tonehole Configuration" author Cheng-i's gender (male)
+Corrected column 10 in row 839 in conference csv data
+
+Correcting paper "A Research of Automatic Composition and Singing Voice Synthesis System for Taiwanese Popular Songs" author Chih-Fang's gender (male)
+Corrected column 3 in row 818 in conference csv data
+
+Correcting paper "The SpatDIF library вЂ“ Concepts and Practical Applications in Audio Software" author Chikashi's gender (male)
+Corrected column 10 in row 750 in conference csv data
+
+Correcting paper "Zirkonium, SpatDIF, and mediaartbase.de; an archiving strategy for spatial music at ZKM" author Chikashi's gender (male)
+Corrected column 3 in row 1008 in conference csv data
+
+Correcting paper "Authoring Spatial Music with SpatDIF Version 0.4" author Chikashi's gender (male)
+Corrected column 14 in row 1022 in conference csv data
+
+Correcting paper "Timbre Features and Music Emotion in Plucked String, Mallet Percussion, and Keyboard Tones" author Chuck-jee's gender (male)
+Corrected column 3 in row 767 in conference csv data
+
+Correcting paper "Musical Timbre and Emotion: The Identification of Salient Timbral Features in Sustained Musical Instrument Tones Equalized in Attack Time and Spectral Centroid" author Chung's gender (male)
+Corrected column 12 in row 759 in conference csv data
+
+Correcting paper "Detection of Random Spectral Alterations of Sustained Musical Instrument Tones in Repeated Note Contexts" author Chung's gender (male)
+Corrected column 3 in row 823 in conference csv data
+
+Correcting paper "Target-Based Rhythmic Pattern Generation and Variation with Genetic Algorithms" author CГЎrthach's gender (male)
+Corrected column 3 in row 893 in conference csv data
+
+Correcting paper "Ecologically grounded multimodal design: The Palafito 1.0 study" author DamiГЎn's gender (male)
+Corrected column 3 in row 870 in conference csv data
+
+Correcting paper " "Sound Search by Content-Based Navigation in Large Databases"" author Diemo's gender (male)
+Corrected column 3 in row 233 in conference csv data
+
+Correcting paper "DESCRIPTOR-BASED SOUND TEXTURE SAMPLING" author Diemo's gender (male)
+Corrected column 3 in row 344 in conference csv data
+
+Correcting paper "Distance Mapping for Corpus-Based Concatenative Synthesis" author Diemo's gender (male)
+Corrected column 3 in row 371 in conference csv data
+
+Correcting paper "Content-based retrieval of environmental sounds by multiresolution analysis" author Diemo's gender (male)
+Corrected column 10 in row 447 in conference csv data
+
+Correcting paper "Fine-tuned Control of Concatenative Synthesis with CATART Using the BACH Library for MAX" author Diemo's gender (male)
+Corrected column 16 in row 775 in conference csv data
+
+Correcting paper "Smooth Granular Sound Texture Synthesis by Control of Timbral Similarity" author Diemo's gender (male)
+Corrected column 3 in row 937 in conference csv data
+
+Correcting paper "ORPHEUS: A virtual learning environment of Ancient Greek music" author Dionysios's gender (male)
+Corrected column 3 in row 157 in conference csv data
+
+Correcting paper "OPEN SOURCE TOOLS FOR MUSIC REPRESENTATION AND NOTATION" author Dominique's gender (male)
+Corrected column 10 in row 31 in conference csv data
+
+Correcting paper "VEMUS - Feedback and groupware technologies for music instrument learning" author Dominique's gender (male)
+Corrected column 3 in row 126 in conference csv data
+
+Correcting paper "Parallelization of Audio Applications with Faust"" author Dominique's gender (male)
+Corrected column 10 in row 262 in conference csv data
+
+Correcting paper "Interlude - A Framework for Augmented Music Scores" author Dominique's gender (male)
+Corrected column 3 in row 304 in conference csv data
+
+Correcting paper "Programming Interactive Music Scores with INScore" author Dominique's gender (male)
+Corrected column 3 in row 575 in conference csv data
+
+Correcting paper "Representation of Musical Computer Processes" author Dominique's gender (male)
+Corrected column 3 in row 858 in conference csv data
+
+Correcting paper "Distributing Music Scores to Mobile Platforms and to the Internet using INScore" author Dominique's gender (male)
+Corrected column 3 in row 908 in conference csv data
+
+Correcting paper "JACK AUDIO SERVER: MACOSX PORT AND MULTI-PROCESSOR VERSION" author Dominique's gender (male)
+Corrected column 10 in row 25 in conference csv data
+
+Correcting paper "Where do you want your ears? Comparing performance quality as a function of listening position in a virtual jazz band" author Doyuen's gender (male)
+Corrected column 12 in row 423 in conference csv data
+
+Correcting paper "IMPROVED POLYNOMIAL TRANSITION REGIONS ALGORITHM FOR ALIAS-SUPPRESSED SIGNAL SYNTHESIS" author DГЎniel's gender (male)
+Corrected column 3 in row 546 in conference csv data
+
+Correcting paper "Modelling the live-electronics in electroacoustic music using particle systems" author Flo's gender (male)
+Corrected column 10 in row 672 in conference csv data
+
+Correcting paper "Computer Game Piece: Exploring Video Games as Means for Controlled Improvisation" author Francho's gender (male)
+Corrected column 10 in row 631 in conference csv data
+
+Correcting paper "The AGNULA/DeMuDi distribution: GNU/Linux and Free Software for the pro audio and sound research domain" author Free's gender (male)
+Corrected column 12 in row 47 in conference csv data
+
+Correcting paper "Optimal Acoustic Reverberation Evaluation of Byzantine Chanting in Churches" author Gavriil's gender (male)
+Corrected column 12 in row 761 in conference csv data
+
+Correcting paper "An overview of sound and music applications for Android available on the market" author GaГ«l's gender (male)
+Corrected column 3 in row 435 in conference csv data
+
+Correcting paper "Principles of Visual Design for Computer Music" author Ge's gender (male)
+Corrected column 3 in row 676 in conference csv data
+
+Correcting paper "miniAudicle for iPad: Touchscreen-based Music Software Programming" author Ge's gender (male)
+Corrected column 10 in row 721 in conference csv data
+
+Correcting paper "Nuance: Adding Multi-Touch Force Detection to the iPad" author Ge's gender (male)
+Corrected column 14 in row 1005 in conference csv data
+
+Correcting paper "FaucK!! Hybridizing the FAUST and ChucK Audio Programming Languages" author Ge's gender (male)
+Corrected column 10 in row 1006 in conference csv data
+
+Correcting paper "USING PATTERNS TO GENERATE RHYTHMIC ACCOMPANIMENT FOR GUITAR" author Geber's gender (male)
+Corrected column 12 in row 52 in conference csv data
+
+Correcting paper "Spatialization Symbolic Music Notation at ICST" author GermГЎn's gender (male)
+Corrected column 10 in row 787 in conference csv data
+
+Correcting paper "Motion-Enabled Live Electronics"" author Gerriet's gender (male)
+Corrected column 12 in row 251 in conference csv data
+
+Correcting paper "Orchestrating wall reflections in space by icosahedral loudspeaker: findings from first artistic research exploration" author Gerriet's gender (male)
+Corrected column 3 in row 745 in conference csv data
+
+Correcting paper "MX STRUCTURAL METADATA AS MIR TOOLS" author Goffredo's gender (male)
+Corrected column 3 in row 77 in conference csv data
+
+Correcting paper "STATE OF THE ART AND NEW RESULTS IN DIRECT MANIPULATION OF MPEG AUDIO CODES" author Goffredo's gender (male)
+Corrected column 3 in row 82 in conference csv data
+
+Correcting paper "AN XML-BASED FORMAT FOR ADVANCED MUSIC FRUITION" author Goffredo's gender (male)
+Corrected column 10 in row 90 in conference csv data
+
+Correcting paper "From music symbolic information to sound synthesis: An XML-based approach" author Goffredo's gender (male)
+Corrected column 3 in row 151 in conference csv data
+
+Correcting paper "Real-time Music Composition through P-timed Petri Nets" author Goffredo's gender (male)
+Corrected column 10 in row 679 in conference csv data
+
+Correcting paper "Visualization and manipulation of stereophonic audio signals by means of IID and IPD" author Goffredo's gender (male)
+Corrected column 10 in row 842 in conference csv data
+
+Correcting paper "TRAP: TRAnsient Presence detection exploiting Continuous Brightness Estimation (CoBE)" author Goffredo's gender (male)
+Corrected column 12 in row 927 in conference csv data
+
+Correcting paper "Corpora for Music Information Research in Indian Art Music" author Gopala's gender (male)
+Corrected column 10 in row 774 in conference csv data
+
+Correcting paper "A Score-Informed Computational Description of Svaras Using a Statistical Model" author Gopala's gender (male)
+Corrected column 10 in row 1024 in conference csv data
+
+Correcting paper "A Survey of Raaga Recognition Techniques and Improvements to the State-of-the-Art" author Gopala-Krishna's gender (male)
+Corrected column 3 in row 349 in conference csv data
+
+Correcting paper "An Online Tempo Tracker for Automatic Accompaniment based on Audio-to-audio Alignment and Beat Tracking" author Grigore's gender (male)
+Corrected column 3 in row 972 in conference csv data
+
+Correcting paper "Implementation and Evaluation of Real-Time Interactive User Interface Design in Self-learning Singing Pitch Training Apps" author Hamzeen's gender (male)
+Corrected column 12 in row 872 in conference csv data
+
+Correcting paper " "Content Analysis of Note Transitions in Music Performance"" author Hani's gender (male)
+Corrected column 16 in row 244 in conference csv data
+
+Correcting paper "Motion recurrence analysis in music performances" author Hani's gender (male)
+Corrected column 10 in row 564 in conference csv data
+
+Correcting paper "Time domain pitch recognition" author Haralampos's gender (male)
+Corrected column 10 in row 159 in conference csv data
+
+Correcting paper "Image to sound and sound to image transform" author Haralampos's gender (male)
+Corrected column 3 in row 160 in conference csv data
+
+Correcting paper "Modeling of Melodic Rhythm Based on Entropy toward Creating Expectation and Emotion" author Hidefumi's gender (male)
+Corrected column 3 in row 560 in conference csv data
+
+Correcting paper "REINFORCEMENT LEARNING MODELS FOR ACQUIRING" author Hidefumi's gender (male)
+Corrected column 10 in row 583 in conference csv data
+
+Correcting paper "Creating a Place as a Medium for Musical Communication Using Multiple Electroencephalography" author Hidefumi's gender (male)
+Corrected column 10 in row 713 in conference csv data
+
+Correcting paper "Automatic Arrangement For Guitars Using Hidden Markov Model" author Hirokazu's gender (male)
+Corrected column 14 in row 438 in conference csv data
+
+Correcting paper "AUDIO-BASED MUSIC VISUALIZATION FOR MUSIC STRUCTURE ANALYSIS" author Ho-Hsiang's gender (male)
+Corrected column 3 in row 342 in conference csv data
+
+Correcting paper "DEVELOPING A NON-VISUAL OUTPUT DEVICE FOR MUSICAL PERFORMERS" author Homei's gender (male)
+Corrected column 3 in row 14 in conference csv data
+
+Correcting paper "What is the Essence of "Music?" A Case Study on a Japanese Audience" author Homei's gender (male)
+Corrected column 3 in row 86 in conference csv data
+
+Correcting paper "Simulated Formant Modeling of Accompanied Singing Signals for Vocal Melody Extraction" author Hsin-Min's gender (male)
+Corrected column 10 in row 481 in conference csv data
+
+Correcting paper "Musical sonification in electronic therapy aids for motor-functional treatment - a smartphone approach" author Iohannes's gender (male)
+Corrected column 10 in row 1027 in conference csv data
+
+Correcting paper "Citygram One: One Year Later вЂ¦" author Jaeseong's gender (male)
+Corrected column 18 in row 691 in conference csv data
+
+Correcting paper "Towards Soundscape Information Retrieval (SIR)" author Jaeseong's gender (male)
+Corrected column 12 in row 802 in conference csv data
+
+Correcting paper "IMPROVING PERFORMERSвЂ™ MUSICALITY THROUGH LIVE INTERACTION WITH HAPTIC FEEDBACK: A CASE STUDY" author Jamie's gender (male)
+Corrected column 10 in row 386 in conference csv data
+
+Correcting paper "LARGE DATA SETS & RECOMMENDER SYSTEMS: A FEASIBLE APPROACH TO LEARNING MUSIC ?" author Jamie's gender (male)
+Corrected column 3 in row 552 in conference csv data
+
+Correcting paper " "A stratified approach for sound spatialization"" author Jan's gender (male)
+Corrected column 12 in row 224 in conference csv data
+
+Correcting paper "Using natural language to specify sound parameters" author Jan-Torsten's gender (male)
+Corrected column 3 in row 861 in conference csv data
+
+Correcting paper "Teaching Audio Programming with the Neonlicht-Engine" author Jan-Torsten's gender (male)
+Corrected column 3 in row 1007 in conference csv data
+
+Correcting paper "Real-time event sequencing without a visual interface" author Jayme's gender (male)
+Corrected column 12 in row 578 in conference csv data
+
+Correcting paper "Mixing time representations in a programmable score editor" author Jean's gender (male)
+Corrected column 10 in row 132 in conference csv data
+
+Correcting paper "Generation and representation of data and events for the control of sound synthesis" author Jean's gender (male)
+Corrected column 3 in row 136 in conference csv data
+
+Correcting paper "New Framework for Score Segmentation and Analysis in OpenMusic" author Jean's gender (male)
+Corrected column 3 in row 468 in conference csv data
+
+Correcting paper "MODELING AND SIMULATION: THE SPECTRAL CANON FOR CONLON NANCARROW BY JAMES TENNEY" author Jean's gender (male)
+Corrected column 10 in row 559 in conference csv data
+
+Correcting paper "pOM: Linking Pen Gestures to Computer-Aided Composition Processes" author Jean's gender (male)
+Corrected column 12 in row 675 in conference csv data
+
+Correcting paper "Programmation and Control of Faust Sound Processing in OpenMusic" author Jean's gender (male)
+Corrected column 10 in row 857 in conference csv data
+
+Correcting paper "Tempo Curving As A Framework For Interactive Computer-aided Composition" author Jean's gender (male)
+Corrected column 3 in row 930 in conference csv data
+
+Correcting paper "Guided improvisation as dynamic calls to an offline model" author Jean's gender (male)
+Corrected column 12 in row 946 in conference csv data
+
+Correcting paper "TEMPORAL CONTROL OVER SOUND SYNTHESIS PROCESSES" author Jean's gender (male)
+Corrected column 3 in row 109 in conference csv data
+
+Correcting paper "AURALIZATION OF COUPLED SPACES BASED ON A DIFFUSION EQUATION MODEL" author Jean-Dominique's gender (male)
+Corrected column 10 in row 519 in conference csv data
+
+Correcting paper "INSTRUMENTAL GESTURES AND SONIC TEXTURES" author Jean-Julien's gender (male)
+Corrected column 3 in row 71 in conference csv data
+
+Correcting paper " "Prototyping Musical Experiments for Tangisense  a Tangible and Traceable Table"" author Jean-Julien's gender (male)
+Corrected column 10 in row 232 in conference csv data
+
+Correcting paper "CREATION AND EXPLORATION OF A PERCEPTUAL SONIC TEXTURES SPACE USING A TANGIBLE INTERFACE" author Jean-Julien's gender (male)
+Corrected column 3 in row 301 in conference csv data
+
+Correcting paper "Papertonnetz: Music Composition With Interactive Paper" author JerГ©mie's gender (male)
+Corrected column 10 in row 471 in conference csv data
+
+Correcting paper "CrossSong Puzzle: Generating and Unscrambling Music Mashups with Real-time Interactivity" author Jordan's gender (male)
+Corrected column 3 in row 924 in conference csv data
+
+Correcting paper "JackTrip/SoundWIRE Meets Server Farm"" author Juan-Pablo's gender (male)
+Corrected column 3 in row 261 in conference csv data
+
+Correcting paper "A Hierarchical Approach for the Design of Gesture-to-Sound Mappings" author Jules's gender (male)
+Corrected column 3 in row 426 in conference csv data
+
+Correcting paper "ArmKeyBoard: A Mobile Keyboard Instrument Based on Chord-scale System and Tonal Hierarchy" author Jun-qi's gender (male)
+Corrected column 3 in row 707 in conference csv data
+
+Correcting paper "A History of Emerging Paradigms in EEG for Music" author Kameron's gender (male)
+Corrected column 3 in row 790 in conference csv data
+
+Correcting paper "Translation as Technique: Collaboratively Creating an Electro-Acoustic Composition for Saxophone and Live Video Projection" author Kelland's gender (male)
+Corrected column 10 in row 687 in conference csv data
+
+Correcting paper "Data Auditorio: Towards Intense Interaction, an Interactive Hyper-Directional Sound for Play and Ubiquity" author Kiyomitsu's gender (male)
+Corrected column 10 in row 869 in conference csv data
+
+Correcting paper "METHOD TO DETECT GTTM LOCAL GROUPING BOUNDARIES BASED ON CLUSTERING AND STATISTICAL LEARNING" author Kouhei's gender (male)
+Corrected column 3 in row 798 in conference csv data
+
+Correcting paper "Towards a discrete electronic transmission line as a musical harmonic oscillator" author Kurijn's gender (male)
+Corrected column 3 in row 607 in conference csv data
+
+Correcting paper "Implementations of the Leap Motion in sound synthesis, effects modulation and assistive performance tools" author Lamtharn's gender (male)
+Corrected column 3 in row 715 in conference csv data
+
+Correcting paper "ORPHEUS: A virtual learning environment of Ancient Greek music" author Leontios's gender (male)
+Corrected column 12 in row 157 in conference csv data
+
+Correcting paper "Conceptual Blending in Biomusic Composition Space: The вЂњBrainswarmвЂќ Paradigm" author Leontios's gender (male)
+Corrected column 3 in row 711 in conference csv data
+
+Correcting paper "Resolving Octave Ambiguities: A Cross-dataset Investigation" author Li's gender (male)
+Corrected column 3 in row 764 in conference csv data
+
+Correcting paper "Power-Scaled Spectral Flux and Peak-Valley Group-Delay Methods for Robust Musical Onset Detection" author Li's gender (male)
+Corrected column 3 in row 799 in conference csv data
+
+Correcting paper "Resolving Octave Ambiguities: A Cross-dataset Investigation" author Li-Fan's gender (male)
+Corrected column 10 in row 764 in conference csv data
+
+Correcting paper "SmartDJ, An Interactive Music Player for Music Discovery by Similarity Comparison" author Lim's gender (male)
+Corrected column 10 in row 592 in conference csv data
+
+Correcting paper "Introducing the Zirkonium MK2 System for Spatial Composition" author Ludger's gender (male)
+Corrected column 10 in row 744 in conference csv data
+
+Correcting paper "Structural Modeling Of Pinna-Related Transfer Functions" author Michele's gender (male)
+Corrected column 10 in row 331 in conference csv data
+
+Correcting paper "Employing Spatial Sonification Of Target Motion In Tracking Exercises" author Michele's gender (male)
+Corrected column 10 in row 454 in conference csv data
+
+Correcting paper "THE SELFEAR PROJECT: A MOBILE APPLICATION FOR LOW-COST PINNA-RELATED TRANSFER FUNCTION ACQUISITION" author Michele's gender (male)
+Corrected column 3 in row 983 in conference csv data
+
+Correcting paper "Connecting SUM with computer-assisted composition in PWGL: Recreating the graphic scores of Anestis Logothetis" author Mika's gender (male)
+Corrected column 10 in row 847 in conference csv data
+
+Correcting paper "Towards Soundscape Information Retrieval (SIR)" author Min-Joon's gender (male)
+Corrected column 14 in row 802 in conference csv data
+
+Correcting paper "A Research of Automatic Composition and Singing Voice Synthesis System for Taiwanese Popular Songs" author MinвЂ“Hsuan's gender (male)
+Corrected column 12 in row 818 in conference csv data
+
+Correcting paper "Mutor: Drone Chorus of Metrically Muted Motors" author Mo's gender (male)
+Corrected column 3 in row 724 in conference csv data
+
+Correcting paper "SoundScavenger: An Interactive Soundwalk" author Naithan's gender (male)
+Corrected column 3 in row 969 in conference csv data
+
+Correcting paper "LCSynth: A Strongly-Timed Synthesis Language that Integrates Objects and Manipulations for Microsounds" author Natoshi's gender (male)
+Corrected column 10 in row 465 in conference csv data
+
+Correcting paper "LC: A New Computer Music Programming Language with Three Core Features" author Natoshi's gender (male)
+Corrected column 10 in row 852 in conference csv data
+
+Correcting paper "The AGNULA/DeMuDi distribution: GNU/Linux and Free Software for the pro audio and sound research domain" author Nicola's gender (male)
+Corrected column 3 in row 47 in conference csv data
+
+Correcting paper "SUSTAINABLE LIVE ELECTRO-ACOUSTIC MUSIC" author Nicola's gender (male)
+Corrected column 3 in row 84 in conference csv data
+
+Correcting paper "Musical perspectives on composition, sonification and performace" author Nicola's gender (male)
+Corrected column 10 in row 673 in conference csv data
+
+Correcting paper "Recommending Music to Groups in Fitness Classes" author Nicola's gender (male)
+Corrected column 12 in row 882 in conference csv data
+
+Correcting paper "AUTOMATIC MUSIC COMPOSITION BASED ON COUNTERPOINT AND IMITATION USING STOCHASTIC MODELS" author Nobutaka's gender (male)
+Corrected column 12 in row 318 in conference csv data
+
+Correcting paper "Merged-Output Hidden Markov Model for Score Following of MIDI Performance with Ornaments, Desynchronized Voices, Repeats and Skips" author Nobutaka's gender (male)
+Corrected column 10 in row 797 in conference csv data
+
+Correcting paper "Human-Computer Music Performance: From Synchronized Accompaniment to Musical Partner" author Octav-Emilian's gender (male)
+Corrected column 14 in row 544 in conference csv data
+
+Correcting paper "The HOA library, review and prospects" author Paris's gender (male)
+Corrected column 12 in row 749 in conference csv data
+
+Correcting paper "Preparing for TreeTorika: Computer-assisted analysis of Mao's oratory" author PerMagnus's gender (male)
+Corrected column 3 in row 152 in conference csv data
+
+Correcting paper "Design of an Interactive Earphone Simulator and Results from a Perceptual Experiment" author PerMagnus's gender (male)
+Corrected column 3 in row 531 in conference csv data
+
+Correcting paper "SKALLDANS, AN AUDIOVISUAL IMPROVISATION FRAMEWORK" author PerMagnus's gender (male)
+Corrected column 3 in row 591 in conference csv data
+
+Correcting paper "SmartDJ, An Interactive Music Player for Music Discovery by Similarity Comparison" author PerMagnus's gender (male)
+Corrected column 12 in row 592 in conference csv data
+
+Correcting paper "Towards a Generative Electronica: Human-Informed Machine Transcription and Analysis in MaxMSP" author Philipe's gender (male)
+Corrected column 10 in row 418 in conference csv data
+
+Correcting paper "Ephemeron: Control over Self-Organised Music" author Phivos-Angelos's gender (male)
+Corrected column 3 in row 199 in conference csv data
+
+Correcting paper "o.io: a Unified Communications Framework for Music, Intermedia and Cloud Interaction" author Rama's gender (male)
+Corrected column 12 in row 856 in conference csv data
+
+Correcting paper "The perceptual similarity of tone clusters: an experimental approach to the listening of avant-garde music" author Reihard's gender (male)
+Corrected column 10 in row 1016 in conference csv data
+
+Correcting paper "Playing Integrated Music Knowledges with Artifical Neural Networks" author Robin's gender (male)
+Corrected column 10 in row 36 in conference csv data
+
+Correcting paper " "Sensory Threads: Sonifying imperceptible phenomena in the Wild"" author Robin's gender (male)
+Corrected column 3 in row 215 in conference csv data
+
+Correcting paper "An Interactive Surface Realisation of Henri Pousseur's `Scambi'" author Robin's gender (male)
+Corrected column 3 in row 356 in conference csv data
+
+Correcting paper "Factors in human recognition of timbre lexicons generated by data clustering" author Robin's gender (male)
+Corrected column 14 in row 460 in conference csv data
+
+Correcting paper "ОјTunes: A Study of Musicality Perception in an Evolutionary Context" author Robin's gender (male)
+Corrected column 10 in row 760 in conference csv data
+
+Correcting paper "Audio Signal Visualisation and Measurement" author Robin's gender (male)
+Corrected column 3 in row 821 in conference csv data
+
+Correcting paper "Learning Musical Contour on a Tabletop" author Robin's gender (male)
+Corrected column 10 in row 880 in conference csv data
+
+Correcting paper "ISSUES AND TECHNIQUES FOR COLLABORATIVE MUSIC MAKING ON MULTI-TOUCH SURFACES" author Robin's gender (male)
+Corrected column 3 in row 291 in conference csv data
+
+Correcting paper "Real-time event sequencing without a visual interface" author Romis's gender (male)
+Corrected column 14 in row 578 in conference csv data
+
+Correcting paper "Surface as Structure: The multi-touch controller as map of musical state space" author Sam's gender (male)
+Corrected column 12 in row 487 in conference csv data
+
+Correcting paper "Automatic Competency Assessment of Rhythm Performances of Ninth-grade and Tenth-grade Pupils" author Sascha's gender (male)
+Corrected column 12 in row 807 in conference csv data
+
+Correcting paper "A Score-Informed Computational Description of Svaras Using a Statistical Model" author Sertan's gender (male)
+Corrected column 3 in row 1024 in conference csv data
+
+Correcting paper "Composition Identification in Ottoman-Turkish Makam Music Using Transposition-Invariant Partial Audio-Score Alignment" author Sertan's gender (male)
+Corrected column 3 in row 1025 in conference csv data
+
+Correcting paper "Emerging Composition: Being and Becoming" author Sever's gender (male)
+Corrected column 3 in row 1029 in conference csv data
+
+Correcting paper "Mapping and dimensionality of a cloth-based sound instrument" author Sha's gender (male)
+Corrected column 12 in row 173 in conference csv data
+
+Correcting paper "A MODEL SELECTION TEST ON EFFECTIVE FACTORS OF THE CHOICE OF EXPRESSIVE TIMING CLUSTERS FOR A PHRASE" author Shengchen's gender (male)
+Corrected column 3 in row 996 in conference csv data
+
+Correcting paper "DANCEREPRODUCER: AN AUTOMATIC MASHUP MUSIC VIDEO GENERATION SYSTEM BY REUSING DANCE VIDEO CLIPS ON THE WEB" author Shigeo's gender (male)
+Corrected column 14 in row 367 in conference csv data
+
+Correcting paper "Automatic Singing Voice To Music Video Generation Via Mashup Of Singing Video Clips" author Shigeo's gender (male)
+Corrected column 18 in row 894 in conference csv data
+
+Correcting paper "Musicmean: Fusion-based Music Generation" author Shigeo's gender (male)
+Corrected column 12 in row 913 in conference csv data
+
+Correcting paper "Musicmean: Fusion-based Music Generation" author Shoto's gender (male)
+Corrected column 10 in row 913 in conference csv data
+
+Correcting paper "A Computational Model of Tonality Cognition Based on Prime Factor Representation of Frequency Ratios and Its Application" author Shun's gender (male)
+Corrected column 3 in row 957 in conference csv data
+
+Correcting paper "Simulated Formant Modeling of Accompanied Singing Signals for Vocal Melody Extraction" author Shyh-Kang's gender (male)
+Corrected column 12 in row 481 in conference csv data
+
+Correcting paper "Structural Modeling Of Pinna-Related Transfer Functions" author Simone's gender (male)
+Corrected column 3 in row 331 in conference csv data
+
+Correcting paper "Employing Spatial Sonification Of Target Motion In Tracking Exercises" author Simone's gender (male)
+Corrected column 3 in row 454 in conference csv data
+
+Correcting paper " "Real-time binaural audio rendering in the near field"" author Simone's gender (male)
+Corrected column 3 in row 223 in conference csv data
+
+Correcting paper "Factors Influencing Vocal Pitch in Articulatory Speech Synthesis: A Study Using PRAAT" author Sivaramakrishnan's gender (male)
+Corrected column 3 in row 1001 in conference csv data
+
+Correcting paper "An analog I/O interface board for Audio Arduino open sound card system" author Smilen's gender (male)
+Corrected column 3 in row 353 in conference csv data
+
+Correcting paper "CONTROL SEARCH USING RULES, TESTS AND MEASURES" author Somnuk's gender (male)
+Corrected column 3 in row 13 in conference csv data
+
+Correcting paper "LOGICAL REPRESENTATION OF MUSICAL CONCEPTS" author Somnuk's gender (male)
+Corrected column 3 in row 26 in conference csv data
+
+Correcting paper "TOWARDS A PERSONALIZED TECHNICAL EAR TRAINING PROGRAM: AN INVESTIGATION OF THE EFFECT OF ADAPTIVE FEEDBACK" author Sungyoung's gender (male)
+Corrected column 10 in row 419 in conference csv data
+
+Correcting paper "MEASURING THE INTERACTION BETWEEN BASSOON AND HORN PLAYERS IN ACHIEVING TIMBRE BLEND" author Sven-Amin's gender (male)
+Corrected column 3 in row 553 in conference csv data
+
+Correcting paper "A Computational Model of Tonality Cognition Based on Prime Factor Representation of Frequency Ratios and Its Application" author Tadachika's gender (male)
+Corrected column 10 in row 957 in conference csv data
+
+Correcting paper "PERFORMANCE RENDERING FOR POLYPHONIC PIANO MUSIC WITH A COMBINATION OF PROBABILISTIC MODELS FOR MELODY AND HARMONY" author Tae's gender (male)
+Corrected column 3 in row 274 in conference csv data
+
+Correcting paper "Timbral Hauntings: An Interactive System Re-Interpreting the Present in Echoes of the Past" author Tae's gender (male)
+Corrected column 10 in row 656 in conference csv data
+
+Correcting paper "Citygram One: One Year Later вЂ¦" author Tae's gender (male)
+Corrected column 3 in row 691 in conference csv data
+
+Correcting paper "Towards Soundscape Information Retrieval (SIR)" author Tae's gender (male)
+Corrected column 3 in row 802 in conference csv data
+
+Correcting paper "Non-negative Sparse Decomposition of Musical Signal using Pre-trained Dictionary of Feature Vectors of Possible Tones from Different Instruments" author Takio's gender (male)
+Corrected column 10 in row 897 in conference csv data
+
+Correcting paper "Modeling of Melodic Rhythm Based on Entropy toward Creating Expectation and Emotion" author Takuro's gender (male)
+Corrected column 10 in row 560 in conference csv data
+
+Correcting paper "LEGATO AND GLISSANDO IDENTIFICATION IN CLASSICAL GUITAR" author Tan's gender (male)
+Corrected column 3 in row 336 in conference csv data
+
+Correcting paper "Modeling of Melodic Rhythm Based on Entropy toward Creating Expectation and Emotion" author Tatsuji's gender (male)
+Corrected column 14 in row 560 in conference csv data
+
+Correcting paper "Automatic Singing Voice To Music Video Generation Via Mashup Of Singing Video Clips" author Tatsunori's gender (male)
+Corrected column 3 in row 894 in conference csv data
+
+Correcting paper "Musicmean: Fusion-based Music Generation" author Tatsunori's gender (male)
+Corrected column 3 in row 913 in conference csv data
+
+Correcting paper "A Computational Model of Tonality Cognition Based on Prime Factor Representation of Frequency Ratios and Its Application" author Toramatsu's gender (male)
+Corrected column 12 in row 957 in conference csv data
+
+Correcting paper "AUTOMATIC MUSIC COMPOSITION BASED ON COUNTERPOINT AND IMITATION USING STOCHASTIC MODELS" author Tsubasa's gender (male)
+Corrected column 3 in row 318 in conference csv data
+
+Correcting paper "Automatic Melodic Grammar Generation For Polyphonic Music Using A Classifier System" author Tsubasa's gender (male)
+Corrected column 3 in row 440 in conference csv data
+
+Correcting paper "REINFORCEMENT LEARNING MODELS FOR ACQUIRING" author Tsubasa's gender (male)
+Corrected column 3 in row 583 in conference csv data
+
+Correcting paper "Interval Scale as Group Generators" author Tsubasa's gender (male)
+Corrected column 3 in row 778 in conference csv data
+
+Correcting paper "Score-informed Piano Tutoring System With Mistake Detection And Score Simplification" author Tsubasa's gender (male)
+Corrected column 3 in row 939 in conference csv data
+
+Correcting paper "IMPROVING PERFORMERSвЂ™ MUSICALITY THROUGH LIVE INTERACTION WITH HAPTIC FEEDBACK: A CASE STUDY" author Tychonas's gender (male)
+Corrected column 3 in row 386 in conference csv data
+
+Correcting paper "Building a Gamelan from Bricks" author Tzu-En's gender (male)
+Corrected column 3 in row 710 in conference csv data
+
+Correcting paper "Cephalomorphic interface for emotion-based music synthesis" author Vassilios-Fivos's gender (male)
+Corrected column 3 in row 142 in conference csv data
+
+Correcting paper "Experimental (Оґ, Оі)-Pattern-Matching with DonвЂ™t Cares" author Velumailum's gender (male)
+Corrected column 12 in row 130 in conference csv data
+
+Correcting paper "SUSTAINABLE LIVE ELECTRO-ACOUSTIC MUSIC" author Vidolin's gender (male)
+Corrected column 10 in row 84 in conference csv data
+
+Correcting paper "How well Can A Music Emotion Recognition System Predict The Emotional Responses Of Participants?" author Yading's gender (male)
+Corrected column 3 in row 905 in conference csv data
+
+Correcting paper "Resolving Octave Ambiguities: A Cross-dataset Investigation" author Yi-Hsuan's gender (male)
+Corrected column 12 in row 764 in conference csv data
+
+Correcting paper "A Study on Cross-cultural and Cross-dataset Generalizability of Music Mood Regression Models" author Yi-Hsuan's gender (male)
+Corrected column 10 in row 791 in conference csv data
+
+Correcting paper "Power-Scaled Spectral Flux and Peak-Valley Group-Delay Methods for Robust Musical Onset Detection" author Yi-Hsuan's gender (male)
+Corrected column 10 in row 799 in conference csv data
+
+Correcting paper "Automatic Multitrack Mixing Using Linear Dynamical Systems" author Youngmoo's gender (male)
+Corrected column 14 in row 362 in conference csv data
+
+Correcting paper "Design and Applications of a Multi-Touch Musical Keyboard" author Youngmoo's gender (male)
+Corrected column 10 in row 369 in conference csv data
+
+Correcting paper "Designing an Expressive Virtual Percussive Instrument" author Youngmoo's gender (male)
+Corrected column 12 in row 370 in conference csv data
+
+Correcting paper "PROTOTYPING WIRELESS INTEGRATED WEARABLE INTERACTIVE MUSIC SYSTEM" author Yu-Chung's gender (male)
+Corrected column 3 in row 1032 in conference csv data
+
+Correcting paper "ArmKeyBoard: A Mobile Keyboard Instrument Based on Chord-scale System and Tonal Hierarchy" author Yu-kwong's gender (male)
+Corrected column 12 in row 707 in conference csv data
+
+Correcting paper "Organic Oscillator: Experiments using Natural Oscillation Sources from Audiences" author Yuan-Yi's gender (male)
+Corrected column 3 in row 727 in conference csv data
+
+Correcting paper "Automatic Singing Voice To Music Video Generation Via Mashup Of Singing Video Clips" author Yukara's gender (male)
+Corrected column 10 in row 894 in conference csv data
+
+Correcting paper "Score-informed Piano Tutoring System With Mistake Detection And Score Simplification" author Yukara's gender (male)
+Corrected column 10 in row 939 in conference csv data
+
+Correcting paper "Music Performance Assistance System Based On Vocal, Harmonic, And Percussive Source Separation And Content Visualization For Music Audio Signals" author Yukara's gender (male)
+Corrected column 10 in row 941 in conference csv data
+
+Correcting paper "SENSITIVITY TO LOUDSPEAKER PERMUTATIONS DURING AN EIGHT-CHANNEL ARRAY REPRODUCTION OF PIANO NOTES" author Yuri's gender (male)
+Corrected column 10 in row 588 in conference csv data
+
+Correcting paper "Infrared vs. Ultrasonic Finger Detection on a Virtual Piano Keyboard" author Yuri's gender (male)
+Corrected column 3 in row 716 in conference csv data
+
+Correcting paper "Human-Computer Music Performance: From Synchronized Accompaniment to Musical Partner" author Zeyu's gender (male)
+Corrected column 10 in row 544 in conference csv data
+
+Correcting paper "DYNAMIC INTERMEDIATE MODELS FOR AUDIOGRAPHIC SYNTHESIS" author Г‰milien's gender (male)
+Corrected column 14 in row 372 in conference csv data
+
+Correcting paper "Beyond movement an animal" author Alkiviades's gender (None)
+Corrected column 3 in row 139 in conference csv data
+
+Correcting paper "PROTOTYPING WIRELESS INTEGRATED WEARABLE INTERACTIVE MUSIC SYSTEM" author Bo-Ting's gender (None)
+Corrected column 10 in row 1032 in conference csv data
+
+Correcting paper "Resolving Octave Ambiguities: A Cross-dataset Investigation" author Hsin-Yu's gender (None)
+Corrected column 14 in row 764 in conference csv data
+
+Correcting paper "MUSE: a Music-making Sandbox Environment for Real-Time Collaborative Play" author Iulius's gender (None)
+Corrected column 3 in row 954 in conference csv data
+
+Correcting paper "Gestural control of wavefield synthesis" author Jian's gender (None)
+Corrected column 18 in row 985 in conference csv data
+
+Correcting paper "Exploring the General Melodic Characteristics of XinTianYou Folk Songs" author Jianhang's gender (None)
+Corrected column 12 in row 895 in conference csv data
+
+Correcting paper "AUTOMATIC SONG COMPOSITION FROM THE LYRICS EXPLOITING PROSODY OF JAPANESE LANGUAGE" author Kei's gender (None)
+Corrected column 10 in row 313 in conference csv data
+
+Correcting paper "EXPRESSIVE HUMANOID ROBOT FOR AUTOMATIC ACCOMPANIMENT" author Kei's gender (None)
+Corrected column 12 in row 1036 in conference csv data
+
+Correcting paper "IMAGE SONIFICATION BASED ON OBJECT AND FEATURE EXTRACTION" author Keunhyoung's gender (None)
+Corrected column 3 in row 545 in conference csv data
+
+Correcting paper "Griddy: a Drawing Based Music Composition System with Multi-layered Structure" author Keunhyoung's gender (None)
+Corrected column 3 in row 669 in conference csv data
+
+Correcting paper "Infrared vs. Ultrasonic Finger Detection on a Virtual Piano Keyboard" author Linmi's gender (None)
+Corrected column 12 in row 716 in conference csv data
+
+Correcting paper "Exploring the General Melodic Characteristics of XinTianYou Folk Songs" author Lu's gender (None)
+Corrected column 10 in row 895 in conference csv data
+
+Correcting paper "EXPRESSIVE HUMANOID ROBOT FOR AUTOMATIC ACCOMPANIMENT" author Mao's gender (None)
+Corrected column 10 in row 1036 in conference csv data
+
+Correcting paper "MELODY CLASSIFICATION USING A SIMILARITY METRIC BASED ON KOLMOGOROV COMPLEXITY" author Ming's gender (None)
+Corrected column 3 in row 27 in conference csv data
+
+Correcting paper "EXPRESSIVE HUMANOID ROBOT FOR AUTOMATIC ACCOMPANIMENT" author Mutian's gender (None)
+Corrected column 14 in row 1036 in conference csv data
+
+Correcting paper " "Sound Object Classification for Symbolic Audio Mosaicing: A Proof-of-Concept"" author Naoaki's gender (None)
+Corrected column 16 in row 211 in conference csv data
+
+Correcting paper "A Tambourine Support System to Improve the Atmosphere of Karaoke" author Ryunosuke's gender (None)
+Corrected column 12 in row 907 in conference csv data
+
+Correcting paper "Music Synthesis based on Impression and Emotion of Input Narratives" author Saya's gender (None)
+Corrected column 3 in row 926 in conference csv data
+
+Correcting paper "MIXTRACT: AN ENVIRONMENT FOR DESIGNING MUSICAL PHRASE EXPRESSION " author Shunji's gender (None)
+Corrected column 10 in row 306 in conference csv data
+
+Correcting paper "Four-part Harmonization Using Probabilistic Models: Comparison of Models With and Without Chord Nodes" author Syunpei's gender (None)
+Corrected column 3 in row 539 in conference csv data
+
+Correcting paper "REVEALING THE SECRET OF "GROOVE" SINGING: ANALYSIS OF J-POP MUSIC" author Tastuya's gender (None)
+Corrected column 10 in row 961 in conference csv data
+
+Correcting paper "TOWARDS A PERSONALIZED TECHNICAL EAR TRAINING PROGRAM: AN INVESTIGATION OF THE EFFECT OF ADAPTIVE FEEDBACK" author Teruaki's gender (None)
+Corrected column 3 in row 419 in conference csv data
+
+Correcting paper "PROTOTYPING WIRELESS INTEGRATED WEARABLE INTERACTIVE MUSIC SYSTEM" author Tsung-Hua's gender (None)
+Corrected column 12 in row 1032 in conference csv data
+
+Correcting paper "A Research of Automatic Composition and Singing Voice Synthesis System for Taiwanese Popular Songs" author Wei-Gang's gender (None)
+Corrected column 10 in row 818 in conference csv data
+
+Correcting paper "Creating Expressive Piano Performance Using a Low-dimensional Performance Model" author Yupeng's gender (None)
+Corrected column 3 in row 530 in conference csv data
+
