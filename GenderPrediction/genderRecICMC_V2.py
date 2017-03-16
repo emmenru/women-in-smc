@@ -106,7 +106,7 @@ male=0
 female=0
 
 # for rows in data frame
-for i in range(3684, len(df)):
+for i in range(0, len(df)):
     print i
     authorlist=df.ix[i,1]
     title=df.ix[i,0]
