@@ -4,13 +4,17 @@ s.boot()
 
 
 // to do:
-// add amps for respecitve male ... it should not be set to the first author, they should be silent mostly....
+// add amps for respective male ... it should not be set to the first author, they should be silent mostly....
 // maybe this is not needed. however, now the sounds are triggered by frequency right?
 
-// add reverb on overall output bus
-// randomize which side the impact sounds come
-// the gender1_female synth does not play the first frequency, but all of the rest of them...
+// frequencies and amplitudes etc.
+// fix so that variables are in a list
+// add todi scale for frequencies on impact
 
+// consider adding a granular synthesizer instead of impact sounds....possibly
+
+// the gender1_female synth does not play the first frequency, but all of the rest of them...
+// use trace
 
 // add so that second authors are rain drops
 // add up to 14 authors for SMC, 10 authors for NIME, 17 for ICMC
