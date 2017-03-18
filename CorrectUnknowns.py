@@ -7,38 +7,21 @@ import pprint
 # run using python CorrectUnknowns.py > SMC_log.txt
 
 
-CSV_PATH = 'Data/SMCoutput/OnePackage-genderize.io'
-INCOMPLETE_CONFERENCE_CSV = os.path.join(
-    CSV_PATH,
-    'SMC_NonCorrected.csv')
-GENDER_LOOKUP_CSV = os.path.join(
-    CSV_PATH,
-    'SMCgenderOutputUnknowns&Ambigous.csv')
-OUTPUT_CSV = os.path.join(
-    CSV_PATH,
-    'SMC_Corrected.csv')
-OUTPUTSTATS_CORRECTED_CSV = os.path.join(
-    CSV_PATH,
-    'SMC_Stats_Corrected.csv')
-OUTPUTSTATS_NONCORRECTED_CSV = os.path.join(
-    CSV_PATH,
-    'SMC_Stats_Non_Corrected.csv')
-
 PAPER_TITLE_CSV_COLUMN_INDEX = 7
 YEAR_CSV_COLUMN_INDEX = 5
 ROW_INDEX_CSV_COLUMN_INDEX = 0  # Stupid.
 
 
-def output_complete_csv(conference_data):
-    with open(OUTPUT_CSV, 'wb') as csvfile:
+def output_complete_csv(conference_data,output_csv):
+    with open(output_csv, 'wb') as csvfile:
         csv_writer = csv.writer(csvfile, delimiter=',')
         for row in conference_data:
             csv_writer.writerow(row)
 
 
-def get_conference_data():
+def get_conference_data(incomplete_conference_csv):
     data = []
-    with open(INCOMPLETE_CONFERENCE_CSV, 'rb') as conference_csv:
+    with open(incomplete_conference_csv, 'rb') as conference_csv:
         csv_reader = csv.reader(conference_csv, delimiter=',')
         for row in csv_reader:
             data.append(row)
@@ -75,8 +58,11 @@ def amend_data(data,
     sys.exit(1)
 
 
-def print_conference_stats(conference_data,output_file_name):
-    GENDER_COLUMNS = [3, 10, 12, 14,16, 18, 20, 22, 24,
+def print_conference_stats(conference_data,
+                           output_file_name,
+                           num_gender_columns,
+                           has_probability):
+    GENDER_COLUMNS = [3, 10, 12, 14, 16, 18, 20, 22, 24,
                       26, 28, 30, 32, 34, 36, 38, 40]
     PROBABILITY_COLUMNS = range(41,58)
 
@@ -103,12 +89,16 @@ def print_conference_stats(conference_data,output_file_name):
         year_gender_dict = year_dict[row_year]
 
         #print "Counting on row", row[0]
-        for column_index in GENDER_COLUMNS:
+        for column_index in GENDER_COLUMNS[0:num_gender_columns]:
             # Count for each gender in dict
             for key in gender_dict:
                 if row[column_index].strip().lower() == key:
                     year_gender_dict[key] += 1
                     #print "   Hit on ", key, "|", column_index, gender_dict
+
+        # Don't calculate probability if dataset has none
+        if not has_probability:
+            continue
 
         for column_index in PROBABILITY_COLUMNS:
                 try:
@@ -119,9 +109,9 @@ def print_conference_stats(conference_data,output_file_name):
                     # print "Could not convert to float: %s" % (error)
                     continue
 
-
     #print "\n\nCalculating gender statistics"
     # Take keys from year_dict and sort them
+
     years = [int(y) for y in year_dict]
     years.sort()
 
@@ -177,22 +167,42 @@ def print_conference_stats(conference_data,output_file_name):
 
 
 
-def lookup_author_gender():
-    conf_data = get_conference_data()
+def lookup_author_gender(output_csv,
+                         incomplete_conference_csv,
+                         gender_lookup_csv,
+                         output_stats_corrected_csv,
+                         output_stats_noncorrected_csv,
+                         columns,
+                         has_probability=False):
+    conf_data = get_conference_data(incomplete_conference_csv)
     # Array slizing to get copy of list (actually copy of list of lists)
     noncorrected_conf_data = conf_data[:]
     # function for counting data in uncorrected file
-    print_conference_stats(conf_data,OUTPUTSTATS_NONCORRECTED_CSV)
-
+    print_conference_stats(conf_data,
+                           output_stats_noncorrected_csv,
+                           columns,
+                           has_probability)
     print "Going through CSV with correct author gender"
-    with open(GENDER_LOOKUP_CSV, 'rb') as gender_csv:
+    i = 0
+    with open(gender_lookup_csv, 'rb') as gender_csv:
+        print i
         csv_reader = csv.reader(gender_csv, delimiter=',')
         csv_reader.next()
-        for name, gender, title, _, _ in csv_reader:
+        for name, gender, title, _ in csv_reader:
             index = amend_data(conf_data, title, name, gender)
-    print "\n" * 10
-    output_complete_csv(conf_data)
-    print_conference_stats(conf_data,OUTPUTSTATS_CORRECTED_CSV)
+        i += 1
+    #print "\n" * 10
+    output_complete_csv(conf_data, output_csv)
+    print_conference_stats(conf_data,
+                           output_stats_corrected_csv,
+                           columns,
+                           has_probability)
 
 if __name__ == '__main__':
-    lookup_author_gender()
+    lookup_author_gender(output_csv,
+        incomplete_conference_csv,
+        gender_lookup_csv,
+        output_stats_corrected_csv,
+        output_stats_noncorrected_csv,
+        columns,
+        has_probability)
