@@ -29,15 +29,16 @@ def get_conference_data(incomplete_conference_csv):
 
 
 def correct_author_gender(row, author_name, correct_gender):
-    author_found = 0
+    """
+    If there are multiple occurrences of the author_name
+    all authors in the paper's will have their gender corrected
+    """
+    author_found = []
     for index, cell in enumerate(row):
         if cell == author_name:
-            if not author_found:
-                row[index+1] = correct_gender
-                author_found = index+1
-            else:
-                print "Author name appears more than once in paper row!"
-                sys.exit(1)
+            row[index+1] = correct_gender
+            author_found.append(index+1)
+
     return author_found
 
 

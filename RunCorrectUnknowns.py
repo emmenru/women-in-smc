@@ -1,6 +1,8 @@
+# coding: utf8
 import CorrectUnknowns
 import os
 
+# The Music, Technology and Innovation Research Group (MTIRG) at De Montfort University ‰ЫХ Studio Report
 
 # SMC
 SMC_csv_path = 'Data/SMCoutput/OnePackage-genderize.io'
@@ -53,4 +55,5 @@ CorrectUnknowns.lookup_author_gender(
     ICMC_gender_lookup_csv,
     ICMC_output_stats_corrected_csv,
     ICMC_output_stats_noncorrected_csv,
-    ICMC_columns)
+    ICMC_columns,
+    True)
