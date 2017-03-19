@@ -53,8 +53,8 @@ def amend_data(data,
     #                                                            gender)
     for index, row in enumerate(data):
         if paper_title == row[PAPER_TITLE_CSV_COLUMN_INDEX]:
-            if row[YEAR_CSV_COLUMN_INDEX] == '2012':
-                print "\n### 2012 paper %s corrected author: %s" % (paper_title, author_name)
+            if row[YEAR_CSV_COLUMN_INDEX] == '1997':
+                print "\n### 1997 paper %s corrected author: %s" % (paper_title, author_name)
             col_index = correct_author_gender(data[index], author_name, gender)
             # print "Corrected column %s in row %s in conference csv data" % (
             #    col_index, index)
@@ -149,7 +149,9 @@ def print_conference_stats(conference_data,
                 female_rate,
                 none_rate])
 
-
+            if year==2012:
+                print "Found year 2012, TOTAL NAMES: ", tot_authors
+                print year_dict[year_str]
             # for gender in year_dict[year_str]:
             #     print "  %s: %s" % (gender,
             #                         year_dict[year_str][gender])
