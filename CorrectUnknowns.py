@@ -36,7 +36,7 @@ def correct_author_gender(row, author_name, correct_gender):
     author_found = []
     for index, cell in enumerate(row):
         if cell == author_name:
-            if row[YEAR_CSV_COLUMN_INDEX] == '2012':
+            if row[YEAR_CSV_COLUMN_INDEX] == '1997':
                 print "Corrected|     %s --> %s" % (row[index+1], correct_gender)
             row[index+1] = correct_gender
             author_found.append(index+1)
@@ -149,9 +149,7 @@ def print_conference_stats(conference_data,
                 female_rate,
                 none_rate])
 
-            if year==2012:
-                print "Found year 2012, TOTAL NAMES: ", tot_authors
-                print year_dict[year_str]
+
             # for gender in year_dict[year_str]:
             #     print "  %s: %s" % (gender,
             #                         year_dict[year_str][gender])

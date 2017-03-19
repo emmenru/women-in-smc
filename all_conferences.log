@@ -2,892 +2,183 @@ NAMES FOR UNCORRECTED DATA :
 Found year 2012, TOTAL NAMES:  342
 {'none': 40, 'male': 272, 'female': 30}
 Going through CSV with correct author gender
-Correcting paper "The Manipuller : Strings Manipulation and Multi-Dimensional Force Sensing" author Adrián's gender (male)
-Corrected column [3] in row 748 in conference csv data
-Correcting paper "The Manipuller II: Strings within a Force Sensing Ring" author Adrián's gender (male)
-Corrected column [3] in row 1122 in conference csv data
-Correcting paper "Play-A-Grill: Music To Your Teeth" author Aisen's gender (female)
-Corrected column [3] in row 887 in conference csv data
-Correcting paper "Spinner: A Simple Approach to Reconfigurable User Interfaces" author Akamasu's gender (male)
-Corrected column [10] in row 202 in conference csv data
-Correcting paper "Experiments with Virtual Reality Instruments" author Aki's gender (male)
-Corrected column [12] in row 210 in conference csv data
-Correcting paper "Lantern Field: Exploring Participatory Design of a Communal, Spatially Responsive Installation" author Aki's gender (female)
-Corrected column [10] in row 1011 in conference csv data
-Correcting paper "The Augmented Djembe Drum - Sculpting Rhythms" author Aki's gender (male)
-Corrected column [12] in row 300 in conference csv data
-Correcting paper "Beatscape , a Mixed Virtual-Physical Environment for Musical Ensembles" author Akito's gender (male)
-Corrected column [12] in row 743 in conference csv data
-Correcting paper "Composing Embodied Sonic Play Experiences: Towards Acoustic Feedback Ecology" author Akito's gender (male)
-Corrected column [3] in row 1249 in conference csv data
-Correcting paper "DrumTop: Playing with Everyday Objects" author Akito's gender (male)
-Corrected column [3] in row 991 in conference csv data
-Correcting paper "scoreLight : Playing with a Human-Sized Laser Pick-Up" author Alavaro's gender (male)
-Corrected column [3] in row 643 in conference csv data
-Correcting paper "LoopJam: turning the dance floor into a collaborative instrumental map" author Alexis's gender (male)
-Corrected column [14] in row 898 in conference csv data
-Correcting paper "MAGE 2.0: New Features and its Application in the Development of a Talking Guitar" author Alexis's gender (male)
-Corrected column [14] in row 1004 in conference csv data
-Correcting paper "Movement to emotions to music: using whole body emotional expression as an interaction for electronic music generation" author Alexis's gender (male)
-Corrected column [3] in row 889 in conference csv data
-Correcting paper "scoreLight : Playing with a Human-Sized Laser Pick-Up" author Alexis's gender (male)
-Corrected column [12] in row 643 in conference csv data
-Correcting paper "Dynamics in Music Conducting: A Computational Comparative Study Among Subjects" author Álvaro's gender (None)
-Corrected column [3] in row 1233 in conference csv data
-Correcting paper "Network Latency Adaptive Tempo in the Public Sound Objects System" author Álvaro's gender (male)
-Corrected column [3] in row 168 in conference csv data
-Correcting paper "Perfect Take: Experience design and new interfaces for musical expression" author Álvaro's gender (male)
-Corrected column [10] in row 940 in conference csv data
-Correcting paper "Ten-Hand Piano : A Networked Music Installation" author Álvaro's gender (male)
-Corrected column [3] in row 433 in conference csv data
-Correcting paper "Designing Empowering Vocal and Tangible Interaction" author Anders-Petter's gender (male)
-Corrected column [3] in row 1003 in conference csv data
-Correcting paper "Designing Sound for Recreation and Well-Being" author Anders-Petter's gender (male)
-Corrected column [3] in row 1120 in conference csv data
-Correcting paper "Expanding the Role of the Instrument" author Anders-Petter's gender (male)
-Corrected column [10] in row 760 in conference csv data
-Correcting paper "Perfect Take: Experience design and new interfaces for musical expression" author André's gender (male)
-Corrected column [12] in row 940 in conference csv data
-Correcting paper "Augmented Stage for Participatory Performances" author Andrea's gender (male)
-Corrected column [14] in row 1204 in conference csv data
-Correcting paper "Design and Evaluation of a Hybrid Reality Performance" author Andrea's gender (male)
-Corrected column [12] in row 869 in conference csv data
-Correcting paper "GeoGraphy : a Real-Time, Graph-Based Composition Environment" author Andrea's gender (male)
-Corrected column [3] in row 510 in conference csv data
-Correcting paper "Integrated Algorithmic Composition Fluid systems for including notation in music composition cycle" author Andrea's gender (male)
-Corrected column [3] in row 511 in conference csv data
-Correcting paper "OSC Virtual Controller" author Andrea's gender (male)
-Corrected column [10] in row 739 in conference csv data
-Correcting paper "The Drummer : a Collaborative Musical Interface with Mobility" author Andrea's gender (male)
-Corrected column [3] in row 528 in conference csv data
-Correcting paper "Ensemble Feedback Instruments" author Anis's gender (male)
-Corrected column [20] in row 1365 in conference csv data
-Correcting paper "Tangible Music Interfaces Using Passive Magnetic Tags" author Ari's gender (male)
-Corrected column [12] in row 10 in conference csv data
-Correcting paper "The Electronic Sitar Controller" author Ariel's gender (None)
-Corrected column [10] in row 132 in conference csv data
-Correcting paper "Real-time Gesture Mapping in Pd Environment using Neural Networks" author Arshia's gender (male)
-Corrected column [3] in row 115 in conference csv data
-Correcting paper "TOASTER and KROONDE: High-Resolution and High- Speed Real-time Sensor Interfaces" author Arshia's gender (male)
-Corrected column [12] in row 114 in conference csv data
-Correcting paper "Interactive Public Sound Art: a case study" author Assegid's gender (male)
-Corrected column [12] in row 247 in conference csv data
-Correcting paper "A Framework for Spatial Interaction in Locative Media" author Atau's gender (male)
-Corrected column [3] in row 321 in conference csv data
-Correcting paper "A Survey and Thematic Analysis Approach as Input to the Design of Mobile Music GUIs" author Atau's gender (male)
-Corrected column [3] in row 986 in conference csv data
-Correcting paper "Machine Learning of Musical Gestures" author Atau's gender (male)
-Corrected column [10] in row 1014 in conference csv data
-Correcting paper "Mapping Out Instruments, Affordances, and Mobiles" author Atau's gender (male)
-Corrected column [3] in row 725 in conference csv data
-Correcting paper "Mobile Music Making" author Atau's gender (male)
-Corrected column [3] in row 158 in conference csv data
-Correcting paper "Mobile Music Technology: Report on an Emerging Community" author Atau's gender (male)
-Corrected column [14] in row 266 in conference csv data
-Correcting paper "Multimodal Interaction in Music Using the Electromyogram and Relative Position Sensing" author Atau's gender (male)
-Corrected column [3] in row 54 in conference csv data
-Correcting paper "Muscular Interactions. Combining {EMG} and MMG sensing for musical practice" author Atau's gender (male)
-Corrected column [12] in row 1021 in conference csv data
-Correcting paper "PiaF: A Tool for Augmented Piano Performance Using Gesture Variation Following" author Atau's gender (male)
-Corrected column [12] in row 1264 in conference csv data
-Correcting paper "Prototyping Audiovisual Performance Tools: A Hackathon Approach" author Atau's gender (male)
-Corrected column [10] in row 1322 in conference csv data
-Correcting paper "The A20 : Musical Metaphors for Interface Design" author Atau's gender (male)
-Corrected column [10] in row 434 in conference csv data
-Correcting paper "Towards Gestural Sonic Affordances" author Atau's gender (male)
-Corrected column [12] in row 1002 in conference csv data
-Correcting paper "Daft Datum -- An Interface for Producing Music Through Foot-based Interaction" author Ben-Zhen's gender (male)
-Corrected column [10] in row 810 in conference csv data
-Correcting paper "DeviceCycle : Rapid and Reusable Prototyping of Gestural Interfaces, Applied to Audio Browsing by Similarity" author Benoît's gender (male)
-Corrected column [10] in row 659 in conference csv data
-Correcting paper "Wireless Inertial Sensor Package (WISP)" author Bernie's gender (male)
-Corrected column [3] in row 417 in conference csv data
-Correcting paper "{OR}OBORO: A Collaborative Controller with Interpersonal Haptic Feedback" author Björn's gender (male)
-Corrected column [10] in row 180 in conference csv data
-Correcting paper "Interactive Mobile Music Performance with Digital Compass" author Bongjun's gender (male)
-Corrected column [3] in row 922 in conference csv data
-Correcting paper "The Virtual Bodhran -- The Vodhran" author Breege's gender (None)
-Corrected column [12] in row 43 in conference csv data
-Correcting paper "Digiti Sonus: Advanced Interactive Fingerprint Sonification Using Visual Feature Analysis" author Byeong-jun's gender (male)
-Corrected column [10] in row 1043 in conference csv data
-Correcting paper "Virtual Pottery: An Interactive Audio-Visual Installation" author Byeong-jun's gender (male)
-Corrected column [10] in row 907 in conference csv data
-Correcting paper "The Mutha Rubboard Controller" author Carr's gender (male)
-Corrected column [3] in row 59 in conference csv data
-Correcting paper "TweetDreams : Making Music with the Audience and the World using Real-time Twitter Data" author Carr's gender (male)
-Corrected column [12] in row 768 in conference csv data
-Correcting paper "Left and right-hand guitar playing techniques detection" author Cécile's gender (female)
-Corrected column [16] in row 967 in conference csv data
-Correcting paper "An Interactive Responsive Skin for Music" author Cha-Lin's gender (None)
-Corrected column [10] in row 731 in conference csv data
-Correcting paper "Project Scriabin v.3" author Chang's gender (male)
-Corrected column [3] in row 367 in conference csv data
-Correcting paper "Collaborative Live-Coding with an Immersive Instrument" author Charlie's gender (male)
-Corrected column [10] in row 1256 in conference csv data
-Correcting paper "Ensemble Feedback Instruments" author Charlie's gender (male)
-Corrected column [18] in row 1365 in conference csv data
-Correcting paper "Rapid Creation and Publication of Digital Musical Instruments" author Charlie's gender (male)
-Corrected column [3] in row 1228 in conference csv data
-Correcting paper "Sound Low Fun" author Che-Wei's gender (None)
-Corrected column [10] in row 860 in conference csv data
-Correcting paper "Mobile DJ: a Tangible, Mobile Platform for Active and Collaborative Music Listening" author Chi's gender (None)
-Corrected column [10] in row 1068 in conference csv data
-Correcting paper "A Design Approach to Engage with Audience with Wearable Musical Instruments: Sound Gloves" author Chi-Hsia's gender (female)
-Corrected column [3] in row 925 in conference csv data
-Correcting paper "Audience Experience in Sound Performance" author Chi-Hsia's gender (female)
-Corrected column [3] in row 1064 in conference csv data
-Correcting paper "Hands On Stage : A Sound and Image Performance Interface" author Chi-Hsia's gender (female)
-Corrected column [3] in row 578 in conference csv data
-Correcting paper "Strike on Stage : a Percussion and Media Performance" author Chi-Hsia's gender (female)
-Corrected column [10] in row 822 in conference csv data
-Correcting paper "An Interactive Responsive Skin for Music" author Chih-Chieh's gender (None)
-Corrected column [3] in row 731 in conference csv data
-Correcting paper "Angry Sparrow" author Chikashi's gender (male)
-Corrected column [3] in row 590 in conference csv data
-Correcting paper "Gestural Electronic Music using Machine Learning as Generative Device" author Chikashi's gender (male)
-Corrected column [10] in row 1269 in conference csv data
-Correcting paper "Peacock : A Non-Haptic {3D} Performance Interface" author Chikashi's gender (male)
-Corrected column [3] in row 703 in conference csv data
-Correcting paper "Harmonic Intonation Trainer: An Open Implementation in Pure Data" author Chin-Ming's gender (None)
-Corrected column [10] in row 1350 in conference csv data
-Correcting paper "B.O.M.B. -Beat Of Magic Box -: Stand-Alone Synthesizer Using Wireless Synchronization System For Musical Session and Performance" author Chuichi's gender (male)
-Corrected column [12] in row 1213 in conference csv data
-Correcting paper "Hop Step Junk: Sonic Visualization using Footsteps" author Chuichi's gender (male)
-Corrected column [10] in row 214 in conference csv data
-Correcting paper "LINE: Interactive Sound and Light Installation" author Chuichi's gender (male)
-Corrected column [14] in row 287 in conference csv data
-Correcting paper "POWDER BOX: An Interactive Device with Sensor Based Replaceable Interface For Musical Session" author Chuichi's gender (male)
-Corrected column [12] in row 1079 in conference csv data
-Correcting paper "Sound Rose: Creating Music and Images with a Touch Table" author Chuichi's gender (male)
-Corrected column [16] in row 256 in conference csv data
-Correcting paper "Eight Years of Practice on the Hyper-Flute : Technological and Musical Perspectives" author Cléo's gender (female)
-Corrected column [3] in row 493 in conference csv data
-Correcting paper "The Hyper-Flute" author Cléo's gender (female)
-Corrected column [3] in row 96 in conference csv data
-Correcting paper "Live Coding Practice" author Click's gender (male)
-Corrected column [3] in row 395 in conference csv data
-Correcting paper "Miller" author Collective's gender (None)
-Corrected column [3] in row 354 in conference csv data
-Correcting paper "Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience" author Da-Lei's gender (None)
-Corrected column [10] in row 935 in conference csv data
-Correcting paper "Laptap: Laptop Computer as a Musical Instrument using Audio Feedback" author Dae's gender (None)
-Corrected column [3] in row 1046 in conference csv data
-Correcting paper "New Interfaces for Traditional Korean Music and Dance" author Dae's gender (None)
-Corrected column [10] in row 1057 in conference csv data
-Correcting paper "Sound Surfing Network (SSN): Mobile Phone-based Sound Spatialization with Audience Collaboration" author Dae's gender (None)
-Corrected column [12] in row 1087 in conference csv data
-Correcting paper "scoreLight : Playing with a Human-Sized Laser Pick-Up" author Daito's gender (male)
-Corrected column [16] in row 643 in conference csv data
-Correcting paper "Stage- vs. Channel-strip Metaphor - Comparing Performance when Adjusting Volume and Panning of a Single Channel in a Stereo Mix" author Dannie's gender (male)
-Corrected column [10] in row 1361 in conference csv data
-Correcting paper "DIRTI ---Dirty Tangible Interfaces" author Diemo's gender (male)
-Corrected column [10] in row 971 in conference csv data
-Correcting paper "Rich Contacts: Corpus-Based Convolution of Contact Interaction Sound for Enhanced Musical Expression" author Diemo's gender (male)
-Corrected column [3] in row 1236 in conference csv data
-Correcting paper "Score Following: State of the Art and New Developments" author Diemo's gender (male)
-Corrected column [12] in row 95 in conference csv data
-Correcting paper "Surfing the Waves : Live Audio Mosaicing of an Electric Bass Performance as a Corpus Browsing Interface" author Diemo's gender (male)
-Corrected column [10] in row 730 in conference csv data
-Correcting paper "The Sound Space as Musical Instrument: Playing Corpus-Based Concatenative Synthesis" author Diemo's gender (male)
-Corrected column [3] in row 975 in conference csv data
-Correcting paper "Tingle: A Digital Music Controller Re-Capturing the Acoustic Instrument Experience" author Diemo's gender (male)
-Corrected column [10] in row 1360 in conference csv data
-Correcting paper "A Max/MSP Approach for Incorporating Digital Music via Laptops in Live Performances of Music Bands" author Dima's gender (None)
-Corrected column [16] in row 1119 in conference csv data
-Correcting paper "Circles and Seeds: Adapting Kpelle Ideas about Music Performance for Collaborative Digital Music performance" author Donagh's gender (None)
-Corrected column [12] in row 31 in conference csv data
-Correcting paper "Low-Latency Audio Pitch Tracking: A Multi-Modal Sensor-Assisted Approach" author Dongjuan's gender (None)
-Corrected column [10] in row 1218 in conference csv data
-Correcting paper "Swayway - Midi Chimes" author Doria's gender (None)
-Corrected column [10] in row 215 in conference csv data
-Correcting paper "Multidimensional sound spatialization by means of chaotic dynamical systems" author Edmar's gender (male)
-Corrected column [3] in row 1101 in conference csv data
-Correcting paper "The Sound Flinger : A Haptic Spatializer" author Eli's gender (male)
-Corrected column [10] in row 763 in conference csv data
-Correcting paper "Prototyping hand-based wearable music education technology" author Esa's gender (male)
-Corrected column [12] in row 1281 in conference csv data
-Correcting paper "Paralinguistic Microphone" author EunJoo's gender (None)
-Corrected column [10] in row 1073 in conference csv data
-Correcting paper "Extracting Human Expression For Interactive Composition with the Augmented Violin" author Fred́éric's gender (male)
-Corrected column [12] in row 923 in conference csv data
-Correcting paper "Probabilistic Models for Designing Motion and Sound Relationships" author Frédéric's gender (male)
-Corrected column [14] in row 1151 in conference csv data
-Correcting paper "Development of A Learning Environment for Playing Erhu by Diagnosis and Advice regarding Finger Position on Strings" author Fumitaka's gender (None)
-Corrected column [3] in row 1059 in conference csv data
-Correcting paper "MoodifierLive : Interactive and Collaborative Expressive Music Performance on Mobile Devices" author Gaël's gender (male)
-Corrected column [10] in row 775 in conference csv data
-Correcting paper "A Novel Face-tracking Mouth Controller and its Application to Interacting with Bioacoustic Models" author Gamhewage's gender (male)
-Corrected column [3] in row 153 in conference csv data
-Correcting paper "Biomuse Trio" author Gascia's gender (female)
-Corrected column [12] in row 584 in conference csv data
-Correcting paper "Music for Sleeping \& Waking Minds" author Gascia's gender (female)
-Corrected column [3] in row 959 in conference csv data
-Correcting paper "Auraglyph: Handwritten Computer Music Composition and Design" author Ge's gender (male)
-Corrected column [10] in row 1232 in conference csv data
-Correcting paper "Borderlands -An Audiovisual Interface for Granular Synthesis" author Ge's gender (male)
-Corrected column [10] in row 885 in conference csv data
-Correcting paper "Building Collaborative Graphical interFaces in the Audicle" author Ge's gender (male)
-Corrected column [3] in row 323 in conference csv data
-Correcting paper "Designing for the iPad : Magic Fiddle" author Ge's gender (male)
-Corrected column [3] in row 864 in conference csv data
-Correcting paper "Designing Smule{\textquoteright}s Ocarina : The iPhone{\textquoteright}s Magic Flute" author Ge's gender (male)
-Corrected column [3] in row 622 in conference csv data
-Correcting paper "Don't Forget the Laptop : Using Native Input Capabilities for Expressive Musical Control" author Ge's gender (male)
-Corrected column [10] in row 356 in conference csv data
-Correcting paper "Evolving The Mobile Phone Orchestra" author Ge's gender (male)
-Corrected column [16] in row 709 in conference csv data
-Correcting paper "LOLOL: Laugh Out Loud On Laptop" author Ge's gender (male)
-Corrected column [10] in row 1082 in conference csv data
-Correcting paper "LUSH : An Organic Eco + Music System" author Ge's gender (male)
-Corrected column [10] in row 644 in conference csv data
-Correcting paper "MadPad : A Crowdsourcing System for Audiovisual Sampling" author Ge's gender (male)
-Corrected column [10] in row 811 in conference csv data
-Correcting paper "Many-Person Instruments for Computer Music Performance" author Ge's gender (male)
-Corrected column [12] in row 970 in conference csv data
-Correcting paper "MoMu : A Mobile Music Toolkit" author Ge's gender (male)
-Corrected column [14] in row 636 in conference csv data
-Correcting paper "On-the-fly Programming: Using Code as an Expressive Musical Instrument" author Ge's gender (male)
-Corrected column [3] in row 161 in conference csv data
-Correcting paper "Ping-Pong: Musically Discovering Locations" author Ge's gender (male)
-Corrected column [12] in row 1184 in conference csv data
-Correcting paper "PLOrk Beat Science 2.0" author Ge's gender (male)
-Corrected column [3] in row 623 in conference csv data
-Correcting paper "Sound Bounce : Physical Metaphors in Designing Mobile Music Performance" author Ge's gender (male)
-Corrected column [10] in row 649 in conference csv data
-Correcting paper "SoundCraft: Transducing StarCraft 2" author Ge's gender (male)
-Corrected column [12] in row 1015 in conference csv data
-Correcting paper "Two Turntables and a Mobile Phone" author Ge's gender (male)
-Corrected column [10] in row 758 in conference csv data
-Correcting paper "Yeah, ChucK It! = > Dynamic , Controllable Interface Mapping" author Ge's gender (male)
-Corrected column [3] in row 238 in conference csv data
-Correcting paper "Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments" author Geber's gender (male)
-Corrected column [14] in row 875 in conference csv data
-Correcting paper "Designing DMIs for Popular Music in the Brazilian Northeast: Lessons Learned" author Geber's gender (male)
-Corrected column [16] in row 1312 in conference csv data
-Correcting paper "Sound Spray - can-shaped sound effect device" author Gibeom's gender (None)
-Corrected column [3] in row 1086 in conference csv data
-Correcting paper "Cutaneous Grooves: Composing for the Sense of Touch" author Glorianna's gender (female)
-Corrected column [10] in row 32 in conference csv data
-Correcting paper "TAPIR Sound Tag: An Enhanced Sonic Communication Framework for Audience Participatory Performance" author Gunho's gender (male)
-Corrected column [10] in row 1178 in conference csv data
-Correcting paper "Sketch-Based Musical Composition and Performance" author Haojing's gender (female)
-Corrected column [3] in row 1143 in conference csv data
-Correcting paper "Associating Emoticons with Musical Genres" author Harri's gender (male)
-Corrected column [10] in row 678 in conference csv data
-Correcting paper "Construction of a System for Recognizing Touch of Strings for Guitar" author Hayami's gender (None)
-Corrected column [3] in row 1107 in conference csv data
-Correcting paper "An Open Source Interface based on Biological Neural Networks for Interactive Music Performance" author Hernán's gender (male)
-Corrected column [3] in row 804 in conference csv data
-Correcting paper "Development of A Learning Environment for Playing Erhu by Diagnosis and Advice regarding Finger Position on Strings" author Hirokazu's gender (None)
-Corrected column [14] in row 1059 in conference csv data
-Correcting paper "First Person Shooters as Collaborative Multiprocess Instruments" author Hironori's gender (None)
-Corrected column [12] in row 753 in conference csv data
-Correcting paper "WIJAM: A Mobile Collaborative Improvisation Platform under Master-players Paradigm" author Ho-Cheung's gender (male)
-Corrected column [12] in row 1142 in conference csv data
-Correcting paper "Thermoscore: A New-type Musical Score with Temperature Sensation" author Homei's gender (male)
-Corrected column [3] in row 139 in conference csv data
-Correcting paper "Computer Assisted Melo-rhythmic Generation of Traditional Chinese Music from Ink Brush Calligraphy" author Hong-va's gender (male)
-Corrected column [14] in row 1103 in conference csv data
-Correcting paper "LUSH : An Organic Eco + Music System" author Hongchan's gender (male)
-Corrected column [3] in row 644 in conference csv data
-Correcting paper "The Deckle Project : A Sketch of Three Sensors" author Hongchan's gender (male)
-Corrected column [3] in row 888 in conference csv data
-Correcting paper "WAAX: Web Audio {API} eXtension" author Hongchan's gender (male)
-Corrected column [3] in row 1016 in conference csv data
-Correcting paper "Harmonic Intonation Trainer: An Open Implementation in Pure Data" author Hsin-Ming's gender (male)
-Corrected column [3] in row 1350 in conference csv data
-Correcting paper "Sound Low Fun" author Hui-Yu's gender (None)
-Corrected column [14] in row 860 in conference csv data
-Correcting paper "Light Pipes: A Light Controlled MIDI Instrument" author Humane's gender (female)
-Corrected column [10] in row 162 in conference csv data
-Correcting paper "WIJAM: A Mobile Collaborative Improvisation Platform under Master-players Paradigm" author Hung-Kwan's gender (male)
-Corrected column [16] in row 1142 in conference csv data
-Correcting paper "SORISU : Sound with Numbers" author Hye's gender (None)
-Corrected column [3] in row 589 in conference csv data
-Correcting paper "Interactive Music Studio : The Soloist" author Hyun-Soo's gender (None)
-Corrected column [3] in row 686 in conference csv data
-Correcting paper "Creating Musical Expression using Kinect" author In-Kwon's gender (male)
-Corrected column [12] in row 867 in conference csv data
-Correcting paper "VIFE \_ alpha v.01 Real-time Visual Sound Installation performed by Glove-Gesture" author Iván's gender (male)
-Corrected column [10] in row 223 in conference csv data
-Correcting paper "Elemental \& Cyrene Reefs" author Ivika's gender (male)
-Corrected column [3] in row 530 in conference csv data
-Correcting paper "Introducing L2Ork : Linux Laptop Orchestra" author Ivika's gender (male)
-Corrected column [3] in row 639 in conference csv data
-Correcting paper "IXI software" author IXISoftware's gender (None)
-Corrected column [3] in row 15 in conference csv data
-Correcting paper "Remix_Dance 3: Improvisatory Sound Displacing on Touch Screen-Based Interface" author Jaeseong's gender (male)
-Corrected column [3] in row 1117 in conference csv data
-Correcting paper "boomBox" author Jamie's gender (male)
-Corrected column [3] in row 165 in conference csv data
-Correcting paper "Integra Live : a New Graphical User Interface for Live Electronic Music" author Jamie's gender (male)
-Corrected column [3] in row 759 in conference csv data
-Correcting paper "Kugelschwung -a Pendulum-based Musical Instrument" author Jamie's gender (male)
-Corrected column [3] in row 913 in conference csv data
-Correcting paper "ml.lib: Robust, Cross-platform, Open-source Machine Learning for Max and Pure Data" author Jamie's gender (male)
-Corrected column [3] in row 1308 in conference csv data
-Correcting paper "Orphion: A Gestural Multi-Touch Instrument for the iPad" author Jamie's gender (male)
-Corrected column [10] in row 1250 in conference csv data
-Correcting paper "Towards a Humane Graphical User Interface for Live Electronic Music" author Jamie's gender (male)
-Corrected column [3] in row 531 in conference csv data
-Correcting paper "Action and Perception in Interactive Sound Installations : An Ecological Approach" author Jan's gender (male)
-Corrected column [3] in row 607 in conference csv data
-Correcting paper "Bangarama: Creating Music With Headbanging" author Jan's gender (male)
-Corrected column [14] in row 169 in conference csv data
-Correcting paper "conga: A Framework for Adaptive Conducting Gesture Analysis" author Jan's gender (male)
-Corrected column [14] in row 292 in conference csv data
-Correcting paper "Davos Soundscape, a Location Based Interactive Composition" author Jan's gender (male)
-Corrected column [3] in row 500 in conference csv data
-Correcting paper "Flowspace -- A Hybrid Ecosystem" author Jan's gender (male)
-Corrected column [10] in row 755 in conference csv data
-Correcting paper "Gestural Electronic Music using Machine Learning as Generative Device" author Jan's gender (male)
-Corrected column [3] in row 1269 in conference csv data
-Correcting paper "Gesture Control of Sounds in {3D} Space" author Jan's gender (male)
-Corrected column [3] in row 409 in conference csv data
-Correcting paper "Gliss : An Intuitive Sequencer for the iPhone and iPad" author Jan's gender (male)
-Corrected column [3] in row 776 in conference csv data
-Correcting paper "Hybrid Musicianship - Teaching Gestural Interaction with Traditional and Digital Instruments" author Jan's gender (male)
-Corrected column [3] in row 1097 in conference csv data
-Correcting paper "MICON A Music Stand for Interactive Conducting" author Jan's gender (male)
-Corrected column [3] in row 249 in conference csv data
-Correcting paper "Motion To Gesture To Sound : Mapping For Interactive Dance" author Jan's gender (male)
-Corrected column [3] in row 718 in conference csv data
-Correcting paper "REMUPP -- An Interactive Tool for Investigating Musical Properties and Relations" author Jan's gender (male)
-Corrected column [14] in row 240 in conference csv data
-Correcting paper "REXband : A Multi-User Interactive Exhibit for Exploring Medieval Music" author Jan's gender (male)
-Corrected column [14] in row 384 in conference csv data
-Correcting paper "SABRe: The Augmented Bass Clarinet" author Jan's gender (male)
-Corrected column [10] in row 972 in conference csv data
-Correcting paper "The HOP Sensor : Wireless Motion Sensor" author Jan's gender (male)
-Corrected column [14] in row 480 in conference csv data
-Correcting paper "The Musical Synchrotron : Using Wireless Motion Sensors to Study How Social Interaction Affects Synchronization with Musical Tempo" author Jan's gender (male)
-Corrected column [14] in row 450 in conference csv data
-Correcting paper "The Quarterstaff, a Gestural Sensor Instrument" author Jan's gender (male)
-Corrected column [3] in row 1098 in conference csv data
-Correcting paper "The Role of Time in Engineering Computer Music Systems" author Jan's gender (male)
-Corrected column [10] in row 203 in conference csv data
-Correcting paper "Towards Rhythmic Analysis of Human Motion Using Acceleration-Onset Times" author Jan's gender (male)
-Corrected column [12] in row 383 in conference csv data
-Correcting paper "Traces -- Body, Motion and Sound" author Jan's gender (male)
-Corrected column [3] in row 845 in conference csv data
-Correcting paper "Visualizing Song Structure on Timecode Vinyls" author Jan's gender (male)
-Corrected column [10] in row 1167 in conference csv data
-Correcting paper "You're The Conductor: A Realistic Interactive Conducting System for Children" author Jan's gender (male)
-Corrected column [12] in row 135 in conference csv data
-Correcting paper "Prototyping hand-based wearable music education technology" author Janne's gender (male)
-Corrected column [18] in row 1281 in conference csv data
-Correcting paper "Interactive Music Studio : The Soloist" author Je-Han's gender (None)
-Corrected column [10] in row 686 in conference csv data
-Correcting paper "A Gesture Detection with Guitar Pickup and Earphones" author Jeong-seob's gender (male)
-Corrected column [10] in row 1243 in conference csv data
-Correcting paper "Real-time Modification of Music with Dancer's Respiration Pattern" author Jeong-seob's gender (male)
-Corrected column [3] in row 926 in conference csv data
-Correcting paper "Sonicstrument : A Musical Interface with Stereotypical Acoustic Transducers" author Jeong-seob's gender (male)
-Corrected column [3] in row 814 in conference csv data
-Correcting paper "Visual Representation in GENESIS as a tool for Physical Modeling, Sound Synthesis and Musical Composition" author Jérôme's gender (male)
-Corrected column [3] in row 1311 in conference csv data
-Correcting paper "Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments" author Jerônimo's gender (male)
-Corrected column [3] in row 875 in conference csv data
-Correcting paper "Designing DMIs for Popular Music in the Brazilian Northeast: Lessons Learned" author Jerônimo's gender (male)
-Corrected column [3] in row 1312 in conference csv data
-Correcting paper "Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience" author Jia-Liang's gender (None)
-Corrected column [3] in row 935 in conference csv data
-Correcting paper "ESP: A Driving Interface for Expression Synthesis" author Jie's gender (None)
-Corrected column [12] in row 182 in conference csv data
-Correcting paper "endo/exo Making Art and Music with Distributed Computing" author Jiffer's gender (male)
-Corrected column [3] in row 1162 in conference csv data
-Correcting paper "Feedback Lapsteel : Exploring Tactile Transducers As String Actuators" author Jiffer's gender (male)
-Corrected column [3] in row 1282 in conference csv data
-Correcting paper "Pd Poems and Teaching Tools" author Jiffer's gender (male)
-Corrected column [3] in row 1276 in conference csv data
-Correcting paper "Quadrofeelia -- A New Instrument for Sliding into Notes" author Jiffer's gender (male)
-Corrected column [3] in row 793 in conference csv data
-Correcting paper "Sinkapater -An Untethered Beat Sequencer" author Jiffer's gender (male)
-Corrected column [3] in row 909 in conference csv data
-Correcting paper "Start 'em Young: Digital Music Instrument for Education" author Jiffer's gender (male)
-Corrected column [3] in row 1318 in conference csv data
-Correcting paper "TAPIR Sound Tag: An Enhanced Sonic Communication Framework for Audience Participatory Performance" author Jimin's gender (male)
-Corrected column [3] in row 1178 in conference csv data
-Correcting paper "Creating Musical Expression using Kinect" author Jin-Wook's gender (None)
-Corrected column [10] in row 867 in conference csv data
-Correcting paper "Developing A Physical Gesture Acquisition System for Guqin Performance" author Jingyin's gender (male)
-Corrected column [3] in row 1298 in conference csv data
-Correcting paper "Kontrol: Hand Gesture Recognition for Music and Dance Interaction" author Jingyin's gender (male)
-Corrected column [10] in row 1017 in conference csv data
-Correcting paper "Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience" author Jiu-Qiang's gender (male)
-Corrected column [14] in row 935 in conference csv data
-Correcting paper "Designing DMIs for Popular Music in the Brazilian Northeast: Lessons Learned" author Jõao's gender (male)
-Corrected column [12] in row 1312 in conference csv data
-Correcting paper "AirPiano: A Multi-Touch Keyboard with Hovering Control" author Joëlle's gender (female)
-Corrected column [10] in row 1335 in conference csv data
-Correcting paper "A Digital Mobile Choir: Joining Two Interfaces towards Composing and Performing Collaborative Mobile Music" author Johnty's gender (male)
-Corrected column [12] in row 870 in conference csv data
-Correcting paper "Investigation of Gesture Controlled Articulatory Vocal Synthesizer using a Bio-Mechanical Mapping Layer" author Johnty's gender (male)
-Corrected column [3] in row 994 in conference csv data
-Correcting paper "PENny: An Extremely Low-Cost Pressure-Sensitive Stylus for Existing Capacitive Touchscreens" author Johnty's gender (male)
-Corrected column [3] in row 1112 in conference csv data
-Correcting paper "SQUEEZY : Extending a Multi-touch Screen with Force Sensing Objects for Controlling Articulatory Synthesis" author Johnty's gender (male)
-Corrected column [3] in row 865 in conference csv data
-Correcting paper "Womba: A Musical Instrument for an Unborn Child" author Johnty's gender (male)
-Corrected column [10] in row 1354 in conference csv data
-Correcting paper "Composing for DMIs Entoa, a Dedicate Piece for Intonaspacio" author Jônatas's gender (male)
-Corrected column [14] in row 1199 in conference csv data
-Correcting paper "A Shift Towards Iterative and Open-Source Design for Musical Interfaces" author Jordan's gender (male)
-Corrected column [10] in row 733 in conference csv data
-Correcting paper "Adding Z-Depth and Pressure Expressivity to Tangible Tabletop Surfaces" author Jordan's gender (male)
-Corrected column [3] in row 795 in conference csv data
-Correcting paper "Designing Expressive Musical Interfaces for Tabletop Surfaces" author Jordan's gender (male)
-Corrected column [3] in row 677 in conference csv data
-Correcting paper "Drum Stroke Computing: Multimodal Signal Processing for Drum Stroke Identification and Performance Metrics" author Jordan's gender (male)
-Corrected column [3] in row 914 in conference csv data
-Correcting paper "Multimodal Musician Recognition" author Jordan's gender (male)
-Corrected column [3] in row 676 in conference csv data
-Correcting paper "sutoolz 1.0 alpha : {3D} Software Music Interface" author Jordan's gender (male)
-Corrected column [3] in row 61 in conference csv data
-Correcting paper "Techniques in Swept Frequency Capacitive Sensing: An Open Source Approach" author Jordan's gender (male)
-Corrected column [10] in row 1170 in conference csv data
-Correcting paper "The KarmetiK NotomotoN : A New Breed of Musical Robot for Teaching and Performance" author Jordan's gender (male)
-Corrected column [14] in row 802 in conference csv data
-Correcting paper "Toward The Future Practice Room: Empowering Musical Pedagogy through Hyperinstruments" author Jordan's gender (male)
-Corrected column [3] in row 1045 in conference csv data
-Correcting paper "Probabilistic Models for Designing Motion and Sound Relationships" author Jules's gender (male)
-Corrected column [3] in row 1151 in conference csv data
-Correcting paper "WIJAM: A Mobile Collaborative Improvisation Platform under Master-players Paradigm" author Jun-qi's gender (male)
-Corrected column [3] in row 1142 in conference csv data
-Correcting paper "Robust and Reliable Fabric, Piezoresistive Multitouch Sensing Surfaces for Musical Controllers" author Jung-Sim's gender (None)
-Corrected column [3] in row 843 in conference csv data
-Correcting paper "Oculog : Playing with Eye Movements" author Juno's gender (male)
-Corrected column [3] in row 380 in conference csv data
-Correcting paper "GoingPublik: Using Realtime Global Score Synthesis" author Jürg's gender (male)
-Corrected column [3] in row 196 in conference csv data
-Correcting paper "SoloTouch: A Capacitive Touch Controller with Lick-based Note Selector" author Ka's gender (None)
-Corrected column [16] in row 1049 in conference csv data
-Correcting paper "Tangible Music Interfaces Using Passive Magnetic Tags" author Kai-yuh's gender (male)
-Corrected column [10] in row 10 in conference csv data
-Correcting paper "Kontrol: Hand Gesture Recognition for Music and Dance Interaction" author Kameron's gender (male)
-Corrected column [3] in row 1017 in conference csv data
-Correcting paper "Evaluation of {3D} Haptic Target Rendering to Support Timing in Music Tasks" author Karon's gender (female)
-Corrected column [10] in row 602 in conference csv data
-Correcting paper "GAINER: A Reconfigurable {I/O} Module and Software Libraries for Education" author Katsuhiko's gender (male)
-Corrected column [12] in row 286 in conference csv data
-Correcting paper "Sense of Space: The Audience Participation Music Performance with High-Frequency Sound ID" author Kazuomi's gender (male)
-Corrected column [10] in row 1303 in conference csv data
-Correcting paper "A Study of Two Thereminists : Towards Movement Informed Instrument Design" author Kedzie's gender (female)
-Corrected column [10] in row 513 in conference csv data
-Correcting paper "Freepad : A Custom Paper-based MIDI Interface" author Keechul's gender (None)
-Corrected column [12] in row 645 in conference csv data
-Correcting paper "Granular Learning Objects for Instrument Design and Collaborative Performance in K-12 Education" author Kendall's gender (None )
-Corrected column [14] in row 882 in conference csv data
-Correcting paper "New Interfaces for Traditional Korean Music and Dance" author Kisoon's gender (male)
-Corrected column [14] in row 1057 in conference csv data
-Correcting paper "Approaches to Interaction in a Digital Music Ensemble" author Kojiro's gender (male)
-Corrected column [10] in row 910 in conference csv data
-Correcting paper "LINE: Interactive Sound and Light Installation" author Kojiro's gender (None)
-Corrected column [10] in row 287 in conference csv data
-Correcting paper "MusicGlove : A Wearable Musical Controller for Massive Media Library" author Kouki's gender (None)
-Corrected column [3] in row 469 in conference csv data
-Correcting paper "ImprovGenerator : Online Grammatical Induction for On-the-Fly Improvisation Accompaniment" author Kris's gender (male)
-Corrected column [3] in row 687 in conference csv data
-Correcting paper "Development of the Waseda Saxophonist Robot and Implementation of an Auditory Feedback Control" author Kunimatsu's gender (male)
-Corrected column [20] in row 722 in conference csv data
-Correcting paper "{SW}AF: Towards a Web Application Framework for Composition and Documentation of Soundscape" author Kyogu's gender (male)
-Corrected column [10] in row 765 in conference csv data
-Correcting paper "A Musical Performance Evaluation System for Beginner Musician based on Real-time Score Following" author Kyogu's gender (male)
-Corrected column [14] in row 1042 in conference csv data
-Correcting paper "FutureGrab: A wearable subtractive synthesizer using hand gesture" author Kyogu's gender (male)
-Corrected column [12] in row 906 in conference csv data
-Correcting paper "Sound Spray - can-shaped sound effect device" author Kyogu's gender (male)
-Corrected column [10] in row 1086 in conference csv data
-Correcting paper "Voicon: An Interactive Gestural Microphone For Vocal Performance" author Kyogu's gender (male)
-Corrected column [12] in row 962 in conference csv data
-Correcting paper "H\'{e} : Calligraphy as a Musical Interface" author Laewoo's gender (None)
-Corrected column [3] in row 683 in conference csv data
-Correcting paper "BRAAHMS: A Novel Adaptive Musical Interface Based on Users' Cognitive State" author Lane's gender (male)
-Corrected column [16] in row 1326 in conference csv data
-Correcting paper "The Argus Project : Underwater Soundscape Composition with Laser- Controlled Modulation" author Lee's gender (male)
-Corrected column [10] in row 576 in conference csv data
-Correcting paper "A Wii-Based Gestural Interface for Computer Conducting Systems" author Lijuan's gender (None)
-Corrected column [3] in row 603 in conference csv data
-Correcting paper "Quadrofeelia -- A New Instrument for Sliding into Notes" author Locky's gender (None)
-Corrected column [10] in row 793 in conference csv data
-Correcting paper "A Self-Organizing Gesture Map for a Voice-Controlled Instrument Interface" author Lonce's gender (male)
-Corrected column [10] in row 1027 in conference csv data
-Correcting paper "A Voice Interface for Sound Generators: adaptive and automatic mapping of gestures to sound" author LONCE's gender (male)
-Corrected column [10] in row 896 in conference csv data
-Correcting paper "Instrumentalizing Synthesis Models" author Lonce's gender (male)
-Corrected column [3] in row 736 in conference csv data
-Correcting paper "Palm-area sensitivity to vibrotactile stimuli above 1~{kHz}" author Lonce's gender (male)
-Corrected column [3] in row 997 in conference csv data
-Correcting paper "The Effect of Visualizing Audio Targets in a Musical Listening and Performance Task" author Lonce's gender (male)
-Corrected column [3] in row 866 in conference csv data
-Correcting paper ""playing robot" : An Interactive Sound Installation in Human-Robot Interaction Design for New Media Art" author Lüder's gender (male)
-Corrected column [12] in row 638 in conference csv data
-Correcting paper "The ZKM Klangdom" author Ludger's gender (male)
-Corrected column [12] in row 310 in conference csv data
-Correcting paper "Perfect Take: Experience design and new interfaces for musical expression" author Luís's gender (male)
-Corrected column [14] in row 940 in conference csv data
-Correcting paper "Battle of the DJs: an HCI Perspective of Traditional, Virtual, Hybrid and Multitouch DJing" author Madeiras's gender (None)
-Corrected column [12] in row 817 in conference csv data
-Correcting paper "Using Audio and Haptic Feedback to Improve Pitched Percussive Instrument Performance in Humanoids" author Manu's gender (None)
-Corrected column [10] in row 1006 in conference csv data
-Correcting paper "BeatJockey : A New Tool for Enhancing DJ Skills" author Martín's gender (male)
-Corrected column [10] in row 827 in conference csv data
-Correcting paper "Multi-Laser Gestural Interface --- Solutions for Cost-Effective and Open Source Controllers" author Meason's gender (male)
-Corrected column [3] in row 628 in conference csv data
-Correcting paper "Personalized Song Interaction Using a Multi Touch Interface" author Mickey's gender (None)
-Corrected column [10] in row 1099 in conference csv data
-Correcting paper "Towards Idiomatic and Flexible Score-based Gestural Control with a Scripting Language" author Mika's gender (male)
-Corrected column [10] in row 483 in conference csv data
-Correcting paper "A Robot Musician Interacting with a Human Partner through Initiative Exchange" author Min-Gyu's gender (male)
-Corrected column [10] in row 711 in conference csv data
-Correcting paper "Creating Musical Expression using Kinect" author Min-Joon's gender (male)
-Corrected column [3] in row 867 in conference csv data
-Correcting paper "LUMI : Live Performance Paradigms Utilizing Software Integrated Touch Screen and Pressure Sensitive Button Matrix" author Mingfei's gender (None)
-Corrected column [3] in row 547 in conference csv data
-Correcting paper "Rasper: a Mechatronic Noise-Intoner" author Mo's gender (male)
-Corrected column [3] in row 1266 in conference csv data
-Correcting paper "Interactive Music Studio : The Soloist" author Moon-Sik's gender (None)
-Corrected column [12] in row 686 in conference csv data
-Correcting paper "Ergonomic Design of A Portable Musical Instrument" author Motohide's gender (male)
-Corrected column [3] in row 76 in conference csv data
-Correcting paper "A Customizable Sensate Surface for Music Control" author Nan-Wei's gender (female)
-Corrected column [3] in row 904 in conference csv data
-Correcting paper "MusicGrip : A Writing Instrument for Music Control" author Nan-Wei's gender (female)
-Corrected column [3] in row 551 in conference csv data
-Correcting paper "Providing a feeling of other remote learners' presence in an online learning environment via realtime sonification of Moodle access log" author Naotoshi's gender (male)
-Corrected column [10] in row 1061 in conference csv data
-Correcting paper "Instrumentalizing Synthesis Models" author Nguyen's gender (male)
-Corrected column [10] in row 736 in conference csv data
-Correcting paper "Input Devices for Musical Expression : Borrowing Tools from HCI" author Nicola's gender (male)
-Corrected column [3] in row 8 in conference csv data
-Correcting paper "Score Following: State of the Art and New Developments" author Nicola's gender (male)
-Corrected column [3] in row 95 in conference csv data
-Correcting paper "Designing, Playing, and Performing with a Vision-based Mouth Interface" author Nobuji's gender (None)
-Corrected column [12] in row 86 in conference csv data
-Correcting paper "A Modulation Matrix for Complex Parameter Sets" author Öyvind's gender (male)
-Corrected column [3] in row 757 in conference csv data
-Correcting paper "Development and Evaluation of a ZigFlea-based Wireless Transceiver Board for CUI32" author Öyvind's gender (male)
-Corrected column [10] in row 987 in conference csv data
-Correcting paper "Gluisax : Bent Leather Band{\textquoteright}s Augmented Saxophone Project" author Paris's gender (female)
-Corrected column [16] in row 455 in conference csv data
-Correcting paper "The UBS Virtual Maestro : an Interactive Conducting System" author Paris's gender (male)
-Corrected column [12] in row 592 in conference csv data
-Correcting paper "Wekinating 000000{S}wan : Using Machine Learning to Create and Control Complex Artistic Systems" author Phoenix's gender (female)
-Corrected column [10] in row 846 in conference csv data
-Correcting paper "Let Loose with WallBalls, a Collaborative Tabletop Instrument for Tomorrow" author Pourang's gender (male)
-Corrected column [10] in row 601 in conference csv data
-Correcting paper "Augmented Piano Performance using a Depth Camera" author Qi's gender (male)
-Corrected column [3] in row 998 in conference csv data
-Correcting paper "Representation-Plurality in Multi-Touch Mobile Visual Programming for Music" author Qi's gender (male)
-Corrected column [3] in row 1294 in conference csv data
-Correcting paper "Visual Associations in Augmented Keyboard Performance" author Qi's gender (male)
-Corrected column [3] in row 1116 in conference csv data
-Correcting paper "Cloud Bridge: a Data-driven Immersive Audio-Visual Software Interface" author Qian's gender (male)
-Corrected column [3] in row 1067 in conference csv data
-Correcting paper "Kontrol: Hand Gesture Recognition for Music and Dance Interaction" author Raakhi's gender (female)
-Corrected column [12] in row 1017 in conference csv data
-Correcting paper "New Interfaces for Traditional Korean Music and Dance" author Raakhi's gender (female)
-Corrected column [12] in row 1057 in conference csv data
-Correcting paper "A New Keyboard-Based, Sensor-Augmented Instrument For Live Performance" author Red's gender (male)
-Corrected column [3] in row 996 in conference csv data
-Correcting paper "Remix_Dance 3: Improvisatory Sound Displacing on Touch Screen-Based Interface" author Red's gender (male)
-Corrected column [10] in row 1117 in conference csv data
-Correcting paper "MnM: a Max/MSP mapping toolbox" author Rémy's gender (male)
-Corrected column [10] in row 171 in conference csv data
-Correcting paper "Music-based respiratory biofeedback in visually-demanding tasks" author Rhushabh's gender (male)
-Corrected column [3] in row 1280 in conference csv data
-Correcting paper "A Force Sensitive Multi-Touch Array Supporting Multiple {2-D} Musical Control Structures" author Rimas's gender (None)
-Corrected column [10] in row 428 in conference csv data
-Correcting paper "Beyond 0-5{V}: Expanding Sensor Integration Architectures" author Rimas's gender (None)
-Corrected column [10] in row 264 in conference csv data
-Correcting paper "Database and Mapping Design for Audiovisual Prepared Radio Set Installation" author Robin's gender (male)
-Corrected column [3] in row 496 in conference csv data
-Correcting paper "Hex Player --- A Virtual Musical Controller" author Robin's gender (male)
-Corrected column [12] in row 825 in conference csv data
-Correcting paper "Hey Man, You're Invading my Personal Space ! Privacy and Awareness in Collaborative Music" author Robin's gender (male)
-Corrected column [3] in row 655 in conference csv data
-Correcting paper "Interactional Sound and Music : Listening to CSCW, Sonification, and Sound Art" author Robin's gender (male)
-Corrected column [10] in row 637 in conference csv data
-Correcting paper "SoundXY4: Supporting Tabletop Collaboration and Awareness with Ambisonics Spatialisation" author Robin's gender (male)
-Corrected column [12] in row 1261 in conference csv data
-Correcting paper "The Hayward Tuning Vine: an interface for Just Intonation" author Robin's gender (male)
-Corrected column [3] in row 1277 in conference csv data
-Correcting paper "Rencon 2004: Turing Test for Musical Expression" author Rumi's gender (female)
-Corrected column [3] in row 126 in conference csv data
-Correcting paper "Bd : A Sound Installation with Swarming Robots" author Ryoho's gender (male)
-Corrected column [12] in row 422 in conference csv data
-Correcting paper "Sound Surfing Network (SSN): Mobile Phone-based Sound Spatialization with Audience Collaboration" author Saebyul's gender (None)
-Corrected column [3] in row 1087 in conference csv data
-Correcting paper "Learning Advanced Skills on New Instruments" author Sageev's gender (male)
-Corrected column [3] in row 217 in conference csv data
-Correcting paper "Motor Imagery: What Does It Offer for New Digital Musical Instruments?" author Sair's gender (male)
-Corrected column [3] in row 1337 in conference csv data
-Correcting paper "``Old'' is the New ``New'': a Fingerboard Case Study in Recrudescence as a NIME Development Strategy" author Sam's gender (male)
-Corrected column [12] in row 1031 in conference csv data
-Correcting paper "A corpus-based method for controlling guitar feedback" author Sam's gender (male)
-Corrected column [3] in row 1028 in conference csv data
-Correcting paper "An Interface for Live Interactive Sonification" author Sam's gender (male)
-Corrected column [3] in row 541 in conference csv data
-Correcting paper "Hyper-shaku (Border-crossing): Towards the Multi-modal Gesture-controlled Hyper-Instrument" author Sam's gender (male)
-Corrected column [12] in row 244 in conference csv data
-Correcting paper "Learning Musical Instrument Skills Through Interactive Sonification" author Sam's gender (male)
-Corrected column [3] in row 262 in conference csv data
-Correcting paper "Mechanisms for Controlling Complex Sound Sources : Applications to Guitar Feedback Control" author Sam's gender (male)
-Corrected column [10] in row 694 in conference csv data
-Correcting paper "Mira: Liveness in iPad Controllers for Max/MSP" author Sam's gender (male)
-Corrected column [3] in row 1104 in conference csv data
-Correcting paper "Movement in a Contemporary Dance Work and its Relation to Continuous Emotional Response" author Sam's gender (male)
-Corrected column [3] in row 657 in conference csv data
-Correcting paper "Indoor localization during installations using WiFi" author Sang-Won's gender (male)
-Corrected column [10] in row 1324 in conference csv data
-Correcting paper "Web-Based Temporal Typography for Musical Expression and Performance" author Sang-Won's gender (male)
-Corrected column [3] in row 1345 in conference csv data
-Correcting paper "Musical Poi (mPoi)" author Sangbong's gender (male)
-Corrected column [3] in row 1080 in conference csv data
-Correcting paper "Listening to Your Brain : Implicit Interaction in Collaborative Music Performances" author Sebastián's gender (male)
-Corrected column [3] in row 824 in conference csv data
-Correcting paper "Coral - a Physical and Haptic Extension of a Swarm Simulation" author Sébastien's gender (male)
-Corrected column [10] in row 1010 in conference csv data
-Correcting paper "Multi-point vibrotactile feedback for an expressive musical interface" author Sébastien's gender (male)
-Corrected column [10] in row 1270 in conference csv data
-Correcting paper "SABRe: The Augmented Bass Clarinet" author Sébastien's gender (male)
-Corrected column [3] in row 972 in conference csv data
-Correcting paper "Fields: An Exploration into the use of Mobile Devices as a Medium for Sound Diffusion" author Śebastien's gender (male)
-Corrected column [10] in row 1304 in conference csv data
-Correcting paper "B.O.M.B. -Beat Of Magic Box -: Stand-Alone Synthesizer Using Wireless Synchronization System For Musical Session and Performance" author Seiichiro's gender (male)
-Corrected column [10] in row 1213 in conference csv data
-Correcting paper "Hop Step Junk: Sonic Visualization using Footsteps" author Seiichiro's gender (male)
-Corrected column [3] in row 214 in conference csv data
-Correcting paper "POWDER BOX: An Interactive Device with Sensor Based Replaceable Interface For Musical Session" author Seiichiro's gender (male)
-Corrected column [10] in row 1079 in conference csv data
-Correcting paper "Sound Rose: Creating Music and Images with a Touch Table" author Seiichiro's gender (male)
-Corrected column [14] in row 256 in conference csv data
-Correcting paper "A Musical Performance Evaluation System for Beginner Musician based on Real-time Score Following" author Sejun's gender (male)
-Corrected column [10] in row 1042 in conference csv data
-Correcting paper "Beatscape , a Mixed Virtual-Physical Environment for Musical Ensembles" author Sertan's gender (male)
-Corrected column [10] in row 743 in conference csv data
-Correcting paper "Crossole: A Gestural Interface for Composition, Improvisation and Performance using Kinect" author Sertan's gender (male)
-Corrected column [3] in row 871 in conference csv data
-Correcting paper "A Material Computation Perspective on Audio Mosaicing and Gestural Conditioning" author Sha's gender (male)
-Corrected column [12] in row 1215 in conference csv data
-Correcting paper "Interactional Sound and Music : Listening to CSCW, Sonification, and Sound Art" author Shahin's gender (male)
-Corrected column [14] in row 637 in conference csv data
-Correcting paper "A Max/MSP Approach for Incorporating Digital Music via Laptops in Live Performances of Music Bands" author Shaltiel's gender (male)
-Corrected column [12] in row 1119 in conference csv data
-Correcting paper "A Function-Oriented Interface for Music Education and Musical Expressions: ``the Sound Wheel''" author Shoken's gender (male)
-Corrected column [3] in row 1056 in conference csv data
-Correcting paper "GAINER: A Reconfigurable {I/O} Module and Software Libraries for Education" author Shosei's gender (None)
-Corrected column [14] in row 286 in conference csv data
-Correcting paper "Reimagining the Computer Keyboard as a Musical Interface" author Si's gender (male)
-Corrected column [3] in row 1302 in conference csv data
-Correcting paper "A Digital Mobile Choir: Joining Two Interfaces towards Composing and Performing Collaborative Mobile Music" author Sidney's gender (male)
-Corrected column [18] in row 870 in conference csv data
-Correcting paper "Contexts of Collaborative Musical Experiences" author Sidney's gender (male)
-Corrected column [10] in row 67 in conference csv data
-Correcting paper "Echology" author Sidney's gender (male)
-Corrected column [10] in row 186 in conference csv data
-Correcting paper "Evolving Tooka: from Experiment to Instrument" author Sidney's gender (male)
-Corrected column [3] in row 118 in conference csv data
-Correcting paper "ForTouch : A Wearable Digital Ventriloquized Actor" author Sidney's gender (male)
-Corrected column [3] in row 540 in conference csv data
-Correcting paper "GRASSP: Gesturally-Realized Audio, Speech and Song Performance" author Sidney's gender (male)
-Corrected column [10] in row 308 in conference csv data
-Correcting paper "Investigation of Gesture Controlled Articulatory Vocal Synthesizer using a Bio-Mechanical Mapping Layer" author Sidney's gender (male)
-Corrected column [12] in row 994 in conference csv data
-Correcting paper "MetaMuse: Metaphors for Expressive Instruments" author Sidney's gender (male)
-Corrected column [10] in row 30 in conference csv data
-Correcting paper "PENny: An Extremely Low-Cost Pressure-Sensitive Stylus for Existing Capacitive Touchscreens" author Sidney's gender (male)
-Corrected column [14] in row 1112 in conference csv data
-Correcting paper "Playing on Heart-Strings: Experiences with the 2{H}earts System" author Sidney's gender (male)
-Corrected column [10] in row 44 in conference csv data
-Correcting paper "Real-time Adaptive Control of Modal Synthesis" author Sidney's gender (male)
-Corrected column [12] in row 78 in conference csv data
-Correcting paper "SQUEEZY : Extending a Multi-touch Screen with Force Sensing Objects for Controlling Articulatory Synthesis" author Sidney's gender (male)
-Corrected column [12] in row 865 in conference csv data
-Correcting paper "Tongue `n' Groove: An Ultrasound based Music Controller" author Sidney's gender (male)
-Corrected column [14] in row 56 in conference csv data
-Correcting paper "Tooka: Explorations of Two Person Instruments" author Sidney's gender (male)
-Corrected column [3] in row 27 in conference csv data
-Correcting paper "Online Map Interface for Creative and Interactive" author Sihwa's gender (male)
-Corrected column [3] in row 712 in conference csv data
-Correcting paper "Palm-area sensitivity to vibrotactile stimuli above 1~{kHz}" author Sim's gender (male)
-Corrected column [14] in row 997 in conference csv data
-Correcting paper "Developing Multimodal Interactive Systems with EyesWeb XMI" author Simone's gender (None)
-Corrected column [14] in row 344 in conference csv data
-Correcting paper "A Simple Practical Approach to a Wireless Data Acquisition Board" author Smilen's gender (male)
-Corrected column [3] in row 258 in conference csv data
-Correcting paper "An Early Prototype of the Augmented PsychoPhone" author Smilen's gender (male)
-Corrected column [10] in row 520 in conference csv data
-Correcting paper "Audio Arduino -- an ALSA (Advanced Linux Sound Architecture) Audio Driver for FTDI-based Arduinos" author Smilen's gender (male)
-Corrected column [3] in row 771 in conference csv data
-Correcting paper "Developing Block-Movement, Physical-Model Based Objects for the Reactable" author Smilen's gender (male)
-Corrected column [3] in row 451 in conference csv data
-Correcting paper "Extending the Soundcard for Use with Generic {DC} Sensors Demonstrated by Revisiting a Vintage ISA Design" author Smilen's gender (male)
-Corrected column [3] in row 651 in conference csv data
-Correcting paper "Development of A Learning Environment for Playing Erhu by Diagnosis and Advice regarding Finger Position on Strings" author Sojiro's gender (None)
-Corrected column [10] in row 1059 in conference csv data
-Correcting paper "{SW}AF: Towards a Web Application Framework for Composition and Documentation of Soundscape" author Souhwan's gender (None)
-Corrected column [3] in row 765 in conference csv data
-Correcting paper "OSC Implementation and Evaluation of the Xsens {MV}N Suit" author Stå's gender (male)
-Corrected column [3] in row 853 in conference csv data
-Correcting paper "SoundSaber -- A Motion Capture Instrument" author Stå's gender (male)
-Corrected column [10] in row 833 in conference csv data
-Correcting paper "A Tactile Closed-Loop Device for Musical Interaction" author Staas's gender (male)
-Corrected column [3] in row 279 in conference csv data
-Correcting paper "Developing the Cyclotactor" author Staas's gender (male)
-Corrected column [3] in row 569 in conference csv data
-Correcting paper "Making Grains Tangible: Microtouch for Microsound" author Staas's gender (male)
-Corrected column [3] in row 800 in conference csv data
-Correcting paper "The Cyclotactor : Towards a Tactile Platform for Musical Interaction" author Staas's gender (male)
-Corrected column [3] in row 474 in conference csv data
-Correcting paper "Sensity" author Stanza's gender (None)
-Corrected column [3] in row 329 in conference csv data
-Correcting paper "Amorphoscapes \& Soundtoys" author StanzaGroup's gender (None)
-Corrected column [3] in row 16 in conference csv data
-Correcting paper "A Morphological Analysis of Audio-Objects and their Control Methods for {3D} Audio" author Stéphane's gender (male)
-Corrected column [10] in row 1201 in conference csv data
-Correcting paper "DeviceCycle : Rapid and Reusable Prototyping of Gestural Interfaces, Applied to Audio Browsing by Similarity" author Stéphane's gender (male)
-Corrected column [12] in row 659 in conference csv data
-Correcting paper "Left and right-hand guitar playing techniques detection" author Stéphane's gender (male)
-Corrected column [14] in row 967 in conference csv data
-Correcting paper "LoopJam: turning the dance floor into a collaborative instrumental map" author Stéphane's gender (male)
-Corrected column [10] in row 898 in conference csv data
-Correcting paper "What does 'Evaluation' mean for the NIME community?" author Stéphane's gender (male)
-Corrected column [14] in row 1351 in conference csv data
-Correcting paper "The Gluion Advantages of an {FPGA}-based Sensor Interface" author Sukandar's gender (male)
-Corrected column [3] in row 281 in conference csv data
-Correcting paper "The Gluiph: a Nucleus for Integrated Instruments" author Sukandar's gender (male)
-Corrected column [3] in row 82 in conference csv data
-Correcting paper "Freepad : A Custom Paper-based MIDI Interface" author Sungkuk's gender (male)
-Corrected column [3] in row 645 in conference csv data
-Correcting paper "Fortissimo: Force-Feedback for Mobile Devices" author Tae's gender (male)
-Corrected column [3] in row 1088 in conference csv data
-Correcting paper "Polyhymnia : An Automatic Piano Performance System with Statistical Modeling of Polyphonic Expression and Musical Symbol Interpretation" author Tae's gender (male)
-Corrected column [3] in row 807 in conference csv data
-Correcting paper "Modelling Gestures in Music Performance with Statistical Latent-State Models" author Taehun's gender (male)
-Corrected column [3] in row 1060 in conference csv data
-Correcting paper "PocoPoco: A Kinetic Musical Interface With Electro-Magnetic Levitation Units" author Takaharu's gender (None)
-Corrected column [10] in row 921 in conference csv data
-Correcting paper "A System for Improvisational Musical Expression Based on Player {\textquoteright} s Sense of Tempo" author Takao's gender (None)
-Corrected column [12] in row 369 in conference csv data
-Correcting paper "Freqtric Drums : A Musical Instrument that Uses Skin Contact as an Interface" author Taketoshi's gender ( male)
-Corrected column [10] in row 333 in conference csv data
-Correcting paper "Realtime Sampling System for the Turntablist, Version 2: 16padjoystickcontroller" author Takuro's gender ( male)
-Corrected column [3] in row 137 in conference csv data
-Correcting paper "Turntable Music in the Digital Era: Designing Alternative Tools for New Turntable Expression" author Takuro's gender ( male)
-Corrected column [3] in row 297 in conference csv data
-Correcting paper "A Left Hand Gesture Caption System for Guitar Based on Capacitive Sensors" author Tan's gender (male)
-Corrected column [10] in row 665 in conference csv data
-Correcting paper "TrAP: An Interactive System to Generate Valid Raga Phrases from Sound-Tracings" author Tejaswinee's gender (female)
-Corrected column [10] in row 1230 in conference csv data
-Correcting paper "An Interactive Responsive Skin for Music" author Teng-Wen's gender (male)
-Corrected column [12] in row 731 in conference csv data
-Correcting paper "Freqtric Drums : A Musical Instrument that Uses Skin Contact as an Interface" author Tetsuaki's gender (male)
-Corrected column [3] in row 333 in conference csv data
-Correcting paper "PocoPoco: A Kinetic Musical Interface With Electro-Magnetic Levitation Units" author Tetsuaki's gender (male)
-Corrected column [16] in row 921 in conference csv data
-Correcting paper "InkSplorer : Exploring Musical Ideas on Paper and Computer" author Theophanis's gender (male)
-Corrected column [10] in row 786 in conference csv data
-Correcting paper "A Look at the Design and Creation of a Graphically Controlled Digital Musical Instrument" author Tjebbe's gender (None)
-Corrected column [10] in row 361 in conference csv data
-Correcting paper "Integrating HyperInstruments , Musical Robots \& Machine Musicianship for North {India}n Classical Music" author Trimpin's gender (male)
-Corrected column [16] in row 378 in conference csv data
-Correcting paper "The KarmetiK NotomotoN : A New Breed of Musical Robot for Teaching and Performance" author Trimpin's gender (male)
-Corrected column [18] in row 802 in conference csv data
-Correcting paper "The Creation of a Multi-Human, Multi-Robot Interactive Jam Session" author Trishul's gender (male)
-Corrected column [12] in row 626 in conference csv data
-Correcting paper "Sound Low Fun" author Tzu-Heng's gender (None)
-Corrected column [12] in row 860 in conference csv data
-Correcting paper "Towards an Affective Gesture Interface for Expressive Music Performance" author Vassilios-Fivos's gender (male)
-Corrected column [3] in row 486 in conference csv data
-Correcting paper "Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments" author Verônica's gender (female)
-Corrected column [12] in row 875 in conference csv data
-Correcting paper "Mobile DJ: a Tangible, Mobile Platform for Active and Collaborative Music Listening" author Wai's gender (None)
-Corrected column [14] in row 1068 in conference csv data
-Correcting paper "The Space Between Us. A Live Performance with Musical Score Generated via Emotional Levels Measured in {EEG} of One Performer and an Audience Member" author Weiwei's gender (female)
-Corrected column [10] in row 1147 in conference csv data
-Correcting paper ""Extension du Corps Sonore" - Dancing Viola" author Wen-Yang's gender (None)
-Corrected column [14] in row 619 in conference csv data
-Correcting paper "Andante: Walking Figures on the Piano Keyboard to Visualize Musical Motion" author Xiao's gender (female)
-Corrected column [3] in row 1262 in conference csv data
-Correcting paper "Conjuring the Recorded Pianist: A New Medium to Experience Musical Performance" author Xiao's gender (female)
-Corrected column [3] in row 1115 in conference csv data
-Correcting paper "Irregular Incurve" author Xiaoyang's gender (male)
-Corrected column [3] in row 656 in conference csv data
-Correcting paper "Recontextualizing the Multi-touch Surface" author Xiaoyu's gender (None)
-Corrected column [14] in row 945 in conference csv data
-Correcting paper "Air Violin: A Body-centric Style Musical Instrument" author Xin's gender (female)
-Corrected column [3] in row 1025 in conference csv data
-Correcting paper "massMobile -an Audience Participation Framework" author Yan-Ling's gender (female)
-Corrected column [14] in row 995 in conference csv data
-Correcting paper "Sketch-Based Musical Composition and Performance" author Yanchao's gender (None)
-Corrected column [10] in row 1143 in conference csv data
-Correcting paper "Smartphone-based Music Conducting" author Yang's gender (male)
-Corrected column [3] in row 1194 in conference csv data
-Correcting paper "A Robot Musician Interacting with a Human Partner through Initiative Exchange" author Ye's gender (None)
-Corrected column [3] in row 711 in conference csv data
-Correcting paper "A Max/MSP Approach for Incorporating Digital Music via Laptops in Live Performances of Music Bands" author Yehiel's gender (None)
-Corrected column [3] in row 1119 in conference csv data
-Correcting paper "NEXUS: Collaborative Performance for the Masses, Handling Instrument Interface Distribution through the Web" author Yemin's gender (male)
-Corrected column [10] in row 1001 in conference csv data
-Correcting paper "Simplified Expressive Mobile Development with NexusUI, NexusUp, and NexusDrop" author Yemin's gender (male)
-Corrected column [14] in row 1244 in conference csv data
-Correcting paper "SoloTouch: A Capacitive Touch Controller with Lick-based Note Selector" author Yi's gender (None)
-Corrected column [10] in row 1049 in conference csv data
-Correcting paper "Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience" author Yi's gender (female)
-Corrected column [12] in row 935 in conference csv data
-Correcting paper "Voicon: An Interactive Gestural Microphone For Vocal Performance" author Yongki's gender (male)
-Corrected column [3] in row 962 in conference csv data
-Correcting paper "Tibetan Singing Prayer Wheel: A Hybrid Musical- Spiritual Instrument Using Gestural Control" author Yoo-Hsiu's gender (female)
-Corrected column [10] in row 1362 in conference csv data
-Correcting paper "Cloud Bridge: a Data-driven Immersive Audio-Visual Software Interface" author Yoon's gender (female)
-Corrected column [10] in row 1067 in conference csv data
-Correcting paper "Digiti Sonus: Advanced Interactive Fingerprint Sonification Using Visual Feature Analysis" author Yoon's gender (female)
-Corrected column [3] in row 1043 in conference csv data
-Correcting paper "Virtual Pottery: An Interactive Audio-Visual Installation" author Yoon's gender (female)
-Corrected column [3] in row 907 in conference csv data
-Correcting paper "A Musical Performance Evaluation System for Beginner Musician based on Real-time Score Following" author Yoonchang's gender (male)
-Corrected column [3] in row 1042 in conference csv data
-Correcting paper "FutureGrab: A wearable subtractive synthesizer using hand gesture" author Yoonchang's gender (male)
-Corrected column [3] in row 906 in conference csv data
-Correcting paper "Construction of a System for Recognizing Touch of Strings for Guitar" author Yoshinari's gender (male)
-Corrected column [10] in row 1107 in conference csv data
-Correcting paper "Mobile Clavier : New Music Keyboard for Flexible Key Transpose" author Yoshinari's gender (male)
-Corrected column [3] in row 416 in conference csv data
-Correcting paper "UnitInstrument : Easy Configurable Musical Instruments" author Yoshinari's gender (male)
-Corrected column [10] in row 696 in conference csv data
-Correcting paper "UnitKeyboard : An Easily Configurable Compact Clavier" author Yoshinari's gender (male)
-Corrected column [3] in row 506 in conference csv data
-Correcting paper "A Component-Based Approach for Modeling Plucked-Guitar Excitation Signals" author Youngmoo's gender (male)
-Corrected column [10] in row 950 in conference csv data
-Correcting paper "Augmenting the Acoustic Piano with Electromagnetic String Actuation and Continuous Key Position Sensing" author Youngmoo's gender (male)
-Corrected column [10] in row 698 in conference csv data
-Correcting paper "Descriptors for Perception of Quality in Jazz Piano Improvisation" author Youngmoo's gender (male)
-Corrected column [14] in row 1366 in conference csv data
-Correcting paper "Personalized Song Interaction Using a Multi Touch Interface" author Youngmoo's gender (male)
-Corrected column [16] in row 1099 in conference csv data
-Correcting paper "Using Audio and Haptic Feedback to Improve Pitched Percussive Instrument Performance in Humanoids" author Youngmoo's gender (male)
-Corrected column [14] in row 1006 in conference csv data
-Correcting paper "Empathetic Interactive Music Video Experience" author Youngsun's gender (Nine)
-Corrected column [10] in row 927 in conference csv data
-Correcting paper "TENORI-ON" author Yu's gender (None)
-Corrected column [3] in row 304 in conference csv data
-Correcting paper "Sound Low Fun" author Yu-Chung's gender (male)
-Corrected column [3] in row 860 in conference csv data
-Correcting paper "WIJAM: A Mobile Collaborative Improvisation Platform under Master-players Paradigm" author Yu-heng's gender (male)
-Corrected column [18] in row 1142 in conference csv data
-Correcting paper "WIJAM: A Mobile Collaborative Improvisation Platform under Master-players Paradigm" author Yu-Kwong's gender (None)
-Corrected column [14] in row 1142 in conference csv data
-Correcting paper "BioRhythm : a Biologically-inspired Audio-Visual Installation" author Yuan-Yi's gender (male)
-Corrected column [10] in row 823 in conference csv data
-Correcting paper "BioSync: An Informed Participatory Interface for Audience Dynamics and Audiovisual Content Co-creation using Mobile PPG and {EEG}" author Yuan-Yi's gender (male)
-Corrected column [3] in row 1026 in conference csv data
-Correcting paper "The UBS Virtual Maestro : an Interactive Conducting System" author Yuri's gender (male)
-Corrected column [10] in row 592 in conference csv data
-Correcting paper "AudioQuilt: {2D} Arrangements of Audio Samples using Metric Learning and Kernelized Sorting" author Zeyu's gender (male)
-Corrected column [10] in row 1152 in conference csv data
-Correcting paper "MalLo: A Distributed Synchronized Musical Instrument Designed For Internet Performance" author Zeyu's gender (male)
-Corrected column [3] in row 1320 in conference csv data
+
+### 2012 paper Play-A-Grill: Music To Your Teeth corrected author: Aisen
+Corrected|     None --> female
+
+### 2012 paper DrumTop: Playing with Everyday Objects corrected author: Akito
+Corrected|     male --> male
+
+### 2012 paper LoopJam: turning the dance floor into a collaborative instrumental map corrected author: Alexis
+Corrected|     male --> male
+
+### 2012 paper Movement to emotions to music: using whole body emotional expression as an interaction for electronic music generation corrected author: Alexis
+Corrected|     male --> male
+
+### 2012 paper Perfect Take: Experience design and new interfaces for musical expression corrected author: Álvaro
+Corrected|     None --> male
+
+### 2012 paper Perfect Take: Experience design and new interfaces for musical expression corrected author: André
+Corrected|     None --> male
+
+### 2012 paper A Survey and Thematic Analysis Approach as Input to the Design of Mobile Music GUIs corrected author: Atau
+Corrected|     None --> male
+
+### 2012 paper Interactive Mobile Music Performance with Digital Compass corrected author: Bongjun
+Corrected|     None --> male
+
+### 2012 paper Virtual Pottery: An Interactive Audio-Visual Installation corrected author: Byeong-jun
+Corrected|     None --> male
+
+### 2012 paper Left and right-hand guitar playing techniques detection corrected author: Cécile
+Corrected|     None --> female
+
+### 2012 paper A Design Approach to Engage with Audience with Wearable Musical Instruments: Sound Gloves corrected author: Chi-Hsia
+Corrected|     None --> female
+
+### 2012 paper Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience corrected author: Da-Lei
+Corrected|     None --> None
+
+### 2012 paper DIRTI ---Dirty Tangible Interfaces corrected author: Diemo
+Corrected|     None --> male
+
+### 2012 paper The Sound Space as Musical Instrument: Playing Corpus-Based Concatenative Synthesis corrected author: Diemo
+Corrected|     None --> male
+
+### 2012 paper Extracting Human Expression For Interactive Composition with the Augmented Violin corrected author: Fred́éric
+Corrected|     None --> male
+
+### 2012 paper Music for Sleeping \& Waking Minds corrected author: Gascia
+Corrected|     None --> female
+
+### 2012 paper Borderlands -An Audiovisual Interface for Granular Synthesis corrected author: Ge
+Corrected|     male --> male
+
+### 2012 paper Many-Person Instruments for Computer Music Performance corrected author: Ge
+Corrected|     male --> male
+
+### 2012 paper Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments corrected author: Geber
+Corrected|     None --> male
+
+### 2012 paper The Deckle Project : A Sketch of Three Sensors corrected author: Hongchan
+Corrected|     None --> male
+
+### 2012 paper Kugelschwung -a Pendulum-based Musical Instrument corrected author: Jamie
+Corrected|     male --> male
+
+### 2012 paper SABRe: The Augmented Bass Clarinet corrected author: Jan
+Corrected|     male --> male
+
+### 2012 paper Real-time Modification of Music with Dancer's Respiration Pattern corrected author: Jeong-seob
+Corrected|     None --> male
+
+### 2012 paper Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments corrected author: Jerônimo
+Corrected|     None --> male
+
+### 2012 paper Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience corrected author: Jia-Liang
+Corrected|     None --> None
+
+### 2012 paper Sinkapater -An Untethered Beat Sequencer corrected author: Jiffer
+Corrected|     None --> male
+
+### 2012 paper Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience corrected author: Jiu-Qiang
+Corrected|     None --> male
+
+### 2012 paper A Digital Mobile Choir: Joining Two Interfaces towards Composing and Performing Collaborative Mobile Music corrected author: Johnty
+Corrected|     None --> male
+
+### 2012 paper Investigation of Gesture Controlled Articulatory Vocal Synthesizer using a Bio-Mechanical Mapping Layer corrected author: Johnty
+Corrected|     None --> male
+
+### 2012 paper Drum Stroke Computing: Multimodal Signal Processing for Drum Stroke Identification and Performance Metrics corrected author: Jordan
+Corrected|     male --> male
+
+### 2012 paper Granular Learning Objects for Instrument Design and Collaborative Performance in K-12 Education corrected author: Kendall
+Corrected|     male --> None 
+
+### 2012 paper Approaches to Interaction in a Digital Music Ensemble corrected author: Kojiro
+Corrected|     None --> male
+
+### 2012 paper FutureGrab: A wearable subtractive synthesizer using hand gesture corrected author: Kyogu
+Corrected|     None --> male
+
+### 2012 paper Voicon: An Interactive Gestural Microphone For Vocal Performance corrected author: Kyogu
+Corrected|     None --> male
+
+### 2012 paper A Voice Interface for Sound Generators: adaptive and automatic mapping of gestures to sound corrected author: LONCE
+Corrected|     None --> male
+
+### 2012 paper Palm-area sensitivity to vibrotactile stimuli above 1~{kHz} corrected author: Lonce
+Corrected|     None --> male
+
+### 2012 paper Perfect Take: Experience design and new interfaces for musical expression corrected author: Luís
+Corrected|     None --> male
+
+### 2012 paper A Customizable Sensate Surface for Music Control corrected author: Nan-Wei
+Corrected|     None --> female
+
+### 2012 paper Development and Evaluation of a ZigFlea-based Wireless Transceiver Board for CUI32 corrected author: Öyvind
+Corrected|     None --> male
+
+### 2012 paper Augmented Piano Performance using a Depth Camera corrected author: Qi
+Corrected|     male --> male
+
+### 2012 paper A New Keyboard-Based, Sensor-Augmented Instrument For Live Performance corrected author: Red
+Corrected|     male --> male
+
+### 2012 paper SABRe: The Augmented Bass Clarinet corrected author: Sébastien
+Corrected|     None --> male
+
+### 2012 paper Crossole: A Gestural Interface for Composition, Improvisation and Performance using Kinect corrected author: Sertan
+Corrected|     male --> male
+
+### 2012 paper A Digital Mobile Choir: Joining Two Interfaces towards Composing and Performing Collaborative Mobile Music corrected author: Sidney
+Corrected|     male --> male
+
+### 2012 paper Investigation of Gesture Controlled Articulatory Vocal Synthesizer using a Bio-Mechanical Mapping Layer corrected author: Sidney
+Corrected|     male --> male
+
+### 2012 paper Palm-area sensitivity to vibrotactile stimuli above 1~{kHz} corrected author: Sim
+Corrected|     male --> male
+
+### 2012 paper Left and right-hand guitar playing techniques detection corrected author: Stéphane
+Corrected|     None --> male
+
+### 2012 paper LoopJam: turning the dance floor into a collaborative instrumental map corrected author: Stéphane
+Corrected|     None --> male
+
+### 2012 paper PocoPoco: A Kinetic Musical Interface With Electro-Magnetic Levitation Units corrected author: Takaharu
+Corrected|     None --> None
+
+### 2012 paper PocoPoco: A Kinetic Musical Interface With Electro-Magnetic Levitation Units corrected author: Tetsuaki
+Corrected|     None --> male
+
+### 2012 paper Considering Audience's View Towards an Evaluation Methodology for Digital Musical Instruments corrected author: Verônica
+Corrected|     None --> female
+
+### 2012 paper Recontextualizing the Multi-touch Surface corrected author: Xiaoyu
+Corrected|     female --> None
+
+### 2012 paper massMobile -an Audience Participation Framework corrected author: Yan-Ling
+Corrected|     None --> female
+
+### 2012 paper Wireless Interactive Sensor Platform for Real-Time Audio-Visual Experience corrected author: Yi
+Corrected|     female --> female
+
+### 2012 paper Voicon: An Interactive Gestural Microphone For Vocal Performance corrected author: Yongki
+Corrected|     None --> male
+
+### 2012 paper Virtual Pottery: An Interactive Audio-Visual Installation corrected author: Yoon
+Corrected|     female --> female
+
+### 2012 paper FutureGrab: A wearable subtractive synthesizer using hand gesture corrected author: Yoonchang
+Corrected|     None --> male
+
+### 2012 paper A Component-Based Approach for Modeling Plucked-Guitar Excitation Signals corrected author: Youngmoo
+Corrected|     female --> male
+
+### 2012 paper Empathetic Interactive Music Video Experience corrected author: Youngsun
+Corrected|     None --> Nine
 NAMES FOR CORRECTED DATA : 
 Found year 2012, TOTAL NAMES:  341
 {'none': 5, 'male': 301, 'female': 35}

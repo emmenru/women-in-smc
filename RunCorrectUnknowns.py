@@ -24,37 +24,37 @@ import os
 #     True)
 
 # NIME
-NIME_csv_path = 'input_data'
-NIME_incomplete_conference_csv = os.path.join(NIME_csv_path,'NIME_NonCorrected.csv')
-NIME_gender_lookup_csv = os.path.join(NIME_csv_path,'NIMEgenderOutputAmbiguous&Unknowns.csv')
-NIME_output_csv = os.path.join(NIME_csv_path,'NIME_Corrected.csv')
-NIME_output_stats_corrected_csv = os.path.join(NIME_csv_path,'NIME_Stats_Corrected.csv')
-NIME_output_stats_noncorrected_csv= os.path.join(NIME_csv_path,'NIME_Stats_Non_Corrected.csv')
-NIME_columns=10
-# NIME only has 10 Columns
-
-CorrectUnknowns.lookup_author_gender(
-    NIME_output_csv,
-    NIME_incomplete_conference_csv,
-    NIME_gender_lookup_csv,
-    NIME_output_stats_corrected_csv,
-    NIME_output_stats_noncorrected_csv,
-    NIME_columns)
-
-#ICMC
-# ICMC_csv_path = 'Data/ICMCoutput/OnePackage-genderize.io'
-# ICMC_incomplete_conference_csv = os.path.join(ICMC_csv_path,'ICMC_NonCorrected.csv')
-# ICMC_gender_lookup_csv = os.path.join(ICMC_csv_path,'ICMCgenderOutputAmbiguous&Unknowns.csv')
-# ICMC_output_csv = os.path.join(ICMC_csv_path,'ICMC_Corrected.csv')
-# ICMC_output_stats_corrected_csv = os.path.join(ICMC_csv_path,'ICMC_Stats_Corrected.csv')
-# ICMC_output_stats_noncorrected_csv= os.path.join(ICMC_csv_path,'ICMC_Stats_Non_Corrected.csv')
-# ICMC_columns=17
+# NIME_csv_path = 'input_data'
+# NIME_incomplete_conference_csv = os.path.join(NIME_csv_path,'NIME_NonCorrected.csv')
+# NIME_gender_lookup_csv = os.path.join(NIME_csv_path,'NIMEgenderOutputAmbiguous&Unknowns.csv')
+# NIME_output_csv = os.path.join(NIME_csv_path,'NIME_Corrected.csv')
+# NIME_output_stats_corrected_csv = os.path.join(NIME_csv_path,'NIME_Stats_Corrected.csv')
+# NIME_output_stats_noncorrected_csv= os.path.join(NIME_csv_path,'NIME_Stats_Non_Corrected.csv')
+# NIME_columns=10
+# # NIME only has 10 Columns
 
 # CorrectUnknowns.lookup_author_gender(
-#     ICMC_output_csv,
-#     ICMC_incomplete_conference_csv,
-#     ICMC_gender_lookup_csv,
-#     ICMC_output_stats_corrected_csv,
-#     ICMC_output_stats_noncorrected_csv,
-#     ICMC_columns,
-#     True)
+#     NIME_output_csv,
+#     NIME_incomplete_conference_csv,
+#     NIME_gender_lookup_csv,
+#     NIME_output_stats_corrected_csv,
+#     NIME_output_stats_noncorrected_csv,
+#     NIME_columns)
+
+#ICMC
+ICMC_csv_path = 'input_data'
+ICMC_incomplete_conference_csv = os.path.join(ICMC_csv_path,'ICMC_NonCorrected.csv')
+ICMC_gender_lookup_csv = os.path.join(ICMC_csv_path,'ICMCgenderOutputAmbiguous&Unknowns.csv')
+ICMC_output_csv = os.path.join(ICMC_csv_path,'ICMC_Corrected.csv')
+ICMC_output_stats_corrected_csv = os.path.join(ICMC_csv_path,'ICMC_Stats_Corrected.csv')
+ICMC_output_stats_noncorrected_csv= os.path.join(ICMC_csv_path,'ICMC_Stats_Non_Corrected.csv')
+ICMC_columns=17
+
+CorrectUnknowns.lookup_author_gender(
+    ICMC_output_csv,
+    ICMC_incomplete_conference_csv,
+    ICMC_gender_lookup_csv,
+    ICMC_output_stats_corrected_csv,
+    ICMC_output_stats_noncorrected_csv,
+    ICMC_columns,
+    True)
