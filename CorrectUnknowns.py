@@ -36,6 +36,8 @@ def correct_author_gender(row, author_name, correct_gender):
     author_found = []
     for index, cell in enumerate(row):
         if cell == author_name:
+            if row[YEAR_CSV_COLUMN_INDEX] == '2012':
+                print "Corrected|     %s --> %s" % (row[index+1], correct_gender)
             row[index+1] = correct_gender
             author_found.append(index+1)
 
@@ -46,14 +48,16 @@ def amend_data(data,
                paper_title,
                author_name,
                gender):
-    print "Correcting paper \"%s\" author %s's gender (%s)" % (paper_title,
-                                                                author_name,
-                                                                gender)
+    # print "Correcting paper \"%s\" author %s's gender (%s)" % (paper_title,
+    #                                                            author_name,
+    #                                                            gender)
     for index, row in enumerate(data):
         if paper_title == row[PAPER_TITLE_CSV_COLUMN_INDEX]:
+            if row[YEAR_CSV_COLUMN_INDEX] == '2012':
+                print "\n### 2012 paper %s corrected author: %s" % (paper_title, author_name)
             col_index = correct_author_gender(data[index], author_name, gender)
-            print "Corrected column %s in row %s in conference csv data" % (
-                col_index, index)
+            # print "Corrected column %s in row %s in conference csv data" % (
+            #    col_index, index)
             return index
     print "Did not find paper!"
     sys.exit(1)

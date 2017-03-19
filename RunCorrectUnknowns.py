@@ -24,7 +24,7 @@ import os
 #     True)
 
 # NIME
-NIME_csv_path = 'Data/NIMEoutput/OnePackage-genderize.io'
+NIME_csv_path = 'input_data'
 NIME_incomplete_conference_csv = os.path.join(NIME_csv_path,'NIME_NonCorrected.csv')
 NIME_gender_lookup_csv = os.path.join(NIME_csv_path,'NIMEgenderOutputAmbiguous&Unknowns.csv')
 NIME_output_csv = os.path.join(NIME_csv_path,'NIME_Corrected.csv')
