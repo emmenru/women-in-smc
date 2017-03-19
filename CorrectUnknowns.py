@@ -67,6 +67,8 @@ def print_conference_stats(conference_data,
                       26, 28, 30, 32, 34, 36, 38, 40]
     PROBABILITY_COLUMNS = range(41,58)
 
+    low_probability_name = 0
+
     gender_dict = {
         'female': 0,
         'male': 0,
@@ -74,10 +76,7 @@ def print_conference_stats(conference_data,
     }
     year_dict = {}
 
-    low_probability_name = 0
-
     for row in conference_data[1:]:
-
         # Which year
         row_year = row[YEAR_CSV_COLUMN_INDEX]
 
@@ -91,6 +90,7 @@ def print_conference_stats(conference_data,
 
         #print "Counting on row", row[0]
         for column_index in GENDER_COLUMNS[0:num_gender_columns]:
+            #print row[column_index]
             # Count for each gender in dict
             for key in gender_dict:
                 if row[column_index].strip().lower() == key:
@@ -123,6 +123,7 @@ def print_conference_stats(conference_data,
         female_count = 0
         none_count = 0
         tot_names_count = 0
+        tot_authors = 0
         for year in years:
             #print year
             year_str = str(year)
@@ -144,9 +145,14 @@ def print_conference_stats(conference_data,
                 female_rate,
                 none_rate])
 
+            if year==2012:
+                print "Found year 2012, TOTAL NAMES: ", tot_authors
+                print year_dict[year_str]
             # for gender in year_dict[year_str]:
             #     print "  %s: %s" % (gender,
             #                         year_dict[year_str][gender])
+
+
 
         csv_writer.writerow(['TotCount' ,
             male_count,
@@ -161,10 +167,13 @@ def print_conference_stats(conference_data,
             float(tot_names_count) / tot_names_count])
 
         csv_writer.writerow(['TotArticles',
-            len(conference_data)])
+            # exclude header row when calculating entries
+            len(conference_data)-1])
 
         csv_writer.writerow(['NamesLowProb',
             low_probability_name])
+
+
 
 
 
@@ -179,6 +188,7 @@ def lookup_author_gender(output_csv,
     # Array slizing to get copy of list (actually copy of list of lists)
     noncorrected_conf_data = conf_data[:]
     # function for counting data in uncorrected file
+    print "NAMES FOR UNCORRECTED DATA : "
     print_conference_stats(conf_data,
                            output_stats_noncorrected_csv,
                            columns,
@@ -186,7 +196,8 @@ def lookup_author_gender(output_csv,
     print "Going through CSV with correct author gender"
     i = 0
     with open(gender_lookup_csv, 'rb') as gender_csv:
-        print i
+        # UNCOMMENT THIS LINE AFTER DEBUGGING
+        #print i
         csv_reader = csv.reader(gender_csv, delimiter=',')
         csv_reader.next()
         for name, gender, title, _ in csv_reader:
@@ -194,6 +205,7 @@ def lookup_author_gender(output_csv,
         i += 1
     #print "\n" * 10
     output_complete_csv(conf_data, output_csv)
+    print "NAMES FOR CORRECTED DATA : "
     print_conference_stats(conf_data,
                            output_stats_corrected_csv,
                            columns,
