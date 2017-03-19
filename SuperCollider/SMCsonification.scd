@@ -1,46 +1,20 @@
+// up to 14 authors for SMC, 10 authors for NIME, 17 for ICMC
 
+// there are some " in the columns.....
 
-s.boot()
-
-
-// to do:
-// add amps for respective male ... it should not be set to the first author, they should be silent mostly....
-// maybe this is not needed. however, now the sounds are triggered by frequency right?
-
-// frequencies and amplitudes etc.
-// fix so that variables are in a list
 // add todi scale for frequencies on impact
 
-// consider adding a granular synthesizer instead of impact sounds....possibly
+// consider adding a granular synthesizer instead of impact sounds
 
-// the gender1_female synth does not play the first frequency, but all of the rest of them...
-// use trace
-
-// add so that second authors are rain drops
-// add up to 14 authors for SMC, 10 authors for NIME, 17 for ICMC
-
-////////////////////////
-/// SYNTH DEFINITIONS
-////////////////////////
-
-// make this into randomized noises of chimes or glass or percussion
+// IMPORTANT! CELLS ARE NOT ALLOWED TO BE EMPTY!
+// The last row in the data set always get a "male" for the last column if cells are empty (I don't understand why!)
+// Fill cells with zeroes and there should be no problem
+// the filereader fucks up for special characters and citation marks, clean the data before sonifying
 
 
+//////////////////////// SYNTH DEFINITIONS////////////////////////
+s.boot();
 (
- SynthDef(\myfemalesynth, {|out = 0, freq, amp, dur, pan = 0|
-  var pm, modulator, env, panner;
- pm = SinOsc.ar(freq);
- pm = { Klank.ar(`[ {exprand(freq*1, freq*5000)}.dup(28), nil, nil ], WhiteNoise.ar(0.01)) };
-  env = EnvGen.kr(Env.perc(0.02, dur, amp), doneAction:2);
-  panner = Pan2.ar(pm, pan, env);
-  Out.ar(out, panner);
- }).add;
-)
-
-
-// Something drony
-// add so that it sounds like rain
-// add an echo effect
 (
 SynthDef.new(\mymalesynth, {
 	arg hz=340, atk=0.05, rel=0.05, amp=1, pan=0;
@@ -53,7 +27,7 @@ SynthDef.new(\mymalesynth, {
 	Out.ar(0, sig);
 }).add;
 
-)
+);
 
 
 (
@@ -62,10 +36,9 @@ SynthDef(\female, {|out = 0, hz = 1760, amp, dur, pan = 0|
 	var env = EnvGen.kr(Env.perc(0.02, dur, amp), doneAction:2);
     sig = Pan2.ar(sig, pan, amp);
 	Out.ar(0, sig);}).add
-)
+);
 
 
-// FreeVerb2
 (
 SynthDef(\FreeVerb2x2, {|outbus, mix = 0.25, room = 0.15, damp = 0.5, amp = 1.0|
     var signal;
@@ -79,33 +52,42 @@ SynthDef(\FreeVerb2x2, {|outbus, mix = 0.25, room = 0.15, damp = 0.5, amp = 1.0|
             mix, room, damp, amp)); // same params as FreeVerb 1 chn version
 
 }).add;
+);
+
 )
 
+//////////////////////// READ DATA  INTO 2D VECTOR ////////////////////////
 (
-
-////////////////////////////////////////////////
-// READ DATA INTO 2D-VECTOR
-////////////////////////////////////////////////
-
-~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/SMCsonificationNumeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
-
-// IMPORTANT! CELLS ARE NOT ALLOWED TO BE EMPTY!
-// The last row in the data set always get a "male" for the last column if cells are empty (I don't understand why!)
-// Fill cells with zeroes and there should be no problem
-// the filereader fucks up for special characters and citation marks, clean the data before sonifying
+~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/input_data_SuperCollider/SMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
 
 // invert rows and columns in a two dimensional Array
 // this is done to get a vector of each column rather than a vector of each row
 ~text=~text.flop;
 
-// place
+// place is where the conference toke place
 ~place=~text[2].drop(1);
 ~year=~text[3].drop(1);
 
-// gender column values
+// specify gender column values here (1 = gender occurance for specific column)
+// exceptions
 
+// male gender columns
+~gender_male = Array.new(17);
+~gender_male.add(~text[1].drop(1));
+(7,9..37).do({ arg item; ~gender_male.add(~text[item].drop(1)) });  // drop(1) is to drop column name
+// ~gender_male[16].postln; // final male column
+
+
+// female gender columns
+~gender_female = Array.new(17);
+~gender_female.add(~text[0].drop(1));
+(6,8..36).do({ arg item; ~gender_female.add(~text[item].drop(1)) });  // drop(1) is to drop column name
+
+
+// this should be removed and re-done
 ~gender1_female=~text[0].drop(1);
 ~gender1_male=~text[1].drop(1);
+
 ~gender2_female=~text[6].drop(1);
 ~gender2_male=~text[7].drop(1);
 ~gender3_female=~text[8].drop(1);
@@ -143,95 +125,67 @@ SynthDef(\FreeVerb2x2, {|outbus, mix = 0.25, room = 0.15, damp = 0.5, amp = 1.0|
 
 // print all columns to make sure that the data contains only gender data
 //~text[1].postln;
-~gender2_female.do({arg item, counter; counter.post; " : ".post; item.postln;});
+//~gender2_female.do({arg item, counter; counter.post; " : ".post; item.postln;});
 )
 
-///////////////////////////////////////
-/// SOUND SYNTHESIS
-///////////////////////////////////////
+
+
+//////////////////////// SOUND SYNTHESIS ////////////////////////
 
 // FIRST GENDER COLUMN PARAMETERS
 (
-n=size(~gender1_female); // length of column
-//plot(~gender1_female.asInteger)
-~length = n; // number of rows to be sonified ~length=n for entire data set
-~note_length = 0.1;
-~durs = Array.fill(~length, ~note_length);
-// SET FREQUENCIES FOR FEMALE, MALE VERSUS NONE VOICES
-~freq_female = 800;
-~freq_male = 60;
-// frequencies for all gender columns
-~freqs1_female = ~gender1_female.asInteger * ~freq_female;
-~freqs2_female = ~gender2_female.asInteger * ~freq_female;
-~freqs3_female = ~gender3_female.asInteger * ~freq_female;
+// local variables
+var freq_fact_female,freq_fact_male,randomization_female,randomization_male,amp_fact_female,amp_fact_male;
 
+freq_fact_female = 800;
+freq_fact_male = 60;
 
-// MALE
-~freqs1_male = ~gender1_male.asInteger * ~freq_male;
-~freqs2_male = ~gender2_male.asInteger * ~freq_male;
-~freqs3_male = ~gender3_male.asInteger * ~freq_male;
-~freqs4_male = ~gender4_male.asInteger * ~freq_male;
-~freqs5_male = ~gender5_male.asInteger * ~freq_male;
-~freqs6_male = ~gender6_male.asInteger * ~freq_male;
-~freqs7_male = ~gender7_male.asInteger * ~freq_male;
-~freqs8_male = ~gender8_male.asInteger * ~freq_male;
-~freqs9_male = ~gender9_male.asInteger * ~freq_male;
-~freqs10_male = ~gender10_male.asInteger * ~freq_male;
+amp_fact_female=0.8; // amplitude is the same for all female sounds
+amp_fact_male=1.0; // amplitude is not the same for all female sounds
 
+randomization_female=1.5;
+randomization_male=2;
 
-~randomization_female=1.5;
-~cont_freqs1_female= Array.fill(~length, {exprand(1.0, ~randomization_female)})*~freqs1_female;
-~cont_freqs2_female= Array.fill(~length, {exprand(1.0, ~randomization_female)})*~freqs2_female;
-~cont_freqs3_female= Array.fill(~length, {exprand(1.0, ~randomization_female)})*~freqs3_female;
-
-~randomization_male=2;
-~cont_freqs1_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs1_male;
-
-
-~cont_freqs2_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs2_male;
-~cont_freqs3_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs3_male;
-~cont_freqs4_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs4_male;
-~cont_freqs5_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs5_male;
-~cont_freqs6_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs6_male;
-~cont_freqs7_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs7_male;
-~cont_freqs8_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs8_male;
-~cont_freqs9_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs9_male;
-~cont_freqs10_male= Array.fill(~length, {exprand(1.0, ~randomization_male)})*~freqs10_male;
-
-
-// ADD SOME RANDOMNESS
-// INCREASE THESE VALUES TO GET DRONE
-// DECREAE VALUES TO GET SEPARATED NOTES
+// global variables
+// envelope parameters
+// increase these values to get a drone sound, decrease them to get separated notes
 ~min_attack_male=0.3;
 ~max_attack_male=0.4;
 ~min_release_male=0.3;
 ~max_release_male=0.4;
-// ALSO SET AMPLITUDES FOR THE DIFFERENT VOICES
-~amps1_female=Array.fill(~length, 0.8)*~gender1_female.asInteger.normalize;
-~amps2_female=Array.fill(~length, 0.8)*~gender2_female.asInteger.normalize;
-~amps3_female=Array.fill(~length, 0.8)*~gender3_female.asInteger.normalize;
-
-~amp_male=Array.fill(~length, 1)*~gender1_male.asInteger.normalize;
-
-~amps2_male=Array.fill(~length, 1)*~gender2_male.asInteger.normalize;
-~amps3_male=Array.fill(~length, 1)*~gender3_male.asInteger.normalize;
-~amps4_male=Array.fill(~length, 1)*~gender4_male.asInteger.normalize;
-~amps5_male=Array.fill(~length, 1)*~gender5_male.asInteger.normalize;
-~amps6_male=Array.fill(~length, 1)*~gender7_male.asInteger.normalize;
-~amps7_male=Array.fill(~length, 1)*~gender8_male.asInteger.normalize;
-~amps8_male=Array.fill(~length, 1)*~gender9_male.asInteger.normalize;
-~amps10_male=Array.fill(~length, 1)*~gender10_male.asInteger.normalize;
-
-
-
-
-// amplitude multiplication of second ... 17th voices should be lower
-
-// SET DURATION!
-// IMPORTANT
+// duration of notes
 // this defines how fast it goes since it sets the length of each sound
 ~min_dur=0.10;
 ~max_dur=0.25;
+
+~freqs_female = Array.new(17);
+~freqs_male = Array.new(17);
+~freqs_male_rand = Array.new(17);
+~amps_female = Array.new(17);
+~amps_male = Array.new(17);
+~freqs_female_rand = Array.new(17);
+
+n=size(~gender_female[0]); // length of gender columns
+//plot(~gender_female.asInteger)
+~length = n; // number of rows to be sonified, should be set to n to sonify entire data set
+~note_length = 0.1; //
+~durs = Array.fill(~length, ~note_length);
+
+// DEFINE FREQUENCIES
+//assign female frequencies
+(0..16).do({ arg item; ~freqs_female.add( ((~gender_female[item]).asInteger)*freq_fact_female) });
+// add randomization to female frequencies
+(0..16).do({ arg item; (~freqs_female_rand.add(Array.fill(~length, {exprand(1.0, randomization_female)})*~freqs_female[item])) });
+// assign male frequencies
+(0..16).do({ arg item; ~freqs_male.add( ((~gender_male[item]).asInteger)*freq_fact_male) });
+// add randomization to male frequencies
+(0..16).do({ arg item; (~freqs_male_rand.add(Array.fill(~length, {exprand(1.0, randomization_male)})*~freqs_male[item])) });
+
+// DEFINE AMPLITUDES
+//assign female amps
+(0..16).do({ arg item; ~amps_female.add( (Array.fill(~length,amp_fact_female)*~gender_female[item].asInteger.normalize)) });
+// assign male amps
+(0..16).do({ arg item; ~amps_male.add( (Array.fill(~length,amp_fact_male)*~gender_male[item].asInteger.normalize)) });
 )
 
 
@@ -251,43 +205,42 @@ s.scope;
 
 
 (
-	var gender1_female,
-    gender1_male, gender2_female,gender3_female, gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male;
+	var gender1_female, gender1_male, gender2_female,gender3_female, gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male;
 
 	gender1_female = Pbind(
 	\instrument, \female,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs1_female), // use trace to print out the current values
-	\amp, Pseq(~amps1_female)
+	\hz, Pseq(~freqs_female_rand[0]).trace, // use trace to print out the current values
+	\amp, Pseq(~amps_female[0])
 );
 
 	gender2_female = Pbind(
 	\instrument, \female,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs2_female),
-	\amp, Pseq(~amps2_female) // amps of second voice should be lower
+	\hz, Pseq(~freqs_female_rand[1]),
+	\amp, Pseq(~amps_female[1]) // amps of second voice should be lower
 );
 
 	gender3_female = Pbind(
 	\instrument, \female,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs3_female),
-	\amp, Pseq(~amps3_female) // amps of second voice should be lower
+	\hz, Pseq(~freqs_female_rand[2]),
+	\amp, Pseq(~amps_female[2]) // amps of second voice should be lower
 );
 
 	gender1_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs1_male),
+	\hz, Pseq(~freqs_male_rand[0]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[0])
 );
 
 	gender2_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs2_male*0.90),
+	\hz, Pseq(~freqs_male_rand[1]*0.90),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amp_male)
@@ -296,83 +249,83 @@ s.scope;
 	gender3_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs3_male*0.80),
+	\hz, Pseq(~freqs_male_rand[2]*0.80),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[1])
 );
 
 	gender4_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs4_male*0.7),
+	\hz, Pseq(~freqs_male_rand[3]*0.7),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[2])
 );
 
 	gender5_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs5_male*0.6),
+	\hz, Pseq(~freqs_male_rand[4]*0.6),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[3])
 );
 
 
 	gender6_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs6_male*0.5),
+	\hz, Pseq(~freqs_male_rand[5]*0.5),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[4])
 );
 
 	gender7_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs7_male*0.4),
+	\hz, Pseq(~freqs_male_rand[6]*0.4),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[5])
 );
 
 	gender8_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs8_male*0.3),
+	\hz, Pseq(~freqs_male_rand[7]*0.3),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[6])
 );
 
 	gender8_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs8_male*0.25),
+	\hz, Pseq(~freqs_male_rand[8]*0.25),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[7])
 );
 
 	gender9_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs9_male*0.15),
+	\hz, Pseq(~freqs_male_rand[9]*0.15),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[8])
 );
 
 	gender10_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~cont_freqs10_male*0.1),
+	\hz, Pseq(~freqs_male_rand[10]*0.1),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amp_male)
+	\amp, Pseq(~amps_male[9])
 );
 
 

@@ -2,6 +2,10 @@
 import CorrectUnknowns
 import os
 
+# TO DO:
+# NIME_Corrected output is currently containing genders that sometimes contain spaces (e.g. " male")
+# Either change in input file "'NIMEgenderOutputAmbiguous&Unknowns.csv" or fix this in script
+
 #SMC
 SMC_csv_path = 'Data/SMCoutput/OnePackage-genderize.io'
 SMC_csv_path_out = 'output_data'
