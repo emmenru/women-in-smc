@@ -1,8 +1,9 @@
 // up to 14 authors for SMC, 10 authors for NIME, 17 for ICMC
 
-// there are some " in the columns.....
+// how to play the different data sets at the same pace?
+// depending on how long the files are, the pace changes....
 
-
+// there are some " in the columns..... why?
 // consider adding a granular synthesizer instead of impact sounds
 
 // IMPORTANT! CELLS ARE NOT ALLOWED TO BE EMPTY!
@@ -16,6 +17,9 @@
 
 //////////////////////// SYNTH DEFINITIONS////////////////////////
 s.boot();
+
+
+
 (
 (
 SynthDef.new(\mymalesynth, {
@@ -60,7 +64,7 @@ SynthDef(\FreeVerb2x2, {|outbus, mix = 0.25, room = 0.15, damp = 0.5, amp = 1.0|
 
 //////////////////////// READ DATA  INTO 2D VECTOR ////////////////////////
 (
-~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/input_data_SuperCollider/SMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/input_data_SuperCollider/NIME_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
 
 // invert rows and columns in a two dimensional Array
 // this is done to get a vector of each column rather than a vector of each row
@@ -135,16 +139,29 @@ n=size(~gender_female[0]); // length of gender columns
 
 // DEFINE FREQUENCIES
 //assign female frequencies
+// 1st version
 // frequency fact is multiplied by (item+1) so that increased column no gives increased frequency
-(0..16).do({ arg item; ~freqs_female.add( ((~gender_female[item]).asInteger)*freq_fact_female*(item+1)) });
+//(0..16).do({ arg item; ~freqs_female.add( ((~gender_female[item]).asInteger)*freq_fact_female*(item+1)) });
 // add randomization for female frequencies
-(0..16).do({ arg item; (~freqs_female_rand.add(Array.fill(~length, {exprand(1.0, randomization_female)})*~freqs_female[item])) });
+//(0..16).do({ arg item; (~freqs_female_rand.add(Array.fill(~length, {exprand(1.0, randomization_female)})*~freqs_female[item])) });
+
+
+// 2nd version
 // add randomization (using todi scale) for female frequencies
+// this needs to be done within the loop! it is nested!
+(0..16).do({
+	arg i; ~freqs_female_rand.add(((Array.fill(~length, {arg item; Scale.todi(\just).degreeToFreq(rrand(0,12), 60.midicps, 1)}))*(~gender_female[i].asInteger)).postln)
+
+});
 
 // assign male frequencies
-(0..16).do({ arg item; ~freqs_male.add( ((~gender_male[item]).asInteger)*freq_fact_male) });
+//(0..16).do({ arg item; ~freqs_male.add( ((~gender_male[item]).asInteger)*freq_fact_male) });
 // add randomization for male frequencies
-(0..16).do({ arg item; (~freqs_male_rand.add(Array.fill(~length, {exprand(1.0, randomization_male)})*~freqs_male[item])) });
+//(0..16).do({ arg item; (~freqs_male_rand.add(Array.fill(~length, {exprand(1.0, randomization_male)})*~freqs_male[item])) });
+(0..16).do({
+	arg i; ~freqs_male_rand.add(((Array.fill(~length, {arg item; Scale.todi(\just).degreeToFreq(rrand(0,12), 12.midicps, 1)}))*(~gender_male[i].asInteger)).postln)
+
+});
 
 // DEFINE AMPLITUDES
 //assign female amps
@@ -152,13 +169,18 @@ n=size(~gender_female[0]); // length of gender columns
 //assign male amps
 // amplitude should decrease for every item in the list (for every gender column)
 (0..16).do({ arg item; ~amps_male.add( (Array.fill(~length,amp_fact_male/((item+1)*amp_dec_fact_male))*~gender_male[item].asInteger.normalize)) });
+
+
 )
+
+
+
+
 
 //////////////////////// CONTINUOUS SONIFICATION ////////////////////////
 
 //s.plotTree
 //s.scope;
-
 
 (
 // ADD REVERB
@@ -182,7 +204,7 @@ gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,ge
 	gender1_female = Pbind(
 	\instrument, \female,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_female_rand[0]).trace, // use trace to print out the current values
+	\hz, Pseq(~freqs_female_rand[0]), // use trace to print out the current values
 	\amp, Pseq(~amps_female[0])
 );
 
@@ -264,7 +286,7 @@ gender10_female = Pbind(
 	gender1_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[0]),
+	\hz, Pseq(~freqs_male_rand[0]).trace,
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[0])
@@ -393,7 +415,6 @@ gender10_female = Pbind(
 // add todi scale for frequencies on impact
 //~freqs1_female =  Array.fill(~length, {Scale.todi.degreeToFreq(rrand(0, 12), 60.midicps, 1)})*~freqs1_female;
 
-(0..16).do({ arg item; (~freqs_female_rand.add(Array.fill(~length, {Scale.todi.degreeToFreq(rrand(0, 12), 60.midicps, 1)})*~freqs_female[item])) });
-
-~freqs_female_rand[1]
-Array.fill(~length, {Scale.todi.degreeToFreq(rrand(0, 12), 60.midicps, 1)})
+(
+Scale.todi(\just).degreeToFreq(rrand(1,12), 60.midicps, 1);
+)
