@@ -1,7 +1,17 @@
-~sample= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a.wav");
+~sample= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
 
 ~sample2= Buffer.read(s,
-"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a.wav");
+"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
+
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/56308__q-k__rain-03.wav");
+
+// soft rain
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/194204__pulswelle__steady-rain.wav");
+
+// rain on roof
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/82367__gynation__rain-on-plastic-roof.wav");
+
+
 
 
 (
@@ -29,5 +39,7 @@ Out.ar(0,Pan2.ar(grain, pan))}).add;
 
 
 Synth(\malegrain,[\amp, exprand(0.7,1.0), \pan, 1.0.rand2, \dur, 0.15, \startrandomness, 1.0.rand]);
+
+
 
 

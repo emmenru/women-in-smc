@@ -19,10 +19,16 @@
 //////////////////////// SYNTH DEFINITIONS////////////////////////
 s.boot();
 
-~sample= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a.wav");
+~sample= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
 
-~sample2= Buffer.read(s,
-"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a.wav");
+~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
+
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/56308__q-k__rain-03.wav");
+
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/82367__gynation__rain-on-plastic-roof.wav");
+
+
+//~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/194204__pulswelle__steady-rain.wav");
 
 
 (
@@ -137,8 +143,8 @@ var freq_fact_female,freq_fact_male,randomization_female,randomization_male,amp_
 freq_fact_female = 800;
 freq_fact_male = 60;
 
-amp_female_start=0.5; // amplitude is randomized, see code below (this factor is currently not being used)
-amp_female_stop=0.6;
+amp_female_start=0.6; // amplitude is randomized, see code below (this factor is currently not being used)
+amp_female_stop=0.7;
 amp_fact_male=1.0; // amplitude is not the same for all male sounds
 amp_dec_fact_male = 0.6; // amp is reduced for second, third .... 17th author
 
