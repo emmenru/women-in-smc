@@ -5,6 +5,7 @@ import os
 # TO DO:
 # NIME_Corrected output is currently containing genders that sometimes contain spaces (e.g. " male")
 # Either change in input file "'NIMEgenderOutputAmbiguous&Unknowns.csv" or fix this in script
+# NIME data has "countryFirstauthor" for the first entries, then conference location
 
 #SMC
 SMC_csv_path = 'Data/SMCoutput/OnePackage-genderize.io'
