@@ -13,12 +13,7 @@ import ast
 import re
 import os
 
-
-# THE FIRST GENDER DETECTOR LIBRARY IS gender_guesser.detector
-import gender_guesser.detector as gender
-detector = gender.Detector(case_sensitive=False)
-
-# THE SECOND GENDER DETECTOR LIBRARY IS genderize
+# genderize
 from findGender import findGender
 
 df=pd.read_csv('SMC_2004-2016.csv', sep=',')
