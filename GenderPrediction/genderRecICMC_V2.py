@@ -2,7 +2,7 @@
 # NOTE THAT THE CSV FILE HAS TO BE SAVED AS UTF8!
 # IMPORT XLS FILE TO GOOGLE DOCS AND SAVE AS CSV THERE
 
-
+import gender
 import pandas as pd
 import time
 import datetime
@@ -13,14 +13,10 @@ import re
 import os
 
 print "ICMC"
-# THE FIRST GENDER DETECTOR LIBRARY IS gender_guesser.detector
-import gender_guesser.detector as gender
-detector = gender.Detector(case_sensitive=False)
 
-# THE SECOND GENDER DETECTOR LIBRARY IS genderize
 from findGender import findGender
 
-df=pd.read_csv('ICMC.csv', sep=',')
+df=pd.read_csv('ICMC_1975-2016.csv', sep=',')
 df[['Title', 'Author(s)', 'Country']] = df[['Title', 'Author(s)', 'Country']].astype('str')
 df[['Year']] = df[['Year']].astype(int)
 
@@ -110,6 +106,7 @@ for i in range(0, len(df)):
     print i
     authorlist=df.ix[i,1]
     title=df.ix[i,0]
+    year=df.ix[i,3]
     authors = authorlist.split(";")
     numAuthors=0
     # for authors in authorlist for every row
@@ -122,20 +119,31 @@ for i in range(0, len(df)):
         author=authors[m]
         author=str(author)
 
+
         #print author # some of the lines are not correctly formatted (some have the syntax "Frid, Emma", whereas other have "Emma Frid")
         # if formatted with comma
-        author = author.split(",")[1]
-        # remove blank spaces in the beginning of the author name
-        author = re.compile('^\xa0').sub('',author)
-        author = re.compile('^\xc2').sub('',author)
-        author = author.lstrip()
-        authorNew = author.split(" ")[0]
+        if ',' in author:
+            author = author.split(",")[1]
+            if ' ' in author:
+                # remove blank spaces in the beginning of the author name
+                author = re.compile('^\xa0').sub('',author)
+                author = re.compile('^\xc2').sub('',author)
+                author = author.lstrip()
+                authorNew = author.split(" ")[0]
+        # if not formatted with comma
+        else:
+            # remove blank spaces in the beginning of the author name
+            author = author.lstrip()
+            author = author.split(" ")[0]
+            authorNew = author.replace('\xa0', '')
+
         # For example M. Marlon Schumacher, take second name!
         testIfSingleCharacter = authorNew.replace('.', '')
         if len(testIfSingleCharacter)==1:
             author = author.split(" ")[1]
         else:
             author = authorNew
+
         # now we have all the names and need to iterate over all m in len(authors) to get gender classification
 
         # CLASSIFICATION
@@ -145,7 +153,7 @@ for i in range(0, len(df)):
         #print authorGenderAlgorithm2
         authorGender=str(authorGenderAlgorithm2.get("gender"))
         probability=str(authorGenderAlgorithm2.get("probability"))
-        print probability
+        #print probability
 
         # CHECK IF WEIRD NAMES (TOO SHORT)
         #if len(author)<=3:
@@ -228,7 +236,7 @@ for i in range(0, len(df)):
 
         if authorGender ==str(None): # if "None" from algorithm two
             unknowns+=1
-            unknownFileWriter.writerow([str(author),str(title),str(authors)])
+            unknownFileWriter.writerow([str(author),str(title),str(authors),str(year)])
             if author not in uniqueUnknowns:
                 uniqueUnknowns.append(author)
         elif authorGender==u"female":
@@ -236,13 +244,13 @@ for i in range(0, len(df)):
             if float(probability)<0.8:
                 print "ambiguous ambiguous ambiguous ambiguous :"+str(author)
                 ambiguous+=1
-                ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors)])
+                ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
         elif authorGender==u"male":
             male+=1
             if float(probability)<0.8:
                 print "ambiguous ambiguous ambiguous ambiguous :"+str(author)
                 ambiguous+=1
-                ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors)])
+                ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
 
 
         newDF.ix[i,nameColumnToWrite]=author #  author name

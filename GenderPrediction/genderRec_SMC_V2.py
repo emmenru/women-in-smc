@@ -21,7 +21,7 @@ detector = gender.Detector(case_sensitive=False)
 # THE SECOND GENDER DETECTOR LIBRARY IS genderize
 from findGender import findGender
 
-df=pd.read_csv('SMC2.csv', sep=',')
+df=pd.read_csv('SMC_2004-2016.csv', sep=',')
 df[['Title', 'Author(s)', 'Country']] = df[['Title', 'Author(s)', 'Country']].astype('str')
 df[['Year']] = df[['Year']].astype(int)
 
