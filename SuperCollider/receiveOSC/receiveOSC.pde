@@ -12,20 +12,22 @@ OscP5 oscP5;                 // objet for OSC send and receive
 NetAddress myRemoteLocation;  // objet for service address
 
 void setup() {
-  size(400,400);
+  size(600,600);
+  pixelDensity(displayDensity());
   oscP5 = new OscP5(this,4859); // start OSC and listen port ...
   // set remote location to localhost SuperColider port
   myRemoteLocation = new NetAddress("127.0.0.1",4859);
-  font = createFont ("Helvetica",26);
+  font = createFont ("Courier New",80);
   textFont (font);
 }
 
 void draw() {
-  if ( year != globalyear ){
-  clear()
+  if ( year != globalyear & year > globalyear){
   globalyear = year;
   textAlign(CENTER,CENTER);
+  background(#d1d1d1);
   text(year,width/2,height/2);
+  text("SMC",width/2,height/2-70);
 
   }
 }

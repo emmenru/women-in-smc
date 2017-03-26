@@ -13,10 +13,9 @@
 // the filereader fucks up for special characters and citation marks, clean the data before sonifying
 
 //////////////////////// TO DO ////////////////////////
-// Randomize panning for female synth
-// in order to illustrate the difference in numbers: make three versions:
+// PUT OSC ON MALE AUTHORS TOO - now year changes depending on female authors
+// in order to illustrate the difference in numbers: make two versions:
 // this is what it would sound like if it was the other way around: one where the male voices are set to the female synth
-// this is what it would sound like if it was 50 % women, 50 % men (randomize so that there is 50 % women in each column
 
 //////////////////////// SYNTH DEFINITIONS////////////////////////
 s.boot();
@@ -26,7 +25,7 @@ s.boot();
 (
 (
 SynthDef.new(\mymalesynth, {
-	arg hz=340, atk=0.05, rel=0.05, amp=1, pan=0;
+	arg hz=340, atk=0.05, rel=0.05, amp, pan=0;
 	var sig, env;
 	sig = SinOsc.ar(hz);
 	//sig = SinOsc.ar(Gendy2.ar(6.rand,6.rand,SinOsc.kr(0.1,0,0.49,0.51),SinOsc.kr(0.13,0,0.49,0.51),hz ,hz, SinOsc.kr(0.17,0,0.49,0.51), SinOsc.kr(0.19,0,0.49,0.51), 5, 12, 0.4.rand, 0.4.rand, 300, 500), 0, 0.1);
@@ -42,9 +41,13 @@ SynthDef.new(\mymalesynth, {
 (
 SynthDef(\female, {|out = 0, year, hz = 1760, amp, dur, pan|
 	var chain, onsets;
-    var sig = Resonz.ar(Array.fill(4, {Impulse.ar(0)}), hz  * [1, 2, 4, 8], 0.01).sum*10;
-	var env = EnvGen.kr(Env.perc(0.02, dur, amp), doneAction:2);
-	sig = Pan2.ar(sig, pan, amp);
+    var sig = Resonz.ar(
+		Array.fill(4, {Impulse.ar(0)}),  // returns 4 impulses
+	    hz  * [1, 2, 4, 8], // frequency
+	    0.01).sum*10; // Q ?
+	var env = EnvGen.kr(Env.perc(0.0001, dur, amp, -4), doneAction:2);
+	sig = sig * env;
+	sig = Pan2.ar(sig, pan);
 	Out.ar(0, sig);
 	chain = FFT({LocalBuf(512, 1)}, sig);
 	onsets = Onsets.kr(chain,0.1,\power);
@@ -121,8 +124,8 @@ var freq_fact_female,freq_fact_male,randomization_female,randomization_male,amp_
 freq_fact_female = 800;
 freq_fact_male = 60;
 
-amp_fact_female=0.8; // amplitude is the same for all female sounds
-amp_fact_male=1.0; // amplitude is not the same for all male sounds
+amp_fact_female=1.0; // amplitude is the same for all female sounds
+amp_fact_male=0.5; // amplitude is not the same for all male sounds
 amp_dec_fact_male = 0.6; // amp is reduced for second, third .... 17th author
 
 randomization_female=1.5;
@@ -138,7 +141,7 @@ randomization_male=2;
 // duration of notes
 // this defines how fast it goes since it sets the length of each sound
 ~min_dur=0.05;
-~max_dur=0.15;
+~max_dur=0.10;
 
 ~freqs_female = Array.new(17);
 ~freqs_male = Array.new(17);
@@ -152,8 +155,6 @@ randomization_male=2;
 n=size(~gender_female[0]); // length of gender columns
 //plot(~gender_female.asInteger)
 ~length = n; // number of rows to be sonified, should be set to n to sonify entire data set
-~note_length = 0.1; //
-~durs = Array.fill(~length, ~note_length);
 
 // DEFINE FREQUENCIES
 //assign female frequencies
@@ -210,16 +211,16 @@ n=size(~gender_female[0]); // length of gender columns
 z = Synth(\FreeVerb2x2, [\outbus, 0], addAction:\addToTail);
 // experiment with some settings
 z.set(\room, 0.9) ;// room size
-z.set(\mix, 0.3) ;// dry wet
+z.set(\mix, 0.2) ;// dry wet
 z.set(\damp, 0.2) ;// reverb HF damp
 )
 
 
 
 (
-	var gender1_female, gender2_female, gender3_female,gender4_female,gender5_female,gender6_female,gender7_female,gender8_female,gender9_female,gender10_female,
+	var gender1_female, gender2_female, gender3_female,gender4_female,gender5_female,gender6_female,gender7_female,gender8_female,gender9_female,gender10_female,gender11_female, gender12_female, gender13_female, gender14_female, gender15_female, gender16_female, gender17_female,
 
-gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male;
+gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male,gender11_male, gender12_male, gender13_male, gender14_male, gender15_male, gender16_male, gender17_male;
 
 
 //// FEMALE VOICES
@@ -230,7 +231,7 @@ gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,ge
 	\hz, Pseq(~freqs_female_rand[0]), // use trace to print out the current values
 	\amp, Pseq(~amps_female[0]),
 	\pan, Pseq(~panning_female_rand[0]),
-	\year, Pseq(~year)
+	\year, Pseq(~year).trace;
 );
 
 	gender2_female = Pbind(
@@ -238,17 +239,15 @@ gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,ge
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[1]),
 	\amp, Pseq(~amps_female[1]),
-	\pan, Pseq(~panning_female_rand[1]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[1])
 );
 
 	gender3_female = Pbind(
 	\instrument, \female,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_female_rand[2]).trace,
+	\hz, Pseq(~freqs_female_rand[2]),
 	\amp, Pseq(~amps_female[2]),
-	\pan, Pseq(~panning_female_rand[2]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[2])
 );
 
 gender4_female = Pbind(
@@ -256,8 +255,7 @@ gender4_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[3]),
 	\amp, Pseq(~amps_female[3]),
-	\pan, Pseq(~panning_female_rand[3]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[3])
 );
 
 
@@ -266,8 +264,7 @@ gender5_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[4]),
 	\amp, Pseq(~amps_female[4]),
-	\pan, Pseq(~panning_female_rand[4]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[4])
 );
 
 
@@ -276,8 +273,7 @@ gender6_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[5]),
 	\amp, Pseq(~amps_female[5]),
-	\pan, Pseq(~panning_female_rand[5]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[5])
 );
 
 
@@ -297,8 +293,7 @@ gender8_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[7]),
 	\amp, Pseq(~amps_female[7]),
-	\pan, Pseq(~panning_female_rand[7]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[7])
 );
 
 
@@ -307,8 +302,7 @@ gender9_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[8]),
 	\amp, Pseq(~amps_female[8]),
-	\pan, Pseq(~panning_female_rand[8]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[8])
 );
 
 
@@ -317,10 +311,64 @@ gender10_female = Pbind(
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
 	\hz, Pseq(~freqs_female_rand[9]),
 	\amp, Pseq(~amps_female[9]),
-	\pan, Pseq(~panning_female_rand[9]),
-	\year, Pseq(~year)
+	\pan, Pseq(~panning_female_rand[9])
 );
 
+gender11_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[10]),
+	\amp, Pseq(~amps_female[10]),
+	\pan, Pseq(~panning_female_rand[10])
+);
+
+gender12_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[11]),
+	\amp, Pseq(~amps_female[11]),
+	\pan, Pseq(~panning_female_rand[11])
+);
+
+gender13_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[12]),
+	\amp, Pseq(~amps_female[12]),
+	\pan, Pseq(~panning_female_rand[12])
+);
+
+gender14_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[13]),
+	\amp, Pseq(~amps_female[13]),
+	\pan, Pseq(~panning_female_rand[13])
+);
+
+gender15_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[14]),
+	\amp, Pseq(~amps_female[14]),
+	\pan, Pseq(~panning_female_rand[14])
+);
+
+gender16_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[15]),
+	\amp, Pseq(~amps_female[15]),
+	\pan, Pseq(~panning_female_rand[15])
+);
+
+gender17_female = Pbind(
+	\instrument, \female,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_female_rand[16]),
+	\amp, Pseq(~amps_female[16]),
+	\pan, Pseq(~panning_female_rand[16])
+);
 
 
 
@@ -333,13 +381,14 @@ gender10_female = Pbind(
 	\hz, Pseq(~freqs_male_rand[0]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
-	\amp, Pseq(~amps_male[0])
+	\amp, Pseq(~amps_male[0]),
+	\year, Pseq(~year).trace;
 );
 
 	gender2_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[1]*0.90),
+	\hz, Pseq(~freqs_male_rand[1]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[1])
@@ -348,7 +397,7 @@ gender10_female = Pbind(
 	gender3_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[2]*0.80),
+	\hz, Pseq(~freqs_male_rand[2]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[2])
@@ -357,7 +406,7 @@ gender10_female = Pbind(
 	gender4_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[3]*0.7),
+	\hz, Pseq(~freqs_male_rand[3]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[3])
@@ -366,7 +415,7 @@ gender10_female = Pbind(
 	gender5_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[4]*0.6),
+	\hz, Pseq(~freqs_male_rand[4]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[4])
@@ -375,7 +424,7 @@ gender10_female = Pbind(
 	gender6_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[5]*0.5),
+	\hz, Pseq(~freqs_male_rand[5]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[5])
@@ -384,7 +433,7 @@ gender10_female = Pbind(
 	gender7_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[6]*0.4),
+	\hz, Pseq(~freqs_male_rand[6]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[6])
@@ -393,38 +442,101 @@ gender10_female = Pbind(
 	gender8_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[7]*0.3),
+	\hz, Pseq(~freqs_male_rand[7]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[7])
 );
 
-	gender8_male = Pbind(
+	gender9_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[8]*0.25),
+	\hz, Pseq(~freqs_male_rand[8]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[8])
 );
 
-	gender9_male = Pbind(
+	gender10_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[9]*0.15),
+	\hz, Pseq(~freqs_male_rand[9]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[9])
 );
 
-	gender10_male = Pbind(
+	gender11_male = Pbind(
 	\instrument, \mymalesynth,
 	\dur, Pwhite(~min_dur, ~max_dur, ~length),
-	\hz, Pseq(~freqs_male_rand[10]*0.1),
+	\hz, Pseq(~freqs_male_rand[10]),
 	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
 	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
 	\amp, Pseq(~amps_male[10])
 );
+
+
+	gender12_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[11]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[11])
+);
+
+
+	gender13_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[12]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[12])
+);
+
+
+	gender14_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[13]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[13])
+);
+
+
+	gender15_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[14]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[14])
+);
+
+
+
+	gender16_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[15]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[15])
+);
+
+
+
+	gender17_male = Pbind(
+	\instrument, \mymalesynth,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\hz, Pseq(~freqs_male_rand[16]),
+	\atk, Pwhite(~min_attack_male, ~max_attack_male, ~length),
+	\rel, Pwhite(~min_release_male, ~max_release_male, ~length),
+	\amp, Pseq(~amps_male[16])
+);
+
 
 
 // The voices originating from the same order in gender detection should be played simultaenously (no shift in time)
@@ -450,7 +562,21 @@ gender10_female = Pbind(
 	0.45,gender9_female,
 	0.45,gender9_male,
 	0.50,gender10_female,
-	0.50,gender10_male
+	0.50,gender10_male,
+	0.55,gender11_female,
+	0.55,gender11_male,
+	0.60,gender12_female,
+	0.60,gender12_male,
+	0.65,gender13_female,
+	0.65,gender13_male,
+	0.70,gender14_female,
+	0.70,gender14_male,
+	0.75,gender15_female,
+	0.75,gender15_male,
+	0.80,gender16_female,
+	0.80,gender16_male,
+	0.85,gender17_female,
+	0.85,gender17_male
 ],1).play; // use Ptpar to change wait between trigger of different voices
 
 
@@ -460,6 +586,6 @@ gender10_female = Pbind(
 ~host = NetAddr("localhost", 4859); // address de PROCESSING
 
 o = OSCFunc({ arg msg, time; var sendMess, year;
-	year= [msg][0][2].postln;
+	year= [msg][0][2];
 	~host.sendMsg("/trigger",year,1.0,"smc");
 },'/tr', s.addr);
