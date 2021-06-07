@@ -9,7 +9,7 @@ Genderize==0.3.1
 idna==2.10
 pbr==5.6.0
 pyparsing==2.4.7
-requests==2.25.1
+requests==2.20.0
 six==1.16.0
 stevedore==3.3.0
 unicode-tex==0.1.1
