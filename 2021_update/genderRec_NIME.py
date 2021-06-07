@@ -107,7 +107,7 @@ statsFileWriter = csv.writer(statsFile)
 
 
 entries = len(bib_database.entries) # number of articles 
-for x in range(0,entries):
+for x in range(0,entries): 
     print ("Article: %s" % x)
     secondName=''
     secondAuthorGender=''
