@@ -1,6 +1,5 @@
 # -*- coding: latin-1 -*-
 # NOTE THAT THE CSV FILE HAS TO BE SAVED AS UTF8!
-# IMPORT XLS FILE TO GOOGLE DOCS AND SAVE AS CSV THERE
 
 import gender
 import time
@@ -10,71 +9,11 @@ import unicodedata
 import ast
 import re
 import os
-
-print('ICMC')
-
 from findGender import findGender
+from columnNames import newcolumns
 
 
-newcolumns=['AllAuthors',
-'FirstName1stAuthor',
-'Gender',
-'Place',
-'Year',
-'NumberOfAuthors',
-'Title',
-'Conference',
-'FirstName2ndAuthor',
-'Gender2',
-'FirstName3rdAuthor',
-'Gender3',
-'FirstName4thAuthor',
-'Gender4',
-'FirstName5thAuthor',
-'Gender5',
-'FirstName6thAuthor',
-'Gender6',
-'FirstName7thAuthor',
-'Gender7',
-'FirstName8thAuthor',
-'Gender8',
-'FirstName9thAuthor',
-'Gender9',
-'FirstName10thAuthor',
-'Gender10',
-'FirstName11thAuthor',
-'Gender11',
-'FirstName12thAuthor',
-'Gender12',
-'FirstName13thAuthor',
-'Gender13',
-'FirstName14thAuthor',
-'Gender14',
-'FirstName15thAuthor',
-'Gender15',
-'FirstName16thAuthor',
-'Gender16',
-'FirstName17thAuthor',
-'Gender17',
-'Probability1',
-'Probability2',
-'Probability3',
-'Probability4',
-'Probability5',
-'Probability6',
-'Probability7',
-'Probability8',
-'Probability9',
-'Probability10',
-'Probability11',
-'Probability12',
-'Probability13',
-'Probability14',
-'Probability15',
-'Probability16',
-'Probability17']
-
-# ### SAVE CSVs
+# SAVE CSVs
 unknownFile = open('ICMCgenderOutputUnknown_2021.csv', 'w')
 unknownFileWriter = csv.writer(unknownFile)
 ambigiuousFile = open('ICMCgenderOutputAmbiguous_2021.csv', 'w')
@@ -85,7 +24,7 @@ outputFile = open('ICMCgenderOutput_2021.csv', 'w')
 outputWriter = csv.writer(outputFile)
 outputWriter.writerow(newcolumns)
 
-# ## STATS
+# STATS
 unknowns=0
 ambiguous = 0
 totNames = 0
@@ -93,15 +32,11 @@ uniqueUnknowns = list()
 male=0
 female=0
 
-
 authorlist=list()
-titlelist=list()
-yearlist=list()
 
 nameDict = {}
 genderDict = {}
 probabilityDict = {}
-
 
 def cleanName(authorString):
     # remove blank spaces in the beginning of the author name
@@ -118,84 +53,8 @@ def cleanName(authorString):
     authorString = (max(list(authorString.split(' ')), key=len))
     return(authorString)
 
-with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
-    rows = csv.reader(csvfile, delimiter=';')
-    counter = 0
-    for i in rows:
-        # for debugging and setting a subset 
-        counter = counter +1 
-        #print(counter)
-        #if counter==5:
-        #    break 
-        #titlelist.append(i[0])
-        title = i[0]
-        year  = i[2]
-        country = i[3]
-        #yearlist.append(i[2])
-        #print(authorlist[1]) # first author name (0 corresponds to column)
-        authors = i[1].split(';')
-        authorlist.append(authors)
-        print(authors)
-        numAuthors=len(authors)
-        for a in range(0,numAuthors): # corresponds to the authors in respective row
-            #print(a)
-            totNames+=1
-            author=authors[a]
-            author=str(author)
-            #print(author)
-            # some of the lines are not correctly formatted (some have the syntax "Frid, Emma", whereas other have "Emma Frid")
-            if ',' in author:
-                #('comma formatting')
-                author = author.split(",")[1]
-                #print(author)
-                authorNew = cleanName(author)
-            else:
-                #if not formatted with comma 
-                authorNew = cleanName(author)
-
-            author = authorNew
-            nameDict['name_%02d' % a] = author
-
-#           # CLASSIFICATION
-            authorGenderAlgorithm2=findGender(author)
-            authorGenderAlgorithm2= ( ", ".join( repr(e) for e in authorGenderAlgorithm2 ) )         
-            authorGenderAlgorithm2=ast.literal_eval(authorGenderAlgorithm2)
-            #print(authorGenderAlgorithm2)
-            authorGender=str(authorGenderAlgorithm2.get("gender"))
-            probability=str(authorGenderAlgorithm2.get("probability"))
-
-#         # CHECK IF WEIRD NAMES (TOO SHORT NAMES)
-#         # if len(author)<=3:
-#         #  print author, title
-
-            if authorGender ==str(None): # if "None" from algorithm two
-                unknowns+=1
-                unknownFileWriter.writerow([str(author),str(title),str(authors),str(year)])
-                if author not in uniqueUnknowns:
-                    uniqueUnknowns.append(author)
-            elif authorGender==u"female":
-                female+=1
-                if float(probability)<0.8:
-                    #print "ambiguous ambiguous ambiguous ambiguous :"+str(author)
-                    ambiguous+=1
-                    ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
-            elif authorGender==u"male":
-                male+=1
-                if float(probability)<0.8:
-                    #print "ambiguous ambiguous ambiguous ambiguous :"+str(author)
-                    ambiguous+=1
-                    ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
-
-
-            genderDict['name_%02d' % a] = authorGender
-
-            probabilityDict['probability_%02d' % a] = probability
-
-        #print('I AM WRITING A ROW')
-        # write output file 
-        print(counter)
-        if counter !=1: # skip first row without data 
-            outputWriter.writerow(
+def writeOutput(authors, nameDict, genderDict, probabilityDict, country, year, numAuthors, title):
+    outputWriter.writerow(
                 [str(authors), 
                 nameDict.get("name_00", None), 
                 genderDict.get("name_00", None), 
@@ -256,8 +115,84 @@ with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
                 probabilityDict.get("probability_17", None)
                 ]) 
 
+with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
+    rows = csv.reader(csvfile, delimiter=';')
+    counter = 0
+    for i in rows:
+        # for debugging and setting a subset 
+        counter = counter +1 
+        #print(counter)
+        if counter>1: # skip the first row since that is just the column name
+            if counter==20:
+                break 
+            #titlelist.append(i[0])
+            title = i[0]
+            year  = i[2]
+            country = i[3]
+            #yearlist.append(i[2])
+            #print(authorlist[1]) # first author name (0 corresponds to column)
+            authors = i[1].split(';')
+            authorlist.append(authors)
+            print(authors)
+            numAuthors=len(authors)
+            for a in range(0,numAuthors): # corresponds to the authors in respective row
+                #print(a)
+                totNames+=1
+                author=authors[a]
+                author=str(author)
+                #print(author)
+                # some of the lines are not correctly formatted (some have the syntax "Frid, Emma", whereas other have "Emma Frid")
+                if ',' in author:
+                    #('comma formatting')
+                    author = author.split(",")[1]
+                    #print(author)
+                    authorNew = cleanName(author)
+                else:
+                    #if not formatted with comma 
+                    authorNew = cleanName(author)
 
-# # write stats file
+                author = authorNew
+                nameDict['name_%02d' % a] = author
+
+                # CLASSIFICATION
+                authorGenderAlgorithm2=findGender(author)
+                authorGenderAlgorithm2= ( ", ".join( repr(e) for e in authorGenderAlgorithm2 ) )         
+                authorGenderAlgorithm2=ast.literal_eval(authorGenderAlgorithm2)
+                #print(authorGenderAlgorithm2)
+                authorGender=str(authorGenderAlgorithm2.get("gender"))
+                probability=str(authorGenderAlgorithm2.get("probability"))
+
+                # tese do not seem to work 
+                if authorGender ==str(None): # if "None" from algorithm two
+                    unknowns+=1
+                    print('****UNKNOWN AUTHOR****')
+                    unknownFileWriter.writerow([str(author),str(title),str(authors),str(year)])
+                    if author not in uniqueUnknowns:
+                        uniqueUnknowns.append(author)
+                elif authorGender==u"female":
+                    female+=1
+                    if float(probability)<0.8:
+                        print('****Ambiguous author**** '+str(author))
+                        ambiguous+=1
+                        ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
+                elif authorGender==u"male":
+                    male+=1
+                    if float(probability)<0.8:
+                        print('****Ambiguous author**** '+str(author))
+                        ambiguous+=1
+                        ambigiuousFileWriter.writerow([str(author),str(authorGender),str(probability),str(title),str(authors), str(year)])
+
+
+                genderDict['name_%02d' % a] = authorGender
+
+                probabilityDict['probability_%02d' % a] = probability
+
+            #print('I AM WRITING A ROW')
+            # write output file 
+            print(counter)
+            writeOutput(authors, nameDict, genderDict, probabilityDict, country, year, numAuthors, title)
+
+# write stats file
 statsFileWriter.writerow(['Conference','TotNames','Unknowns','UniqueUnknowns', 'Ambiguous', 'Female', 'Male'])
 statsFileWriter.writerow(['ICMC', totNames,unknowns, len(uniqueUnknowns), ambiguous, female, male])
 
