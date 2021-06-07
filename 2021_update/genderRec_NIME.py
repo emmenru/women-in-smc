@@ -26,13 +26,10 @@ uniqueUnknowns = list()
 male=0
 female=0
 
-print('TRYING TO FIND NIME BIB')
-
-
 # BIBTEX PARSER
-with open('NIME_2017-2020.bib') as bibtex_file:
+with open('input/NIME_2017-2020.bib') as bibtex_file:
     bibtex_str = bibtex_file.read()
-    print(bibtex_str)
+    #print(bibtex_str)
 bib_database = bibtexparser.loads(bibtex_str)
 
 print('****NIME****')
@@ -109,8 +106,8 @@ statsFile = open('NIMEstats_2021.csv', 'w')
 statsFileWriter = csv.writer(statsFile)
 
 
-entries=1369 # number of articles
-for x in range(0,10):
+entries = len(bib_database.entries) # number of articles 
+for x in range(0,entries):
     print ("Article: %s" % x)
     secondName=''
     secondAuthorGender=''
