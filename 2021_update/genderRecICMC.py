@@ -12,6 +12,9 @@ import os
 from findGender import findGender
 from columnNames import newcolumns
 
+# CHANGE HERE FOR DIFFERENT CONFERENCE DATA
+confName = 'ICMC'
+fileName = 'input/ICMC_2017-2018.csv'
 
 # SAVE CSVs
 unknownFile = open('ICMCgenderOutputUnknown_2021.csv', 'w')
@@ -115,16 +118,21 @@ def writeOutput(authors, nameDict, genderDict, probabilityDict, country, year, n
                 probabilityDict.get("probability_17", None)
                 ]) 
 
-with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
+# write stats file
+statsFileWriter.writerow(['Conference','TotNames','Unknowns','UniqueUnknowns', 'Ambiguous', 'Female', 'Male'])
+
+
+with open(fileName, newline='') as csvfile:
     rows = csv.reader(csvfile, delimiter=';')
     counter = 0
     for i in rows:
         # for debugging and setting a subset 
         counter = counter +1 
         #print(counter)
+        #print(i)
         if counter>1: # skip the first row since that is just the column name
-            if counter==20:
-                break 
+            #if counter==30:
+            #    break 
             #titlelist.append(i[0])
             title = i[0]
             year  = i[2]
@@ -162,10 +170,9 @@ with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
                 authorGender=str(authorGenderAlgorithm2.get("gender"))
                 probability=str(authorGenderAlgorithm2.get("probability"))
 
-                # tese do not seem to work 
+                # bugs in output
                 if authorGender ==str(None): # if "None" from algorithm two
                     unknowns+=1
-                    print('****UNKNOWN AUTHOR****')
                     unknownFileWriter.writerow([str(author),str(title),str(authors),str(year)])
                     if author not in uniqueUnknowns:
                         uniqueUnknowns.append(author)
@@ -189,12 +196,13 @@ with open('input/ICMC_2017-2018.csv', newline='') as csvfile:
 
             #print('I AM WRITING A ROW')
             # write output file 
-            print(counter)
             writeOutput(authors, nameDict, genderDict, probabilityDict, country, year, numAuthors, title)
-
-# write stats file
-statsFileWriter.writerow(['Conference','TotNames','Unknowns','UniqueUnknowns', 'Ambiguous', 'Female', 'Male'])
-statsFileWriter.writerow(['ICMC', totNames,unknowns, len(uniqueUnknowns), ambiguous, female, male])
+            # need to empty nameDict, probabilityDict, genderDict for each row 
+            nameDict = {}
+            genderDict = {}
+            probabilityDict = {}
+    
+    statsFileWriter.writerow([confName, totNames,unknowns, len(uniqueUnknowns), ambiguous, female, male])
 
 print("TOTAL NUMBER OF NAMES: " + str(totNames))
 print("NUMBER OF UNKNOWNS: " + str(unknowns))
