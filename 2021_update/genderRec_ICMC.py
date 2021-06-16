@@ -50,7 +50,7 @@ def cleanName(authorString):
     #S. M. is not a name 
     # if there is a '.' in the string:
     if '.' in authorString and len(authorString.split(' ')[0]) <= 2 :
-        #print('******FOUND AN INITIAL!!!!******')
+        print('******FOUND AN INITIAL!!!!******')
         # remove the characters around the '.' (e.g. initials)
         authorString = re.sub(r'[^\w]', ' ', authorString)
     authorString = (max(list(authorString.split(' ')), key=len))
@@ -131,8 +131,8 @@ with open(fileName, newline='') as csvfile:
         #print(counter)
         #print(i)
         if counter>1: # skip the first row since that is just the column name
-            if counter==30:
-                break 
+            #if counter==30:
+            #    break 
             #titlelist.append(i[0])
             title = i[0]
             year  = i[2]
