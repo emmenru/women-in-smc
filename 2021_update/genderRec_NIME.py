@@ -135,13 +135,13 @@ for x in range(0,entries):
         firstName = firstName.split()[0]
         firstNameRaw = firstName
         firstName = convert_tex_string(firstName)
-        nameDict['name_%02d' % n] = firstName
+        nameDict['name_%02d' % n] = firstName.decode('UTF-8')
 
         # CHECK IF WEIRD NAMES (TOO SHORT)
         #if len(firstName)<2:
         #   print firstName
 
-        authorGenderAlgorithm2=findGender(firstName)
+        authorGenderAlgorithm2=findGender(firstName.decode('UTF-8'))
         authorGenderAlgorithm2= ( ", ".join( repr(e) for e in authorGenderAlgorithm2 ) )
         authorGenderAlgorithm2=ast.literal_eval(authorGenderAlgorithm2)
         #print authorGenderAlgorithm2

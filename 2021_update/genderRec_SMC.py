@@ -13,17 +13,17 @@ from findGender import findGender
 from columnNames import newcolumns
 
 # CHANGE HERE FOR DIFFERENT CONFERENCE DATA
-confName = 'ICMC'
-fileName = 'input/ICMC_2017-2018.csv'
+confName = 'SMC'
+fileName = 'input/SMC_2017-2020_new.csv'
 
 # SAVE CSVs
-unknownFile = open('ICMCgenderOutputUnknown_2021.csv', 'w')
+unknownFile = open(confName+'genderOutputUnknown_2021.csv', 'w')
 unknownFileWriter = csv.writer(unknownFile)
-ambigiuousFile = open('ICMCgenderOutputAmbiguous_2021.csv', 'w')
+ambigiuousFile = open(confName+'genderOutputAmbiguous_2021.csv', 'w')
 ambigiuousFileWriter = csv.writer(ambigiuousFile)
-statsFile = open('ICMCstats_2021.csv', 'w')
+statsFile = open(confName+'stats_2021.csv', 'w')
 statsFileWriter = csv.writer(statsFile)
-outputFile = open('ICMCgenderOutput_2021.csv', 'w') 
+outputFile = open(confName+'genderOutput_2021.csv', 'w') 
 outputWriter = csv.writer(outputFile)
 outputWriter.writerow(newcolumns)
 
@@ -36,6 +36,7 @@ male=0
 female=0
 
 authorlist=list()
+yearlist=list()
 
 nameDict = {}
 genderDict = {}
@@ -43,16 +44,19 @@ probabilityDict = {}
 
 def cleanName(authorString):
     # remove blank spaces in the beginning of the author name
+    startString = authorString
+    authorString = authorString.split()[0]
     authorString = re.compile('^\xa0').sub('',authorString)
     authorString = re.compile('^\xc2').sub('',authorString)
     authorString = authorString.lstrip()
     #Dr. is not a name 
     #S. M. is not a name 
     # if there is a '.' in the string:
+    # this is not working 
     if '.' in authorString and len(authorString.split(' ')[0]) <= 2 :
-        #print('******FOUND AN INITIAL!!!!******')
+        print('******FOUND AN INITIAL!!!!******')
         # remove the characters around the '.' (e.g. initials)
-        authorString = re.sub(r'[^\w]', ' ', authorString)
+        authorString = startString
     authorString = (max(list(authorString.split(' ')), key=len))
     return(authorString)
 
@@ -131,35 +135,27 @@ with open(fileName, newline='') as csvfile:
         #print(counter)
         #print(i)
         if counter>1: # skip the first row since that is just the column name
-            #if counter==30:
-            #    break 
+            if counter==20: # for debugging
+                break 
             #titlelist.append(i[0])
             title = i[0]
             year  = i[2]
             country = i[3]
+            print(year)
             #yearlist.append(i[2])
             #print(authorlist[1]) # first author name (0 corresponds to column)
-            authors = i[1].split(';')
+            authors = (str(i[1]))
+            print('1: ', authors)
+            authors = authors.split(',')
             authorlist.append(authors)
             print(authors)
-            numAuthors=len(authors)
+            numAuthors=len(authors) 
             for a in range(0,numAuthors): # corresponds to the authors in respective row
-                #print(a)
                 totNames+=1
                 author=authors[a]
                 author=str(author)
                 #print(author)
-                # some of the lines are not correctly formatted (some have the syntax "Frid, Emma", whereas other have "Emma Frid")
-                if ',' in author:
-                    #('comma formatting')
-                    author = author.split(",")[1]
-                    #print(author)
-                    authorNew = cleanName(author)
-                else:
-                    #if not formatted with comma 
-                    authorNew = cleanName(author)
-
-                author = authorNew
+                author = cleanName(author)
                 nameDict['name_%02d' % a] = author
 
                 # CLASSIFICATION
@@ -201,7 +197,10 @@ with open(fileName, newline='') as csvfile:
             nameDict = {}
             genderDict = {}
             probabilityDict = {}
-    
+
+
+    # this should be done for each year? or do this in separate script?
+    # totNames, unknowns, uniqueunknowns, female, male, ambiguous should be resetted every year  
     statsFileWriter.writerow([confName, totNames,unknowns, len(uniqueUnknowns), ambiguous, female, male])
 
 print("TOTAL NUMBER OF NAMES: " + str(totNames))

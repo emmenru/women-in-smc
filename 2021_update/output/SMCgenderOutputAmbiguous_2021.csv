@@ -1,0 +1,43 @@
+Zhiyao,male,0.75,Audio-Visual Source Association for String Ensembles through Multi-Modal Vibrato Analysis,"['Bochen Li', ' Chenliang Xu', ' Zhiyao Duan']",2017
+Eita,male,0.73,An Adaptive Karaoke System that Plays Accompaniment Parts of Music Audio Signals Synchronously with Users' Singing Voices,"['Yusuke Wada', ' Yoshiaki Bando', ' Eita Nakamura', ' Katsutoshi Itoyama', ' Kazuyoshi Yoshii']",2017
+Andrea,male,0.62,Robinflock: a Polyphonic Algorithmic Composer for Interactive Scenarios with Children,"['Raul Masu', ' Andrea Conci', ' Cristina Core', ' Antonella de Angeli', ' Fabio Morreale']",2017
+Zhiyan,female,0.79,SECCIMA: Singing and Ear Training for Children with Cochlear Implants via a Mobile Application,"['Zhiyan Duan', ' Chitralekha Gupta', ' Graham Percival', ' David Grunberg and Ye Wang']",2017
+Keunhyoung,male,0.67,Sample-Level Deep Convolutional Neural Networks for Music Auto-Tagging Using Raw Waveforms,"['Jongpil Lee', ' Jiyoung Park', ' Keunhyoung Luke Kim', ' Juhan Nam']",2017
+Marian,male,0.62,Evaluation of an Acoustic Interface for Tremor Analysis,"['Marian Weger', ' David Pirrò', ' Robert Höldrich']",2017
+Liang,male,0.79,Renotation of Optical Music Recognition Data,"['Liang Chen', ' Christopher Raphael']",2017
+Simone,male,0.75,Electric Grammars. Algorithmic Design and Construction of Experimental Music Circuits,"['Simone Pappalardo', ' Andrea Valle']",2017
+Andrea,male,0.62,Electric Grammars. Algorithmic Design and Construction of Experimental Music Circuits,"['Simone Pappalardo', ' Andrea Valle']",2017
+Eita,male,0.73,Constructing PEDB 2nd Edition: A Music Performance Database with Phrase Information,"['Mitsuyo Hashida', ' Eita Nakamura', ' Haruhiro Katayose']",2017
+Gen,male,0.7,Lp-Viterbi Algorithm for Automatic Fingering Decision,"['Gen Hori', ' Shigeki Sagayama']",2017
+Andrea,male,0.62,Systema Naturae: Shared Practices Between Physical Computing and Algorithmic Composition,"['Andrea Valle', ' Mauro Lanza']",2017
+Doga,female,0.54,S1.2.  Digital Manufacturing for Musical Applications: A Survey of Current Status and Future Outlook,['Doga Cavdir '],2019
+Simone,male,0.75,P1.8. The Viking HRTF Dataset,"['Simone Spagnol', ' Kristján Bjarki Purkhús', ' Sverrir Karl Björnsson and Runar Unnthórsson']",2019
+Zheng,male,0.75,P1.10. Melody Identification in Standard MIDI Files,['Zheng Jiang and Roger Dannenberg'],2019
+Andrea,male,0.62,S3.5.  No Strings Attached: Force and Vibrotactile Feedback in a Guitar Simulation,"['Andrea Passalenti', ' Razvan Paisa', ' Niels Christian Nilsson', ' Nikolaj S. Andersson', ' Federico Fontana', ' Rolf Nordahl and Stefania Serafin ']",2019
+Leigh,male,0.5,S4.2.  Composing with Sounds: Designing an Object Oriented Daw for the Teaching of Sound-Based Composition,"['Stephen Pearse', ' Leigh Landy', ' Duncan Chapman', ' David Holland and Mihai Eni ']",2019
+Lauri,female,0.55,S5.2.  Real-Time Modeling of Audio Distortion Circuits with Deep Learning,"['Eero-Pekka Damskägg', ' Lauri Juvela and Vesa Välimäki ']",2019
+Lilian,female,0.73,P2.10.  Real-time Mapping of Periodic Dance Movements to Control Tempo in Electronic Dance Music,['Lilian Jap and Andre Holzapfel '],2019
+Johanni,female,0.72,Learning to Generate Music with BachProp ,"['Florian Colombo', ' Johanni Brea and Wulfram Gerstner ']",2019
+Kaede,female,0.65,S6.4.  Adaptive Score-Following System by Integrating Gaze Information,"['Kaede Noto', ' Yoshinari Takegawa and Keiji Hirata ']",2019
+Kin,male,0.78,VocalistMirror: A Singer Support Interface for Avoiding Undesirable Facial Expressions ,"['Kin Wah Edward Lin', ' Tomoyasu Nakano and Masataka Goto ']",2019
+Lonce,male,0.75, Conditioning a Recurrent Neural Network to synthesize musical instrument transients,['Lonce Wyse and Muhammad Huzaifah'],2019
+Changhong,male,0.55,S8.4. HMM-Based Glissando Detection for Recordings of Chinese Bamboo Flute,"['Changhong Wang', ' Emmanouil Benetos', ' Xiaojie Meng and Elaine Chew.']",2019
+Xiaojie,female,0.52,S8.4. HMM-Based Glissando Detection for Recordings of Chinese Bamboo Flute,"['Changhong Wang', ' Emmanouil Benetos', ' Xiaojie Meng and Elaine Chew.']",2019
+Andrea,male,0.62,P3.8.  SonaGraph. A cartoonified spectral model for music composition,['Andrea Valle '],2019
+Shin,male,0.75,#102. Web360Square: An interactive web application for viewing 3D audio-visual contents,"['Shin Kato', ' Tomohiro Ikeda', ' Mitsuaki Kawamorita', ' Manabu Tsukada and Hiroshi Esaki']",2020
+Dominique,male,0.57,#74. A Faust architecture for the ESP32 microcontroller,"['Romain Michon', ' Daniel Overholt', ' Stéphane Letz', ' Yann Orlarey', ' Dominique Fober and Catinca Dumitrascu']",2020
+Doga,female,0.54,#155. Embedding electronics in additive manufacturing for digital musical instrument design,['Doga Cavdir'],2020
+Yuri,male,0.76,#141. A low-cost endless knob controller with programmable resistive force feedback for multimedia production,"['Yuri De Pra', ' Federico Fontana', ' Stefano Papetti and Michele Simonato']",2020
+Elim,female,0.6,#220. Interactive software for the sonification of neuronal activity,"['Argan Verrier', ' Vincent Goudard', ' Elim Hong and Hugues Genevois']",2020
+Minz,male,0.72,#210. Evaluation of CNN-based automatic music tagging models,"['Minz Won', ' Andres Ferraro', ' Dmitry Bogdanov and Xavier\xa0Serra']",2020
+Mischa,male,0.74,#230. The world's first interactive 5G music concert: Professional quality networked music over a commodity network infrastructure,"['Alexander Carôt', ' Mischa Dohler', ' Simon Saunders', ' Frank Sardis', ' Richard Cornock and Navdeep Uniyal']",2020
+Rumi,female,0.7,#132. Computer-based music training with hearing impairments: Lessons from an experiment,['Rumi Hiraga and Kjetil Falkenberg'],2020
+Eita,male,0.73,CrestMusePEDB 2nd EDITION: MUSIC PERFORMANCE DATABASE WITH PHRASE p.60 INFORMATION.,"['Mitsuyo Hashida', ' Eita Nakamura', ' Haruhiro Katayose ']",2018
+Laurel,female,0.61,Improving the Instrumental Learning Experience through Complexity Management ,"['Laurel Pardue', ' Andrew McPherson', ' Dan Overholt ']",2018
+Yi-Hsuan,female,0.71,#nowplaying-RS: A New Benchmark Dataset for Building Context-Aware Music Recommender Systems.,"['Asmita Poddar', ' Eva Zangerle', ' Yi-Hsuan Yang ']",2018
+Rong,male,0.59,A Simple Fusion of Deep and Shallow Learning for Acoustic Scene Classification. ,"['Eduardo Fonseca', ' Rong Gong', ' Xavier Serra ']",2018
+Hedy,female,0.5,Dervish Sound Dress; a Development of a Musical Interface Garment which explores Wearable Technology using Sound and Haptic Feedback for Performance and Interaction.,"['Eduardo Miranda', ' Hedy Hurban', ' Edward Braund ']",2018
+Tian,male,0.71,AI Encountering Interactive Systems: A Deep Learning Reinforced Musical Composition Model. ,"['Ke Ma', ' Tian Xia ']",2018
+Andrea,male,0.62,Haptic Interaction with Guitar and Bass Virtual Strings. ,"['Andrea Passalenti', ' Federico Fontana ']",2018
+Doga,female,0.54,The BodyHarp: Designing the Intersection Between the Instrument and the Body. ,"['Doga Buse Cavdir', ' Romain Michon', ' Ge Wang ']",2018
+Ge,male,0.68,The BodyHarp: Designing the Intersection Between the Instrument and the Body. ,"['Doga Buse Cavdir', ' Romain Michon', ' Ge Wang ']",2018
