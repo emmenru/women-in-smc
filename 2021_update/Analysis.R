@@ -134,7 +134,6 @@ SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2018row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2019row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2020row
 
-
 # make a sonification for SMC 2019
 View(SMC2019) # these figures are very high, check if everything is actually correct 
 View(gendersSMC2019)
@@ -150,13 +149,15 @@ data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=T
 #p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
 #  geom_bar(stat="identity")
 p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
-  geom_bar(stat="identity", position=position_dodge())
+  geom_bar(stat="identity", position=position_dodge())+
+  xlab("Year") + ylab("Percentage")+labs(fill = "Gender")
 p + scale_fill_brewer(palette="Dark2") + theme_minimal()
 
 # ONLY PLOTTING WOMEN 
 women <- subset(data_long, gender == 'Female')
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
-  geom_bar(stat="identity", position=position_dodge())
+  geom_bar(stat="identity", position=position_dodge())+
+  xlab("Year") + ylab("Percentage")
 p + scale_fill_brewer(palette="Dark2") + theme_minimal()
 
 # ONLY PLOTTING THE FIRST AUTHORS ?
