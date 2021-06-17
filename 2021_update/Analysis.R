@@ -56,15 +56,31 @@ getCountsPerYear <- function(data){
   return(row)
 }
 
+getCountsPerYearFirstAuthor <- function(data){
+  #for debugging
+  #genders <- data$Gender
+  #gets number per row in dataset 
+  #print(summary(genders))
+  year = data$Year[1]
+  maleCountTot = sum(with(data, Gender=='male'))
+  femaleCountTot = sum(with(data, Gender=='female'))
+  unknownCountTot = sum(with(data, Gender=='None'))
+  #print(femaleCountTot)
+  #print(maleCountTot)
+  #print(unknownCountTot)
+  totNames = maleCountTot + femaleCountTot + unknownCountTot
+  malePercentage = maleCountTot/totNames
+  femalePercentage = femaleCountTot/totNames 
+  unknownPercentage = unknownCountTot/totNames
+  row <- c(year, maleCountTot, femaleCountTot, unknownCountTot, totNames, malePercentage, femalePercentage, unknownPercentage)
+  return(row)
+}
+
 # sum column $NumberOfAuthors to verify that total is correct 
 
 # ICMC 
 ICMC2017row <- getCountsPerYear(ICMC2017) 
 ICMC2018row <- getCountsPerYear(ICMC2018)
-
-#df <- setNames(data.frame(matrix(ncol = 8, nrow = 0)), c('Year', 'Male', 'Female', 'Unknown', 'Total', 'Male%', 'Female%', 'Unknown%'))
-#df[nrow(df) + 1,] = row2017
-#df[nrow(df) + 1,] = row2018
 
 # NIME 
 NIME2017row <- getCountsPerYear(NIME2017)
@@ -77,6 +93,18 @@ SMC2017row <- getCountsPerYear(SMC2017)
 SMC2018row <- getCountsPerYear(SMC2018)
 SMC2019row <- getCountsPerYear(SMC2019)
 SMC2020row <- getCountsPerYear(SMC2020)
+
+# SMC first authors 
+SMC2017rowFirst <- getCountsPerYearFirstAuthor(SMC2017)
+SMC2018rowFirst <- getCountsPerYearFirstAuthor(SMC2018)
+SMC2019rowFirst <- getCountsPerYearFirstAuthor(SMC2019)
+SMC2020rowFirst <- getCountsPerYearFirstAuthor(SMC2020)
+
+df <- setNames(data.frame(matrix(ncol = 8, nrow = 0)), c('Year', 'Male', 'Female', 'Unknown', 'Total', 'Male%', 'Female%', 'Unknown%'))
+df[nrow(df) + 1,] = SMC2017rowFirst
+df[nrow(df) + 1,] = SMC2018rowFirst
+df[nrow(df) + 1,] = SMC2019rowFirst
+df[nrow(df) + 1,] = SMC2020rowFirst
 
 # format to fit with data from previous years 
 # ICMC 
@@ -106,6 +134,7 @@ SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2018row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2019row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2020row
 
+
 # make a sonification for SMC 2019
 View(SMC2019) # these figures are very high, check if everything is actually correct 
 View(gendersSMC2019)
@@ -116,7 +145,6 @@ occurences["male"]
 df_plotting <- SMC_stats_new
 olddata_wide <- df_plotting[,c(1,6:8)]
 data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=TRUE)
-
 
 # PLOTTING 
 #p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
@@ -130,6 +158,10 @@ women <- subset(data_long, gender == 'Female')
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())
 p + scale_fill_brewer(palette="Dark2") + theme_minimal()
+
+# ONLY PLOTTING THE FIRST AUTHORS ?
+# PERHAPS IF THERE IS TIME 
+
 
 
 #### OLD 
