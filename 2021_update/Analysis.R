@@ -1,6 +1,7 @@
 library(readr)
 library(ggplot2)
 library(tidyr)
+library(RColorBrewer)
 
 # DO BEFORE INPUTTING FILES HERE
 # IMPORT CSV FILES IN EXCEL 
@@ -116,6 +117,10 @@ ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2018row
 #olddata_wide_ICMC <- ICMC_stats_new[,c(1,6:8)]
 #data_long_ICMC <- gather(olddata_wide_ICMC, gender, percentage, Male:Unknown, factor_key=TRUE)
 
+ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
+ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
+
+
 # NIME  
 NIME_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/NIME_stats.csv")
 stoprowNIME <- nrow(NIME_stats)-4
@@ -124,6 +129,10 @@ NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2017row
 NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2018row
 NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2019row
 NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2020row
+
+# overall 
+NIME_tot = sum(NIME_stats_new$MaleCount)+sum(NIME_stats_new$FemaleCount)+sum(NIME_stats_new$UnknownCount)
+NIME_women = sum(NIME_stats_new$FemaleCount)/NIME_tot*100
 
 # SMC  
 SMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/SMC_stats.csv")
@@ -134,6 +143,10 @@ SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2018row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2019row
 SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2020row
 
+# overall 
+SMC_tot = sum(SMC_stats_new$MaleCount)+sum(SMC_stats_new$FemaleCount)+sum(SMC_stats_new$UnknownCount)
+SMC_women = sum(SMC_stats_new$FemaleCount)/SMC_tot*100
+  
 # make a sonification for SMC 2019
 View(SMC2019) # these figures are very high, check if everything is actually correct 
 View(gendersSMC2019)
@@ -141,7 +154,7 @@ occurences<-table(unlist(gendersSMC2019))
 occurences["male"]
 
 # INPUT DATASET HERE FOR PLOTTING 
-df_plotting <- SMC_stats_new
+df_plotting <- ICMC_stats_new
 olddata_wide <- df_plotting[,c(1,6:8)]
 data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=TRUE)
 
@@ -151,21 +164,22 @@ data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=T
 p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())+
   xlab("Year") + ylab("Percentage")+labs(fill = "Gender")
-p + scale_fill_brewer(palette="Dark2") + theme_minimal()
+p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal()
 
 # ONLY PLOTTING WOMEN 
 women <- subset(data_long, gender == 'Female')
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())+
   xlab("Year") + ylab("Percentage")
-p + scale_fill_brewer(palette="Dark2") + theme_minimal()
+p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal()+theme(legend.position = "none")
+
 
 # ONLY PLOTTING THE FIRST AUTHORS ?
 # PERHAPS IF THERE IS TIME 
 
+# PUT LOG REGRESSION LINE TO SEE IF SIGNIFICANT DIFFERENCE OVER YEARS 
 
-
-#### OLD 
+#################################################### OLD 
 
 
 # for every year, get number of authors 

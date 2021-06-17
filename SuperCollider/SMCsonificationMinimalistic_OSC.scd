@@ -77,7 +77,11 @@ SynthDef(\FreeVerb2x2, {|outbus, mix = 0.25, room = 0.15, damp = 0.5, amp = 1.0|
 //////////////////////// READ DATA  INTO 2D VECTOR ////////////////////////
 
 (
-~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/input_data_SuperCollider/ICMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+//~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/input_data_SuperCollider/ICMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+
+~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/2021_update/output/corrected_output_supercollider/ICMCgenderOutput_2021_for_R_SC.csv", true).postcs;
+
+
 
 // invert rows and columns in a two dimensional Array
 // this is done to get a vector of each column rather than a vector of each row
