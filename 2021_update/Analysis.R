@@ -6,35 +6,137 @@ library(tidyr)
 # IMPORT CSV FILES IN EXCEL 
 # EXPORT AS CSV 
 ICMC <- read.csv("~/Dev/women-in-smc/2021_update/output/ICMCgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
-NIME <- read.csv("~/Dev/women-in-smc/2021_update/output/NIMEgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
-
+NIME <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/NIMEgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
+SMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/SMCgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
 
 # ICMC 
-years <- range(ICMC$Year)
-mydata <- ICMC 
-newdata2017 <- ICMC[ which(ICMC$Year==2017), ]
-newdata2018 <- ICMC[ which(ICMC$Year==2018), ]
+ICMC2017 <- ICMC[ which(ICMC$Year==2017), ]
+ICMC2018 <- ICMC[ which(ICMC$Year==2018), ]
 
 # NIME 
-years <- range(NIME$Year)
 NIME2017 <- NIME[ which(NIME$Year==2017), ]
 NIME2018 <- NIME[ which(NIME$Year==2018), ]
 NIME2019 <- NIME[ which(NIME$Year==2019), ]
 NIME2020 <- NIME[ which(NIME$Year==2020), ]
 
+# SMC 
+years <- range(SMC$Year)
+SMC2017 <- SMC[ which(SMC$Year==2017), ]
+SMC2018 <- SMC[ which(SMC$Year==2018), ]
+SMC2019 <- SMC[ which(SMC$Year==2019), ]
+SMC2020 <- SMC[ which(SMC$Year==2020), ]
 
 is.empty <- function(x, mode = NULL){
   if (is.null(mode)) mode <- class(x)
   identical(vector(mode, 1), c(x, vector(class(x), 1)))
+  #a <- 1
+  #b <- numeric(0)
+  #is.empty(a)
 }
 
-#a <- 1
-#b <- numeric(0)
-#is.empty(a)
+
+getCountsPerYear <- function(data){
+  genders<-data[ , grepl( "Gender" , names( data ) ) ]
+  # remove columns in which there are any NAs
+  genders <- genders[ , apply(genders, 2, function(x) !any(is.na(x)))]
+  # gets number per row in dataset 
+  counts <- t(apply(genders, 1, function(u) table(factor(u, levels=c("male","female", "None"))))) 
+  counts = as.data.frame(counts)
+  # sum per column to get a number per year 
+  #output <- c(sum(counts$female), sum(counts$male), sum(counts$None))
+  year = data$Year[1]
+  maleCountTot = sum(counts$male)
+  femaleCountTot = sum(counts$female)
+  unknownCountTot = sum(counts$None)
+  totNames = maleCountTot + femaleCountTot + unknownCountTot
+  malePercentage = maleCountTot/totNames
+  femalePercentage = femaleCountTot/totNames 
+  unknownPercentage = unknownCountTot/totNames
+  row <- c(year, maleCountTot, femaleCountTot, unknownCountTot, totNames, malePercentage, femalePercentage, unknownPercentage)
+  return(row)
+}
+
+# sum column $NumberOfAuthors to verify that total is correct 
+
+# ICMC 
+ICMC2017row <- getCountsPerYear(ICMC2017) 
+ICMC2018row <- getCountsPerYear(ICMC2018)
+
+#df <- setNames(data.frame(matrix(ncol = 8, nrow = 0)), c('Year', 'Male', 'Female', 'Unknown', 'Total', 'Male%', 'Female%', 'Unknown%'))
+#df[nrow(df) + 1,] = row2017
+#df[nrow(df) + 1,] = row2018
+
+# NIME 
+NIME2017row <- getCountsPerYear(NIME2017)
+NIME2018row <- getCountsPerYear(NIME2018)
+NIME2019row <- getCountsPerYear(NIME2019)
+NIME2020row <- getCountsPerYear(NIME2020)
+
+# SMC 
+SMC2017row <- getCountsPerYear(SMC2017)
+SMC2018row <- getCountsPerYear(SMC2018)
+SMC2019row <- getCountsPerYear(SMC2019)
+SMC2020row <- getCountsPerYear(SMC2020)
+
+# format to fit with data from previous years 
+# ICMC 
+ICMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/ICMC_stats.csv")
+stoprowICMC <- nrow(ICMC_stats)-4
+ICMC_stats_new <- ICMC_stats[c(1:stoprowICMC),]
+ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2017row
+ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2018row
+#olddata_wide_ICMC <- ICMC_stats_new[,c(1,6:8)]
+#data_long_ICMC <- gather(olddata_wide_ICMC, gender, percentage, Male:Unknown, factor_key=TRUE)
+
+# NIME  
+NIME_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/NIME_stats.csv")
+stoprowNIME <- nrow(NIME_stats)-4
+NIME_stats_new <- NIME_stats[c(1:stoprowNIME),]
+NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2017row
+NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2018row
+NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2019row
+NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2020row
+
+# SMC  
+SMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/SMC_stats.csv")
+stoprowSMC <- nrow(SMC_stats)-4
+SMC_stats_new <- SMC_stats[c(1:stoprowSMC),]
+SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2017row
+SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2018row
+SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2019row
+SMC_stats_new[nrow(SMC_stats_new) + 1,] = SMC2020row
+
+# make a sonification for SMC 2019
+View(SMC2019) # these figures are very high, check if everything is actually correct 
+View(gendersSMC2019)
+occurences<-table(unlist(gendersSMC2019))
+occurences["male"]
+
+# INPUT DATASET HERE FOR PLOTTING 
+df_plotting <- SMC_stats_new
+olddata_wide <- df_plotting[,c(1,6:8)]
+data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=TRUE)
+
+
+# PLOTTING 
+#p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
+#  geom_bar(stat="identity")
+p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
+  geom_bar(stat="identity", position=position_dodge())
+p + scale_fill_brewer(palette="Dark2") + theme_minimal()
+
+# ONLY PLOTTING WOMEN 
+women <- subset(data_long, gender == 'Female')
+p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
+  geom_bar(stat="identity", position=position_dodge())
+p + scale_fill_brewer(palette="Dark2") + theme_minimal()
+
+
+#### OLD 
+
 
 # for every year, get number of authors 
 getCountsPerColumn <- function(data, column, gender){
-  # this is because there table differs between the two (first gender column has no empty cells)
   tab <- table(data[column])
   #print(tab)
   if (gender=='female') { 
@@ -49,13 +151,13 @@ getCountsPerColumn <- function(data, column, gender){
 
 getStats <- function(data) {
   # only get columns with gender data 
-  data[ , grepl( "Gender" , names( data ) ) ]
   genders<-data[ , grepl( "Gender" , names( data ) ) ]
-  
+  #print(genders)
+  # total number of names per year 
+  numAuthors <- sum(data$NumberOfAuthors)
   femaleCountTot = 0 
   maleCountTot = 0 
   unknownCountTot = 0
-  
   # iterate through all columns in the dataset 
   for(i in 1:17) {
     print(paste('COLUMN NUMBER:', i)) 
@@ -63,7 +165,6 @@ getStats <- function(data) {
     #print((genders[column]))
     tab <- table(genders[column])
     print(tab)
-    
     femaleCount = as.integer(getCountsPerColumn(genders, column, 'female'))
     maleCount = as.integer(getCountsPerColumn(genders, column, 'male'))
     unknownCount = as.integer(getCountsPerColumn(genders, column, 'unknown')) 
@@ -89,81 +190,20 @@ getStats <- function(data) {
     print(paste('U:', unknownCount)) 
   }
   
+  
   year = data$Year[1]
   totNames = femaleCountTot + maleCountTot + unknownCountTot
   malePercentage = maleCountTot/totNames
   femalePercentage = femaleCountTot/totNames 
   unknownPercentage = unknownCountTot/totNames
   row <- c(year, maleCountTot, femaleCountTot, unknownCountTot, totNames, malePercentage, femalePercentage, unknownPercentage)
+  # make sure that the total corresponds to the total number of authors listed in the original csv file 
+  stopifnot(numAuthors == totNames)
   return(row)
 }
 
-# ICMC 
-row2017 <- getStats(newdata2017)
-row2018 <- getStats(newdata2018)
 
-df <- setNames(data.frame(matrix(ncol = 8, nrow = 0)), c('Year', 'Male', 'Female', 'Unknown', 'Total', 'Male%', 'Female%', 'Unknown%'))
-df[nrow(df) + 1,] = row2017
-df[nrow(df) + 1,] = row2018
-
-# NIME 
-NIME2017row <- getStats(NIME2017)
-NIME2018row <- getStats(NIME2018)
-NIME2019row <- getStats(NIME2019)
-NIME2020row <- getStats(NIME2020)
-
-#df <- setNames(data.frame(matrix(ncol = 8, nrow = 0)), c('Year', 'Male', 'Female', 'Unknown', 'Total', 'Male%', 'Female%', 'Unknown%'))
-#df[nrow(df) + 1,] = NIME2017row
-#df[nrow(df) + 1,] = NIME2018row
-#df[nrow(df) + 1,] = NIME2019row
-#df[nrow(df) + 1,] = NIME2020row
-
-
-
-# format to fit with data from previous years 
-# Year, MaleCount, FemaleCount, UnknownCount, TotNames, MalePercentage, FemalePercentage,  UnknownPercentage
-
-# ICMC 
-ICMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/ICMC_stats.csv")
-stoprow <- nrow(ICMC_stats)-4
-ICMC_stats_new <- ICMC_stats[c(1:stoprow),]
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = row2017
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = row2018
-# make new plots over years 
-olddata_wide <- ICMC_stats_new[,c(1,6:8)]
-data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=TRUE)
-
-# NIME  
-NIME_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/NIME_stats.csv")
-stoprow <- nrow(NIME_stats)-4
-
-NIME_stats_new <- NIME_stats[c(1:stoprow),]
-NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2017row
-NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2018row
-NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2019row
-NIME_stats_new[nrow(NIME_stats_new) + 1,] = NIME2020row
-
-# WIDE TO LONG 
-df_plotting <- NIME_stats_new
-olddata_wide <- df_plotting[,c(1,6:8)]
-data_long <- gather(olddata_wide, gender, percentage, Male:Unknown, factor_key=TRUE)
-
-
-# PLOTTING 
-p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
-  geom_bar(stat="identity")
-p <- ggplot(data=data_long, aes(x=Year, y=percentage, fill=gender)) +
-  geom_bar(stat="identity", position=position_dodge())
-p + scale_fill_brewer(palette="Dark2") + theme_minimal()
-
-# ONLY PLOTTING WOMEN 
-women <- subset(data_long, gender == 'Female')
-p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
-  geom_bar(stat="identity", position=position_dodge())
-p + scale_fill_brewer(palette="Dark2") + theme_minimal()
-
-
-
+#### #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### 
 #### CHECK THIS 
 #### SOMETHING IS UP WITH THE LEVELS 
 # I don't understand why this one has the category None
@@ -179,3 +219,4 @@ levels(droplevels(newdata2017$Gender4))
 
 # check agains this to verify 
 summary(newdata2017$Gender2)
+

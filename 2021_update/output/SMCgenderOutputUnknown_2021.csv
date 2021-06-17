@@ -1,27 +1,31 @@
 Sebastià,Investigations on Stage Acoustic Preferences of Solo Trumpet Players using Virtual Acoustics,"['Sebastià V. Amengual Garí', ' Malte Kob', ' Tapio Lokki']",2017
-Fabián,Virtual Analog Model of the Lockhart Wavefolder,"['Fabián Esqueda', ' Henri Pöntynen', ' Julian D. Parker', ' Stefan Bilbao']",2017
 Léopold,"Live Orchestral Piano, a System for Real-Time Orchestral Music Generation","['Léopold Crestel', ' Philippe Esling']",2017
-Stéphane,S1.3.  Real Time Audio Digital Signal Processing with Faust and the Teensy,"['Romain Michon', ' Yann Orlarey', ' Stéphane Letz and Dominique Fober ']",2019
-Adrián,P1.5. Perceptual Evaluation of Modal Synthesis for Impact-Based Sounds,['Adrián Barahona and Sandra Pauletto'],2019
-Kristján,P1.8. The Viking HRTF Dataset,"['Simone Spagnol', ' Kristján Bjarki Purkhús', ' Sverrir Karl Björnsson and Runar Unnthórsson']",2019
-Víctor,D1.6.  Musicypher: Music for Message Encryption,['Víctor Jaime Marín and Alberto Peinado '],2019
-Fu-Hai,D1.7.  A Platform for Processing Sheet Music and Developing Multimedia Application,['Fu-Hai Frank Wu '],2019
-Stéphane,Comparison and Implementation of Data Transmission Techniques through Analog Audio Signals in the Context of Augmented Mobile Instruments,"['Romain Michon', ' Yann Orlarey', ' Stéphane Letz and Dominique Fober ']",2019
-Anıl,S3.3.  Exploring the Effects of Diegetic and Non-diegetic Audiovisual Cues on Decision-making in Virtual Reality,['Anıl Çamcı '],2019
-Christon-Ragavan,S8.5. Towards CNN-based Acoustic Modeling of Seventh Chords for Automatic Chord Recognition,"['Christon-Ragavan Nadar', ' Jakob Abeßer and Sascha Grollmisch']",2019
-Josué,P3.5.  VUSAA: An Augmented Reality Mobile App for Urban Soundwalks,['Josué Moreno and Vesa Norilo '],2019
-África,Drawing Geometric Figures with Braille Description through a Speech Recognition System,"['África Chamorro', ' Ana M. Barbancho', ' Isabel Barbancho and Lorenzo J. Tardón']",2019
-Çagri,#67. Towards playing in the 'air': Modeling motion-sound energy relationships in electric guitar performance using deep neural networks,"['Çagri Erdem', ' Qichao Lan', ' Julian Fuhrer', ' Charles Martin', ' Jim Tørresen and Alexander Refsum Jensenius']",2020
-Sven-Amin,#93. Matching uni-directional auditory gestures to visual trajectories of varying curvature,['Sven-Amin Lembke'],2020
-Adrián,#95. Perception of emotions in knocking sounds: An evaluation study,"['Malcolm Houel', ' Abhilash Arun', ' Alfred Berg', ' Alessandro Iop', ' Adrián Barahona-Ríos and Sandra Pauletto']",2020
-Adrián,#83. Synthesising knocking sound effects using conditional WaveGAN,['Adrián Barahona-Ríos and Sandra Pauletto'],2020
-Flaithri,Stream Segregation: Utilizing Harmonic Variance in Auditory Graphs,"[' Joe Fitzpatrick', ' Flaithri Neff ']",2018
+Fabián,Virtual Analog Model of the Lockhart Wavefolder,"['Fabián Esqueda', ' Henri Pöntynen', ' Julian D. Parker', ' Stefan Bilbao']",2017
 Jan-Torsten,A system for spacial audio using synchronized mobile devices. p.93,['Jan-Torsten Milde'],2018
+Tychonas,Affordances of Vibrational Excitation for Music Composition and Performance. ,"['Tychonas Michailidis', ' Jason Hockman ']",2018
+Fabián,Algorithms for Guitar-Driven Synthesis: Application to an Augmented Guitar. ,"['Fabián Esqueda', ' Otso Lähdeoja', ' Vesa Valimaki ']",2018
+Ohejl,An Expressive Multidimensional Physical Modelling Percussion Instrument. ,"['Ohejl Zabetian ', ' Pablo Delgado', ' Sofia Dahl', ' Stefania Serafin ']",2018
 Siobhán,Evoking Places from Spaces: The application of Multimodal Narrative Techniques in the p.103 Creation of “U - Modified”.,"['Gareth W. Young', ' Siobhán Mannion', ' Sara Wentworth ']",2018
+Barıs,Nawba Recognition for Arab-andalusian Music Using Templates From Music Scores. ,"['Niccolò Pretto', ' Barıs Bozkurt', ' Rafael Caro Repetto', ' Xavier Serra ']",2018
 Kıvanç,Quantitative Analysis of the Impact of Mixing on Perceived Emotion of Soundscape Recordings.,"['Jianyu Fan', ' Miles Thorogood', ' Kıvanç Tatar', ' Philippe Pasquier ']",2018
 Kurijn,Real-time Bowed String Feature Extraction for Performance Applications. ,"['Kurijn Buys', ' Andrew McPherson ']",2018
-Ohejl,An Expressive Multidimensional Physical Modelling Percussion Instrument. ,"['Ohejl Zabetian ', ' Pablo Delgado', ' Sofia Dahl', ' Stefania Serafin ']",2018
-Tychonas,Affordances of Vibrational Excitation for Music Composition and Performance. ,"['Tychonas Michailidis', ' Jason Hockman ']",2018
-Barıs,Nawba Recognition for Arab-andalusian Music Using Templates From Music Scores. ,"['Niccolò Pretto', ' Barıs Bozkurt', ' Rafael Caro Repetto', ' Xavier Serra ']",2018
-Fabián,Algorithms for Guitar-Driven Synthesis: Application to an Augmented Guitar. ,"['Fabián Esqueda', ' Otso Lähdeoja', ' Vesa Valimaki ']",2018
+Flaithri,Stream Segregation: Utilizing Harmonic Variance in Auditory Graphs,"[' Joe Fitzpatrick', ' Flaithri Neff ']",2018
 Sérgio,"Strumming on an Acoustic Nylon Guitar: Microtiming, Beat Control and Rhythmic Expression in Three Different Accompaniment Patterns.","['Sérgio Freire', ' Augusto Armondes', ' João Viana', ' Rubens Silva ']",2018
+Jan-Torsten,Adaptive Body Movement Sonification in Music and Therapy,"['Christian Baumann', ' Johanna Friederike Baarlink ', ' Jan-Torsten Milde']",2019
+Stéphane,Comparison and Implementation of Data Transmission Techniques through Analog Audio Signals in the Context of Augmented Mobile Instruments,"['Romain Michon', ' Yann Orlarey', ' Stéphane Letz ', ' Dominique Fober ']",2019
+Víctor,D1.6.  Musicypher: Music for Message Encryption,"['Víctor Jaime Marín ', ' Alberto Peinado ']",2019
+Fu-Hai,D1.7.  A Platform for Processing Sheet Music and Developing Multimedia Application,['Fu-Hai Frank Wu '],2019
+María-José,D1.8.  Capturing the Reaction Time to Distinguish between Voice and Music,"['Alejandro Villena-Rodríguez', ' Lorenzo J. Tardón', ' Isabel Barbancho', ' Ana M. Barbancho', ' Irene Gómez-Plazas ', ' María-José Varela-Salinas ']",2019
+África,Drawing Geometric Figures with Braille Description through a Speech Recognition System,"['África Chamorro', ' Ana M. Barbancho', ' Isabel Barbancho ', ' Lorenzo J. Tardón']",2019
+Adrián,P1.5. Perceptual Evaluation of Modal Synthesis for Impact-Based Sounds,"['Adrián Barahona ', ' Sandra Pauletto']",2019
+Kristján,P1.8. The Viking HRTF Dataset,"['Simone Spagnol', ' Kristján Bjarki Purkhús', ' Sverrir Karl Björnsson ', ' Runar Unnthórsson']",2019
+Frédéric,P3.2.  Polytopic reconfiguration: a graph-based scheme for the multiscale transformation of music segments and its perceptual assessment,"['Valentin Gillot ', ' Frédéric Bimbot ']",2019
+Josué,P3.5.  VUSAA: An Augmented Reality Mobile App for Urban Soundwalks,"['Josué Moreno ', ' Vesa Norilo ']",2019
+Stéphane,S1.3.  Real Time Audio Digital Signal Processing with Faust and the Teensy,"['Romain Michon', ' Yann Orlarey', ' Stéphane Letz ', ' Dominique Fober ']",2019
+Anıl,S3.3.  Exploring the Effects of Diegetic and Non-diegetic Audiovisual Cues on Decision-making in Virtual Reality,['Anıl Çamcı '],2019
+Hélène-Camille,S8.3. Belief Propagation algorithm for Automatic Chord Estimation,"['Vincent P. Martin', ' Sylvain Reynal', ' Dogac Basaran ', ' Hélène-Camille Crayencour ']",2019
+Christon-Ragavan,S8.5. Towards CNN-based Acoustic Modeling of Seventh Chords for Automatic Chord Recognition,"['Christon-Ragavan Nadar', ' Jakob Abeßer ', ' Sascha Grollmisch']",2019
+Çagri,#67. Towards playing in the 'air': Modeling motion-sound energy relationships in electric guitar performance using deep neural networks,"['Çagri Erdem', ' Qichao Lan', ' Julian Fuhrer', ' Charles Martin', ' Jim Tørresen ', ' Alexander Refsum Jensenius']",2020
+Adrián,#83. Synthesising knocking sound effects using conditional WaveGAN,"['Adrián Barahona-Ríos ', ' Sandra Pauletto']",2020
+Sven-Amin,#93. Matching uni-directional auditory gestures to visual trajectories of varying curvature,['Sven-Amin Lembke'],2020
+Adrián,#95. Perception of emotions in knocking sounds: An evaluation study,"['Malcolm Houel', ' Abhilash Arun', ' Alfred Berg', ' Alessandro Iop', ' Adrián Barahona-Ríos ', ' Sandra Pauletto']",2020

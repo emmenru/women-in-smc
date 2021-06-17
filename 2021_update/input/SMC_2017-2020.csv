@@ -1,295 +1,296 @@
-Title;Author(s);Year;Country;;;
-Exploring Sound-Motion Textures in Drum Set Performance;Rolf Inge Godøy, Minho Song, Sofia Dahl;2017;Finland;;;
-Jazz Piano Trio Synthesizing System Based on HMM and DNN;Takeshi Hori, Kazuyuki Nakamura, Shigeki Sagayama;2017;Finland;;;
-Audio-Visual Source Association for String Ensembles through Multi-Modal Vibrato Analysis;Bochen Li, Chenliang Xu, Zhiyao Duan;2017;Finland;;;
-Investigations on Stage Acoustic Preferences of Solo Trumpet Players using Virtual Acoustics;Sebastià V. Amengual Garí, Malte Kob, Tapio Lokki;2017;Finland;;;
-The design of a lightweight DSP programming library;Victor Lazzarini;2017;Finland;;;
-Towards the internet of musical things;Luca Turchet, Carlo Fischione, Mathieu Barthet;2017;Finland;;;
-Environment-Mediated Coupling of Autonomous Sound-Generating Systems in Live Performance: An Overview of the Machine Milieu Project;Dario Sanfilippo, Agostino Di Scipio;2017;Finland;;;
-Design Implications for Technology-Mediated Audience Participation in Live Music;Oliver Hödl, Geraldine Fitzpatrick, Fares Kayali, Simon Holland;2017;Finland;;;
-Automatic Arranging Musical Score for Piano using Important Musical Elements;Hirofumi Takamori, Haruki Sato, Takayuki Nakatsuka, Shigeo Morishima;2017;Finland;;;
-FFT-based Dynamic Range Compression;Leo McCormack, Vesa Välimäki;2017;Finland;;;
-A Sonification Interface Unifying Real-Time and Offline Processing;Hanns Holger Rutz, Robert Höldrich;2017;Finland;;;
-QUALIA: A Software for Guided Meta-Improvisation Performance;Manuel Brásio, Filipe Lopes, Gilberto Bernardes, Rui Penha;2017;Finland;;;
-Interactive Painting Sonification Using a Sensor-Equipped Runway;Eduardo Micheloni, Marcella Mandanici, Antonio Rodà, Sergio Canazza;2017;Finland;;;
-Interactive Soundscapes: Developing a Physical Space Augmented through Dynamic Sound Rendering and Granular Synthesis;Matteo Lionello, Marcella Mandanici, Sergio Canazza, Edoardo Micheloni;2017;Finland;;;
-Learning to Play the Guitar at the Age of Interactive and Collaborative Web Technologies;Anne-Marie Burns, Sébastien Bel, Caroline Traube;2017;Finland;;;
-Key Inference from Irish Traditional Music Scores and Recordings;Pierre Beauguitte, Bryan Duggan, John D. Kelleher;2017;Finland;;;
-Ferin Martino’s Tour: Lessons from Adapting the Same Algorithmic Art Installation to Different Venues and Platforms;Jeffrey M. Morris;2017;Finland;;;
-Exploring Melody and Motion Features in “Sound-Tracings”;Tejaswinee Kelkar, Alexander Refsum Jensenius;2017;Finland;;;
-Troop: A Collaborative Tool for Live Coding;Ryan Kirkbride;2017;Finland;;;
-An Adaptive Karaoke System that Plays Accompaniment Parts of Music Audio Signals Synchronously with Users' Singing Voices;Yusuke Wada, Yoshiaki Bando, Eita Nakamura, Katsutoshi Itoyama, Kazuyoshi Yoshii;2017;Finland;;;
-Experimental Assessment of Descriptive Statistics and Adaptive Methodologies for Threshold Establishment in Onset Selection Functions;Jose J. Valero-Mas, José M. Iñesta;2017;Finland;;;
-Robinflock: a Polyphonic Algorithmic Composer for Interactive Scenarios with Children;Raul Masu, Andrea Conci, Cristina Core, Antonella de Angeli, Fabio Morreale;2017;Finland;;;
-Technology-Assisted Performance of Polytemporal Music;Philippe Kocher;2017;Finland;;;
-Investigating Spatial Music Qualia through Tissue Conduction;Peter Lennox, Ian McKenzie;2017;Finland;;;
-Exploring Social Mobile Music with Tiny Touch-Screen Performances;Charles P. Martin, Jim Torresen;2017;Finland;;;
-Does Singing a Low-Pitch Tone Make You Look Angrier?;Peter Ahrendt, Christian C. Bach, Sofia Dahl;2017;Finland;;;
-Monitoring and Supporting Engagement in Skilled Tasks: From Creative Musical Activity to Psychological Wellbeing;Juan Carlos Vasquez, Koray Tahiroğlu, Niklas Pöllönen, Johan Kildal, Teemu Ahmaniemi;2017;Finland;;;
-The Musical Influence on People's Micromotion when Standing Still in Groups;Alexander Refsum Jensenius, Agata Zelechowska, Victor Gonzalez Sanchez;2017;Finland;;;
-SECCIMA: Singing and Ear Training for Children with Cochlear Implants via a Mobile Application;Zhiyan Duan, Chitralekha Gupta, Graham Percival, David Grunberg and Ye Wang;2017;Finland;;;
-Stacked Convolutional and Recurrent Neural Networks for Music Emotion Recognition;Miroslav Malik, Sharath Adavanne, Konstantinos Drossos, Tuomas Virtanen, Dasa Ticha, Roman Jarina;2017;Finland;;;
-Validating Attach Phase Descriptors Obtained by the Timbre Toolbox and MIRtoolbox;Kristian Nymoen, Anne Danielsen, Justin London;2017;Finland;;;
-Sample-Level Deep Convolutional Neural Networks for Music Auto-Tagging Using Raw Waveforms;Jongpil Lee, Jiyoung Park, Keunhyoung Luke Kim, Juhan Nam;2017;Finland;;;
-Generating Data to Train Convolutional Neural Networks for Classical Music Source Separation;Marius Miron, Jordi Janer, Emilia Gómez;2017;Finland;;;
-Evaluation of an Acoustic Interface for Tremor Analysis;Marian Weger, David Pirrò, Robert Höldrich;2017;Finland;;;
-An Exploratory Study on the Effect of Auditory Feedback on Gaze Behavior in a Virtual Throwing Task with and without Haptic Feedback;Emma Frid, Roberto Bresin, Eva-Lotta Sallnäs Pysander, Jonas Moll;2017;Finland;;;
-Auralization in Space and in Rooms of Arbitrary D Dimensions;Felipe Orduña-Bustamante;2017;Finland;;;
-Auditory, Visual and Somatosensory Localization of Piano Tones: a Preliminary Study;Federico Fontana, Debora Scappin, Federico Avanzini, Mattia Bernardi, Devid Bianco, Giorgio Klauer;2017;Finland;;;
-SONIC GREENHOUSE - Considerations on a Large-Scale Audio-Architectural Installation;Otso Lähdeoja, Josué Moreno;2017;Finland;;;
-The CSOUND Plugin Opcode Framework;Victor Lazzarini;2017;Finland;;;
-Versioning and Annotation Support for Collaborative Mapping Design;Johnty Wang, Joseph Malloch, Stéphane Huot, Fanny Chevalier, Marcelo Wanderley;2017;Finland;;;
-Tools for Annotatiing Musical Measures in Digital Music Editions;Yevgen Mexin, Aristotelis Hadjakos, Axel Berndt, Simon Waloschek, Anastasia Wawilow, Gerd Szwillus;2017;Finland;;;
-Renotation of Optical Music Recognition Data;Liang Chen, Christopher Raphael;2017;Finland;;;
-WALLACE: Composing Music for Variable Reverberation;Filipe Lopes;2017;Finland;;;
-Real-Time Physical Model for Synthesis of Sword Sounds;Rod Selfridge, David Moffat, Joshua D. Reiss;2017;Finland;;;
-Electronic Hearing Protection for Musicians;Robert Albrecht, Jussi Jaatinen, Tapio Lokki;2017;Finland;;;
-Virtual Analog Simulation and Extensions of Plate Reverberation;Silvin Willemsen, Stefania Serafin, Jesper Rindom Jensen;2017;Finland;;;
-The Effectiveness of Two Audiovisual Mappings to Control a Concatenative Synthesiser;Augoustinos Tsiros, Grégory Leplâtre;2017;Finland;;;
-Extraction, Mapping, and Evaluation of Expressive Acoustic Features for Adaptive Digital Audio Effects;Jonas Holfelt, Gergely Csapo, Nikolaj Andersson, Sohejl Zabetian, Michael Castanieto, Daniel Overholt, Sofia Dahl, Cumhur Erkut;2017;Finland;;;
-Virtual Analog Model of the Lockhart Wavefolder;Fabián Esqueda, Henri Pöntynen, Julian D. Parker, Stefan Bilbao;2017;Finland;;;
-Musical Approaches for Working with Time-Delayed Feedback Networks;Daniel Bisig, Philippe Kocher;2017;Finland;;;
-Electric Grammars. Algorithmic Design and Construction of Experimental Music Circuits;Simone Pappalardo, Andrea Valle;2017;Finland;;;
-Constructing PEDB 2nd Edition: A Music Performance Database with Phrase Information;Mitsuyo Hashida, Eita Nakamura, Haruhiro Katayose;2017;Finland;;;
-Musical Feature and Novelty Curve Characterizations as Predictors of Segmentation Accuracy;Martin Hartmann, Olivier Lartillot, Petri Toiviainen;2017;Finland;;;
-Meter Detection in Symbolic Music Using a Lexicalized PCFG;Andrew McLeod, Mark Steedman;2017;Finland;;;
-Audio-to-Score Alignment of Piano Music Using RNN-Based Automatic Music Transcription;Taegyun Kwon, Dasaem Jeong, Juhan Nam;2017;Finland;;;
-Lp-Viterbi Algorithm for Automatic Fingering Decision;Gen Hori, Shigeki Sagayama;2017;Finland;;;
-Systema Naturae: Shared Practices Between Physical Computing and Algorithmic Composition;Andrea Valle, Mauro Lanza;2017;Finland;;;
-Generating Equivalent Chord Progressions to Enrich Guided Improvisation: Application to Rhythm Changes;Ken Déguernel, Jérôme Nika, Emmanuel Vincent, Gérard Assayag;2017;Finland;;;
-A Constraint-Based Framework to Model Harmony for Music Composition;Torsten Anders;2017;Finland;;;
-pch2csd: an Application for Converting Nord Modular G2 Patches into Csound Code;Gleb Rogozinsky, Mihail Chesnokov, Eugene Cherny;2017;Finland;;;
-Towards an Automated Multitrack Mixing Tool Using Answer Set Programming;Flavio Everardo;2017;Finland;;;
-Explorations with Digital Control of MIDI-enabled Pipe Organs;Johnty Wang, Robert Pritchard, Bryn Nixon, Marcelo M. Wanderley;2017;Finland;;;
-Live Orchestral Piano, a System for Real-Time Orchestral Music Generation;Léopold Crestel, Philippe Esling;2017;Finland;;;
-A Singing Instrument for Real-Time Vocal-Part Arrangement of Music and Audio Signals;Yuta Ojima, Tomoyasu Nakano, Satoru Fukayama, Jun Kato, Masataka Goto, Katsutoshi Itoyama, Kazuyoshi Yoshii;2017;Finland;;;
-Evaluation of the Learnability and Playability of Pitch Layouts in New Musical Instruments;Jennifer MacRitchie, Andrew J. Milne;2017;Finland;;;
-Towards a High-Performance Platform for Sonic Interaction Interfaces ;Stefano Fasciani and Manohar Vohra ;2019;Spain;;;
-S1.2.  Digital Manufacturing for Musical Applications: A Survey of Current Status and Future Outlook;Doga Cavdir ;2019;Spain;;;
-S1.3.  Real Time Audio Digital Signal Processing with Faust and the Teensy;Romain Michon, Yann Orlarey, Stéphane Letz and Dominique Fober ;2019;Spain;;;
-S1.4.  Sound Design through Large Audience Interaction;Kjetil Falkenberg Hansen, Martin Ljungdahl-Eriksson and Ricardo Atienza ;2019;Spain;;;
-S1.5.  Evaluating a Continuous Sonic Interaction: Comparing a Performable Acoustic and Digital Everyday Sound;Fiona Keenan and Sandra Pauletto ;2019;Spain;;;
-Adaptive Loudness Compensation in Music Listening ;Leonardo Fierro, Jussi Rämö and Vesa Välimäki ;2019;Spain;;;
-S2.2.  Toward Automatic Tuning of the Piano;Joonas Tuovinen, Jamin Hu and Vesa Välimäki ;2019;Spain;;;
-S2.3.  Real-time Control of Large-scale Modular Physical Models using the Sensel Morph;Silvin Willemsen, Nikolaj Andersson, Stefania Serafin and Stefan Bilbao ;2019;Spain;;;
-S2.4.  An Interactive Music Synthesizer for Gait Training in Neurorehabilitation;Prithvi Kantan and Sofia Dahl ;2019;Spain;;;
-S2.5.  From Vocal Sketching to Sound Models by Means of a Sound-Based Musical Transcription System;Claudio Panariello, Mattias Sköld, Emma Frid and Roberto Bresin ;2019;Spain;;;
-S2.6.  Tempo and Metrical Analysis by Tracking Multiple Metrical Levels Using Autocorrelation;Olivier Lartillot and Didier Grandjean ;2019;Spain;;;
-DAW-Integrated Beat Tracking for Music Production;Brett Dalton, David Johnson and George Tzanetakis;2019;Spain;;;
-P1.2. Interaction-based Analysis of Freely Improvised Music;Stefano Kalonaris;2019;Spain;;;
-P1.3. Mechanical Entanglement: A Collaborative Haptic-Music Performance;Alexandros Kontogeorgakopoulos, George Sioros and Odysseas Klissouras;2019;Spain;;;
-P1.4. State Dependency - Audiovisual interaction through brain states;Patrick Neff, Jan Schacher and Daniel Bisig;2019;Spain;;;
-P1.5. Perceptual Evaluation of Modal Synthesis for Impact-Based Sounds;Adrián Barahona and Sandra Pauletto;2019;Spain;;;
-P1.6. VIBRA - Technical and Artistic Issues in an Interactive Dance Project;Andreas Bergsland, Sigurd Saue and Pekka Stokke;2019;Spain;;;
-P1.7. Musical Tempo and Key Estimation with Directional Convolutional Neural Networks;Hendrik Schreiber and Meinard Müller;2019;Spain;;;
-P1.8. The Viking HRTF Dataset;Simone Spagnol, Kristján Bjarki Purkhús, Sverrir Karl Björnsson and Runar Unnthórsson;2019;Spain;;;
-P1.9. Performing with Sound Sample-Controlled Gloves and Light-Controlled Arms;Frank Pecquet, Fotis Moschos, David Fierro and Justin Pecquet;2019;Spain;;;
-P1.10. Melody Identification in Standard MIDI Files;Zheng Jiang and Roger Dannenberg;2019;Spain;;;
-P1.11. Automatic Chord-Scale Recognition using Harmonic Pitch Class Profiles;Emir Demirel, Baris Bozkurt and Xavier Serra;2019;Spain;;;
- Exciting Digital Resonators with Analogue Sound ;Max Neupert and Clemens Wegener ;2019;Spain;;;
-D1.2.  Melody Slot Machine;Masatoshi Hamanaka ;2019;Spain;;;
-D1.3.  OM-AI: A Toolkit to Support AI-Based Computer-Assisted Composition Workflows in OpenMusic;Anders Vinjar and Jean Bresson ;2019;Spain;;;
-D1.4.  URALi: a proposal of approach to real-time audio synthesis in Unity;Enrico Dorigatti ;2019;Spain;;;
-D1.5.  A Sequencer with Decoupled Track Timing;Silvan David Peter and Gerhard Widmer ;2019;Spain;;;
-D1.6.  Musicypher: Music for Message Encryption;Víctor Jaime Marín and Alberto Peinado ;2019;Spain;;;
-D1.7.  A Platform for Processing Sheet Music and Developing Multimedia Application;Fu-Hai Frank Wu ;2019;Spain;;;
-D1.8.  Capturing the Reaction Time to Distinguish between Voice and Music;Alejandro Villena-Rodríguez, Lorenzo J. Tardón, Isabel Barbancho, Ana M. Barbancho, Irene Gómez-Plazas and María-José Varela-Salinas ;2019;Spain;;;
-D1.9.  Physical Models and Real-Time Control with the Sensel Morph;Silvin Willemsen , Stefan Bilbao, Nikolaj Andersson and Stefania Serafin ;2019;Spain;;;
-Comparison and Implementation of Data Transmission Techniques through Analog Audio Signals in the Context of Augmented Mobile Instruments;Romain Michon, Yann Orlarey, Stéphane Letz and Dominique Fober ;2019;Spain;;;
-S3.2.  Mass-Interaction Physical Models for Sound and Multi-Sensory Creation: Starting Anew;Jerome Villeneuve and James Leonard ;2019;Spain;;;
-S3.3.  Exploring the Effects of Diegetic and Non-diegetic Audiovisual Cues on Decision-making in Virtual Reality;Anıl Çamcı ;2019;Spain;;;
-S3.4.  OSC-XR: A Toolkit for Extended Reality Immersive Music Interfaces;David Johnson, Daniela Damian and George Tzanetakis ;2019;Spain;;;
-S3.5.  No Strings Attached: Force and Vibrotactile Feedback in a Guitar Simulation;Andrea Passalenti, Razvan Paisa, Niels Christian Nilsson, Nikolaj S. Andersson, Federico Fontana, Rolf Nordahl and Stefania Serafin ;2019;Spain;;;
-A Framework for the Evaluation of Interpolated Synthesizer Parameter Mapping ;Darrell Gibson and Richard Polfreman ;2019;Spain;;;
-S4.2.  Composing with Sounds: Designing an Object Oriented Daw for the Teaching of Sound-Based Composition;Stephen Pearse, Leigh Landy, Duncan Chapman, David Holland and Mihai Eni ;2019;Spain;;;
-S4.3.  Insights in Habits and Attitudes Regarding Programming Sound Synthesizers: A Quantitative Study;Gordan Kreković ;2019;Spain;;;
-S5.1.  Experimental Verification of Dispersive Wave Propagation on Guitar Strings;Dmitri Kartofelev, Joann Arro and Vesa Välimäki ;2019;Spain;;;
-S5.2.  Real-Time Modeling of Audio Distortion Circuits with Deep Learning;Eero-Pekka Damskägg, Lauri Juvela and Vesa Välimäki ;2019;Spain;;;
-S5.3.  MI-GEN~: An Efficient and Accessible Mass-Interaction Sound Synthesis Toolbox;James Leonard and Jerome Villeneuve ;2019;Spain;;;
-S5.5.  Percussion synthesis using loopback frequency modulation oscillators;Jennifer Hsu and Tamara Smyth ;2019;Spain;;;
-S5.6.  Deep Linear Autoregressive Model for Interpretable Prediction of Expressive Tempo;Akira Maezawa ;2019;Spain;;;
-Combining Texture-Derived Vibrotactile Feedback, Concatenative Synthesis and Photogrammetry for Virtual Reality Rendering;Eduardo Magalhães, Emil Rosenlund Høeg, Gilberto Bernardes, Jon Ram Bruun-Pedersen, Stefania Serafin and Rolf Nordhal ;2019;Spain;;;
-Metrics for the Automatic Assessment of Music Harmony Awareness in Children;Federico Avanzini, Adriano Baratè, Luca Andrea Ludovico and Marcella Mandanici ;2019;Spain;;;
-RaveForce: A Deep Reinforcement Learning Environment for Music Generation ;Qichao Lan, Jim Tørresen and Alexander Refsum Jensenius ;2019;Spain;;;
-P2.2.  Music Temperaments Evaluation Based on Triads;Meihui Tong and Satoshi Tojo ;2019;Spain;;;
-P2.3.  Composing space in the space: An Augmented and Virtual Reality sound spatialization system;Giovanni Santini ;2019;Spain;;;
-P2.4.  Graph Based Physical Models for Sound Synthesis;Pelle Juul Christensen and Stefania Serafin ;2019;Spain;;;
-P2.5.  ADPET: Exploring the Design, Pedagogy, and Analysis of a Mixed Reality Application for Piano Training;Lynda Gerry, Sofia Dahl and Stefania Serafin ;2019;Spain;;;
-P2.6.  Chord Prediction with The Annotated Beethoven Corpus;Kristoffer Landsnes, Liana Mehrabyan, Victor Wiklund, Fabian C. Moss, Robert Lieck and Martin Rohrmeier ;2019;Spain;;;
-P2.7.  Sonic Characteristics of Robots in Films;Adrian B. Latupeirissa, Emma Frid and Roberto Bresin ;2019;Spain;;;
-P2.8.  Virtual Reality Music Intervention to Reduce Social Anxiety in Adolescents Diagnosed with Autism Spectrum Disorder;Ali Adjorlu, Nathaly Belen Betancourt Barriga and Stefania Serafin ;2019;Spain;;;
-P2.10.  Real-time Mapping of Periodic Dance Movements to Control Tempo in Electronic Dance Music;Lilian Jap and Andre Holzapfel ;2019;Spain;;;
-P2.11.  Increasing Access to Music in SEN Settings;Tom Davis, Daniel Pierson and Ann Bevan ;2019;Spain;;;
-Interacting with Musebots (that don’t really listen) ;Arne Eigenfeldt ;2019;Spain;;;
-D2.2.  Extending Jamsketch: An Improvisation Support System;Akane Yasuhara, Junko Fujii and Tetsuro Kitahara ;2019;Spain;;;
-D2.3.  Visualizing Music Genres using a Topic Model;Swaroop Panda, Vinay P. Namboodiri and Shatarupa Thakurta Roy ;2019;Spain;;;
-D2.4.  CompoVOX: Real-Time Sonification of Voice;Daniel Hernán Molina Villota, Antonio Jurado-Navas and Isabel Barbancho ;2019;Spain;;;
-D2.5.  Facial Activity Detection to Monitor Attention and Fatigue;Oscar Cobos, Jorge Munilla, Ana M. Barbancho, Isabel Barbancho and Lorenzo J. Tardón ;2019;Spain;;;
-D2.6.  The Chordinator: An Interactive Music Learning Device;Eamon McCoy, John Greene, Jared Henson, James Pinder, Jonathan Brown, Claire Arthur;2019;Spain;;;
-D2.7.  Automatic Chord Recognition in Music Education Applications;Sascha Grollmisch and Estefania Cano ;2019;Spain;;;
-D2.8.  Sonic Sweetener Mug;Signe Lund Mathiesen, Derek Victor Byrne and Qian Janice Wang ;2019;Spain;;;
-Learning to Generate Music with BachProp ;Florian Colombo, Johanni Brea and Wulfram Gerstner ;2019;Spain;;;
-S6.2.  Offline Score Alignment for Realistic Music Practice;Yucong Jiang, Fiona Ryan, David Cartledge and Christopher Raphael ;2019;Spain;;;
-S6.3.  Piano Score-Following by Tracking Note Evolution;Yucong Jiang and Christopher Raphael ;2019;Spain;;;
-S6.4.  Adaptive Score-Following System by Integrating Gaze Information;Kaede Noto, Yoshinari Takegawa and Keiji Hirata ;2019;Spain;;;
-S6.5.  Alternative Measures: A Musicologist Workbench for Popular Music;Beach Clark and Claire Arthur ;2019;Spain;;;
-VocalistMirror: A Singer Support Interface for Avoiding Undesirable Facial Expressions ;Kin Wah Edward Lin, Tomoyasu Nakano and Masataka Goto ;2019;Spain;;;
-S7.2.  Audiovisual perception of arousal, valence, and effort in contemporary cello performance;Hanna Järveläinen ;2019;Spain;;;
-S7.3.  Dancing dots - investigating the link between dancer and musician in Swedish Folk Dance;Olof Misgeld, Andre Holzapfel and Sven Ahlbäck ;2019;Spain;;;
- Conditioning a Recurrent Neural Network to synthesize musical instrument transients;Lonce Wyse and Muhammad Huzaifah;2019;Spain;;;
-S8.2. Predicting Perceived Dissonance of Piano Chords Using a Chord-Class Invariant CNN and Deep Layered Learning;Juliette Dubois, Anders Elowsson and Anders Friberg;2019;Spain;;;
-S8.3. Belief Propagation algorithm for Automatic Chord Estimation;Vincent P. Martin, Sylvain Reynal, Dogac Basaran and Hélène-Camille Crayencour ;2019;Spain;;;
-S8.4. HMM-Based Glissando Detection for Recordings of Chinese Bamboo Flute;Changhong Wang, Emmanouil Benetos, Xiaojie Meng and Elaine Chew.;2019;Spain;;;
-S8.5. Towards CNN-based Acoustic Modeling of Seventh Chords for Automatic Chord Recognition;Christon-Ragavan Nadar, Jakob Abeßer and Sascha Grollmisch;2019;Spain;;;
-Autoencoders for music sound modeling: a comparison of linear, shallow, deep, recurrent and variational models;Fanny Roche, Thomas Hueber, Samuel Limier and Laurent Girin ;2019;Spain;;;
-P3.2.  Polytopic reconfiguration: a graph-based scheme for the multiscale transformation of music segments and its perceptual assessment;Valentin Gillot and Frédéric Bimbot ;2019;Spain;;;
-P3.3.  Non-Linear Contact Sound Synthesis for Real-Time Audio-Visual Applications using Modal Textures;Martin Maunsbach and Stefania Serafin ;2019;Spain;;;
-P3.4.  Analysis of Vocal Ornamentation in Iranian Classical Music;Sepideh Shafiei ;2019;Spain;;;
-P3.5.  VUSAA: An Augmented Reality Mobile App for Urban Soundwalks;Josué Moreno and Vesa Norilo ;2019;Spain;;;
-P3.6.  A Framework for Multi-f0 Modeling in SATB Choirs;Helena Cuesta, Emilia Gómez and Pritish Chandna ;2019;Spain;;;
-P3.7.  Representations of Self-Coupled Modal Oscillators with Time-Varying Sounding Frequency;Tamara Smyth and Jennifer Hsu ;2019;Spain;;;
-P3.8.  SonaGraph. A cartoonified spectral model for music composition;Andrea Valle ;2019;Spain;;;
-P3.9.  Sound in Multiples: Synchrony and Interaction Design of Coupled- Oscillator Networks;Nolan Lem ;2019;Spain;;;
-P3.10.  Jazz Mapping an Analytical and Computational Approach to Jazz Improvisation;Dimitrios Vassilakis, Anastasia Georgaki and Christina Anagnostopoulou ;2019;Spain;;;
-P3.11.  Visual Pitch Estimation;A. Sophia Koepke, Olivia Wiles and Andrew Zisserman ;2019;Spain;;;
-Miningsuite: A Comprehensive Matlab Framework For Signal, Audio and Music Analysis, Articulating Audio And Symbolic Approaches;Olivier Lartillot;2019;Spain;;;
-Drawing Geometric Figures with Braille Description through a Speech Recognition System;África Chamorro, Ana M. Barbancho, Isabel Barbancho and Lorenzo J. Tardón;2019;Spain;;;
-Interactive Music Training System;Daniel Moreno, Isabel Barbancho, Ana M. Barbancho and Lorenzo J. Tardón;2019;Spain;;;
-Copying Clave – A Turing Test;Simon Blackmore;2019;Spain;;;
-Resonance Improviser: A System for Transmitting the Embodied Sensations of Vocalization Between Two People During Improvisation;Tejaswinee Kelkar and Lynda Gerry;2019;Spain;;;
-Finding New Practice Material through Chord-Based Exploration of a Large Music Catalogue;Johan Pauwels and Mark B. Sandler;2019;Spain;;;
-Internal Complexity for Exploratory Interaction;Mads Hobye;2019;Spain;;;
-Adaptive Body Movement Sonification in Music and Therapy;Christian Baumann, Johanna Friederike Baarlink and Jan-Torsten Milde;2019;Spain;;;
-#40. Sixteen years of Sound and Music Computing: A look into the history and trends of the Conference and Community;Davide Andrea Mauro, Federico Avanzini, Adriano Baratè, Luca Andrea Ludovico, Stavros Ntalampiras, Smilen Dimitrov and Stefania Serafin;2020;Italy;;;
-#171. A compendium of bach's shortcomings as it turns ten (along with a few ideas on how to overcome them);Daniele Ghisi and Andrea Agostini;2020;Italy;;;
-#222. Improvements in bach 0.8.1, a user's perspective;Jonathan Bell;2020;Italy;;;
-#54. WebAudioXML: Proposing a new standard for structuring web audio;Hans Lindetorp and Kjetil Falkenberg;2020;Italy;;;
-#102. Web360Square: An interactive web application for viewing 3D audio-visual contents;Shin Kato, Tomohiro Ikeda, Mitsuaki Kawamorita, Manabu Tsukada and Hiroshi Esaki;2020;Italy;;;
-#108. ASMD: An automatic framework for compiling multimodal datasets with audio and scores;Federico Simonetta, Stavros Ntalampiras and Federico Avanzini;2020;Italy;;;
-#181. Reliability of two IR motion capture systems in a music performance setting;Laura Bishop and Alexander Refsum Jensenius;2020;Italy;;;
-#14. Strune – An interactive audio-visual installation inspired by string theory;Davor B. Vincze, Hrvoje Hiršl and Jonathan S. Abel;2020;Italy;;;
-#43. Looking for the soundscape of the future: preliminary results applying the design fiction method;Roberto Bresin, Sandra Pauletto, Jarmo Laaksolahti and Erik Gandini;2020;Italy;;;
-#57. Haptic music - Exploring whole-body vibrations and tactile sound for a multisensory music installation;Emma Frid and Hans Lindetorp;2020;Italy;;;
-#74. A Faust architecture for the ESP32 microcontroller;Romain Michon, Daniel Overholt, Stéphane Letz, Yann Orlarey, Dominique Fober and Catinca Dumitrascu;2020;Italy;;;
-#115. 01101110 : An audiovisual installation based on the Cellular Automaton Rule 110;Alexandros Kontogeorgakopoulos and Odysseas Klissouras;2020;Italy;;;
-#130. Speech sound disorder classification based on time-aligned dissimilarity profiles;Guilherme Jun Yoshimura, Marcelo Queiroz, Haydée Fiszbein Wertzner and Danira Francisco;2020;Italy;;;
-#152. Detection of musically relevant regions in multiresolution time-frequency representations evaluated on piano recordings;Nicolas Figueiredo and Marcelo Queiroz;2020;Italy;;;
-#155. Embedding electronics in additive manufacturing for digital musical instrument design;Doga Cavdir;2020;Italy;;;
-#157. Menagerie: exploring the audio-visual rhythms of violence through data, gun triggers, and swarms;Nolan Lem;2020;Italy;;;
-#165. Real-time visualisation of fugue played by a string quartet;Olivier Lartillot, Carlos Cancino-Chacón and Charles Brazier;2020;Italy;;;
-#166. Peace Wall Belfast: Spatial audio representation of Divided Spaces and soundwalks;Georgios Varoutsos;2020;Italy;;;
-#99. 3D ear shape as an estimator of HRTF notch frequency;Marius George Onofrei, Riccardo Miccini, Runar Unnthorsson, Stefania Serafin and Simone Spagnol;2020;Italy;;;
-#124. Methods for performing with feedback in virtual acoustics;Eoin F. Callery and Elliot K. Canfield-Dafilou;2020;Italy;;;
-#145. Evaluation of reverberation time models with variable acoustics;Karolina Prawda, Sebastian J. Schlecht and Vesa Välimäki;2020;Italy;;;
-#63. Embouchure interaction model for brass instruments;Rares Stefan Alecu, Stefania Serafin, Silvin Willemsen, Emanuele Parravicini and Stefano Lucato;2020;Italy;;;
-#97. Real-time implementation of a physical model of the tromba marina;Silvin Willemsen, Stefania Serafin, Stefan Bilbao and Michele Ducceschi;2020;Italy;;;
-#120. Insights into the string-barrier interaction dynamics based on high-speed camera measurements;Dmitri Kartofelev, Joann Gustav Arro and Vesa Välimäki;2020;Italy;;;
-#67. Towards playing in the 'air': Modeling motion-sound energy relationships in electric guitar performance using deep neural networks;Çagri Erdem, Qichao Lan, Julian Fuhrer, Charles Martin, Jim Tørresen and Alexander Refsum Jensenius;2020;Italy;;;
-#168. Identifying master violinists using note-level audio features;Yudong Zhao, György Fazekas and Mark Sandler;2020;Italy;;;
-#186. Musical dynamics classification with CNN and modulation spectra;Luca Marinelli, Athanasios Lykartsis, Charalampos Saitis and Stefan Weinzierl;2020;Italy;;;
-#53. Fb1 – An interface for single sample feedback and feedforward in SuperCollider;Daniel Mayer;2020;Italy;;;
-#55. The Physics Network Scripting Language to design masses-interactions physical models for arts;Nicolas Castagné and Annie Luciani;2020;Italy;;;
-#59. Sonification as negotiation - Learning from translation studies;Giacomo Lepri;2020;Italy;;;
-#100. Rhythm Rangers: An evaluation of beat synchronisation skills and musical confidence through multiplayer gamification influence;Rasmus Kjærbo, Ramon Romeu, Marco González Pérez, Francisco Rosado Correia, Vatsal Guruvayurappan, Daniel Overholt and Sofia Dahl;2020;Italy;;;
-#109. Good artists copy, great artists steal: Strategies for creative exploitation of the CHAMELEON harmonisation assistant;Asterios Zacharakis, Stamatia Kalaitzidou, Maximos Kaliakatsos-Papakostas and Emilios Cambouropoulos;2020;Italy;;;
-#116. Design and implementation of real-time physically-based virtual musical instruments: A balancing act;James Leonard and Jerome Villeneuve;2020;Italy;;;
-#141. A low-cost endless knob controller with programmable resistive force feedback for multimedia production;Yuri De Pra, Federico Fontana, Stefano Papetti and Michele Simonato;2020;Italy;;;
-#144. Evaluation of accurate artificial reverberation algorithm;Karolina Prawda, Stefania Serafin and Vesa Välimäki;2020;Italy;;;
-#169. Digitally enhanced drums: An approach to rhythmic improvisation;Matteo Amadio and Alberto Novello;2020;Italy;;;
-#173. ET systems: A high-level approach to additive synthesis control;Matteo Marson and Andrea Agostini;2020;Italy;;;
-#147. Pictorize: Transforming image region luminosity to sound brightness for monitoring location;Georgios Marentakis;2020;Italy;;;
-#167. Spectral analysis for modal parameters linear estimate;Marco Tiraboschi, Federico Avanzini and Stavros Ntalampiras;2020;Italy;;;
-#220. Interactive software for the sonification of neuronal activity;Argan Verrier, Vincent Goudard, Elim Hong and Hugues Genevois;2020;Italy;;;
-#44. DigiDrum - A haptic-based virtual reality musical instrument and a case study;Silvin Willemsen, Anca-Simona Horvath and Mauro Nascimben;2020;Italy;;;
-#112. Resurrecting the tromba marina: A bowed virtual reality instrument using haptic feedback and accurate physical modelling;Silvin Willemsen, Razvan Paisa and Stefania Serafin;2020;Italy;;;
-#136. GENESIS 4th generation / Nomadicity / Gesture emulation: Real-time CORDIS-ANIMA physical modeling and high performance force-feedback interaction within the Hélicanthe workstation;Claude Cadoz;2020;Italy;;;
-#87. Jazz harmony analysis with epsilon-transition and cadential shortcut;Hiroyuki Yamamoto, Yui Uehara and Satoshi Tojo;2020;Italy;;;
-#151. Estimating keys and modulations in musical pieces;Laurent Feisthauer, Louis Bigo, Mathieu Giraud and Florence Levé;2020;Italy;;;
-#210. Evaluation of CNN-based automatic music tagging models;Minz Won, Andres Ferraro, Dmitry Bogdanov and Xavier Serra;2020;Italy;;;
-#75. Web-based time-span tree editor and analysis database;Masatoshi Hamanaka, Yui Isono, Keiji Hirata and Satoshi Tojo;2020;Italy;;;
-"#86. Motif set assignment problem in the compositional process of ""Musical Rally""";Tsubasa Tanaka;2020;Italy;;;
-#111. Expectation-based parsing for jazz chord sequences;Yuta Ogura, Hidefumi Ohmura, Yui Uehara, Satoshi Tojo and Kouichi Katsurada;2020;Italy;;;
-#113. Composition as an embodied act: A framework for the gesture-based creation of augmented reality action scores;Giovanni Santini;2020;Italy;;;
-#122. Latent birds: A bird's-eye view exploration of the latent space;Juan Alonso Moreno, Francesco Bigoni and Georgios Palamas;2020;Italy;;;
-#135. Towards reliable real-time opera tracking: Combining alignment with audio event detectors to increase robustness;Charles Brazier and Gerhard Widmer;2020;Italy;;;
-#170. AVAI: A tool for expressive music visualization based on autoencoders and constant Q transformation;Simon Borst Tyroll, Daniel Overholt and Georgios Palamas;2020;Italy;;;
-#189. Historiography of the form of symbolic music through a computer-assisted analysis;Beate Ruth Kutschke and Tobias Bachmann;2020;Italy;;;
-#209. Active preservation of analogue audio documents: A summary of the last seven years of digitization at CSC;Niccolò Pretto, Alessandro Russo, Federica Bressan, Valentina Burini, Antonio Rodà and Sergio Canazza;2020;Italy;;;
-#218. Rapid composition for a multi-device networked music platform;Oliver Bown, Angelo Fraietta, Sam Ferguson and Deborah Turnbull Tillman;2020;Italy;;;
-#230. The world's first interactive 5G music concert: Professional quality networked music over a commodity network infrastructure;Alexander Carôt, Mischa Dohler, Simon Saunders, Frank Sardis, Richard Cornock and Navdeep Uniyal;2020;Italy;;;
-#93. Matching uni-directional auditory gestures to visual trajectories of varying curvature;Sven-Amin Lembke;2020;Italy;;;
-#95. Perception of emotions in knocking sounds: An evaluation study;Malcolm Houel, Abhilash Arun, Alfred Berg, Alessandro Iop, Adrián Barahona-Ríos and Sandra Pauletto;2020;Italy;;;
-#132. Computer-based music training with hearing impairments: Lessons from an experiment;Rumi Hiraga and Kjetil Falkenberg;2020;Italy;;;
-#174. Exploring emotion perception in sonic HRI;Adrian B. Latupeirissa, Claudio Panariello and Roberto Bresin;2020;Italy;;;
-#60. Streams as Seams: Carving trajectories out of the time-frequency matrix;Giovanni Capizzi, Davide Rocchesso and Stefano Baldan;2020;Italy;;;
-#83. Synthesising knocking sound effects using conditional WaveGAN;Adrián Barahona-Ríos and Sandra Pauletto;2020;Italy;;;
-#133. Towards objective evaluation of audio time-scale modification methods;Leonardo Fierro and Vesa Välimäki;2020;Italy;;;
-Perception of Mechanical Sounds Inherent to Expressive Gestures of a NAO Robot - p.43 Implications for Movement Sonification of Humanoids.;Emma Frid, Roberto Bresin, Simon Alexandersson ;2018;Cyprus ;;;
-Stream Segregation: Utilizing Harmonic Variance in Auditory Graphs; Joe Fitzpatrick, Flaithri Neff ;2018;Cyprus ;;;
-CrestMusePEDB 2nd EDITION: MUSIC PERFORMANCE DATABASE WITH PHRASE p.60 INFORMATION.;Mitsuyo Hashida, Eita Nakamura, Haruhiro Katayose ;;2018;Cyprus ;;
-Crossing Phrase Boundaries in Music. ;Zuzana Cenkerova, Martin Hartmann, Petri Toiviainen ;2018;Cyprus ;;;
-Perceiving Agent Collaborative Sonic Exploration in Interactive Reinforcement p.72 Learning.;Hugo Scurto, Frédéric Bevilacqua, Baptiste Caramiaux ;;2018;Cyprus ;;
-Evidence of Lateralization Cues in Grand and Upright Piano Sounds. p.80;Federico Fontana, Federico Avanzini, Stefano Papetti ;2018;Cyprus ;;;
-Virtual Reality Exploration with Different Head-Related Transfer Functions. p.85;Erik Sikström, Michele Geronazzo, Jari Kleimola, Federico Avanzini, Amalia de Götzen, Stefania Serafin;2018;Cyprus ;;;
-A system for spacial audio using synchronized mobile devices. p.93 Jan-Torsten Milde;"Time lapse video sonification; watching and listening to events unfolding. p.97 Xenofon Karakonstantis, Konstantinos Bakogiannis, George Cambourakis, Anastasia Georgaki";2018;Cyprus ;;;
-Evoking Places from Spaces: The application of Multimodal Narrative Techniques in the p.103 Creation of “U - Modified”.;Gareth W. Young, Siobhán Mannion, Sara Wentworth ;2018;Cyprus ;;;
-Towards Creating an Augmented Handpan using Leap Motion. p.108 Christine Steinmeier, Dominic Becking;Christine Steinmeie, Christine Steinmeie;2018;Cyprus ;;;
-Inside the intimate zone: The case of aural micro-space in multichannel compositional practice.;Nikos Stavropoulos ;2018;Cyprus ;;;
-Teaching Programming in Secondary Education through Sound. ;Theofani Sklirou, Areti Andreopoulou, Anastasia Georgaki ;2018;Cyprus ;;;
-NordicSMC: a Nordic University Hub on Sound and Music Computing. ;Stefania Serafin, Sofia Dahl, Roberto Bresin Alexander Refsum Jensenius, Runar Unnthorsson, Vesa Valimaki ;2018;Cyprus ;;;
-Improving the Instrumental Learning Experience through Complexity Management ;Laurel Pardue, Andrew McPherson, Dan Overholt ;2018;Cyprus ;;;
-Fiddl: Evaluation of a Smartphone Based Application Designed for a Music Workshop for Children.;Gergely Csapo, Jonas Holfelt , Peter Bruun, Stefania Serafin ;2018;Cyprus ;;;
-A Portable Impulse Response Measurement System. ;Elliot K. Canfield-Dafilou, Eoin Callery, Christopher Jette ;2018;Cyprus ;;;
-Acquisition of Violin Instrumental Gestures Using an Infrared Depth. Camera. ;Zacharias Vamvakousis, Alfonso Perez Carrillo, Rafael Ramirez ;2018;Cyprus ;;;
-Simulating the Acoustic Environment of Two Historical Viennese Theaters. ;Brandon Westergaard, Timothy Hsu ;2018;Cyprus ;;;
-A new implementation of Spat in Max. ;Thibaut Carpentier ;2018;Cyprus ;;;
-Navigate as a Bat. Real-Time Echolocation System in Virtual Reality. ;Anastassia Andreasen, Jelisaveta Zovnercuka, Kristians Konovalovs, Michele Geronazzo, Stefania Serafin, Razvan Paisa ;2018;Cyprus ;;;
-Interactive Exploration of Musical Space with Parametric t-SNE. ;Matteo Lionello, Hendrik Purwins, Luca Pietrogrande, Mohamed Abou-Zleikha ;2018;Cyprus ;;;
-You Are Here: Sonic Crossings and Time Indeterminacy within the Buffer Zone. ;Oswaldo Emiddio Vasquez Hadjilyra ;2018;Cyprus ;;;
-An Xception Residual Recurrent Neural Network for Audio Event Detection and Tagging.;Tomas Gajarsky, Hendrik Purwins ;2018;Cyprus ;;;
-#nowplaying-RS: A New Benchmark Dataset for Building Context-Aware Music Recommender Systems.;Asmita Poddar, Eva Zangerle, Yi-Hsuan Yang ;2018;Cyprus ;;;
-Toward a Web of Audio Things. ;Benjamin Matuszewski, Frédéric Bevilacqua ;2018;Cyprus ;;;
-Analyzing and Classifying Guitarists from ;Nick Bouris, Achilleas Chaldaeakes, Anastasia Georgaki ;2018;Cyprus ;;;
-Makam Recognition Using Extended Pitch Distribution Features and Multi-Layer Perceptrons.;Furkan Yesiler, Baris Bozkurt, Xavier Serra ;2018;Cyprus ;;;
-Formalizing Schoenberg’s Fundamentals of Musical Composition through Petri Nets. ;Adriano Baratè, Davide Andrea Mauro, Goffredo Haus, Luca Andrea Ludovico ;2018;Cyprus ;;;
-A Heuristic Algorithm for DJ Cue Point Estimation. ;Diemo Schwarz, Daniel Schindler, Severino Spadavecchia ;2018;Cyprus ;;;
-A Simple Fusion of Deep and Shallow Learning for Acoustic Scene Classification. ;Eduardo Fonseca, Rong Gong, Xavier Serra ;2018;Cyprus ;;;
-Relative DTW Embedding for Binary Classification of Audio Data. ;Marcelo Queiroz, Guilherme Jun Yoshimura ;2018;Cyprus ;;;
-Training Deep Convolutional Networks with Unlimited Synthesis of Musical Examples for Multiple Instrument Recognition.;Rameel Sethi, Noah Weninger, Abram Hindle, Vadim Bulitko, Michael Frishkopf ;2018;Cyprus ;;;
-Soundscape Emotion Recognition via Deep Learning. ;Jianyu Fan, Fred Tung, William Li, Philippe Pasquier ;2018;Cyprus ;;;
-Quantitative Analysis of the Impact of Mixing on Perceived Emotion of Soundscape Recordings.;Jianyu Fan, Miles Thorogood, Kıvanç Tatar, Philippe Pasquier ;2018;Cyprus ;;;
-Design and Interaction of 3D Virtual Music Instruments for STEAM Education Using Web Technologies.;Kosmas Kritsis, Aggelos Gkiokas, Quentin Lamerand, Robert Piéchaud, Carlos Acosta, Maximos Kaliakatsos-Papakostas, Vassilis Katsouros ;2018;Cyprus ;;;
-Stability, Reliability, Compatibility: Reviewing 40 Years of DMI Design.;John Sullivan, Marcelo M. Wanderley ;2018;Cyprus ;;;
-Real-time Bowed String Feature Extraction for Performance Applications. ;Kurijn Buys, Andrew McPherson ;2018;Cyprus ;;;
-"Dervish Sound Dress; a Development of a Musical Interface Garment which explores Wearable Technology using Sound and Haptic Feedback for Performance and Interaction.";Eduardo Miranda, Hedy Hurban, Edward Braund ;2018;Cyprus ;;;
-Deployment of LSTMs for Real-Time Hand Gesture Interaction of 3D Virtual Music Instruments with a Leap Motion Sensor.;Kosmas Kritsis, Aggelos Gkiokas, Maximos Kaliakatsos-Papakostas, Vassilis Katsouros, Aggelos Pikrakis ;2018;Cyprus ;;;
-An Expressive Multidimensional Physical Modelling Percussion Instrument. ;Ohejl Zabetian , Pablo Delgado, Sofia Dahl, Stefania Serafin ;2018;Cyprus ;;;
-A Machine Learning Approach to Violin Vibrato Modelling in Audio Performances and a Didactic Application for Mobile Devices.;Matteo Lionello, Rafael Ramirez ;2018;Cyprus ;;;
-A comparative study on filtering and classification of bird songs. ;Nicolas Figueiredo, Felipe Felix, Carolina Brum Medeiros, Marcelo Queiroz ;2018;Cyprus ;;;
-A Machine Learning Approach to Classification of Phonation Modes in Singing. ;Furkan Yesiler, Rafael Ramirez ;2018;Cyprus ;;;
-AI Encountering Interactive Systems: A Deep Learning Reinforced Musical Composition Model. ;Ke Ma, Tian Xia ;2018;Cyprus ;;;
-Modeling Carnatic Rhythm Generation: a Data Driven Approach Based on Rhythmic Analysis.;Carlos Guedes, Konstantinos Trochidis, Akshay Anantapadmanabhan ;2018;Cyprus ;;;
-Affordances of Vibrational Excitation for Music Composition and Performance. ;Tychonas Michailidis, Jason Hockman ;2018;Cyprus ;;;
-Approaches and Assessment of Drama Prosodic Tools in Live Performance. ;George Petras, Panagiotis Tsagkarakis, Anastasia Georgaki ;2018;Cyprus ;;;
-Nawba Recognition for Arab-andalusian Music Using Templates From Music Scores. ;Niccolò Pretto, Barıs Bozkurt, Rafael Caro Repetto, Xavier Serra ;2018;Cyprus ;;;
-Blender2faust: from drawn 3d objects to physically based sound models.;Stefania Serafin, Romain Michon, Smilen Dimitrov ;2018;Cyprus ;;;
-A Collaborative System for Composing Music via Motion Using a Kinect Sensor and Skeletal Data.;Christos Garoufis, Athanasia Zlatintsi, Petros Maragos ;2018;Cyprus ;;;
-Block-based Scheduling Through Interrupts And Intervention. ;Bjarni Gunnarsson ;2018;Cyprus ;;;
-SketchyTuna: Exploring A Design For Screenless Creativity. ;Nikolaj Møller, Dan Overholt, Vanessa Carpenter, Antonio Stella, Baldur Kampmann, Martin Minovski, Martin Maunsbach ;2018;Cyprus ;;;
-Haptic Interaction with Guitar and Bass Virtual Strings. ;Andrea Passalenti, Federico Fontana ;2018;Cyprus ;;;
-UPISketch : The Renewal of an Old Idea. ;Rodolphe Bourotte ;2018;Cyprus ;;;
-Frequency Control of Nonlinear Oscillators – Strategies for Realtime Sound Synthesis. ;Martin Neukom ;2018;Cyprus ;;;
-Algorithms for Guitar-Driven Synthesis: Application to an Augmented Guitar. ;Fabián Esqueda, Otso Lähdeoja, Vesa Valimaki ;2018;Cyprus ;;;
-Ko2 - Distributed Music Systems With O2 and Kronos.;Vesa Norilo, Roger Dannenberg ;2018;Cyprus ;;;
-Data Transmission as Musical Performance. ;Simon Blackmore ;2018;Cyprus ;;;
-GTTM Database and Manual Time-span Tree Generation Tool. ;Masatoshi Hamanaka, Keiji Hirata, Satoshi Tojo ;2018;Cyprus ;;;
-CTcomposer: A Music Composition Interface Considering Intra-Composer Consistency and Musical Typicality.;Hiromi Nakamura, Tomoyasu Nakano, Satoru Fukayama, Masataka Goto ;2018;Cyprus ;;;
-Mapping Pitch Classes And Sound Objects: A Bridge Between Klumpenhouwer Networks And Schaeffer’s TARTYP.;Israel Neuman ;2018;Cyprus ;;;
-Unit-generator Graph as a Generator of Lazily Evaluated Audio-vector Trees. ;Hiroki Nishino ;2018;Cyprus ;;;
-Metric Interweaving in Networked Dance and Music Performance. ;Ioannis Zannos, Martin Carlé ;2018;Cyprus ;;;
-The BodyHarp: Designing the Intersection Between the Instrument and the Body. ;Doga Buse Cavdir, Romain Michon, Ge Wang ;2018;Cyprus ;;;
-Sonic Crossings with Audience Participation: The Embodied iSound Performance. ;Marcelo Gimenes ;2018;Cyprus ;;;
-HamoKara: A System for Practice of Backing Vocals for Karaoke. ;Mina Shiraishi, Kozue Ogasawara, Tetsuro Kitahara ;2018;Cyprus ;;;
-3D Printing and Physical Modeling of Musical Instruments: Casting the Net.;Romain Michon, John Granzow ;2018;Cyprus ;;;
-Towards Flexible Audio Processing. ;Thilo Koch, Marcelo Queiroz ;2018;Cyprus ;;;
-Strumming on an Acoustic Nylon Guitar: Microtiming, Beat Control and Rhythmic Expression in Three Different Accompaniment Patterns.;Sérgio Freire, Augusto Armondes, João Viana, Rubens Silva ;2018;Cyprus ;;;
+Title;Author(s);Year;Country
+A Constraint-Based Framework to Model Harmony for Music Composition;Torsten Anders;2017;Finland
+A Singing Instrument for Real-Time Vocal-Part Arrangement of Music and Audio Signals;Yuta Ojima, Tomoyasu Nakano, Satoru Fukayama, Jun Kato, Masataka Goto, Katsutoshi Itoyama, Kazuyoshi Yoshii;2017;Finland
+A Sonification Interface Unifying Real-Time and Offline Processing;Hanns Holger Rutz, Robert Höldrich;2017;Finland
+An Adaptive Karaoke System that Plays Accompaniment Parts of Music Audio Signals Synchronously with Users' Singing Voices;Yusuke Wada, Yoshiaki Bando, Eita Nakamura, Katsutoshi Itoyama, Kazuyoshi Yoshii;2017;Finland
+An Exploratory Study on the Effect of Auditory Feedback on Gaze Behavior in a Virtual Throwing Task with and without Haptic Feedback;Emma Frid, Roberto Bresin, Eva-Lotta Sallnäs Pysander, Jonas Moll;2017;Finland
+Audio-to-Score Alignment of Piano Music Using RNN-Based Automatic Music Transcription;Taegyun Kwon, Dasaem Jeong, Juhan Nam;2017;Finland
+Audio-Visual Source Association for String Ensembles through Multi-Modal Vibrato Analysis;Bochen Li, Chenliang Xu, Zhiyao Duan;2017;Finland
+Auditory, Visual and Somatosensory Localization of Piano Tones: a Preliminary Study;Federico Fontana, Debora Scappin, Federico Avanzini, Mattia Bernardi, Devid Bianco, Giorgio Klauer;2017;Finland
+Auralization in Space and in Rooms of Arbitrary D Dimensions;Felipe Orduña-Bustamante;2017;Finland
+Automatic Arranging Musical Score for Piano using Important Musical Elements;Hirofumi Takamori, Haruki Sato, Takayuki Nakatsuka, Shigeo Morishima;2017;Finland
+Constructing PEDB 2nd Edition: A Music Performance Database with Phrase Information;Mitsuyo Hashida, Eita Nakamura, Haruhiro Katayose;2017;Finland
+Design Implications for Technology-Mediated Audience Participation in Live Music;Oliver Hödl, Geraldine Fitzpatrick, Fares Kayali, Simon Holland;2017;Finland
+Does Singing a Low-Pitch Tone Make You Look Angrier?;Peter Ahrendt, Christian C. Bach, Sofia Dahl;2017;Finland
+Electric Grammars. Algorithmic Design and Construction of Experimental Music Circuits;Simone Pappalardo, Andrea Valle;2017;Finland
+Electronic Hearing Protection for Musicians;Robert Albrecht, Jussi Jaatinen, Tapio Lokki;2017;Finland
+Environment-Mediated Coupling of Autonomous Sound-Generating Systems in Live Performance: An Overview of the Machine Milieu Project;Dario Sanfilippo, Agostino Di Scipio;2017;Finland
+Evaluation of an Acoustic Interface for Tremor Analysis;Marian Weger, David Pirrò, Robert Höldrich;2017;Finland
+Evaluation of the Learnability and Playability of Pitch Layouts in New Musical Instruments;Jennifer MacRitchie, Andrew J. Milne;2017;Finland
+Experimental Assessment of Descriptive Statistics and Adaptive Methodologies for Threshold Establishment in Onset Selection Functions;Jose J. Valero-Mas, José M. Iñesta;2017;Finland
+Explorations with Digital Control of MIDI-enabled Pipe Organs;Johnty Wang, Robert Pritchard, Bryn Nixon, Marcelo M. Wanderley;2017;Finland
+Exploring Melody and Motion Features in “Sound-Tracings”;Tejaswinee Kelkar, Alexander Refsum Jensenius;2017;Finland
+Exploring Social Mobile Music with Tiny Touch-Screen Performances;Charles P. Martin, Jim Torresen;2017;Finland
+Exploring Sound-Motion Textures in Drum Set Performance;Rolf Inge Godøy, Minho Song, Sofia Dahl;2017;Finland
+Extraction, Mapping, and Evaluation of Expressive Acoustic Features for Adaptive Digital Audio Effects;Jonas Holfelt, Gergely Csapo, Nikolaj Andersson, Sohejl Zabetian, Michael Castanieto, Daniel Overholt, Sofia Dahl, Cumhur Erkut;2017;Finland
+Ferin Martino’s Tour: Lessons from Adapting the Same Algorithmic Art Installation to Different Venues and Platforms;Jeffrey M. Morris;2017;Finland
+FFT-based Dynamic Range Compression;Leo McCormack, Vesa Välimäki;2017;Finland
+Generating Data to Train Convolutional Neural Networks for Classical Music Source Separation;Marius Miron, Jordi Janer, Emilia Gómez;2017;Finland
+Generating Equivalent Chord Progressions to Enrich Guided Improvisation: Application to Rhythm Changes;Ken Déguernel, Jérôme Nika, Emmanuel Vincent, Gérard Assayag;2017;Finland
+Interactive Painting Sonification Using a Sensor-Equipped Runway;Eduardo Micheloni, Marcella Mandanici, Antonio Rodà, Sergio Canazza;2017;Finland
+Interactive Soundscapes: Developing a Physical Space Augmented through Dynamic Sound Rendering and Granular Synthesis;Matteo Lionello, Marcella Mandanici, Sergio Canazza, Edoardo Micheloni;2017;Finland
+Investigating Spatial Music Qualia through Tissue Conduction;Peter Lennox, Ian McKenzie;2017;Finland
+Investigations on Stage Acoustic Preferences of Solo Trumpet Players using Virtual Acoustics;Sebastià V. Amengual Garí, Malte Kob, Tapio Lokki;2017;Finland
+Jazz Piano Trio Synthesizing System Based on HMM and DNN;Takeshi Hori, Kazuyuki Nakamura, Shigeki Sagayama;2017;Finland
+Key Inference from Irish Traditional Music Scores and Recordings;Pierre Beauguitte, Bryan Duggan, John D. Kelleher;2017;Finland
+Learning to Play the Guitar at the Age of Interactive and Collaborative Web Technologies;Anne-Marie Burns, Sébastien Bel, Caroline Traube;2017;Finland
+Live Orchestral Piano, a System for Real-Time Orchestral Music Generation;Léopold Crestel, Philippe Esling;2017;Finland
+Lp-Viterbi Algorithm for Automatic Fingering Decision;Gen Hori, Shigeki Sagayama;2017;Finland
+Meter Detection in Symbolic Music Using a Lexicalized PCFG;Andrew McLeod, Mark Steedman;2017;Finland
+Monitoring and Supporting Engagement in Skilled Tasks: From Creative Musical Activity to Psychological Wellbeing;Juan Carlos Vasquez, Koray Tahiroğlu, Niklas Pöllönen, Johan Kildal, Teemu Ahmaniemi;2017;Finland
+Musical Approaches for Working with Time-Delayed Feedback Networks;Daniel Bisig, Philippe Kocher;2017;Finland
+Musical Feature and Novelty Curve Characterizations as Predictors of Segmentation Accuracy;Martin Hartmann, Olivier Lartillot, Petri Toiviainen;2017;Finland
+pch2csd: an Application for Converting Nord Modular G2 Patches into Csound Code;Gleb Rogozinsky, Mihail Chesnokov, Eugene Cherny;2017;Finland
+QUALIA: A Software for Guided Meta-Improvisation Performance;Manuel Brásio, Filipe Lopes, Gilberto Bernardes, Rui Penha;2017;Finland
+Real-Time Physical Model for Synthesis of Sword Sounds;Rod Selfridge, David Moffat, Joshua D. Reiss;2017;Finland
+Renotation of Optical Music Recognition Data;Liang Chen, Christopher Raphael;2017;Finland
+Robinflock: a Polyphonic Algorithmic Composer for Interactive Scenarios with Children;Raul Masu, Andrea Conci, Cristina Core, Antonella de Angeli, Fabio Morreale;2017;Finland
+Sample-Level Deep Convolutional Neural Networks for Music Auto-Tagging Using Raw Waveforms;Jongpil Lee, Jiyoung Park, Keunhyoung Luke Kim, Juhan Nam;2017;Finland
+SECCIMA: Singing and Ear Training for Children with Cochlear Implants via a Mobile Application;Zhiyan Duan, Chitralekha Gupta, Graham Percival, David Grunberg , Ye Wang;2017;Finland
+SONIC GREENHOUSE - Considerations on a Large-Scale Audio-Architectural Installation;Otso Lähdeoja, Josué Moreno;2017;Finland
+Stacked Convolutional and Recurrent Neural Networks for Music Emotion Recognition;Miroslav Malik, Sharath Adavanne, Konstantinos Drossos, Tuomas Virtanen, Dasa Ticha, Roman Jarina;2017;Finland
+Systema Naturae: Shared Practices Between Physical Computing and Algorithmic Composition;Andrea Valle, Mauro Lanza;2017;Finland
+Technology-Assisted Performance of Polytemporal Music;Philippe Kocher;2017;Finland
+The CSOUND Plugin Opcode Framework;Victor Lazzarini;2017;Finland
+The design of a lightweight DSP programming library;Victor Lazzarini;2017;Finland
+The Effectiveness of Two Audiovisual Mappings to Control a Concatenative Synthesiser;Augoustinos Tsiros, Grégory Leplâtre;2017;Finland
+The Musical Influence on People's Micromotion when Standing Still in Groups;Alexander Refsum Jensenius, Agata Zelechowska, Victor Gonzalez Sanchez;2017;Finland
+Tools for Annotatiing Musical Measures in Digital Music Editions;Yevgen Mexin, Aristotelis Hadjakos, Axel Berndt, Simon Waloschek, Anastasia Wawilow, Gerd Szwillus;2017;Finland
+Towards an Automated Multitrack Mixing Tool Using Answer Set Programming;Flavio Everardo;2017;Finland
+Towards the internet of musical things;Luca Turchet, Carlo Fischione, Mathieu Barthet;2017;Finland
+Troop: A Collaborative Tool for Live Coding;Ryan Kirkbride;2017;Finland
+Validating Attach Phase Descriptors Obtained by the Timbre Toolbox and MIRtoolbox;Kristian Nymoen, Anne Danielsen, Justin London;2017;Finland
+Versioning and Annotation Support for Collaborative Mapping Design;Johnty Wang, Joseph Malloch, Stéphane Huot, Fanny Chevalier, Marcelo Wanderley;2017;Finland
+Virtual Analog Model of the Lockhart Wavefolder;Fabián Esqueda, Henri Pöntynen, Julian D. Parker, Stefan Bilbao;2017;Finland
+Virtual Analog Simulation and Extensions of Plate Reverberation;Silvin Willemsen, Stefania Serafin, Jesper Rindom Jensen;2017;Finland
+WALLACE: Composing Music for Variable Reverberation;Filipe Lopes;2017;Finland
+#nowplaying-RS: A New Benchmark Dataset for Building Context-Aware Music Recommender Systems.;Asmita Poddar, Eva Zangerle, Yi-Hsuan Yang ;2018;Cyprus 
+3D Printing and Physical Modeling of Musical Instruments: Casting the Net.;Romain Michon, John Granzow ;2018;Cyprus 
+A Collaborative System for Composing Music via Motion Using a Kinect Sensor and Skeletal Data.;Christos Garoufis, Athanasia Zlatintsi, Petros Maragos ;2018;Cyprus 
+A comparative study on filtering and classification of bird songs. ;Nicolas Figueiredo, Felipe Felix, Carolina Brum Medeiros, Marcelo Queiroz ;2018;Cyprus 
+A Heuristic Algorithm for DJ Cue Point Estimation. ;Diemo Schwarz, Daniel Schindler, Severino Spadavecchia ;2018;Cyprus 
+A Machine Learning Approach to Classification of Phonation Modes in Singing. ;Furkan Yesiler, Rafael Ramirez ;2018;Cyprus 
+A Machine Learning Approach to Violin Vibrato Modelling in Audio Performances and a Didactic Application for Mobile Devices.;Matteo Lionello, Rafael Ramirez ;2018;Cyprus 
+A new implementation of Spat in Max. ;Thibaut Carpentier ;2018;Cyprus 
+A Portable Impulse Response Measurement System. ;Elliot K. Canfield-Dafilou, Eoin Callery, Christopher Jette ;2018;Cyprus 
+A Simple Fusion of Deep and Shallow Learning for Acoustic Scene Classification. ;Eduardo Fonseca, Rong Gong, Xavier Serra ;2018;Cyprus 
+A system for spacial audio using synchronized mobile devices. p.93;Jan-Torsten Milde;2018;Cyprus 
+Acquisition of Violin Instrumental Gestures Using an Infrared Depth. Camera. ;Zacharias Vamvakousis, Alfonso Perez Carrillo, Rafael Ramirez ;2018;Cyprus 
+Affordances of Vibrational Excitation for Music Composition and Performance. ;Tychonas Michailidis, Jason Hockman ;2018;Cyprus 
+AI Encountering Interactive Systems: A Deep Learning Reinforced Musical Composition Model. ;Ke Ma, Tian Xia ;2018;Cyprus 
+Algorithms for Guitar-Driven Synthesis: Application to an Augmented Guitar. ;Fabián Esqueda, Otso Lähdeoja, Vesa Valimaki ;2018;Cyprus 
+An Expressive Multidimensional Physical Modelling Percussion Instrument. ;Ohejl Zabetian , Pablo Delgado, Sofia Dahl, Stefania Serafin ;2018;Cyprus 
+An Xception Residual Recurrent Neural Network for Audio Event Detection and Tagging.;Tomas Gajarsky, Hendrik Purwins ;2018;Cyprus 
+Analyzing and Classifying Guitarists from ;Nick Bouris, Achilleas Chaldaeakes, Anastasia Georgaki ;2018;Cyprus 
+Approaches and Assessment of Drama Prosodic Tools in Live Performance. ;George Petras, Panagiotis Tsagkarakis, Anastasia Georgaki ;2018;Cyprus 
+Blender2faust: from drawn 3d objects to physically based sound models.;Stefania Serafin, Romain Michon, Smilen Dimitrov ;2018;Cyprus 
+Block-based Scheduling Through Interrupts And Intervention. ;Bjarni Gunnarsson ;2018;Cyprus 
+CrestMusePEDB 2nd EDITION: MUSIC PERFORMANCE DATABASE WITH PHRASE p.60 INFORMATION.;Mitsuyo Hashida, Eita Nakamura, Haruhiro Katayose ;2018;Cyprus 
+Crossing Phrase Boundaries in Music. ;Zuzana Cenkerova, Martin Hartmann, Petri Toiviainen ;2018;Cyprus 
+CTcomposer: A Music Composition Interface Considering Intra-Composer Consistency and Musical Typicality.;Hiromi Nakamura, Tomoyasu Nakano, Satoru Fukayama, Masataka Goto ;2018;Cyprus 
+Data Transmission as Musical Performance. ;Simon Blackmore ;2018;Cyprus 
+Deployment of LSTMs for Real-Time Hand Gesture Interaction of 3D Virtual Music Instruments with a Leap Motion Sensor.;Kosmas Kritsis, Aggelos Gkiokas, Maximos Kaliakatsos-Papakostas, Vassilis Katsouros, Aggelos Pikrakis ;2018;Cyprus 
+"Dervish Sound Dress; a Development of a Musical Interface Garment which explores Wearable Technology using Sound and Haptic Feedback for Performance and Interaction.";Eduardo Miranda, Hedy Hurban, Edward Braund ;2018;Cyprus 
+Design and Interaction of 3D Virtual Music Instruments for STEAM Education Using Web Technologies.;Kosmas Kritsis, Aggelos Gkiokas, Quentin Lamerand, Robert Piéchaud, Carlos Acosta, Maximos Kaliakatsos-Papakostas, Vassilis Katsouros ;2018;Cyprus 
+Evidence of Lateralization Cues in Grand and Upright Piano Sounds. p.80;Federico Fontana, Federico Avanzini, Stefano Papetti ;2018;Cyprus 
+Evoking Places from Spaces: The application of Multimodal Narrative Techniques in the p.103 Creation of “U - Modified”.;Gareth W. Young, Siobhán Mannion, Sara Wentworth ;2018;Cyprus 
+Fiddl: Evaluation of a Smartphone Based Application Designed for a Music Workshop for Children.;Gergely Csapo, Jonas Holfelt , Peter Bruun, Stefania Serafin ;2018;Cyprus 
+Formalizing Schoenberg’s Fundamentals of Musical Composition through Petri Nets. ;Adriano Baratè, Davide Andrea Mauro, Goffredo Haus, Luca Andrea Ludovico ;2018;Cyprus 
+Frequency Control of Nonlinear Oscillators – Strategies for Realtime Sound Synthesis. ;Martin Neukom ;2018;Cyprus 
+GTTM Database and Manual Time-span Tree Generation Tool. ;Masatoshi Hamanaka, Keiji Hirata, Satoshi Tojo ;2018;Cyprus 
+HamoKara: A System for Practice of Backing Vocals for Karaoke. ;Mina Shiraishi, Kozue Ogasawara, Tetsuro Kitahara ;2018;Cyprus 
+Haptic Interaction with Guitar and Bass Virtual Strings. ;Andrea Passalenti, Federico Fontana ;2018;Cyprus 
+Improving the Instrumental Learning Experience through Complexity Management ;Laurel Pardue, Andrew McPherson, Dan Overholt ;2018;Cyprus 
+Inside the intimate zone: The case of aural micro-space in multichannel compositional practice.;Nikos Stavropoulos ;2018;Cyprus 
+Interactive Exploration of Musical Space with Parametric t-SNE. ;Matteo Lionello, Hendrik Purwins, Luca Pietrogrande, Mohamed Abou-Zleikha ;2018;Cyprus 
+Ko2 - Distributed Music Systems With O2 and Kronos.;Vesa Norilo, Roger Dannenberg ;2018;Cyprus 
+Makam Recognition Using Extended Pitch Distribution Features and Multi-Layer Perceptrons.;Furkan Yesiler, Baris Bozkurt, Xavier Serra ;2018;Cyprus 
+Mapping Pitch Classes And Sound Objects: A Bridge Between Klumpenhouwer Networks And Schaeffer’s TARTYP.;Israel Neuman ;2018;Cyprus 
+Metric Interweaving in Networked Dance and Music Performance. ;Ioannis Zannos, Martin Carlé ;2018;Cyprus 
+Modeling Carnatic Rhythm Generation: a Data Driven Approach Based on Rhythmic Analysis.;Carlos Guedes, Konstantinos Trochidis, Akshay Anantapadmanabhan ;2018;Cyprus 
+Navigate as a Bat. Real-Time Echolocation System in Virtual Reality. ;Anastassia Andreasen, Jelisaveta Zovnercuka, Kristians Konovalovs, Michele Geronazzo, Stefania Serafin, Razvan Paisa ;2018;Cyprus 
+Nawba Recognition for Arab-andalusian Music Using Templates From Music Scores. ;Niccolò Pretto, Barıs Bozkurt, Rafael Caro Repetto, Xavier Serra ;2018;Cyprus 
+NordicSMC: a Nordic University Hub on Sound and Music Computing. ;Stefania Serafin, Sofia Dahl, Roberto Bresin Alexander Refsum Jensenius, Runar Unnthorsson, Vesa Valimaki ;2018;Cyprus 
+Perceiving Agent Collaborative Sonic Exploration in Interactive Reinforcement p.72 Learning.;Hugo Scurto, Frédéric Bevilacqua, Baptiste Caramiaux ;2018;Cyprus 
+Perception of Mechanical Sounds Inherent to Expressive Gestures of a NAO Robot - p.43 Implications for Movement Sonification of Humanoids.;Emma Frid, Roberto Bresin, Simon Alexandersson ;2018;Cyprus 
+Quantitative Analysis of the Impact of Mixing on Perceived Emotion of Soundscape Recordings.;Jianyu Fan, Miles Thorogood, Kıvanç Tatar, Philippe Pasquier ;2018;Cyprus 
+Real-time Bowed String Feature Extraction for Performance Applications. ;Kurijn Buys, Andrew McPherson ;2018;Cyprus 
+Relative DTW Embedding for Binary Classification of Audio Data. ;Marcelo Queiroz, Guilherme Jun Yoshimura ;2018;Cyprus 
+Simulating the Acoustic Environment of Two Historical Viennese Theaters. ;Brandon Westergaard, Timothy Hsu ;2018;Cyprus 
+SketchyTuna: Exploring A Design For Screenless Creativity. ;Nikolaj Møller, Dan Overholt, Vanessa Carpenter, Antonio Stella, Baldur Kampmann, Martin Minovski, Martin Maunsbach ;2018;Cyprus 
+Sonic Crossings with Audience Participation: The Embodied iSound Performance. ;Marcelo Gimenes ;2018;Cyprus 
+Soundscape Emotion Recognition via Deep Learning. ;Jianyu Fan, Fred Tung, William Li, Philippe Pasquier ;2018;Cyprus 
+Stability, Reliability, Compatibility: Reviewing 40 Years of DMI Design.;John Sullivan, Marcelo M. Wanderley ;2018;Cyprus 
+Stream Segregation: Utilizing Harmonic Variance in Auditory Graphs; Joe Fitzpatrick, Flaithri Neff ;2018;Cyprus 
+Strumming on an Acoustic Nylon Guitar: Microtiming, Beat Control and Rhythmic Expression in Three Different Accompaniment Patterns.;Sérgio Freire, Augusto Armondes, João Viana, Rubens Silva ;2018;Cyprus 
+Teaching Programming in Secondary Education through Sound. ;Theofani Sklirou, Areti Andreopoulou, Anastasia Georgaki ;2018;Cyprus 
+The BodyHarp: Designing the Intersection Between the Instrument and the Body. ;Doga Buse Cavdir, Romain Michon, Ge Wang ;2018;Cyprus 
+"Time lapse video sonification; watching and listening to events unfolding.";Xenofon Karakonstantis, Konstantinos Bakogiannis, George Cambourakis, Anastasia Georgaki;2018;Cyprus
+Toward a Web of Audio Things. ;Benjamin Matuszewski, Frédéric Bevilacqua ;2018;Cyprus 
+Towards Creating an Augmented Handpan using Leap Motion. p.108 Christine Steinmeier, Dominic Becking;Christine Steinmeie, Christine Steinmeie;2018;Cyprus 
+Towards Flexible Audio Processing. ;Thilo Koch, Marcelo Queiroz ;2018;Cyprus 
+Training Deep Convolutional Networks with Unlimited Synthesis of Musical Examples for Multiple Instrument Recognition.;Rameel Sethi, Noah Weninger, Abram Hindle, Vadim Bulitko, Michael Frishkopf ;2018;Cyprus 
+Unit-generator Graph as a Generator of Lazily Evaluated Audio-vector Trees. ;Hiroki Nishino ;2018;Cyprus 
+UPISketch : The Renewal of an Old Idea. ;Rodolphe Bourotte ;2018;Cyprus 
+Virtual Reality Exploration with Different Head-Related Transfer Functions. p.85;Erik Sikström, Michele Geronazzo, Jari Kleimola, Federico Avanzini, Amalia de Götzen, Stefania Serafin;2018;Cyprus 
+You Are Here: Sonic Crossings and Time Indeterminacy within the Buffer Zone. ;Oswaldo Emiddio Vasquez Hadjilyra ;2018;Cyprus 
+ Conditioning a Recurrent Neural Network to synthesize musical instrument transients;Lonce Wyse , Muhammad Huzaifah;2019;Spain
+ Exciting Digital Resonators with Analogue Sound ;Max Neupert , Clemens Wegener ;2019;Spain
+A Framework for the Evaluation of Interpolated Synthesizer Parameter Mapping ;Darrell Gibson , Richard Polfreman ;2019;Spain
+Adaptive Body Movement Sonification in Music and Therapy;Christian Baumann, Johanna Friederike Baarlink , Jan-Torsten Milde;2019;Spain
+Adaptive Loudness Compensation in Music Listening ;Leonardo Fierro, Jussi Rämö , Vesa Välimäki ;2019;Spain
+Autoencoders for music sound modeling: a comparison of linear, shallow, deep, recurrent and variational models;Fanny Roche, Thomas Hueber, Samuel Limier , Laurent Girin ;2019;Spain
+Combining Texture-Derived Vibrotactile Feedback, Concatenative Synthesis and Photogrammetry for Virtual Reality Rendering;Eduardo Magalhães, Emil Rosenlund Høeg, Gilberto Bernardes, Jon Ram Bruun-Pedersen, Stefania Serafin , Rolf Nordhal ;2019;Spain
+Comparison and Implementation of Data Transmission Techniques through Analog Audio Signals in the Context of Augmented Mobile Instruments;Romain Michon, Yann Orlarey, Stéphane Letz , Dominique Fober ;2019;Spain
+Copying Clave – A Turing Test;Simon Blackmore;2019;Spain
+D1.2.  Melody Slot Machine;Masatoshi Hamanaka ;2019;Spain
+D1.3.  OM-AI: A Toolkit to Support AI-Based Computer-Assisted Composition Workflows in OpenMusic;Anders Vinjar , Jean Bresson ;2019;Spain
+D1.4.  URALi: a proposal of approach to real-time audio synthesis in Unity;Enrico Dorigatti ;2019;Spain
+D1.5.  A Sequencer with Decoupled Track Timing;Silvan David Peter , Gerhard Widmer ;2019;Spain
+D1.6.  Musicypher: Music for Message Encryption;Víctor Jaime Marín , Alberto Peinado ;2019;Spain
+D1.7.  A Platform for Processing Sheet Music and Developing Multimedia Application;Fu-Hai Frank Wu ;2019;Spain
+D1.8.  Capturing the Reaction Time to Distinguish between Voice and Music;Alejandro Villena-Rodríguez, Lorenzo J. Tardón, Isabel Barbancho, Ana M. Barbancho, Irene Gómez-Plazas , María-José Varela-Salinas ;2019;Spain
+D1.9.  Physical Models and Real-Time Control with the Sensel Morph;Silvin Willemsen , Stefan Bilbao, Nikolaj Andersson , Stefania Serafin ;2019;Spain
+D2.2.  Extending Jamsketch: An Improvisation Support System;Akane Yasuhara, Junko Fujii , Tetsuro Kitahara ;2019;Spain
+D2.3.  Visualizing Music Genres using a Topic Model;Swaroop Panda, Vinay P. Namboodiri , Shatarupa Thakurta Roy ;2019;Spain
+D2.4.  CompoVOX: Real-Time Sonification of Voice;Daniel Hernán Molina Villota, Antonio Jurado-Navas , Isabel Barbancho ;2019;Spain
+D2.5.  Facial Activity Detection to Monitor Attention and Fatigue;Oscar Cobos, Jorge Munilla, Ana M. Barbancho, Isabel Barbancho , Lorenzo J. Tardón ;2019;Spain
+D2.6.  The Chordinator: An Interactive Music Learning Device;Eamon McCoy, John Greene, Jared Henson, James Pinder, Jonathan Brown, Claire Arthur;2019;Spain
+D2.7.  Automatic Chord Recognition in Music Education Applications;Sascha Grollmisch , Estefania Cano ;2019;Spain
+D2.8.  Sonic Sweetener Mug;Signe Lund Mathiesen, Derek Victor Byrne , Qian Janice Wang ;2019;Spain
+DAW-Integrated Beat Tracking for Music Production;Brett Dalton, David Johnson , George Tzanetakis;2019;Spain
+Drawing Geometric Figures with Braille Description through a Speech Recognition System;África Chamorro, Ana M. Barbancho, Isabel Barbancho , Lorenzo J. Tardón;2019;Spain
+Finding New Practice Material through Chord-Based Exploration of a Large Music Catalogue;Johan Pauwels , Mark B. Sandler;2019;Spain
+Interacting with Musebots (that don’t really listen) ;Arne Eigenfeldt ;2019;Spain
+Interactive Music Training System;Daniel Moreno, Isabel Barbancho, Ana M. Barbancho , Lorenzo J. Tardón;2019;Spain
+Internal Complexity for Exploratory Interaction;Mads Hobye;2019;Spain
+Learning to Generate Music with BachProp ;Florian Colombo, Johanni Brea , Wulfram Gerstner ;2019;Spain
+Metrics for the Automatic Assessment of Music Harmony Awareness in Children;Federico Avanzini, Adriano Baratè, Luca Andrea Ludovico , Marcella Mandanici ;2019;Spain
+Miningsuite: A Comprehensive Matlab Framework For Signal, Audio and Music Analysis, Articulating Audio And Symbolic Approaches;Olivier Lartillot;2019;Spain
+P1.10. Melody Identification in Standard MIDI Files;Zheng Jiang , Roger Dannenberg;2019;Spain
+P1.11. Automatic Chord-Scale Recognition using Harmonic Pitch Class Profiles;Emir Demirel, Baris Bozkurt , Xavier Serra;2019;Spain
+P1.2. Interaction-based Analysis of Freely Improvised Music;Stefano Kalonaris;2019;Spain
+P1.3. Mechanical Entanglement: A Collaborative Haptic-Music Performance;Alexandros Kontogeorgakopoulos, George Sioros , Odysseas Klissouras;2019;Spain
+P1.4. State Dependency - Audiovisual interaction through brain states;Patrick Neff, Jan Schacher , Daniel Bisig;2019;Spain
+P1.5. Perceptual Evaluation of Modal Synthesis for Impact-Based Sounds;Adrián Barahona , Sandra Pauletto;2019;Spain
+P1.6. VIBRA - Technical and Artistic Issues in an Interactive Dance Project;Andreas Bergsland, Sigurd Saue , Pekka Stokke;2019;Spain
+P1.7. Musical Tempo and Key Estimation with Directional Convolutional Neural Networks;Hendrik Schreiber , Meinard Müller;2019;Spain
+P1.8. The Viking HRTF Dataset;Simone Spagnol, Kristján Bjarki Purkhús, Sverrir Karl Björnsson , Runar Unnthórsson;2019;Spain
+P1.9. Performing with Sound Sample-Controlled Gloves and Light-Controlled Arms;Frank Pecquet, Fotis Moschos, David Fierro , Justin Pecquet;2019;Spain
+P2.10.  Real-time Mapping of Periodic Dance Movements to Control Tempo in Electronic Dance Music;Lilian Jap , Andre Holzapfel ;2019;Spain
+P2.11.  Increasing Access to Music in SEN Settings;Tom Davis, Daniel Pierson , Ann Bevan ;2019;Spain
+P2.2.  Music Temperaments Evaluation Based on Triads;Meihui Tong , Satoshi Tojo ;2019;Spain
+P2.3.  Composing space in the space: An Augmented and Virtual Reality sound spatialization system;Giovanni Santini ;2019;Spain
+P2.4.  Graph Based Physical Models for Sound Synthesis;Pelle Juul Christensen , Stefania Serafin ;2019;Spain
+P2.5.  ADPET: Exploring the Design, Pedagogy, and Analysis of a Mixed Reality Application for Piano Training;Lynda Gerry, Sofia Dahl , Stefania Serafin ;2019;Spain
+P2.6.  Chord Prediction with The Annotated Beethoven Corpus;Kristoffer Landsnes, Liana Mehrabyan, Victor Wiklund, Fabian C. Moss, Robert Lieck , Martin Rohrmeier ;2019;Spain
+P2.7.  Sonic Characteristics of Robots in Films;Adrian B. Latupeirissa, Emma Frid , Roberto Bresin ;2019;Spain
+P2.8.  Virtual Reality Music Intervention to Reduce Social Anxiety in Adolescents Diagnosed with Autism Spectrum Disorder;Ali Adjorlu, Nathaly Belen Betancourt Barriga , Stefania Serafin ;2019;Spain
+P3.10.  Jazz Mapping an Analytical and Computational Approach to Jazz Improvisation;Dimitrios Vassilakis, Anastasia Georgaki , Christina Anagnostopoulou ;2019;Spain
+P3.11.  Visual Pitch Estimation;A. Sophia Koepke, Olivia Wiles , Andrew Zisserman ;2019;Spain
+P3.2.  Polytopic reconfiguration: a graph-based scheme for the multiscale transformation of music segments and its perceptual assessment;Valentin Gillot , Frédéric Bimbot ;2019;Spain
+P3.3.  Non-Linear Contact Sound Synthesis for Real-Time Audio-Visual Applications using Modal Textures;Martin Maunsbach , Stefania Serafin ;2019;Spain
+P3.4.  Analysis of Vocal Ornamentation in Iranian Classical Music;Sepideh Shafiei ;2019;Spain
+P3.5.  VUSAA: An Augmented Reality Mobile App for Urban Soundwalks;Josué Moreno , Vesa Norilo ;2019;Spain
+P3.6.  A Framework for Multi-f0 Modeling in SATB Choirs;Helena Cuesta, Emilia Gómez , Pritish Chandna ;2019;Spain
+P3.7.  Representations of Self-Coupled Modal Oscillators with Time-Varying Sounding Frequency;Tamara Smyth , Jennifer Hsu ;2019;Spain
+P3.8.  SonaGraph. A cartoonified spectral model for music composition;Andrea Valle ;2019;Spain
+P3.9.  Sound in Multiples: Synchrony and Interaction Design of Coupled- Oscillator Networks;Nolan Lem ;2019;Spain
+RaveForce: A Deep Reinforcement Learning Environment for Music Generation ;Qichao Lan, Jim Tørresen , Alexander Refsum Jensenius ;2019;Spain
+Resonance Improviser: A System for Transmitting the Embodied Sensations of Vocalization Between Two People During Improvisation;Tejaswinee Kelkar , Lynda Gerry;2019;Spain
+S1.2.  Digital Manufacturing for Musical Applications: A Survey of Current Status and Future Outlook;Doga Cavdir ;2019;Spain
+S1.3.  Real Time Audio Digital Signal Processing with Faust and the Teensy;Romain Michon, Yann Orlarey, Stéphane Letz , Dominique Fober ;2019;Spain
+S1.4.  Sound Design through Large Audience Interaction;Kjetil Falkenberg Hansen, Martin Ljungdahl-Eriksson , Ricardo Atienza ;2019;Spain
+S1.5.  Evaluating a Continuous Sonic Interaction: Comparing a Performable Acoustic and Digital Everyday Sound;Fiona Keenan , Sandra Pauletto ;2019;Spain
+S2.2.  Toward Automatic Tuning of the Piano;Joonas Tuovinen, Jamin Hu , Vesa Välimäki ;2019;Spain
+S2.3.  Real-time Control of Large-scale Modular Physical Models using the Sensel Morph;Silvin Willemsen, Nikolaj Andersson, Stefania Serafin , Stefan Bilbao ;2019;Spain
+S2.4.  An Interactive Music Synthesizer for Gait Training in Neurorehabilitation;Prithvi Kantan , Sofia Dahl ;2019;Spain
+S2.5.  From Vocal Sketching to Sound Models by Means of a Sound-Based Musical Transcription System;Claudio Panariello, Mattias Sköld, Emma Frid , Roberto Bresin ;2019;Spain
+S2.6.  Tempo and Metrical Analysis by Tracking Multiple Metrical Levels Using Autocorrelation;Olivier Lartillot , Didier Grandjean ;2019;Spain
+S3.2.  Mass-Interaction Physical Models for Sound and Multi-Sensory Creation: Starting Anew;Jerome Villeneuve , James Leonard ;2019;Spain
+S3.3.  Exploring the Effects of Diegetic and Non-diegetic Audiovisual Cues on Decision-making in Virtual Reality;Anıl Çamcı ;2019;Spain
+S3.4.  OSC-XR: A Toolkit for Extended Reality Immersive Music Interfaces;David Johnson, Daniela Damian , George Tzanetakis ;2019;Spain
+S3.5.  No Strings Attached: Force and Vibrotactile Feedback in a Guitar Simulation;Andrea Passalenti, Razvan Paisa, Niels Christian Nilsson, Nikolaj S. Andersson, Federico Fontana, Rolf Nordahl , Stefania Serafin ;2019;Spain
+S4.2.  Composing with Sounds: Designing an Object Oriented Daw for the Teaching of Sound-Based Composition;Stephen Pearse, Leigh Landy, Duncan Chapman, David Holland , Mihai Eni ;2019;Spain
+S4.3.  Insights in Habits and Attitudes Regarding Programming Sound Synthesizers: A Quantitative Study;Gordan Kreković ;2019;Spain
+S5.1.  Experimental Verification of Dispersive Wave Propagation on Guitar Strings;Dmitri Kartofelev, Joann Arro , Vesa Välimäki ;2019;Spain
+S5.2.  Real-Time Modeling of Audio Distortion Circuits with Deep Learning;Eero-Pekka Damskägg, Lauri Juvela , Vesa Välimäki ;2019;Spain
+S5.3.  MI-GEN~: An Efficient and Accessible Mass-Interaction Sound Synthesis Toolbox;James Leonard , Jerome Villeneuve ;2019;Spain
+S5.5.  Percussion synthesis using loopback frequency modulation oscillators;Jennifer Hsu , Tamara Smyth ;2019;Spain
+S5.6.  Deep Linear Autoregressive Model for Interpretable Prediction of Expressive Tempo;Akira Maezawa ;2019;Spain
+S6.2.  Offline Score Alignment for Realistic Music Practice;Yucong Jiang, Fiona Ryan, David Cartledge , Christopher Raphael ;2019;Spain
+S6.3.  Piano Score-Following by Tracking Note Evolution;Yucong Jiang , Christopher Raphael ;2019;Spain
+S6.4.  Adaptive Score-Following System by Integrating Gaze Information;Kaede Noto, Yoshinari Takegawa , Keiji Hirata ;2019;Spain
+S6.5.  Alternative Measures: A Musicologist Workbench for Popular Music;Beach Clark , Claire Arthur ;2019;Spain
+S7.2.  Audiovisual perception of arousal, valence, and effort in contemporary cello performance;Hanna Järveläinen ;2019;Spain
+S7.3.  Dancing dots - investigating the link between dancer and musician in Swedish Folk Dance;Olof Misgeld, Andre Holzapfel , Sven Ahlbäck ;2019;Spain
+S8.2. Predicting Perceived Dissonance of Piano Chords Using a Chord-Class Invariant CNN and Deep Layered Learning;Juliette Dubois, Anders Elowsson , Anders Friberg;2019;Spain
+S8.3. Belief Propagation algorithm for Automatic Chord Estimation;Vincent P. Martin, Sylvain Reynal, Dogac Basaran , Hélène-Camille Crayencour ;2019;Spain
+S8.4. HMM-Based Glissando Detection for Recordings of Chinese Bamboo Flute;Changhong Wang, Emmanouil Benetos, Xiaojie Meng , Elaine Chew.;2019;Spain
+S8.5. Towards CNN-based Acoustic Modeling of Seventh Chords for Automatic Chord Recognition;Christon-Ragavan Nadar, Jakob Abeßer , Sascha Grollmisch;2019;Spain
+Towards a High-Performance Platform for Sonic Interaction Interfaces ;Stefano Fasciani , Manohar Vohra ;2019;Spain
+VocalistMirror: A Singer Support Interface for Avoiding Undesirable Facial Expressions ;Kin Wah Edward Lin, Tomoyasu Nakano , Masataka Goto ;2019;Spain
+#100. Rhythm Rangers: An evaluation of beat synchronisation skills and musical confidence through multiplayer gamification influence;Rasmus Kjærbo, Ramon Romeu, Marco González Pérez, Francisco Rosado Correia, Vatsal Guruvayurappan, Daniel Overholt , Sofia Dahl;2020;Italy
+#102. Web360Square: An interactive web application for viewing 3D audio-visual contents;Shin Kato, Tomohiro Ikeda, Mitsuaki Kawamorita, Manabu Tsukada , Hiroshi Esaki;2020;Italy
+#108. ASMD: An automatic framework for compiling multimodal datasets with audio and scores;Federico Simonetta, Stavros Ntalampiras , Federico Avanzini;2020;Italy
+#109. Good artists copy, great artists steal: Strategies for creative exploitation of the CHAMELEON harmonisation assistant;Asterios Zacharakis, Stamatia Kalaitzidou, Maximos Kaliakatsos-Papakostas , Emilios Cambouropoulos;2020;Italy
+#111. Expectation-based parsing for jazz chord sequences;Yuta Ogura, Hidefumi Ohmura, Yui Uehara, Satoshi Tojo , Kouichi Katsurada;2020;Italy
+#112. Resurrecting the tromba marina: A bowed virtual reality instrument using haptic feedback and accurate physical modelling;Silvin Willemsen, Razvan Paisa , Stefania Serafin;2020;Italy
+#113. Composition as an embodied act: A framework for the gesture-based creation of augmented reality action scores;Giovanni Santini;2020;Italy
+#115. 01101110 : An audiovisual installation based on the Cellular Automaton Rule 110;Alexandros Kontogeorgakopoulos , Odysseas Klissouras;2020;Italy
+#116. Design and implementation of real-time physically-based virtual musical instruments: A balancing act;James Leonard , Jerome Villeneuve;2020;Italy
+#120. Insights into the string-barrier interaction dynamics based on high-speed camera measurements;Dmitri Kartofelev, Joann Gustav Arro , Vesa Välimäki;2020;Italy
+#122. Latent birds: A bird's-eye view exploration of the latent space;Juan Alonso Moreno, Francesco Bigoni , Georgios Palamas;2020;Italy
+#124. Methods for performing with feedback in virtual acoustics;Eoin F. Callery , Elliot K. Canfield-Dafilou;2020;Italy
+#130. Speech sound disorder classification based on time-aligned dissimilarity profiles;Guilherme Jun Yoshimura, Marcelo Queiroz, Haydée Fiszbein Wertzner , Danira Francisco;2020;Italy
+#132. Computer-based music training with hearing impairments: Lessons from an experiment;Rumi Hiraga , Kjetil Falkenberg;2020;Italy
+#133. Towards objective evaluation of audio time-scale modification methods;Leonardo Fierro , Vesa Välimäki;2020;Italy
+#135. Towards reliable real-time opera tracking: Combining alignment with audio event detectors to increase robustness;Charles Brazier , Gerhard Widmer;2020;Italy
+#136. GENESIS 4th generation / Nomadicity / Gesture emulation: Real-time CORDIS-ANIMA physical modeling and high performance force-feedback interaction within the Hélicanthe workstation;Claude Cadoz;2020;Italy
+#14. Strune – An interactive audio-visual installation inspired by string theory;Davor B. Vincze, Hrvoje Hiršl , Jonathan S. Abel;2020;Italy
+#141. A low-cost endless knob controller with programmable resistive force feedback for multimedia production;Yuri De Pra, Federico Fontana, Stefano Papetti , Michele Simonato;2020;Italy
+#144. Evaluation of accurate artificial reverberation algorithm;Karolina Prawda, Stefania Serafin , Vesa Välimäki;2020;Italy
+#145. Evaluation of reverberation time models with variable acoustics;Karolina Prawda, Sebastian J. Schlecht , Vesa Välimäki;2020;Italy
+#147. Pictorize: Transforming image region luminosity to sound brightness for monitoring location;Georgios Marentakis;2020;Italy
+#151. Estimating keys and modulations in musical pieces;Laurent Feisthauer, Louis Bigo, Mathieu Giraud , Florence Levé;2020;Italy
+#152. Detection of musically relevant regions in multiresolution time-frequency representations evaluated on piano recordings;Nicolas Figueiredo , Marcelo Queiroz;2020;Italy
+#155. Embedding electronics in additive manufacturing for digital musical instrument design;Doga Cavdir;2020;Italy
+#157. Menagerie: exploring the audio-visual rhythms of violence through data, gun triggers, and swarms;Nolan Lem;2020;Italy
+#165. Real-time visualisation of fugue played by a string quartet;Olivier Lartillot, Carlos Cancino-Chacón , Charles Brazier;2020;Italy
+#166. Peace Wall Belfast: Spatial audio representation of Divided Spaces and soundwalks;Georgios Varoutsos;2020;Italy
+#167. Spectral analysis for modal parameters linear estimate;Marco Tiraboschi, Federico Avanzini , Stavros Ntalampiras;2020;Italy
+#168. Identifying master violinists using note-level audio features;Yudong Zhao, György Fazekas , Mark Sandler;2020;Italy
+#169. Digitally enhanced drums: An approach to rhythmic improvisation;Matteo Amadio , Alberto Novello;2020;Italy
+#170. AVAI: A tool for expressive music visualization based on autoencoders and constant Q transformation;Simon Borst Tyroll, Daniel Overholt , Georgios Palamas;2020;Italy
+#171. A compendium of bach's shortcomings as it turns ten (along with a few ideas on how to overcome them);Daniele Ghisi , Andrea Agostini;2020;Italy
+#173. ET systems: A high-level approach to additive synthesis control;Matteo Marson , Andrea Agostini;2020;Italy
+#174. Exploring emotion perception in sonic HRI;Adrian B. Latupeirissa, Claudio Panariello , Roberto Bresin;2020;Italy
+#181. Reliability of two IR motion capture systems in a music performance setting;Laura Bishop , Alexander Refsum Jensenius;2020;Italy
+#186. Musical dynamics classification with CNN and modulation spectra;Luca Marinelli, Athanasios Lykartsis, Charalampos Saitis , Stefan Weinzierl;2020;Italy
+#189. Historiography of the form of symbolic music through a computer-assisted analysis;Beate Ruth Kutschke , Tobias Bachmann;2020;Italy
+#209. Active preservation of analogue audio documents: A summary of the last seven years of digitization at CSC;Niccolò Pretto, Alessandro Russo, Federica Bressan, Valentina Burini, Antonio Rodà , Sergio Canazza;2020;Italy
+#210. Evaluation of CNN-based automatic music tagging models;Minz Won, Andres Ferraro, Dmitry Bogdanov , Xavier Serra;2020;Italy
+#218. Rapid composition for a multi-device networked music platform;Oliver Bown, Angelo Fraietta, Sam Ferguson , Deborah Turnbull Tillman;2020;Italy
+#220. Interactive software for the sonification of neuronal activity;Argan Verrier, Vincent Goudard, Elim Hong , Hugues Genevois;2020;Italy
+#222. Improvements in bach 0.8.1, a user's perspective;Jonathan Bell;2020;Italy
+#230. The world's first interactive 5G music concert: Professional quality networked music over a commodity network infrastructure;Alexander Carôt, Mischa Dohler, Simon Saunders, Frank Sardis, Richard Cornock , Navdeep Uniyal;2020;Italy
+#40. Sixteen years of Sound and Music Computing: A look into the history and trends of the Conference and Community;Davide Andrea Mauro, Federico Avanzini, Adriano Baratè, Luca Andrea Ludovico, Stavros Ntalampiras, Smilen Dimitrov , Stefania Serafin;2020;Italy
+#43. Looking for the soundscape of the future: preliminary results applying the design fiction method;Roberto Bresin, Sandra Pauletto, Jarmo Laaksolahti , Erik Gandini;2020;Italy
+#44. DigiDrum - A haptic-based virtual reality musical instrument and a case study;Silvin Willemsen, Anca-Simona Horvath , Mauro Nascimben;2020;Italy
+#53. Fb1 – An interface for single sample feedback and feedforward in SuperCollider;Daniel Mayer;2020;Italy
+#54. WebAudioXML: Proposing a new standard for structuring web audio;Hans Lindetorp , Kjetil Falkenberg;2020;Italy
+#55. The Physics Network Scripting Language to design masses-interactions physical models for arts;Nicolas Castagné , Annie Luciani;2020;Italy
+#57. Haptic music - Exploring whole-body vibrations and tactile sound for a multisensory music installation;Emma Frid , Hans Lindetorp;2020;Italy
+#59. Sonification as negotiation - Learning from translation studies;Giacomo Lepri;2020;Italy
+#60. Streams as Seams: Carving trajectories out of the time-frequency matrix;Giovanni Capizzi, Davide Rocchesso , Stefano Baldan;2020;Italy
+#63. Embouchure interaction model for brass instruments;Rares Stefan Alecu, Stefania Serafin, Silvin Willemsen, Emanuele Parravicini , Stefano Lucato;2020;Italy
+#67. Towards playing in the 'air': Modeling motion-sound energy relationships in electric guitar performance using deep neural networks;Çagri Erdem, Qichao Lan, Julian Fuhrer, Charles Martin, Jim Tørresen , Alexander Refsum Jensenius;2020;Italy
+#74. A Faust architecture for the ESP32 microcontroller;Romain Michon, Daniel Overholt, Stéphane Letz, Yann Orlarey, Dominique Fober , Catinca Dumitrascu;2020;Italy
+#75. Web-based time-span tree editor and analysis database;Masatoshi Hamanaka, Yui Isono, Keiji Hirata , Satoshi Tojo;2020;Italy
+#83. Synthesising knocking sound effects using conditional WaveGAN;Adrián Barahona-Ríos , Sandra Pauletto;2020;Italy
+"#86. Motif set assignment problem in the compositional process of ""Musical Rally""";Tsubasa Tanaka;2020;Italy
+#87. Jazz harmony analysis with epsilon-transition and cadential shortcut;Hiroyuki Yamamoto, Yui Uehara , Satoshi Tojo;2020;Italy
+#93. Matching uni-directional auditory gestures to visual trajectories of varying curvature;Sven-Amin Lembke;2020;Italy
+#95. Perception of emotions in knocking sounds: An evaluation study;Malcolm Houel, Abhilash Arun, Alfred Berg, Alessandro Iop, Adrián Barahona-Ríos , Sandra Pauletto;2020;Italy
+#97. Real-time implementation of a physical model of the tromba marina;Silvin Willemsen, Stefania Serafin, Stefan Bilbao , Michele Ducceschi;2020;Italy
+#99. 3D ear shape as an estimator of HRTF notch frequency;Marius George Onofrei, Riccardo Miccini, Runar Unnthorsson, Stefania Serafin , Simone Spagnol;2020;Italy

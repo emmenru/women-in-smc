@@ -14,7 +14,7 @@ from columnNames import newcolumns
 
 # CHANGE HERE FOR DIFFERENT CONFERENCE DATA
 confName = 'SMC'
-fileName = 'input/SMC_2017-2020_new.csv'
+fileName = 'input/SMC_2017-2020.csv'
 
 # SAVE CSVs
 unknownFile = open(confName+'genderOutputUnknown_2021.csv', 'w')
@@ -69,7 +69,7 @@ def writeOutput(authors, nameDict, genderDict, probabilityDict, country, year, n
                 year, 
                 numAuthors, 
                 title, 
-                'ICMC',
+                confName,
                 nameDict.get("name_01", None),
                 genderDict.get("name_01", None),
                 nameDict.get("name_02", None),
@@ -135,8 +135,8 @@ with open(fileName, newline='') as csvfile:
         #print(counter)
         #print(i)
         if counter>1: # skip the first row since that is just the column name
-            if counter==20: # for debugging
-                break 
+            #if counter==20: # for debugging
+            #    break 
             #titlelist.append(i[0])
             title = i[0]
             year  = i[2]
