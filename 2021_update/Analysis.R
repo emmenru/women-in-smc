@@ -120,6 +120,10 @@ ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2018row
 ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
 ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
 
+# overall 
+ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
+ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
+ICMC_male = sum(ICMC_stats_new$MaleCount)/ICMC_tot*100
 
 # NIME  
 NIME_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/NIME_stats.csv")
@@ -170,7 +174,16 @@ p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal(
 women <- subset(data_long, gender == 'Female')
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())+
-  xlab("Year") + ylab("Percentage")
+  xlab("Year") + ylab("Percentage")+
+  ylim(0, 1)
+p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal()+theme(legend.position = "none")
+
+# ONLY PLOTTING MEN (REVERSED MAPPING) 
+men <- subset(data_long, gender == 'Male')
+p <- ggplot(data=men, aes(x=Year, y=percentage, fill=gender)) +
+  geom_bar(stat="identity", position=position_dodge())+
+  xlab("Year") + ylab("Percentage")+
+  ylim(0, 1)
 p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal()+theme(legend.position = "none")
 
 

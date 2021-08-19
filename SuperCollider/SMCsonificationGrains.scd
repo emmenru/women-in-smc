@@ -19,9 +19,9 @@
 //////////////////////// SYNTH DEFINITIONS////////////////////////
 s.boot();
 
-~sample= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
+~sample= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
 
-~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
+~sample2= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
 
 //~sample2= Buffer.read(s,"/Users/emmafrid/kurser/creative_coding/women-in-smc/SuperCollider/56308__q-k__rain-03.wav");
 
@@ -96,7 +96,10 @@ Out.ar(0,Pan2.ar(grain, pan))}).add;
 //////////////////////// READ DATA  INTO 2D VECTOR ////////////////////////
 
 (
-~text = CSVFileReader.read("/Users/emmafrid/kurser/creative_coding/women-in-smc/input_data_SuperCollider/NIME_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+//~text = CSVFileReader.read("//Users/emmafrid/Dev/women-in-smc/input_data_SuperCollider/SMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+
+~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/2021_update/output/corrected_output_supercollider/sorted_on_first_author/ICMCgenderOutput_2021_for_R_SC_2018.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+
 
 // invert rows and columns in a two dimensional Array
 // this is done to get a vector of each column rather than a vector of each row
