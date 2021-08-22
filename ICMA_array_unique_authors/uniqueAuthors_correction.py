@@ -29,23 +29,24 @@ nameColumns.insert(0,1) # there are 17 columns with first names, and correspondi
 genderColumns = numpy.array(nameColumns)
 genderColumns = (genderColumns + 1)
 
-def createPersonDict(personDict, first, last, year, gender):
+def createPersonDict(personDict, first, last, year, gender, title):
         personDict["Name"].append(first)
         personDict["Last name"].append(last)
         personDict["Year"].append(year)
         personDict["Gender"].append(gender)
+        personDict["Title"].append(title)
         return(personDict)
 
-def findFirstOrLastName(row): 
+def getData(row): 
+    counter = 0
     year = row[4]
     persons = row[0]
     # if there is a comma in the string, first name is the name after the comma 
     persons = (persons.split(";"))
-    counter = 0
     personDict = dict()
-
+    personListPerRow = list()
     for person in persons: # note that person is a list 
-        personDict = {"Name":[],"Last name":[],"Year":[], "Gender":[]};
+        personDict = {"Name":[],"Last name":[],"Year":[], "Gender":[], "Title":[]};
         genderCol = genderColumns[counter] 
         counter += 1
         # if name formatted with comma : 
@@ -59,32 +60,57 @@ def findFirstOrLastName(row):
         first= first.strip()
         last= last.strip()
         gender = row[genderCol]
-        personDict = createPersonDict(personDict,first,last,year,gender)
-        print(personDict)
-    return(first, last, genderCol)
+        title=row[6]
+        personDict = createPersonDict(personDict,first,last,year,gender, title)
+        #print(counter)
+        personListPerRow.append(personDict)
+        # list of dictionaries
+    return(personListPerRow) 
 
 def getNamesFromCSV(year_to_check):
     with open(proceedingsData, newline='') as csvfile:
         rows = csv.reader(csvfile, delimiter=';')
+        allPersons = []
         for row in rows:
             authors = row[0]
             year = row[4]
             if year == year_to_check:
-                findFirstOrLastName(row)
+                personsPerRow = getData(row)
+                allPersons = allPersons+personsPerRow
+    return(allPersons)
+
+
+def findDuplicates(allPersonsOneYear):
+    # sort by name 
+    newlist = sorted(allPersonsOneYear, key=lambda k: k["Name"]) 
+    #firstNameList = list()
+    #lastNameList = list()
+    for i in range(len(newlist)-1):
+        # this current setup skips the last line  
+        old_person = newlist[i]
+        new_person = newlist[i+1]
+        name_row_1 = str(old_person.get("Name")).lower()
+        name_row_2 = str(new_person.get("Name")).lower()
+        lastname_row_1 = str(old_person.get("Last name")).lower()
+        lastname_row_2 = str(new_person.get("Last name")).lower()
+        title = new_person.get("Title")
+        print(i, name_row_1, lastname_row_1)
+        # identify items with identical first and last names 
+        if (name_row_2 == name_row_1):
+            print("Duplicates: ", name_row_1, lastname_row_1, name_row_2, lastname_row_2)
+            # check if also the last names are the same 
+            if (lastname_row_1 == lastname_row_2):
+                print("SAME PERSON!!!!")
+        #firstNameList.append(name)
+        #lastNameList.append(name)
+    #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
+
 
 def main():
+    print("*************************************")
     print("LOOKING FOR NON-UNIQUE AUTHOR NAMES")
-    getNamesFromCSV("1976")
-
-
-
-
-        #if year not in years_printed:
-        #    years_printed.append(year)
-        #    print(year)
-
-    #print(sorted(firstNames))
-    # analysis has to be done on a year basis     
+    allPersonsOneYear = getNamesFromCSV("1980")
+    findDuplicates(allPersonsOneYear)
 
 main()
 
