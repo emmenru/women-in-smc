@@ -20,9 +20,10 @@ from operator import itemgetter
 
 # TO DO: 
 # Check that the script works also for data after 2016 
-# Predict genders for 2021 and add them to ICMCgenderOutput_2021_for_R.csv
-# ICMC_stats_new.csv needs to be recalculated since there was an error in the csv file (yinrui) used to generate that data
-# Use the file in this folder to calculate those stats
+# Go through unknown and ambiguous gender predictions for 2021 
+# Add predicted genders for 2021 to ICMCgenderOutput_2021_for_R.csv
+# ICMC_stats_new.csv needs to be recalculated since there was an error in the csv file (yinrui) used to generate that data (done in R?)
+# Input new modified stats file to this script and compute the new stats for unique authors!
 
 # the two files have different formats
 #proceedingsData = "input/ICMC_reformatted.csv"

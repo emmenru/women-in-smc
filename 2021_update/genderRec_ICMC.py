@@ -14,7 +14,8 @@ from columnNames import newcolumns
 
 # CHANGE HERE FOR DIFFERENT CONFERENCE DATA
 confName = 'ICMC'
-fileName = 'input/ICMC_2017-2018.csv'
+#fileName = 'input/ICMC_2017-2018.csv'
+fileName = 'input/ICMC_2019.csv'
 
 # SAVE CSVs
 unknownFile = open('ICMCgenderOutputUnknown_2021.csv', 'w')
@@ -131,7 +132,7 @@ with open(fileName, newline='') as csvfile:
         #print(counter)
         #print(i)
         if counter>1: # skip the first row since that is just the column name
-            #if counter==30:
+            #if counter==10:
             #    break 
             #titlelist.append(i[0])
             title = i[0]
@@ -157,7 +158,8 @@ with open(fileName, newline='') as csvfile:
                     authorNew = cleanName(author)
                 else:
                     #if not formatted with comma 
-                    authorNew = cleanName(author)
+                    authorNew = author.split(" ")[0]
+                    #authorNew = cleanName(author)
 
                 author = authorNew
                 nameDict['name_%02d' % a] = author
