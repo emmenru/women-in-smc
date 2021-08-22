@@ -30,6 +30,11 @@ nameColumns.insert(0,1) # there are 17 columns with first names, and correspondi
 genderColumns = numpy.array(nameColumns)
 genderColumns = (genderColumns + 1)
 
+# output 
+outputFile = open("ICMC_stats_unique_authors.csv", "w") 
+outputWriter = csv.writer(outputFile)
+
+
 def createPersonDict(personDict, first, last, year, gender, title):
         personDict["Name"].append(first)
         personDict["Last name"].append(last)
@@ -133,24 +138,42 @@ def fixStatsFile(statsdata, year_to_check, compensationArray):
             year = row[1]
             if year == year_to_check:
                 #print("[Id, Year, MaleCount, FemaleCount, UnknownCount, TotNames, Male%, Female%, Unknown%]")
-                #print(row)
+                print("Old stats: ", row)
                 #print(compensationArray)
                 maleCount = int(row[2]) + compensationArray[0]
                 femaleCount = int(row[3]) + compensationArray[1]
                 UnknownCount = int(row[4]) + compensationArray[2]
                 TotNames = int(row[5]) + compensationArray[3]
-                newLine = [row[0], year, maleCount, femaleCount, UnknownCount, TotNames, maleCount/TotNames, femaleCount/TotNames, UnknownCount/TotNames]
+                newLine = [int(row[0]), int(year), maleCount, femaleCount, UnknownCount, TotNames, maleCount/TotNames, femaleCount/TotNames, UnknownCount/TotNames]
                 #print(newLine)
-                return(newLine)
+                return(newLine) 
 
-def main():
-    year = "1977"
+def iterateThroughYears(year):
+    #print(type(str(year)), type("1975"))
+    #year = "1975"
+    year = str(year)
     print("*************************************", year)
-    print("LOOKING FOR NON-UNIQUE AUTHOR NAMES")
     allPersonsOneYear = getNamesFromCSV(year)
     compensation = findDuplicates(allPersonsOneYear)
     fixedYear = fixStatsFile(statsData,year,compensation)
-    print(fixedYear)
+    print("New stats: ", fixedYear)
+    return(fixedYear)
+
+def saveNewStats(data): 
+    if (data == None):
+        print("NO DATA FOR THIS YEAR")
+    else:
+        print("SAVING DATA")
+        outputWriter.writerow(data)
+
+def main():
+    print("----------------------------START---------------------------------")
+    output = []
+    outputWriter.writerow(["Id", "Year", "MaleCount", "FemaleCount", "UnknownCount", "TotNames", "Male%", "Female%", "Unknown%"])
+    for i in years: # reduce for debugging
+        newLine = iterateThroughYears(i)
+        saveNewStats(newLine)
+        output.append(iterateThroughYears(i))
 
 main()
 
