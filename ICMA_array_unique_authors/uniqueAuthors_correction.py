@@ -2,6 +2,7 @@
 
 import csv
 import numpy
+from operator import itemgetter
 
 # for ICMA Array 
 # this has to be done since the stats reported in my ICMC paper from 2017 did not 
@@ -80,29 +81,47 @@ def getNamesFromCSV(year_to_check):
     return(allPersons)
 
 
+def calcCompensation(gender):
+    [maleCountCompensation, femaleCountCompensation, noneCountCompensation, totalCountCompensation] = [0,0,0,0]
+    gender = gender.strip("[]").strip("''")
+    totalCountCompensation -= 1
+    if gender == "male":
+        maleCountCompensation -= 1
+    elif gender == "female":
+        femaleCountCompensation -= 1
+    elif gender == "None":
+        noneCountCompensation -= 1
+    else: 
+        raise TypeError("Could not find gender for identical author name.") 
+    return(numpy.array([maleCountCompensation, femaleCountCompensation, noneCountCompensation, totalCountCompensation]))
+
 def findDuplicates(allPersonsOneYear):
-    # sort by name 
-    newlist = sorted(allPersonsOneYear, key=lambda k: k["Name"]) 
+    # sort by name AND lastname 
+    newlist = sorted(allPersonsOneYear, key=itemgetter("Name", "Last name"))
+    #newlist = sorted(allPersonsOneYear, key=lambda k: k["Name"]) 
     #firstNameList = list()
     #lastNameList = list()
+    compensationArray = numpy.array([0,0,0,0])
     for i in range(len(newlist)-1):
-        # this current setup skips the last line  
         old_person = newlist[i]
         new_person = newlist[i+1]
-        name_row_1 = str(old_person.get("Name")).lower()
-        name_row_2 = str(new_person.get("Name")).lower()
-        lastname_row_1 = str(old_person.get("Last name")).lower()
-        lastname_row_2 = str(new_person.get("Last name")).lower()
+        name_row_1 = str(old_person.get("Name"))#.lower()
+        name_row_2 = str(new_person.get("Name"))#.lower()
+        lastname_row_1 = str(old_person.get("Last name"))#.lower()
+        lastname_row_2 = str(new_person.get("Last name"))#.lower()
         title = new_person.get("Title")
-        print(i, name_row_1, lastname_row_1)
+        print(i, name_row_1, lastname_row_1, name_row_2, lastname_row_2)
         # identify items with identical first and last names 
-        if (name_row_2 == name_row_1):
-            print("Duplicates: ", name_row_1, lastname_row_1, name_row_2, lastname_row_2)
-            # check if also the last names are the same 
-            if (lastname_row_1 == lastname_row_2):
-                print("SAME PERSON!!!!")
-        #firstNameList.append(name)
-        #lastNameList.append(name)
+        if (name_row_2 == name_row_1 and lastname_row_1 == lastname_row_2):
+            print("IDENTICAL NAME IDENTIFIED")
+            # this should not be done if "unknown"
+            gender = str(newlist[i].get("Gender")) # not sure if this is correct i 
+            print("new compensation: ", calcCompensation(gender)) 
+            compensationArray =  numpy.add(compensationArray,calcCompensation(gender))
+            # this is currently not working for the last row??
+        print("total compensation: ", compensationArray) 
+    # assert that the sum of the first three elements is equal to the last one
+    assert(compensationArray[0:3].sum() == compensationArray[3])
     #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
 
 
