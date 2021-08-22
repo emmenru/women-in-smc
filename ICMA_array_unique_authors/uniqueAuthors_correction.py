@@ -99,10 +99,7 @@ def findDuplicates(allPersonsOneYear):
     # sort by name AND lastname 
     newlist = sorted(allPersonsOneYear, key=itemgetter("Name", "Last name"))
     # for debugging, print entire newlist to see that the last entries are correct
-    print(newlist)
-    #newlist = sorted(allPersonsOneYear, key=lambda k: k["Name"]) 
-    #firstNameList = list()
-    #lastNameList = list()
+    #print(newlist)
     compensationArray = numpy.array([0,0,0,0])
     for i in range(len(newlist)-1):
         old_person = newlist[i]
@@ -126,20 +123,41 @@ def findDuplicates(allPersonsOneYear):
             print("total compensation: ", compensationArray) 
     # assert that the sum of the first three elements is equal to the last one
     assert(compensationArray[0:3].sum() == compensationArray[3])
-    #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
+    return(compensationArray)
 
+def fixStatsFile(statsdata, year_to_check, compensationArray):
+    with open(statsdata, newline='') as csvfile:
+        rows = csv.reader(csvfile, delimiter=',')
+        print("*************************************STATS", year_to_check)
+        for row in rows: 
+            year = row[1]
+            if year == year_to_check:
+                #print("[Id, Year, MaleCount, FemaleCount, UnknownCount, TotNames, Male%, Female%, Unknown%]")
+                #print(row)
+                #print(compensationArray)
+                maleCount = int(row[2]) + compensationArray[0]
+                femaleCount = int(row[3]) + compensationArray[1]
+                UnknownCount = int(row[4]) + compensationArray[2]
+                TotNames = int(row[5]) + compensationArray[3]
+                newLine = [row[0], year, maleCount, femaleCount, UnknownCount, TotNames, maleCount/TotNames, femaleCount/TotNames, UnknownCount/TotNames]
+                #print(newLine)
+                return(newLine)
 
 def main():
-    print("*************************************")
+    year = "1977"
+    print("*************************************", year)
     print("LOOKING FOR NON-UNIQUE AUTHOR NAMES")
-    allPersonsOneYear = getNamesFromCSV("1977")
-    findDuplicates(allPersonsOneYear)
+    allPersonsOneYear = getNamesFromCSV(year)
+    compensation = findDuplicates(allPersonsOneYear)
+    fixedYear = fixStatsFile(statsData,year,compensation)
+    print(fixedYear)
 
 main()
 
-# to do - is there something funky where there is an ICMC 
 # ICMC_stats_new.csv needs to be rerun since there was an error in the csv file (yinrui) used to generate that 
 
 # output:  
 # ICMCstats_2021_unique_authors.csv
+
+    #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
 
