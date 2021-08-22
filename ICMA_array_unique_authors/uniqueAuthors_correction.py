@@ -26,74 +26,56 @@ statsData = "input/ICMC_stats_new.csv"
 years = list(range(1975,2017)) # wait, where there not some years that it did not happen?
 nameColumns = list(range(8,40,2))
 nameColumns.insert(0,1) # there are 17 columns with first names, and corresponding genders 
-#print(nameColumns) 
 genderColumns = numpy.array(nameColumns)
 genderColumns = (genderColumns + 1)
 
-def collectFirstnames(row):
-    # collects all first names for a row
-    year = row[4]
-    
-    [firstName, lastName, genderColumn] = findFirstOrLastName(row)
-    
-
+def createPersonDict(personDict, first, last, year, gender):
+        personDict["Name"].append(first)
+        personDict["Last name"].append(last)
+        personDict["Year"].append(year)
+        personDict["Gender"].append(gender)
+        return(personDict)
 
 def findFirstOrLastName(row): 
+    year = row[4]
     persons = row[0]
     # if there is a comma in the string, first name is the name after the comma 
     persons = (persons.split(";"))
-    #print(persons)
     counter = 0
     personDict = dict()
 
     for person in persons: # note that person is a list 
         personDict = {"Name":[],"Last name":[],"Year":[], "Gender":[]};
         genderCol = genderColumns[counter] 
-        #print(counter, person)
         counter += 1
-        #print(person)
         # if name formatted with comma : 
         if "," in person: 
-            #print("formatted with comma")
             names = (person.split(",")) 
             first = names[1]
             last = names[0]
         else: 
-            #print("not formatted with comma")
             (first, last) = person.split(maxsplit=1)
         # remove empty space in beginning of name 
         first= first.strip()
         last= last.strip()
-        #print("gender column: ", genderCol)
         gender = row[genderCol]
-        #print("gender : ", gender)
-        personDict["Name"].append(first)
-        personDict["Last name"].append(last)
-        personDict["Year"].append(year)
-        personDict["Gender"].append(gender)
+        personDict = createPersonDict(personDict,first,last,year,gender)
         print(personDict)
     return(first, last, genderCol)
 
+def getNamesFromCSV(year_to_check):
+    with open(proceedingsData, newline='') as csvfile:
+        rows = csv.reader(csvfile, delimiter=';')
+        for row in rows:
+            authors = row[0]
+            year = row[4]
+            if year == year_to_check:
+                findFirstOrLastName(row)
 
-with open(proceedingsData, newline='') as csvfile:
-    rows = csv.reader(csvfile, delimiter=';')
-    years_printed = []
-    firstNames = [] 
-    firstNames_per_year = []
+def main():
+    print("LOOKING FOR NON-UNIQUE AUTHOR NAMES")
+    getNamesFromCSV("1976")
 
-    # this is the list that we use to check if there are identical names  
-    # identified by checking if first names are the same, if last names are the same, if year is the same
-
-    for row in rows:
-        authors = row[0]
-        year = row[4]
-
-        if year == "1975":
-            #print(authors)
-            collectFirstnames(row)
-            #print(names)
-            # unlist strings and sort them to see if there are any identical names 
-            # identify if some of the firstNames are identical by sorting them
 
 
 
@@ -103,6 +85,8 @@ with open(proceedingsData, newline='') as csvfile:
 
     #print(sorted(firstNames))
     # analysis has to be done on a year basis     
+
+main()
 
 # to do - is there something funky where there is an ICMC 
 # ICMC_stats_new.csv needs to be rerun since there was an error in the csv file (yinrui) used to generate that 
