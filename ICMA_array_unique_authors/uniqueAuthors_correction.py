@@ -6,32 +6,38 @@ from operator import itemgetter
 
 # for ICMA Array 
 # this has to be done since the stats reported in my ICMC paper from 2017 did not 
-# take into account that some authors were presented several times 
-# in other words, it did not look on UNIQUE AUTHOR stats 
-# this scripts takes in the predicted data (after going through unknown authors manually) 
-# and outputs a corrected statistics file
+# take into account that some authors published several papers in the same year
+# this scripts inputs the predicted data (after going through unknown authors manually) and outputs new stats for only unque authors 
 
 # virtual env: /Users/emmafrid/Dev/VirtualEnvs/women-in-smc
 
 # input: 
+# ICMC.csv (years before 2016, downloaded from supplementary material from ICMC paper, fixed one for 1975 where no gender was recorded)
 # ICMCgenderOutput_2021_for_R.csv (years after 2016)
-# ICMC.csv (years before 2016, downloaded from supplementary material from ICMC paper)
-# ICMC_stats_new.csv (contains all years, but 2019-2020 was one conference since the 19 edition was cancelled)
-# two conference years are therefore missing in the analysis, 2020 and 2021
+
+# ICMC_stats_new.csv (contains all years apart from 2019, which I could not get the proceedings for)
+# Please note that the conference 2020 was cancelled)
+
+# TO DO: 
+# Check that the script works also for data after 2016 
+# Predict genders for 2021 and add them to ICMCgenderOutput_2021_for_R.csv
+# ICMC_stats_new.csv needs to be recalculated since there was an error in the csv file (yinrui) used to generate that data
+# Use the file in this folder to calculate those stats
 
 # the two files have different formats
-proceedingsData = "input/ICMC_reformatted.csv"
+#proceedingsData = "input/ICMC_reformatted.csv"
+proceedingsData = "input/ICMC_reformatted_all_years.csv"
 #proceedingsData = "input/ICMCgenderOutput_2021_for_R.csv"
 statsData = "input/ICMC_stats_new.csv"
 
-years = list(range(1975,2017)) # wait, where there not some years that it did not happen?
+years = list(range(1975,2020)) 
 nameColumns = list(range(8,40,2))
 nameColumns.insert(0,1) # there are 17 columns with first names, and corresponding genders 
 genderColumns = numpy.array(nameColumns)
 genderColumns = (genderColumns + 1)
 
 # output 
-outputFile = open("ICMC_stats_unique_authors.csv", "w") 
+outputFile = open("output/ICMC_stats_unique_authors.csv", "w") 
 outputWriter = csv.writer(outputFile)
 
 
@@ -177,10 +183,5 @@ def main():
 
 main()
 
-# ICMC_stats_new.csv needs to be rerun since there was an error in the csv file (yinrui) used to generate that 
-
-# output:  
-# ICMCstats_2021_unique_authors.csv
-
-    #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
+#print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
 
