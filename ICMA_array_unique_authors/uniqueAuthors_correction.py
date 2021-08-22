@@ -98,6 +98,8 @@ def calcCompensation(gender):
 def findDuplicates(allPersonsOneYear):
     # sort by name AND lastname 
     newlist = sorted(allPersonsOneYear, key=itemgetter("Name", "Last name"))
+    # for debugging, print entire newlist to see that the last entries are correct
+    print(newlist)
     #newlist = sorted(allPersonsOneYear, key=lambda k: k["Name"]) 
     #firstNameList = list()
     #lastNameList = list()
@@ -114,12 +116,14 @@ def findDuplicates(allPersonsOneYear):
         # identify items with identical first and last names 
         if (name_row_2 == name_row_1 and lastname_row_1 == lastname_row_2):
             print("IDENTICAL NAME IDENTIFIED")
-            # this should not be done if "unknown"
-            gender = str(newlist[i].get("Gender")) # not sure if this is correct i 
-            print("new compensation: ", calcCompensation(gender)) 
-            compensationArray =  numpy.add(compensationArray,calcCompensation(gender))
-            # this is currently not working for the last row??
-        print("total compensation: ", compensationArray) 
+            # no compensation if name_row_1 is "Unknown"
+            if (name_row_1=="Unknown"): 
+                pass 
+            else: 
+                gender = str(newlist[i].get("Gender")) # not sure if this is correct i 
+                print("new compensation: ", calcCompensation(gender)) 
+                compensationArray =  numpy.add(compensationArray,calcCompensation(gender))
+            print("total compensation: ", compensationArray) 
     # assert that the sum of the first three elements is equal to the last one
     assert(compensationArray[0:3].sum() == compensationArray[3])
     #print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
@@ -128,7 +132,7 @@ def findDuplicates(allPersonsOneYear):
 def main():
     print("*************************************")
     print("LOOKING FOR NON-UNIQUE AUTHOR NAMES")
-    allPersonsOneYear = getNamesFromCSV("1980")
+    allPersonsOneYear = getNamesFromCSV("1977")
     findDuplicates(allPersonsOneYear)
 
 main()
