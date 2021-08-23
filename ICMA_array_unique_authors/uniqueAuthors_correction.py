@@ -12,21 +12,21 @@ from operator import itemgetter
 # virtual env: /Users/emmafrid/Dev/VirtualEnvs/women-in-smc
 
 # input: 
-# ICMC.csv (years before 2016, downloaded from supplementary material from ICMC paper, fixed one for 1975 where no gender was recorded)
-# ICMCgenderOutput_2021_for_R.csv (years after 2016)
+# ICMC_reformatted_all_years.csv (years before 2016, downloaded from supplementary material from ICMC paper, fixed one for 1975 where no gender was recorded)
+# ICMCgenderOutput_1975-2021_for_R.csv (years after 2016) # different format, perhaps code must be different 
 
-# ICMC_stats_new.csv (contains all years apart from 2019, which I could not get the proceedings for)
-# Please note that the conference 2020 was cancelled)
+# ICMC_stats_new.csv (contains all years apart from 2020, which was published together with 2021 due to covid)
 
 # TO DO: 
 # Check that the script works also for data after 2016 
-# ICMC_stats_new.csv needs to be recalculated since there was an error in the csv file (yinrui) used to generate that data (done in R?)
-# Input new modified stats file to this script and compute the new stats for unique authors!
+# Check that stats calc in R is correct 
+# Make sure that the data is modified so that ICMCgenderOutput_1975-2021_for_R also works....
 
 # the two files have different formats
-#proceedingsData = "input/ICMC_reformatted.csv"
 proceedingsData = "input/ICMC_reformatted_all_years.csv"
-#proceedingsData = "input/ICMCgenderOutput_2021_for_R.csv"
+# THIS IS NOT WORKING YET - probably since the format is different for the names?
+#proceedingsData = "input/ICMCgenderOutput_1975-2021_for_R.csv"
+# check last row, where there is an additional row name 
 statsData = "input/ICMC_stats_new.csv"
 
 years = list(range(1975,2020)) 
@@ -38,7 +38,6 @@ genderColumns = (genderColumns + 1)
 # output 
 outputFile = open("output/ICMC_stats_unique_authors.csv", "w") 
 outputWriter = csv.writer(outputFile)
-
 
 def createPersonDict(personDict, first, last, year, gender, title):
         personDict["Name"].append(first)
@@ -89,7 +88,6 @@ def getNamesFromCSV(year_to_check):
                 personsPerRow = getData(row)
                 allPersons = allPersons+personsPerRow
     return(allPersons)
-
 
 def calcCompensation(gender):
     [maleCountCompensation, femaleCountCompensation, noneCountCompensation, totalCountCompensation] = [0,0,0,0]
@@ -181,6 +179,3 @@ def main():
         output.append(iterateThroughYears(i))
 
 main()
-
-#print("Value of Name key from 2nd dictionary:", allPersonsOneYear[1].get("Name"))
-

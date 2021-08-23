@@ -105,13 +105,6 @@ years = as.numeric(years)
 
 
 df_ICMC <- lapply(years, getYear, data = ICMC)
-#df_ICMC[1]
-
-ICMC2017row <- getCountsPerYear(ICMC2017) 
-ICMC2018row <- getCountsPerYear(ICMC2018)
-ICMC2019row <- getCountsPerYear(ICMC2019)
-ICMC2021row <- getCountsPerYear(ICMC2021)
-
 
 # NIME 
 NIME2017row <- getCountsPerYear(NIME2017)
@@ -140,33 +133,23 @@ df[nrow(df) + 1,] = SMC2020rowFirst
 # format to fit with data from previous years 
 # ICMC 
 ICMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/ICMC_stats.csv")
-# this one is wrong and needs to be recalculated !!!!
+# this one is wrong and needs to be recalculated !!!! or maybe not? 
 stoprowICMC <- nrow(ICMC_stats)-4
 ICMC_stats_new <- ICMC_stats[c(1:stoprowICMC),]
 
-
-
 ICMC_stats_new_fixed = as.data.frame(do.call(rbind, df_ICMC))
 names(ICMC_stats_new_fixed) = names(ICMC_stats_new)
-
+ICMC_stats_new=ICMC_stats_new_fixed
 # compare these 
 View(ICMC_stats)
 View(ICMC_stats_new_fixed)
 ICMC_stats$TotNames[0:40]==ICMC_stats_new_fixed$TotNames[0:40]
-
-
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2017row
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2018row
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2019row
-ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2021row
 
 #olddata_wide_ICMC <- ICMC_stats_new[,c(1,6:8)]
 #data_long_ICMC <- gather(olddata_wide_ICMC, gender, percentage, Male:Unknown, factor_key=TRUE)
 
 # save file for ICMA Array - unique authors 
 write.csv(ICMC_stats_new,'ICMC_stats_new.csv')
-
-
 
 ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
 ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
