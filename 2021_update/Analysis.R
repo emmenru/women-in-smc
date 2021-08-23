@@ -6,13 +6,21 @@ library(RColorBrewer)
 # DO BEFORE INPUTTING FILES HERE
 # IMPORT CSV FILES IN EXCEL 
 # EXPORT AS CSV 
-ICMC <- read.csv("~/Dev/women-in-smc/2021_update/output/ICMCgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
-NIME <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/NIMEgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
-SMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/SMCgenderOutput_2021_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
+ICMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/ICMCgenderOutput_1975-2021_for_R.csv", sep=";")[ ,c(1:40)]
+# add all data for NIME or SMC here instead?
+NIME <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/NIMEgenderOutput_2020_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
+SMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/SMCgenderOutput_2020_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
+
+summary(ICMC)
+class(ICMC$Year)
+
 
 # ICMC 
 ICMC2017 <- ICMC[ which(ICMC$Year==2017), ]
 ICMC2018 <- ICMC[ which(ICMC$Year==2018), ]
+ICMC2019 <- ICMC[ which(ICMC$Year==2019), ]
+ICMC2021 <- ICMC[ which(ICMC$Year==2021), ]
+
 
 # NIME 
 NIME2017 <- NIME[ which(NIME$Year==2017), ]
@@ -37,6 +45,7 @@ is.empty <- function(x, mode = NULL){
 
 
 getCountsPerYear <- function(data){
+  print("calculating stats for year: ")
   genders<-data[ , grepl( "Gender" , names( data ) ) ]
   # remove columns in which there are any NAs
   genders <- genders[ , apply(genders, 2, function(x) !any(is.na(x)))]
@@ -45,7 +54,8 @@ getCountsPerYear <- function(data){
   counts = as.data.frame(counts)
   # sum per column to get a number per year 
   #output <- c(sum(counts$female), sum(counts$male), sum(counts$None))
-  year = data$Year[1]
+  year = as.numeric(data$Year[1])
+  print(year)
   maleCountTot = sum(counts$male)
   femaleCountTot = sum(counts$female)
   unknownCountTot = sum(counts$None)
@@ -53,9 +63,11 @@ getCountsPerYear <- function(data){
   malePercentage = maleCountTot/totNames
   femalePercentage = femaleCountTot/totNames 
   unknownPercentage = unknownCountTot/totNames
+  #print(c(year, maleCountTot, femaleCountTot))
   row <- c(year, maleCountTot, femaleCountTot, unknownCountTot, totNames, malePercentage, femalePercentage, unknownPercentage)
   return(row)
 }
+
 
 getCountsPerYearFirstAuthor <- function(data){
   #for debugging
@@ -79,9 +91,27 @@ getCountsPerYearFirstAuthor <- function(data){
 
 # sum column $NumberOfAuthors to verify that total is correct 
 
+getYear <- function(year, data){
+  oneYear <- data[ which(data$Year==year), ]
+  oneYearRow <- getCountsPerYear(oneYear) 
+  return(oneYearRow)
+}
+
 # ICMC 
+#getYear(2017, ICMC)
+years <- levels(as.factor(ICMC$Year))
+years = years[-length(years)] # remove Year label
+years = as.numeric(years)
+
+
+df_ICMC <- lapply(years, getYear, data = ICMC)
+#df_ICMC[1]
+
 ICMC2017row <- getCountsPerYear(ICMC2017) 
 ICMC2018row <- getCountsPerYear(ICMC2018)
+ICMC2019row <- getCountsPerYear(ICMC2019)
+ICMC2021row <- getCountsPerYear(ICMC2021)
+
 
 # NIME 
 NIME2017row <- getCountsPerYear(NIME2017)
@@ -110,12 +140,33 @@ df[nrow(df) + 1,] = SMC2020rowFirst
 # format to fit with data from previous years 
 # ICMC 
 ICMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/ICMC_stats.csv")
+# this one is wrong and needs to be recalculated !!!!
 stoprowICMC <- nrow(ICMC_stats)-4
 ICMC_stats_new <- ICMC_stats[c(1:stoprowICMC),]
+
+
+
+ICMC_stats_new_fixed = as.data.frame(do.call(rbind, df_ICMC))
+names(ICMC_stats_new_fixed) = names(ICMC_stats_new)
+
+# compare these 
+View(ICMC_stats)
+View(ICMC_stats_new_fixed)
+ICMC_stats$TotNames[0:40]==ICMC_stats_new_fixed$TotNames[0:40]
+
+
 ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2017row
 ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2018row
+ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2019row
+ICMC_stats_new[nrow(ICMC_stats_new) + 1,] = ICMC2021row
+
 #olddata_wide_ICMC <- ICMC_stats_new[,c(1,6:8)]
 #data_long_ICMC <- gather(olddata_wide_ICMC, gender, percentage, Male:Unknown, factor_key=TRUE)
+
+# save file for ICMA Array - unique authors 
+write.csv(ICMC_stats_new,'ICMC_stats_new.csv')
+
+
 
 ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
 ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
@@ -174,8 +225,8 @@ p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal(
 women <- subset(data_long, gender == 'Female')
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())+
-  xlab("Year") + ylab("Percentage")+
-  ylim(0, 1)
+  xlab("Year") + ylab("Percentage")#+
+  #ylim(0, 1)
 p + scale_fill_manual(values=c("#30BC85", "#3F30BC", "#30ADBC"))+ theme_minimal()+theme(legend.position = "none")
 
 # ONLY PLOTTING MEN (REVERSED MAPPING) 
