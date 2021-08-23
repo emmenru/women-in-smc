@@ -18,13 +18,13 @@ confName = 'ICMC'
 fileName = 'input/ICMC_2019.csv'
 
 # SAVE CSVs
-unknownFile = open('ICMCgenderOutputUnknown_2021.csv', 'w')
+unknownFile = open('ICMCgenderOutputUnknown_2019.csv', 'w')
 unknownFileWriter = csv.writer(unknownFile)
-ambigiuousFile = open('ICMCgenderOutputAmbiguous_2021.csv', 'w')
+ambigiuousFile = open('ICMCgenderOutputAmbiguous_2019.csv', 'w')
 ambigiuousFileWriter = csv.writer(ambigiuousFile)
-statsFile = open('ICMCstats_2021.csv', 'w')
+statsFile = open('ICMCstats_2019.csv', 'w')
 statsFileWriter = csv.writer(statsFile)
-outputFile = open('ICMCgenderOutput_2021.csv', 'w') 
+outputFile = open('ICMCgenderOutput_2019.csv', 'w') 
 outputWriter = csv.writer(outputFile)
 outputWriter.writerow(newcolumns)
 
