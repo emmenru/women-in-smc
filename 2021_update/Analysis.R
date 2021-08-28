@@ -6,7 +6,9 @@ library(RColorBrewer)
 # DO BEFORE INPUTTING FILES HERE
 # IMPORT CSV FILES IN EXCEL 
 # EXPORT AS CSV 
-ICMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/ICMCgenderOutput_1975-2021_for_R.csv", sep=";")[ ,c(1:40)]
+#ICMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/ICMCgenderOutput_1975-2021_for_R.csv", sep=";")[ ,c(1:40)]
+ICMC <- read.csv("~/Dev/women-in-smc/ICMA_array_unique_authors/input/ICMCgenderOutput_1975-2021_for_R_manually_fixed.csv", sep=";")[ ,c(1:40)]
+
 # add all data for NIME or SMC here instead?
 NIME <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/NIMEgenderOutput_2020_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
 SMC <- read.csv("~/Dev/women-in-smc/2021_update/output/corrected_output/SMCgenderOutput_2020_for_R.csv", sep=";", stringsAsFactors=TRUE)[ ,c(1:40)]
@@ -100,10 +102,9 @@ getYear <- function(year, data){
 # ICMC 
 #getYear(2017, ICMC)
 years <- levels(as.factor(ICMC$Year))
-years = years[-length(years)] # remove Year label
 years = as.numeric(years)
 
-
+years
 df_ICMC <- lapply(years, getYear, data = ICMC)
 
 # NIME 
@@ -134,25 +135,24 @@ df[nrow(df) + 1,] = SMC2020rowFirst
 # ICMC 
 ICMC_stats <- read.csv("~/Dev/women-in-smc/2021_update/output/old-stats/ICMC_stats.csv")
 # this one is wrong and needs to be recalculated !!!! or maybe not? 
-stoprowICMC <- nrow(ICMC_stats)-4
-ICMC_stats_new <- ICMC_stats[c(1:stoprowICMC),]
+#stoprowICMC <- nrow(ICMC_stats)-4
+#ICMC_stats_new <- ICMC_stats[c(1:stoprowICMC),]
 
 ICMC_stats_new_fixed = as.data.frame(do.call(rbind, df_ICMC))
 names(ICMC_stats_new_fixed) = names(ICMC_stats_new)
 ICMC_stats_new=ICMC_stats_new_fixed
 # compare these 
 View(ICMC_stats)
-View(ICMC_stats_new_fixed)
-ICMC_stats$TotNames[0:40]==ICMC_stats_new_fixed$TotNames[0:40]
+View(ICMC_stats_new)
+ICMC_stats$TotNames[0:40]==ICMC_stats_new$TotNames[0:40]
+ICMC_stats$TotNames[0:40]
+ICMC_stats_new$TotNames[0:40]
 
 #olddata_wide_ICMC <- ICMC_stats_new[,c(1,6:8)]
 #data_long_ICMC <- gather(olddata_wide_ICMC, gender, percentage, Male:Unknown, factor_key=TRUE)
 
 # save file for ICMA Array - unique authors 
 write.csv(ICMC_stats_new,'ICMC_stats_new.csv')
-
-ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)
-ICMC_women = sum(ICMC_stats_new$FemaleCount)/ICMC_tot*100
 
 # overall 
 ICMC_tot = sum(ICMC_stats_new$MaleCount)+sum(ICMC_stats_new$FemaleCount)+sum(ICMC_stats_new$UnknownCount)

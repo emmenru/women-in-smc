@@ -25,7 +25,7 @@ from operator import itemgetter
 # the two files have different formats
 proceedingsData = "input/ICMC_reformatted_all_years.csv"
 # THIS IS NOT WORKING YET - probably since the format is different for the names?
-#proceedingsData = "input/ICMCgenderOutput_1975-2021_for_R.csv"
+#proceedingsData = "input/ICMCgenderOutput_1975-2021_for_R_before_manual_fix.csv"
 # check last row, where there is an additional row name 
 statsData = "input/ICMC_stats_new.csv"
 
@@ -173,7 +173,7 @@ def main():
     print("----------------------------START---------------------------------")
     output = []
     outputWriter.writerow(["Id", "Year", "MaleCount", "FemaleCount", "UnknownCount", "TotNames", "Male%", "Female%", "Unknown%"])
-    for i in years: # reduce for debugging
+    for i in years[1:3]: # reduce for debugging
         newLine = iterateThroughYears(i)
         saveNewStats(newLine)
         output.append(iterateThroughYears(i))
