@@ -3,6 +3,7 @@
 import csv
 import numpy
 from operator import itemgetter
+import re
 
 # for ICMA Array 
 # this has to be done since the stats reported in my ICMC paper from 2017 did not 
@@ -21,15 +22,17 @@ from operator import itemgetter
 # Check that the script works also for data after 2016 
 # Check that stats calc in R is correct 
 # Make sure that the data is modified so that ICMCgenderOutput_1975-2021_for_R also works....
+# if first three letters are the same, but not the rest, write these names to a separate list to go through later
+# Det var något funky med 2019, oklart varför. Borde nog gå igenom alla publikationer från början till slut för att se att det stämmer 
 
 # the two files have different formats
-proceedingsData = "input/ICMC_reformatted_all_years.csv"
+#proceedingsData = "input/ICMC_reformatted_all_years.csv"
 # THIS IS NOT WORKING YET - probably since the format is different for the names?
-#proceedingsData = "input/ICMCgenderOutput_1975-2021_for_R_before_manual_fix.csv"
+proceedingsData = "input/ICMCgenderOutput_1975-2021_for_R_manually_fixed.csv"
 # check last row, where there is an additional row name 
 statsData = "input/ICMC_stats_new.csv"
 
-years = list(range(1975,2020)) 
+years = list(range(1975,2022)) 
 nameColumns = list(range(8,40,2))
 nameColumns.insert(0,1) # there are 17 columns with first names, and corresponding genders 
 genderColumns = numpy.array(nameColumns)
@@ -51,8 +54,9 @@ def getData(row):
     counter = 0
     year = row[4]
     persons = row[0]
+    #print(persons)
     # if there is a comma in the string, first name is the name after the comma 
-    persons = (persons.split(";"))
+    persons = (persons.split("&"))
     personDict = dict()
     personListPerRow = list()
     for person in persons: # note that person is a list 
@@ -109,6 +113,7 @@ def findDuplicates(allPersonsOneYear):
     # for debugging, print entire newlist to see that the last entries are correct
     #print(newlist)
     compensationArray = numpy.array([0,0,0,0])
+    manualCheckList = list()
     for i in range(len(newlist)-1):
         old_person = newlist[i]
         new_person = newlist[i+1]
@@ -117,32 +122,39 @@ def findDuplicates(allPersonsOneYear):
         lastname_row_1 = str(old_person.get("Last name"))#.lower()
         lastname_row_2 = str(new_person.get("Last name"))#.lower()
         title = new_person.get("Title")
-        print(i, name_row_1, lastname_row_1, name_row_2, lastname_row_2)
-        # identify items with identical first and last names 
+        #print(i, name_row_1, lastname_row_1, name_row_2, lastname_row_2)
         if (name_row_2 == name_row_1 and lastname_row_1 == lastname_row_2):
-            print("IDENTICAL NAME IDENTIFIED")
+            #print("IDENTICAL NAME IDENTIFIED")
             # no compensation if name_row_1 is "Unknown"
             if (name_row_1=="Unknown"): 
                 pass 
             else: 
                 gender = str(newlist[i].get("Gender")) # not sure if this is correct i 
-                print("new compensation: ", calcCompensation(gender)) 
+                #print("new compensation: ", calcCompensation(gender)) 
                 compensationArray =  numpy.add(compensationArray,calcCompensation(gender))
-            print("total compensation: ", compensationArray) 
+            #print("total compensation: ", compensationArray)
+        elif (name_row_2[0:5]==name_row_1[0:5] and lastname_row_1[0:5]==lastname_row_2[0:5]and name_row_2[0:5]!="['Unk"):
+            #print(name_row_2[0:5], name_row_1[0:5])
+            #print("FIRST THREE CHARACTERS ARE THE SAME")
+            # allows you to manually go through to see if people have called themselves 
+            # e.g. Ron for Ronald, and identical names are not identified
+            # or Alexander R. Brinkman versus Alexander Brinkman
+            manualCheckList.append([name_row_1, lastname_row_1, name_row_2, lastname_row_2]) 
     # assert that the sum of the first three elements is equal to the last one
     assert(compensationArray[0:3].sum() == compensationArray[3])
-    return(compensationArray)
+    #print("ADDED TO CHECKLIST: ", manualCheckList)
+    return(compensationArray, manualCheckList)
 
 def fixStatsFile(statsdata, year_to_check, compensationArray):
     with open(statsdata, newline='') as csvfile:
         rows = csv.reader(csvfile, delimiter=',')
-        print("*************************************STATS", year_to_check)
+        #print("*************************************STATS", year_to_check)
         for row in rows: 
             year = row[1]
             if year == year_to_check:
                 #print("[Id, Year, MaleCount, FemaleCount, UnknownCount, TotNames, Male%, Female%, Unknown%]")
                 print("Old stats: ", row)
-                #print(compensationArray)
+                print(compensationArray)
                 maleCount = int(row[2]) + compensationArray[0]
                 femaleCount = int(row[3]) + compensationArray[1]
                 UnknownCount = int(row[4]) + compensationArray[2]
@@ -157,9 +169,12 @@ def iterateThroughYears(year):
     year = str(year)
     print("*************************************", year)
     allPersonsOneYear = getNamesFromCSV(year)
-    compensation = findDuplicates(allPersonsOneYear)
+    [compensation, manualCheckList]= findDuplicates(allPersonsOneYear)
     fixedYear = fixStatsFile(statsData,year,compensation)
     print("New stats: ", fixedYear)
+    print("Just verify that these are not the same persons: ")
+    for s in manualCheckList:
+        print(*s)
     return(fixedYear)
 
 def saveNewStats(data): 
@@ -169,13 +184,19 @@ def saveNewStats(data):
         print("SAVING DATA")
         outputWriter.writerow(data)
 
+
 def main():
     print("----------------------------START---------------------------------")
     output = []
     outputWriter.writerow(["Id", "Year", "MaleCount", "FemaleCount", "UnknownCount", "TotNames", "Male%", "Female%", "Unknown%"])
-    for i in years[1:3]: # reduce for debugging
+    #i = years[1]
+    #newLine = iterateThroughYears(i)
+    #saveNewStats(newLine)
+    #output.append(newLine)
+    #print(output)
+    for i in years: # reduce for debugging
         newLine = iterateThroughYears(i)
         saveNewStats(newLine)
-        output.append(iterateThroughYears(i))
+        output.append(newLine)
 
 main()
