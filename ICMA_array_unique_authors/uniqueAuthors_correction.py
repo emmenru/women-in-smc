@@ -13,17 +13,13 @@ import re
 # virtual env: /Users/emmafrid/Dev/VirtualEnvs/women-in-smc
 
 # input: 
-# ICMC_reformatted_all_years.csv (years before 2016, downloaded from supplementary material from ICMC paper, fixed one for 1975 where no gender was recorded)
-# ICMCgenderOutput_1975-2021_for_R.csv (years after 2016) # different format, perhaps code must be different 
-
+# ICMCgenderOutput_1975-2021_for_R.csv 
 # ICMC_stats_new.csv (contains all years apart from 2020, which was published together with 2021 due to covid)
 
 # TO DO: 
-# Check that the script works also for data after 2016 
 # Check that stats calc in R is correct 
-# Make sure that the data is modified so that ICMCgenderOutput_1975-2021_for_R also works....
-# if first three letters are the same, but not the rest, write these names to a separate list to go through later
-# Det var något funky med 2019, oklart varför. Borde nog gå igenom alla publikationer från början till slut för att se att det stämmer 
+# Something is funky with year 2019. 
+# Should go through 2019 papers from beginning to end to see what is going on 
 
 # the two files have different formats
 #proceedingsData = "input/ICMC_reformatted_all_years.csv"
