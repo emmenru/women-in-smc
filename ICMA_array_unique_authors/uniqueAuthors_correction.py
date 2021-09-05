@@ -17,9 +17,8 @@ import re
 # ICMC_stats_new.csv (contains all years apart from 2020, which was published together with 2021 due to covid)
 
 # TO DO: 
-# Check that stats calc in R is correct 
-# Something is funky with year 2019. 
-# Should go through 2019 papers from beginning to end to see what is going on 
+# Check that stats calc in R is correct  
+# Should go through 2019 proceedings from beginning to see that everything is ok
 
 # the two files have different formats
 #proceedingsData = "input/ICMC_reformatted_all_years.csv"
