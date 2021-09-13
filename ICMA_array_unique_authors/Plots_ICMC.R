@@ -1,5 +1,7 @@
 # SCRIPT FOR PLOTS AND POISSON REGRESSIONS
 library(car)
+library(ggplot2)
+library(tidyr)
  
 #### FEMALE AUTHOR NAMES ICMC 
 # INPUT DATASET HERE FOR PLOTTING 
@@ -8,7 +10,6 @@ df_plotting <- read.csv("~/Dev/women-in-smc/ICMA_array_unique_authors/output/ICM
 
 # Total number of female author names 
 summary(df_plotting$Female.)
-sum(df_plotting$FemaleCount)/ (sum(df_plotting$FemaleCount)+ sum(df_plotting$MaleCount))
 
 df_wide <- df_plotting[,c(2,7:9)] # only pick percentages 
 data_long <- gather(df_wide, gender, percentage, Male.:Unknown., factor_key=TRUE)
@@ -17,11 +18,21 @@ data_long$percentage = data_long$percentage*100
 
 # ONLY PLOTTING WOMEN 
 women <- subset(data_long, gender == 'Female.')
+
 p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
   geom_bar(stat="identity", position=position_dodge())+
   xlab("Year") + ylab("ICMC Female Author Names (%)")
 p+geom_smooth(method = "glm", formula = y~x, method.args = list(family = gaussian(link = 'log')))+
   scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
+
+
+ggplot(women, aes(x=Year, y=percentage)) + 
+  geom_point()
+glmLog<- glm(percentage ~ Year, data = women, family = gaussian(link = "log"))
+summary(glmLog)
+
+
+hist(women$percentage)
 
 plot(df_plotting$FemaleCount)
 p<-plot(df_plotting$FemaleCount/df_plotting$MaleCount)
@@ -109,7 +120,7 @@ p$phat <- predict(poisson.model.rate, type="response")
 
 #### MEMBERSHIPS ICMA 
 # IMPORT ICMA MEMBERSHIP DATA 
-df_ICMA <- read.csv("~/Dev//women-in-smc/ICMA_array_unique_authors/ICMA-members/ICMA_data.csv", sep=";", header = F)
+df_ICMA <- read.csv("~/Dev//women-in-smc/ICMA_array_unique_authors/ICMA-members/ICMA_data_new.csv", sep=";", header = F)
 df_ICMA_nums <- df_ICMA[-1,-1]
 
 new_row <-  colSums(df_ICMA_nums) 
@@ -142,3 +153,60 @@ p <- ggplot(data=women_ICMA, aes(x=Year, y=percentage)) +
 #ylim(0, 1)
 p + scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
 #p+geom_smooth(method = "lm", se = FALSE)
+
+
+library(prophet)
+library(Rcpp)
+library(caret)
+df <- df_plotting[,c(2,8)]
+names(df) = c("ds", "y")
+# convert time column into date 
+df$ds = paste(df$ds, "-01-01", sep="")
+
+#df <- read.csv("~/Dev/women-in-smc/ICMA_array_unique_authors/example_wp_log_peyton_manning.csv")
+# test with data that should work 
+m <- prophet(df)
+summary(m)
+future <- make_future_dataframe(m, periods = 365*10)
+tail(future)
+
+forecast <- predict(m, future)
+tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
+
+plot(m, forecast)
+
+prophet_plot_components(m, forecast)
+
+# DETECT LINEAR TREND 
+library(ts)
+library(forecast)
+
+# should I interpolate cause there are missing values???? 
+tsData <- ts(df_plotting$Female.)# ts data
+
+# fit regression
+fit.x <- lm(Female. ~ Year, data=df_plotting)
+summary(fit.x)
+
+# fit arima 
+fit<-arima(x = tsData, order = c(1,1,0), include.mean = T, method="CSS") 
+predict(fit, n.ahead = 100)
+autoplot(forecast(fit))
+
+# OK forecast seem to suggest that we would not obtain 30% women even in the most positive outcomes 
+# maybe actually just estimate the linear trend line using the methods of the youtube video 
+#https://robjhyndman.com/hyndsight/arima-trends/
+fit2<-Arima(y = tsData, order = c(1,1,0), include.drift=TRUE) 
+# is drift significantly different from zero? look at the standard errors 
+# mean range 
+c(0.0016-0.0026, 0.0016+0.0026)
+# this passes through 0 and we can not exclude the hypothesis that the drift is close to 0
+# when is the first time we could potentially earliest get to 50%?
+forecast(fit2, h=59)
+autoplot(forecast(fit2, h=59))
+checkresiduals(fit2)
+# residuals are OK 
+Box.test(resid(fit2),type="Ljung",lag=20,fitdf=1)
+# this model suggest that it would take at least 59 years 
+
+# https://online.stat.psu.edu/stat510/book/export/html/665
