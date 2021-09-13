@@ -134,10 +134,10 @@ names(t_df_ICMA) <- as.character(unlist(t_df_ICMA[1,]))
 t_df_ICMA = t_df_ICMA[-1,]
 t_df_ICMA <- as.data.frame(sapply(t_df_ICMA, as.numeric))
 
-# do not take non profit into account! thats like companies or organizations
+# this takes nonprofit organizations into account
 t_df_ICMA$TotalNotNonProfit <- t_df_ICMA$Male+t_df_ICMA$Female
-t_df_ICMA$WomenPercentage <- t_df_ICMA$Female / t_df_ICMA$TotalNotNonProfit * 100
-t_df_ICMA$MenPercentage <- t_df_ICMA$Male / t_df_ICMA$TotalNotNonProfit * 100
+t_df_ICMA$WomenPercentage <- t_df_ICMA$Female / t_df_ICMA$Total * 100
+t_df_ICMA$MenPercentage <- t_df_ICMA$Male / t_df_ICMA$Total * 100
 # summary
 summary(t_df_ICMA$WomenPercentage)
 
@@ -152,7 +152,7 @@ p <- ggplot(data=women_ICMA, aes(x=Year, y=percentage)) +
   xlab("Year") + ylab("ICMA Female Members (%)")#+
 #ylim(0, 1)
 p + scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
-#p+geom_smooth(method = "lm", se = FALSE)
+p+geom_smooth(method = "lm", se = FALSE)
 
 
 library(prophet)
@@ -180,33 +180,60 @@ prophet_plot_components(m, forecast)
 # DETECT LINEAR TREND 
 library(ts)
 library(forecast)
+library(tidyr)
+library(tseries)
 
 # should I interpolate cause there are missing values???? 
-tsData <- ts(df_plotting$Female.)# ts data
+#add NAs for missing years 
+dat2 <- df_plotting %>%
+  complete(Year = 1975:2021)
+
+tsData <- ts(dat2$Female.)# ts data
 
 # fit regression
 fit.x <- lm(Female. ~ Year, data=df_plotting)
 summary(fit.x)
 
 # fit arima 
-fit<-arima(x = tsData, order = c(1,1,0), include.mean = T, method="CSS") 
-predict(fit, n.ahead = 100)
-autoplot(forecast(fit))
+#fit<-arima(x = tsData, order = c(1,1,0), include.mean = T, method="CSS") 
+#predict(fit, n.ahead = 100)
+#autoplot(forecast(fit))
 
 # OK forecast seem to suggest that we would not obtain 30% women even in the most positive outcomes 
 # maybe actually just estimate the linear trend line using the methods of the youtube video 
 #https://robjhyndman.com/hyndsight/arima-trends/
-fit2<-Arima(y = tsData, order = c(1,1,0), include.drift=TRUE) 
+
+# do I need to do a transform? variance doesnt look too bad....
+plot(diff(tsData))
+
+fit2<-Arima(y = tsData, order = c(1,1,0), include.drift=TRUE)
 # is drift significantly different from zero? look at the standard errors 
-# mean range 
-c(0.0016-0.0026, 0.0016+0.0026)
-# this passes through 0 and we can not exclude the hypothesis that the drift is close to 0
+# calc conf interval and seee if it goes through zero 
+# https://onlinestatbook.com/2/estimation/mean.html
+#mean+-1.96*SE?
+c(0.0016-1.96*0.0025, 0.0016+1.96*0.0025) # goes through 0
+summary(fit2)
+
+# this passes through 0 
+# but this is not the confidence interval, only the mean and the SE
+# we need to check this using one-sample t test to try if the slope is significantly different from 0 
 # when is the first time we could potentially earliest get to 50%?
-forecast(fit2, h=59)
-autoplot(forecast(fit2, h=59))
+forecast(fit2, h=61)
+autoplot(forecast(fit2, h=61))
 checkresiduals(fit2)
 # residuals are OK 
 Box.test(resid(fit2),type="Ljung",lag=20,fitdf=1)
 # this model suggest that it would take at least 59 years 
 
 # https://online.stat.psu.edu/stat510/book/export/html/665
+
+# memberships
+# actually requires more datapoints? is this OK? 
+# https://robjhyndman.com/hyndsight/short-time-series/
+t_df_ICMA
+fit3<-Arima(y = ts(t_df_ICMA$WomenPercentage), order = c(1,1,0), include.drift=TRUE) 
+forecast(fit3, h=23)
+Box.test(resid(fit3),type="Ljung",lag=5,fitdf=1)
+autoplot(forecast(fit3, h=23))
+
+c(0.4710-1.96*0.4652, 0.4710+1.96*0.4652) # goes through 0
