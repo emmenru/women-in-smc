@@ -2,6 +2,10 @@
 library(car)
 library(ggplot2)
 library(tidyr)
+library(ts)
+library(forecast)
+library(tseries)
+library(fpp)
  
 #### FEMALE AUTHOR NAMES ICMC 
 # INPUT DATASET HERE FOR PLOTTING 
@@ -10,6 +14,11 @@ df_plotting <- read.csv("~/Dev/women-in-smc/ICMA_array_unique_authors/output/ICM
 
 # Total number of female author names 
 summary(df_plotting$Female.)
+
+# Total percentage 
+sum(df_plotting$FemaleCount)/(sum(df_plotting$MaleCount)+sum(df_plotting$UnknownCount)+sum(df_plotting$FemaleCount))
+sum(df_plotting$FemaleCount)/(sum(df_plotting$TotNames))
+# should be the same
 
 df_wide <- df_plotting[,c(2,7:9)] # only pick percentages 
 data_long <- gather(df_wide, gender, percentage, Male.:Unknown., factor_key=TRUE)
@@ -25,12 +34,21 @@ p <- ggplot(data=women, aes(x=Year, y=percentage, fill=gender)) +
 p+geom_smooth(method = "glm", formula = y~x, method.args = list(family = gaussian(link = 'log')))+
   scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
 
+# for slides
+men <- subset(data_long, gender == 'Male.')
+
+p <- ggplot(data=men, aes(x=Year, y=percentage, fill=gender)) +
+  geom_bar(stat="identity", position=position_dodge())+
+  xlab("Year") + ylab("ICMC Female Author Names (%)")
+p+theme(panel.background = element_rect(fill='black', colour='grey'))+
+  scale_fill_manual(values=c("white"))+
+  theme(legend.position = "none")+
+  ylim(0, 100)
 
 ggplot(women, aes(x=Year, y=percentage)) + 
   geom_point()
 glmLog<- glm(percentage ~ Year, data = women, family = gaussian(link = "log"))
 summary(glmLog)
-
 
 hist(women$percentage)
 
@@ -43,6 +61,140 @@ ggplot(df_plotting, aes(x=Year, y=Female.)) +
 
 scatterplot(FemaleCount ~ MaleCount, data = df_plotting)
 
+#### MEMBERSHIPS ICMA 
+# IMPORT ICMA MEMBERSHIP DATA 
+df_ICMA <- read.csv("~/Dev//women-in-smc/ICMA_array_unique_authors/ICMA-members/ICMA_data_new.csv", sep=";", header = F)
+df_ICMA_nums <- df_ICMA[-1,-1]
+
+new_row <-  colSums(df_ICMA_nums) 
+new_row = as.numeric(new_row)
+new_row = c("Total", new_row)
+df_ICMA = rbind(df_ICMA, new_row)
+
+t_df_ICMA <- t(df_ICMA)#[-1,]
+t_df_ICMA = as.data.frame(t_df_ICMA)
+names(t_df_ICMA) <- as.character(unlist(t_df_ICMA[1,]))
+t_df_ICMA = t_df_ICMA[-1,]
+t_df_ICMA <- as.data.frame(sapply(t_df_ICMA, as.numeric))
+
+# this takes nonprofit organizations into account
+t_df_ICMA$TotalNotNonProfit <- t_df_ICMA$Male+t_df_ICMA$Female
+t_df_ICMA$WomenPercentage <- t_df_ICMA$Female / t_df_ICMA$Total * 100
+t_df_ICMA$MenPercentage <- t_df_ICMA$Male / t_df_ICMA$Total * 100
+# summary
+summary(t_df_ICMA$WomenPercentage)
+
+# to long 
+data_long_ICMA <- gather(t_df_ICMA, gender, percentage, WomenPercentage:MenPercentage, factor_key=TRUE)
+data_long_ICMA <- data_long_ICMA[,c(1,7:8)] # only pick percentages 
+
+# PLOT ICMA MEMBERSHIPS 
+women_ICMA <- subset(data_long_ICMA, gender=="WomenPercentage")
+p <- ggplot(data=women_ICMA, aes(x=Year, y=percentage)) +
+  geom_bar(stat="identity", position=position_dodge())+
+  xlab("Year") + ylab("ICMA Female Members (%)")#+
+#ylim(0, 1)
+p + scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
+p+geom_smooth(method = "lm", se = FALSE)
+
+# DETECT LINEAR TREND 
+#add NAs for missing years 
+dat2 <- df_plotting %>%
+  complete(Year = 1975:2021)
+
+tsData <- ts(dat2$Female.)# ts data
+
+# fit regression
+fit.x <- lm(Female. ~ Year, data=df_plotting)
+summary(fit.x)
+
+# fit arima 
+#fit<-arima(x = tsData, order = c(1,1,0), include.mean = T, method="CSS") 
+#predict(fit, n.ahead = 100)
+#autoplot(forecast(fit))
+
+# OK forecast seem to suggest that we would not obtain 30% women even in the most positive outcomes 
+# maybe actually just estimate the linear trend line using the methods of the youtube video 
+#https://robjhyndman.com/hyndsight/arima-trends/
+#https://otexts.com/fpp2/
+
+# do I need to do a transform? variance doesnt look too bad....
+plot(diff(tsData))
+adf.test(diff(df_plotting$Female.)) # ok 
+
+# with xreg (disregarding that we have missing years)
+#dat2
+#fit1<-Arima(y = ts(df_plotting$Female.), order = c(0,1,0), xreg=ts(df_plotting$Year))
+#forecast(fit1, h=4, xreg=c(2020, 2030, 2040, 2050))
+#autoplot(forecast(fit1, h=6, xreg=c(2020, 2030, 2040, 2050)))
+#this model doesnt make any sense
+
+
+# https://people.duke.edu/~rnau/411arim.htm
+auto.arima(y = tsData, stepwise=FALSE, approximation=FALSE, trace=TRUE)
+acf(df_plotting$Female.) # 
+pacf(df_plotting$Female.) # 
+fit2<-Arima(y = tsData, order = c(0,1,1), include.drift=TRUE, include.constant=TRUE)
+# c(1,1,1) smallest AIC but is mixed, so might be overfitted 
+#https://faculty.fuqua.duke.edu/~rnau/Decision411_2007/411arim.htm 
+# c(0,1,1) model does not give significant p values though....
+# is drift significantly different from zero? look at the standard errors 
+# calc conf interval and seee if it goes through zero 
+# https://onlinestatbook.com/2/estimation/mean.html
+#mean+-1.96*SE?
+c(0.17-1.96*0.01, 0.17+1.96*0.01) # % # doesn't go through 0
+summary(fit2)
+coeftest(fit2) # not significant....
+# calculate p-value 
+# https://stats.stackexchange.com/questions/8868/how-to-calculate-the-p-value-of-parameters-for-arima-model-in-r
+(1-pnorm(abs(fit2$coef)/sqrt(diag(fit2$var.coef))))*2
+
+
+plot(dat2$Year,dat2$Female.,col="blue", type="l")
+lines(dat2$Year,fitted(fit2),type="l",col="red")
+
+
+# checking that slope/drift is not 0!!! 
+#https://robjhyndman.com/hyndsight/arima-trends/
+#http://www.fsb.miamioh.edu/lij14/690_s9.pdf
+#https://robjhyndman.com/hyndsight/arimaconstants/
+
+# this passes through 0 
+# but this is not the confidence interval, only the mean and the SE
+# we need to check this using one-sample t test to try if the slope is significantly different from 0 
+# when is the first time we could potentially earliest get to 50%?
+forecast(fit2, h=119)
+autoplot(forecast(fit2, h=119))
+checkresiduals(fit2)
+acf(residuals(fit2), na.action=na.pass) #uncorrelated
+hist(residuals(fit2)) # normally distributed
+# residuals are OK 
+Box.test(resid(fit2),type="Ljung",lag=20,fitdf=1)
+# this model suggest that it would take at least 59 years 
+
+# https://online.stat.psu.edu/stat510/book/export/html/665
+
+# carls suggestion
+#https://stats.stackexchange.com/questions/246474/test-for-the-significance-of-the-effect-of-an-intervention-in-a-time-series
+
+#https://stats.stackexchange.com/questions/306933/arima1-1-1-equation-based-on-r-output 
+
+# memberships
+# actually requires more datapoints? is this OK? 
+# https://robjhyndman.com/hyndsight/short-time-series/
+t_df_ICMA
+auto.arima(y = ts(t_df_ICMA$WomenPercentage))
+fit3<-Arima(y = ts(t_df_ICMA$WomenPercentage), order = c(0,1,0), include.drift=TRUE) 
+forecast(fit3, h=23)
+Box.test(resid(fit3),type="Ljung",lag=5,fitdf=1)
+autoplot(forecast(fit3, h=23))
+summary(fit3)
+c(0.4710-1.96*0.4652, 0.4710+1.96*0.4652) # goes through 0
+coeftest(fit3) # not significant
+
+
+##### OLD #####
+# not published in paper
 # linear regression with a logit transformation 
 
 df_plotting$TotFemaleMale <- df_plotting$MaleCount+df_plotting$FemaleCount 
@@ -106,7 +258,7 @@ coef(naive.model)[1]+coef(naive.model)[2]*year
 # https://education.illinois.edu/docs/default-source/carolyn-anderson/edpsy589/lectures/4_glm/4glm_3_beamer_post.pdf
 # https://www.dataquest.io/blog/tutorial-poisson-regression-in-r/ 
 with(poisson.model.rate, cbind(res.deviance = deviance, df = df.residual,
-               p = pchisq(deviance, df.residual, lower.tail=FALSE)))
+                               p = pchisq(deviance, df.residual, lower.tail=FALSE)))
 
 new_df
 #s1 <- data.frame(Year = c(1975, 1975+10, 1975+20, 1975+30, 1975+40, 1975+50), logpop=c(3.218876,4.488636,5.459586,5.950643,5.209486,5.209486))
@@ -118,41 +270,6 @@ predict(poisson.model.rate, s1, type="response", se.fit=TRUE)
 ## calculate and store predicted values
 p$phat <- predict(poisson.model.rate, type="response")
 
-#### MEMBERSHIPS ICMA 
-# IMPORT ICMA MEMBERSHIP DATA 
-df_ICMA <- read.csv("~/Dev//women-in-smc/ICMA_array_unique_authors/ICMA-members/ICMA_data_new.csv", sep=";", header = F)
-df_ICMA_nums <- df_ICMA[-1,-1]
-
-new_row <-  colSums(df_ICMA_nums) 
-new_row = as.numeric(new_row)
-new_row = c("Total", new_row)
-df_ICMA = rbind(df_ICMA, new_row)
-
-t_df_ICMA <- t(df_ICMA)#[-1,]
-t_df_ICMA = as.data.frame(t_df_ICMA)
-names(t_df_ICMA) <- as.character(unlist(t_df_ICMA[1,]))
-t_df_ICMA = t_df_ICMA[-1,]
-t_df_ICMA <- as.data.frame(sapply(t_df_ICMA, as.numeric))
-
-# this takes nonprofit organizations into account
-t_df_ICMA$TotalNotNonProfit <- t_df_ICMA$Male+t_df_ICMA$Female
-t_df_ICMA$WomenPercentage <- t_df_ICMA$Female / t_df_ICMA$Total * 100
-t_df_ICMA$MenPercentage <- t_df_ICMA$Male / t_df_ICMA$Total * 100
-# summary
-summary(t_df_ICMA$WomenPercentage)
-
-# to long 
-data_long_ICMA <- gather(t_df_ICMA, gender, percentage, WomenPercentage:MenPercentage, factor_key=TRUE)
-data_long_ICMA <- data_long_ICMA[,c(1,7:8)] # only pick percentages 
-
-# PLOT ICMA MEMBERSHIPS 
-women_ICMA <- subset(data_long_ICMA, gender=="WomenPercentage")
-p <- ggplot(data=women_ICMA, aes(x=Year, y=percentage)) +
-  geom_bar(stat="identity", position=position_dodge())+
-  xlab("Year") + ylab("ICMA Female Members (%)")#+
-#ylim(0, 1)
-p + scale_fill_manual(values=c("black"))+ theme_minimal()+theme(legend.position = "none")
-p+geom_smooth(method = "lm", se = FALSE)
 
 
 library(prophet)
@@ -177,63 +294,3 @@ plot(m, forecast)
 
 prophet_plot_components(m, forecast)
 
-# DETECT LINEAR TREND 
-library(ts)
-library(forecast)
-library(tidyr)
-library(tseries)
-
-# should I interpolate cause there are missing values???? 
-#add NAs for missing years 
-dat2 <- df_plotting %>%
-  complete(Year = 1975:2021)
-
-tsData <- ts(dat2$Female.)# ts data
-
-# fit regression
-fit.x <- lm(Female. ~ Year, data=df_plotting)
-summary(fit.x)
-
-# fit arima 
-#fit<-arima(x = tsData, order = c(1,1,0), include.mean = T, method="CSS") 
-#predict(fit, n.ahead = 100)
-#autoplot(forecast(fit))
-
-# OK forecast seem to suggest that we would not obtain 30% women even in the most positive outcomes 
-# maybe actually just estimate the linear trend line using the methods of the youtube video 
-#https://robjhyndman.com/hyndsight/arima-trends/
-
-# do I need to do a transform? variance doesnt look too bad....
-plot(diff(tsData))
-
-fit2<-Arima(y = tsData, order = c(1,1,0), include.drift=TRUE)
-# is drift significantly different from zero? look at the standard errors 
-# calc conf interval and seee if it goes through zero 
-# https://onlinestatbook.com/2/estimation/mean.html
-#mean+-1.96*SE?
-c(0.0016-1.96*0.0025, 0.0016+1.96*0.0025) # goes through 0
-summary(fit2)
-
-# this passes through 0 
-# but this is not the confidence interval, only the mean and the SE
-# we need to check this using one-sample t test to try if the slope is significantly different from 0 
-# when is the first time we could potentially earliest get to 50%?
-forecast(fit2, h=61)
-autoplot(forecast(fit2, h=61))
-checkresiduals(fit2)
-# residuals are OK 
-Box.test(resid(fit2),type="Ljung",lag=20,fitdf=1)
-# this model suggest that it would take at least 59 years 
-
-# https://online.stat.psu.edu/stat510/book/export/html/665
-
-# memberships
-# actually requires more datapoints? is this OK? 
-# https://robjhyndman.com/hyndsight/short-time-series/
-t_df_ICMA
-fit3<-Arima(y = ts(t_df_ICMA$WomenPercentage), order = c(1,1,0), include.drift=TRUE) 
-forecast(fit3, h=23)
-Box.test(resid(fit3),type="Ljung",lag=5,fitdf=1)
-autoplot(forecast(fit3, h=23))
-
-c(0.4710-1.96*0.4652, 0.4710+1.96*0.4652) # goes through 0

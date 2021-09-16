@@ -19,20 +19,14 @@
 //////////////////////// SYNTH DEFINITIONS////////////////////////
 s.boot();
 
-//~sample= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
-
 ~sample= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/2021_update/176746__carlito62__blackbird-in-forest.wav");
-
-//~sample2= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
-
-//~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/242151__bassboybg__countryside-with-bees.wav");
-
-//~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/529448__vermontrobinsson__some-cows.wav");
-
 ~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/499711__isohoo__night-bird-grasshopper.wav");
 
+//~sample= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/353194__inspectorj__wind-chimes-a-excerpt.wav");
+//~sample2= Buffer.read(s,"/Users/emmafrid/Dev/women-in-smc/SuperCollider/346642__inspectorj__rain-on-windows-interior-a-excerpt.wav");
+//~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/242151__bassboybg__countryside-with-bees.wav");
+//~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/529448__vermontrobinsson__some-cows.wav");
 //~sample2= Buffer.read(s,"/Users/emmafrid/Downloads/460178__johanwestling__forest-ambience-steady-breeze-summer-sweden-leaves-light-wind-distant-highway-loop-m10.wav");
-
 
 (
 
@@ -71,19 +65,32 @@ Out.ar(0,Pan2.ar(grain, pan))}).add;
 
 )
 
+//plot(Env.perc(0.2,1.9,0.5, 134))
+//plot(Env.sine(1, 1))
+
+
 
 //////////////////////// READ DATA  INTO 2D VECTOR ////////////////////////
 
+~filename="/Users/emmafrid/Dev/women-in-smc/ICMA_array_unique_authors/output/SC/"++"1994"++".csv"
+
+
 (
+~year = CSVFileReader.read(~filename, true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+
 //~text = CSVFileReader.read("//Users/emmafrid/Dev/women-in-smc/input_data_SuperCollider/SMC_Corrected_Numeric.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
 
-~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/2021_update/output/corrected_output_supercollider/sorted_on_first_author/SMCgenderOutput_2021_for_R_SC_2019.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+//~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/2021_update/output/corrected_output_supercollider/sorted_on_first_author/SMCgenderOutput_2021_for_R_SC_2019.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
+
+~text = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/ICMA_array_unique_authors/output/SC/ICMCgenderOutput_1975-2021_for_R_manually_fixed_for_SC.csv", true).postcs; // true for skipping empty rows (do not skip empty cells!!!)
 
 
+~maletext = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/ICMA_array_unique_authors/output/SC/male_author_for_SC.csv", true).postcs;
+~femaletext = CSVFileReader.read("/Users/emmafrid/Dev/women-in-smc/ICMA_array_unique_authors/output/SC/female_author_for_SC.csv", true).postcs;
 
 // invert rows and columns in a two dimensional Array
 // this is done to get a vector of each column rather than a vector of each row
-~text=~text.flop;
+~text=~year.flop;
 
 // place is where the conference toke place
 ~place=~text[2].drop(1);
@@ -116,31 +123,27 @@ Out.ar(0,Pan2.ar(grain, pan))}).add;
 // (6,8..36).do({ arg item; ~gender_female.add(~text[item]) });  // drop(1) is to drop column name
 // ~gender_female[1]
 
-
 //////////////////////// SET PARAMETERS FOR SOUND SYNTHESIS ////////////////////////
 
 (
 // local variables
-var freq_fact_female,freq_fact_male,randomization_female,randomization_male,amp_female_start,amp_female_stop,amp_fact_male,amp_dec_fact_male;
+var freq_fact_female,freq_fact_male,amp_female_start,amp_female_stop,amp_fact_male,amp_dec_fact_male;
 
 freq_fact_female = 800;
 freq_fact_male = 60;
 
 amp_female_start=0.6; // amplitude is randomized, see code below (this factor is currently not being used)
-amp_female_stop=0.7;
-amp_fact_male=1.0; // amplitude is not the same for all male sounds
-amp_dec_fact_male = 0.6; // amp is reduced for second, third .... 17th author
-
-randomization_female=1.5;
-randomization_male=2;
+amp_female_stop=0.9;
+//amp_fact_male=0.9; // amplitude is not the same for all male sounds
+amp_dec_fact_male = 0.95; // amp is reduced for second, third .... 17th author
 
 // global variables
 // envelope parameters
 // increase these values to get a drone sound, decrease them to get separated notes
-~min_attack_male=0.3;
+~min_attack_male=0.4;
 ~max_attack_male=0.4;
 ~min_release_male=0.3;
-~max_release_male=0.4;
+~max_release_male=0.8;
 // duration of notes
 // this defines how fast it goes since it sets the length of each sound
 ~min_dur=0.15;
@@ -160,7 +163,8 @@ randomization_male=2;
 
 n=size(~gender_female[0]); // length of gender columns
 //plot(~gender_female.asInteger)
-~length = n; // number of rows to be sonified, should be set to n to sonify entire data set
+~length = n;
+// change here to only sonify respective year
 ~note_length = 0.1; //
 ~durs = Array.fill(~length, ~note_length);
 
@@ -182,13 +186,14 @@ n=size(~gender_female[0]); // length of gender columns
 (0..16).do({
 	arg i; ~amps_female.add(((Array.fill(~length, {arg item; exprand(amp_female_start,amp_female_stop)}))*(~gender_female[i].asInteger)).postln)
 });
-(0..16).do({
-	arg i; ~amps_male.add(((Array.fill(~length, {arg item; exprand(0.8,1.0)}))*(~gender_male[i].asInteger)))
-});
 
 
 // amplitude should decrease for every item in the list (for every gender column)
-//(0..16).do({ arg item; ~amps_male.add( (Array.fill(~length,amp_fact_male/((item+1)*amp_dec_fact_male))*~gender_male[item].asInteger.normalize)) });
+//(0..16).do({ arg item; ~amps_male.add( (Array.fill(~length,amp_dec_fact_male**(item+1))*~gender_male[item].asInteger.normalize)) });
+
+(0..16).do({
+	arg i; ~amps_male.add(((Array.fill(~length, {arg item; exprand(0.6,0.8)}))*(~gender_male[i].asInteger)))
+});
 
 // PANNING RANDOMNESS
 (0..16).do({
@@ -203,29 +208,19 @@ n=size(~gender_female[0]); // length of gender columns
 
 )
 
+//sum(~gender_female[16].asInteger);
+
 
 //////////////////////// CONTINUOUS SONIFICATION ////////////////////////
 
 //s.plotTree
 //s.scope;
 
-(
-// ADD REVERB
-// much better to put reverb on the output chain since putting them inside a synth def is demanding
-z = Synth(\FreeVerb2x2, [\outbus, 0], addAction:\addToTail);
-// experiment with some settings
-z.set(\room, 0.9) ;// room size
-z.set(\mix, 0.3) ;// dry wet
-z.set(\damp, 0.2) ;// reverb HF damp
-)
-
 
 
 
 (
-	var gender1_female, gender2_female, gender3_female,gender4_female,gender5_female,gender6_female,gender7_female,gender8_female,gender9_female,gender10_female,
-
-gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male;
+	var gender1_female, gender2_female, gender3_female,gender4_female,gender5_female,gender6_female,gender7_female,gender8_female,gender9_female,gender10_female,gender11_female,gender12_female,gender13_female,gender14_female,gender15_female, gender16_female,gender17_female,gender1_male,gender2_male,gender3_male,gender4_male,gender5_male,gender6_male,gender7_male,gender8_male,gender9_male,gender10_male,gender11_male,gender12_male,gender13_male,gender14_male,gender15_male,gender16_male,gender17_male;
 
 
 //// FEMALE VOICES
@@ -312,7 +307,67 @@ gender10_female = Pbind(
 	\amp, Pseq(~amps_female[9])
 );
 
+gender11_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[10]).trace,
+	\pan, Pseq(~panning_female_rand[10]),
+	\amp, Pseq(~amps_female[10])
+);
 
+
+gender12_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[11]).trace,
+	\pan, Pseq(~panning_female_rand[11]),
+	\amp, Pseq(~amps_female[11])
+);
+
+
+gender13_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[12]).trace,
+	\pan, Pseq(~panning_female_rand[12]),
+	\amp, Pseq(~amps_female[12])
+);
+
+
+gender14_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[13]).trace,
+	\pan, Pseq(~panning_female_rand[13]),
+	\amp, Pseq(~amps_female[13])
+);
+
+
+gender15_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[14]).trace,
+	\pan, Pseq(~panning_female_rand[14]),
+	\amp, Pseq(~amps_female[14])
+);
+
+
+gender16_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[15]).trace,
+	\pan, Pseq(~panning_female_rand[15]),
+	\amp, Pseq(~amps_female[15])
+);
+
+
+gender17_female = Pbind(
+	\instrument, \grain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_female_rand[16]).trace,
+	\pan, Pseq(~panning_female_rand[16]),
+	\amp, Pseq(~amps_female[16])
+);
 
 //// MALE VOICES
 
@@ -395,7 +450,6 @@ gender9_male = Pbind(
 	\startrandomness, Pseq(~start_pos_male_rand[8]).trace,
 	\pan, Pseq(~panning_male_rand[8]),
 	\amp, Pseq(~amps_male[8]),
-
 );
 
 gender10_male = Pbind(
@@ -404,7 +458,62 @@ gender10_male = Pbind(
 	\startrandomness, Pseq(~start_pos_male_rand[9]).trace,
 	\pan, Pseq(~panning_male_rand[9]),
 	\amp, Pseq(~amps_male[9]),
+);
 
+gender11_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[10]).trace,
+	\pan, Pseq(~panning_male_rand[10]),
+	\amp, Pseq(~amps_male[10]),
+);
+
+gender12_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[11]).trace,
+	\pan, Pseq(~panning_male_rand[11]),
+	\amp, Pseq(~amps_male[11]),
+);
+
+gender13_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[12]).trace,
+	\pan, Pseq(~panning_male_rand[12]),
+	\amp, Pseq(~amps_male[12]),
+);
+
+gender14_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[13]).trace,
+	\pan, Pseq(~panning_male_rand[13]),
+	\amp, Pseq(~amps_male[13]),
+);
+
+gender15_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[14]).trace,
+	\pan, Pseq(~panning_male_rand[14]),
+	\amp, Pseq(~amps_male[14]),
+);
+
+gender16_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[15]).trace,
+	\pan, Pseq(~panning_male_rand[15]),
+	\amp, Pseq(~amps_male[15]),
+);
+
+gender17_male = Pbind(
+	\instrument, \malegrain,
+	\dur, Pwhite(~min_dur, ~max_dur, ~length),
+	\startrandomness, Pseq(~start_pos_male_rand[16]).trace,
+	\pan, Pseq(~panning_male_rand[16]),
+	\amp, Pseq(~amps_male[16]),
 );
 
 
@@ -428,11 +537,41 @@ gender10_male = Pbind(
 	0.35,gender7_male,
 	0.4,gender8_female,
 	0.4,gender8_male,
-	0.5,gender9_female,
+	0.45,gender9_female,
 	0.45,gender9_male,
+	0.5,gender10_male,
 	0.5,gender10_female,
-	0.5,gender10_male
+	0.5,gender11_male,
+	0.5,gender11_female,
+	0.5,gender12_male,
+	0.5,gender12_female,
+	0.5,gender13_male,
+	0.5,gender13_female,
+	0.5,gender14_male,
+	0.5,gender14_female,
+	0.5,gender15_male,
+	0.5,gender15_female,
+	0.5,gender16_male,
+	0.5,gender16_female,
+	0.5,gender17_male,
+	0.5,gender17_female
 ],1).play; // use Ptpar to change wait between trigger of different voices
 
 
+
+
+(
+// ADD REVERB
+// much better to put reverb on the output chain since putting them inside a synth def is demanding
+z = Synth(\FreeVerb2x2, [\outbus, 0], addAction:\addToTail);
+// experiment with some settings
+z.set(\room, 0.7) ;// room size
+z.set(\mix, 0.3) ;// dry wet
+z.set(\damp, 0.1) ;// reverb HF damp
+);
+
 )
+
+
+
+//thisProcess.platform.recordingsDir
