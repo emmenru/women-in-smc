@@ -2,7 +2,7 @@ appdirs==1.4.3
 bibtexparser==0.6.2
 gender-detector==0.1.0
 Genderize==0.1.5
-numpy==1.12.1
+numpy==1.21.0
 packaging==16.8
 pandas==0.19.2
 pyparsing==2.2.0
